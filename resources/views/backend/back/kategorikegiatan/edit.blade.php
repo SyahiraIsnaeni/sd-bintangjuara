@@ -15,7 +15,7 @@
 				<div class="card-header">
 					<div class="card-head-row">
 						<div class="card-title">Edit Kategori {{ $kategori_kegiatan->nama_kategori }} </div>
-                        <a href="{{route('kategorikegiatan.index')}}" class="btn btn-warning btn=sm ml-auto">Back</a>
+                        <a href="{{route('kategorikegiatan.index')}}" class="btn btn-warning btn=sm ml-auto"> Kembali </a>
 					</div>
 				</div>
 				<div class="card-body">
@@ -27,7 +27,7 @@
 						<input type="text" name="nama_kategori" value=" {{$kategori_kegiatan->nama_kategori}}" class="form-control" id="text" placeholder="Enter Kategori Kegiatan">
 				    </div>
 					<div class="form-group">
-                    <button class="btn btn-primary btn-sm" type="submit">Save</button>
+                    <button class="btn btn-primary btn-sm" type="submit"> Simpan </button>
 					</div>
 				</div>
 			</div>

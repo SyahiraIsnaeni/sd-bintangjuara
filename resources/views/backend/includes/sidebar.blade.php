@@ -65,7 +65,7 @@
 							<h4 class="text-section">Components</h4>
 						</li>
 						
-						<li class="nav-item">
+						<!-- <li class="nav-item">
 							<a data-toggle="collapse" href="#base">
 								<i class="fas fa-layer-group"></i>
 								<p>Base</p>
@@ -125,11 +125,17 @@
 									</li>
 								</ul>
 							</div>
-						</li>
+						</li> -->
 						<li class="nav-item">
 							<a href="{{ route('kategorikegiatan.index') }}">
-								<i class="fas fa-solid fa-list-ul"></i>
+								<i class="fas fa-list-ul"></i>
 								<p>Kategori Kegiatan</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="{{ route('kegiatan.index') }}">
+								<i class="fas fa-calendar"></i>
+								<p>Kegiatan</p>
 							</a>
 						</li>
 						<li class="nav-item">
@@ -137,7 +143,7 @@
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
 													 <i class="fas fa-undo"></i>
-                                        {{ __('Logout') }}
+													 <p> {{ __('Logout') }}</p>
                                     </a>
 								
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
