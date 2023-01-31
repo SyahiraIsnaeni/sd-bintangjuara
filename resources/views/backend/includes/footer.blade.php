@@ -20,7 +20,7 @@
 						</ul>
 					</nav>
 					<div class="copyright ml-auto">
-						2018, made with <i class="fa fa-heart heart text-danger"></i> by <a href="https://www.themekita.com">ThemeKita</a>
+						2023, made with <i class="fa fa-heart heart text-danger"></i> by <a>AdminCantik</a>
 					</div>				
 				</div>
 			</footer>

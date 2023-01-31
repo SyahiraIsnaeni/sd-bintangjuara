@@ -127,17 +127,16 @@
 							</div>
 						</li>
 						<li class="nav-item">
-							<!-- <a href="widgets.html">
-								<i class="fas fa-desktop"></i>
-								<p>Widgets</p>
-								<span class="badge badge-success">4</span>
-							</a> -->
-
-							
+							<a href="{{ route('kategorikegiatan.index') }}">
+								<i class="fas fa-solid fa-list-ul"></i>
+								<p>Kategori Kegiatan</p>
+							</a>
+						</li>
+						<li class="nav-item">
 							<a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-													 <i class="fas fa-rotate-left"></i>
+													 <i class="fas fa-undo"></i>
                                         {{ __('Logout') }}
                                     </a>
 								
