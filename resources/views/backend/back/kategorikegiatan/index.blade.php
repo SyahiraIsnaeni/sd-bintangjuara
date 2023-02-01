@@ -29,18 +29,18 @@
 					<table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>ID</th>
                                 <th>Nama Kategori</th>
                                 <th>Slug</th>
+                                <th>Tanggal</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             @forelse ($kategori_kegiatan as $row)
                                 <tr>
-                                    <td>{{ $row->id}}</td>
                                     <td>{{ $row->nama_kategori}}</td>
                                     <td>{{ $row->slug}}</td>
+                                    <td>{{ $row->updated_at}}</td>
                                     <td>
                                         <a href="{{route('kategorikegiatan.edit', $row->id) }}"
                                         class="btn btn-warning btn-sm">Edit</a>

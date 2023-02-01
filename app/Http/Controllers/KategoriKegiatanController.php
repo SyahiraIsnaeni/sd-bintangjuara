@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\KategoriKegiatan;
+use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Str;
 
 
@@ -34,7 +35,7 @@ class KategoriKegiatanController extends Controller
 
         $kategori_kegiatan = KategoriKegiatan::create([
             'nama_kategori' => $request->nama_kategori,
-            'slug' => Str::slug($request->nama_kategori)
+            'slug' => Str::slug($request->nama_kategori),
         ]);
 
         return redirect()->route('kategorikegiatan.index')->with(['success'=> 'Data berhasil tersimpan']);
