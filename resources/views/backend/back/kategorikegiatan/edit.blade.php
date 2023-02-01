@@ -1,10 +1,10 @@
 @extends('backend.layouts.default')
 @section('content')
-    
+
 <div class="panel-header bg-primary-gradient">
 	<div class="page-inner py-5">
 		<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
-			
+
 		</div>
 	</div>
 </div>
@@ -20,15 +20,16 @@
 				</div>
 				<div class="card-body">
                     <form method="post" action="{{ route('kategorikegiatan.update', $kategori_kegiatan->id)}}">
-					@csrf
-                    @method('PUT')
-                    <div class="form-group">
-						<label for="kategorikegiatan">Nama Kategori Kegiatan</label>
-						<input type="text" name="nama_kategori" value=" {{$kategori_kegiatan->nama_kategori}}" class="form-control" id="text" placeholder="Enter Kategori Kegiatan">
-				    </div>
-					<div class="form-group">
-                    <button class="btn btn-primary btn-sm" type="submit"> Simpan </button>
-					</div>
+                        @csrf
+                        @method('PUT')
+                        <div class="form-group">
+                            <label for="kategorikegiatan">Nama Kategori Kegiatan</label>
+                            <input type="text" name="nama_kategori" value=" {{$kategori_kegiatan->nama_kategori}}" class="form-control" id="text" placeholder="Enter Kategori Kegiatan">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-sm" type="submit"> Simpan </button>
+                        </div>
+                    </form>
 				</div>
 			</div>
 		</div>

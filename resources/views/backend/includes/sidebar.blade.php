@@ -1,4 +1,4 @@
-<div class="sidebar sidebar-style-2">			
+<div class="sidebar sidebar-style-2">
 			<div class="sidebar-wrapper scrollbar scrollbar-inner">
 				<div class="sidebar-content">
 					<div class="user">
@@ -64,7 +64,7 @@
 							</span>
 							<h4 class="text-section">Components</h4>
 						</li>
-						
+
 						<!-- <li class="nav-item">
 							<a data-toggle="collapse" href="#base">
 								<i class="fas fa-layer-group"></i>
@@ -132,6 +132,18 @@
 								<p>Kategori Kegiatan</p>
 							</a>
 						</li>
+                        <li class="nav-item">
+                            <a href="{{ route('kategorikegiatan.index') }}">
+                                <i class="fas fa-list-ul"></i>
+                                <p>Kategori Berita</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('kategorikegiatan.index') }}">
+                                <i class="fas fa-list-ul"></i>
+                                <p>Kategori Pengumuman</p>
+                            </a>
+                        </li>
 						<li class="nav-item">
 							<a href="{{ route('kegiatan.index') }}">
 								<i class="fas fa-calendar"></i>
@@ -145,7 +157,7 @@
 													 <i class="fas fa-undo"></i>
 													 <p> {{ __('Logout') }}</p>
                                     </a>
-								
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>

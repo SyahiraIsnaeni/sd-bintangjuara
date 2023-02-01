@@ -1,10 +1,10 @@
 @extends('backend.layouts.default')
 @section('content')
-    
+
 <div class="panel-header bg-primary-gradient">
 	<div class="page-inner py-5">
 		<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
-			
+
 		</div>
 	</div>
 </div>
@@ -15,7 +15,7 @@
 				<div class="card-header">
 					<div class="card-head-row">
 						<div class="card-title">Data Kategori Kegiatan</div>
-                        <a href="{{route('kategorikegiatan.create')}}" class="btn btn-primary btn=sm ml-auto"> <i 
+                        <a href="{{route('kategorikegiatan.create')}}" class="btn btn-primary btn=sm ml-auto"> <i
                         class="fas fa-plus"></i>Tambah Kategori </a>
 					</div>
 				</div>
@@ -42,7 +42,7 @@
                                     <td>{{ $row->nama_kategori}}</td>
                                     <td>{{ $row->slug}}</td>
                                     <td>
-                                        <a href="{{route('kategorikegiatan.edit', $row->id) }}" 
+                                        <a href="{{route('kategorikegiatan.edit', $row->id) }}"
                                         class="btn btn-warning btn-sm">Edit</a>
 
                                         <form action="{{route('kategorikegiatan.destroy', $row->id)}}" method="post"
