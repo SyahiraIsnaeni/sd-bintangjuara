@@ -13,7 +13,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_kategori');
             $table->string('slug');
-            $table->timestamp('tanggal');
+            $table->timestamps();
         });
     }
 

@@ -29,7 +29,6 @@
                             <table class="table table-bordered">
                                 <thead>
                                 <tr>
-                                    <th>ID</th>
                                     <th>Nama Kategori</th>
                                     <th>Slug</th>
                                     <th>Tanggal</th>
@@ -39,10 +38,9 @@
                                 <tbody>
                                 @forelse ($kategori_pengumuman as $row)
                                     <tr>
-                                        <td>{{ $row->id}}</td>
                                         <td>{{ $row->nama_kategori}}</td>
                                         <td>{{ $row->slug}}</td>
-                                        <td>{{ $row->tanggal}}</td>
+                                        <td>{{ $row->updated_at}}</td>
                                         <td>
                                             <a href="{{route('kategoripengumuman.edit', $row->id) }}"
                                                class="btn btn-warning btn-sm">Edit</a>
