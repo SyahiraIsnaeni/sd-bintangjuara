@@ -133,13 +133,13 @@
 							</a>
 						</li>
                         <li class="nav-item">
-                            <a href="{{ route('kategorikegiatan.index') }}">
+                            <a href="{{ route('kategoriberita.index') }}">
                                 <i class="fas fa-list-ul"></i>
                                 <p>Kategori Berita</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('kategorikegiatan.index') }}">
+                            <a href="{{ route('kategoripengumuman.index') }}">
                                 <i class="fas fa-list-ul"></i>
                                 <p>Kategori Pengumuman</p>
                             </a>

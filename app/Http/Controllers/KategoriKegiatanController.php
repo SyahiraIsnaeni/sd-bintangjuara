@@ -10,6 +10,11 @@ use Illuminate\Support\Str;
 class KategoriKegiatanController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $kategori_kegiatan = KategoriKegiatan::all();
