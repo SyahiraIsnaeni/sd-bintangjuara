@@ -40,7 +40,7 @@ class KategoriPengumumanController extends Controller
 
     public function edit($id)
     {
-        $kategori_kegiatan = KategoriPengumuman::find($id);
+        $kategori_pengumuman = KategoriPengumuman::find($id);
 
         return view('backend.back.kategoripengumuman.edit', compact('kategori_pengumuman'));
     }
