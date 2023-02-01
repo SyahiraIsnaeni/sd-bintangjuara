@@ -74,7 +74,10 @@ class KegiatanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $kegiatan = Kegiatan::find($id);
+        $kategori_kegiatan = KategoriKegiatan::all();
+
+        return view('backend.back.kegiatan.edit', compact('kegiatan', 'kategori_kegiatan'));
     }
 
     /**
