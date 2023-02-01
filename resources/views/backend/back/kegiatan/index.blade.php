@@ -34,6 +34,7 @@
                                 <th>Judul</th>
                                 <th>Slug</th>
                                 <th>Kategori</th>
+                                <th>Gambar</th>
                                 <th style="width:20%">Action</th>
                             </tr>
                         </thead>
@@ -44,6 +45,7 @@
                                     <td>{{ $row->judul}}</td>
                                     <td>{{ $row->slug}}</td>
                                     <td>{{ $row->kategori_kegiatan->nama_kategori}}</td>
+                                    <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="100"></td>
                                     <td>
                                         <a href="{{route('kegiatan.edit', $row->id) }}" 
                                         class="btn btn-warning btn-sm">Edit</a>
@@ -58,6 +60,7 @@
 
                                         </form>
                                     </td>
+                                    
                                 </tr>
                             @empty
                                 <tr>

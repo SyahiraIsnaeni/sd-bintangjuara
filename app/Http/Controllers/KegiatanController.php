@@ -7,6 +7,7 @@ use App\Models\Kegiatan;
 use App\Models\KategoriKegiatan;
 use Illuminate\Support\Str;
 // use Iluminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class KegiatanController extends Controller
 {
@@ -60,11 +61,37 @@ class KegiatanController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+        if(empty($request->file('gambar_artikel'))) {
+        $kegiatan = Kegiatan::find($id);
+        $kegiatan->update([
+            'judul' => $request->judul,
+            'body' => $request->body,
+            'slug' => Str::slug($request->judul),
+            'kategori_kegiatan_id' => $request->kategori_kegiatan_id,
+            'is_active' => $request->is_active,
+        ]);
+        return redirect()->route('kegiatan.index')->with(['success'=> 'Data berhasil terupdate']);
+        } else {
+        $kegiatan = Kegiatan::find($id);
+        Storage::delete($kegiatan->gambar_artikel);
+        $kegiatan->update([
+            'judul' => $request->judul,
+            'body' => $request->body,
+            'slug' => Str::slug($request->judul),
+            'kategori_kegiatan_id' => $request->kategori_kegiatan_id,
+            'is_active' => $request->is_active,
+            'gambar_artikel' => $request->file('gambar_artikel')->store('kegiatan'),
+        ]);
+        return redirect()->route('kegiatan.index')->with(['success'=> 'Data berhasil terupdate']);
+        } 
     }
 
     public function destroy($id)
     {
-        //
+        $kegiatan = Kegiatan::find($id);
+        Storage::delete($kegiatan->gambar_artikel);
+        $kegiatan->delete();
+
+        return redirect()->route('kegiatan.index')->with(['success'=> 'Data berhasil dihapus']);
     }
 }

@@ -21,6 +21,7 @@
 				<div class="card-body">
                     <form method="post" action="{{ route('kegiatan.update', $kegiatan->id)}}" enctype="multipart/form-data">
 					@csrf
+					@method('PUT')
                     <div class="form-group">
 						<label for="kegiatan">Judul</label>
 						<input type="text" name="judul" class="form-control" id="text" value="{{$kegiatan->judul}}">
@@ -33,20 +34,32 @@
 						<label for="kegiatan">Kategori</label>
 						<select name="kategori_kegiatan_id" class="form-control">
                             @foreach ($kategori_kegiatan as $row)
-                            <option value="{{ $row-> id}}">{{$row->nama_kategori}}</option>
-                            @endforeach
+							@if ($row->id == $kegiatan->kategori_kegiatan_id)
+                            <option value={{$row->id}} selected='selected'> {{ $row->nama_kategori}} </option>
+                            @else
+							<option value="{{$row->id}}">
+								{{ $row->nama_kategori}}</option>
+							@endif
+							@endforeach
                         </select>
-				    </div>
-                    <div class="form-group">
-						<label for="gambar">Gambar Kegiatan</label>
-						<input type="file" name="gambar_artikel">
 				    </div>
                     <div class="form-group">
 						<label for="kegiatan">Status</label>
 						<select name="is_active" class="form-control">
-                            <option value="1">Terbitkan</option>
-                            <option value="0">Draf</option>
+                            <option value="1" {{$kegiatan->is_active == '1' ? 'selected' : '' }}>
+								Terbitkan
+							</option>
+                            <option value="0" {{$kegiatan->is_active == '0' ? 'selected' : '' }}>
+								Draf
+							</option>
                         </select>
+				    </div>
+					<div class="form-group">
+						<label for="gambar">Gambar Kegiatan</label>
+						<input type="file" name="gambar_artikel" class="form-control">
+						<br>
+						<label for="gambar">Gambar Saat Ini</label><br>
+						<img src="{{asset('uploads/'.$kegiatan->gambar_artikel) }}" width="100">
 				    </div>
 					<div class="form-group">
                     <button class="btn btn-primary btn-sm" type="submit"> Simpan </button>

@@ -56,9 +56,9 @@
                                         </form>
                                     </td>
                                 </tr>
-                            @empty
+                                @empty
                                 <tr>
-                                    <td>Data Masih Kosong</td>
+                                    <td colspan="6" class="text-center">Data Masih Kosong</td>
                                 </tr>
                             @endforelse
                         </tbody>

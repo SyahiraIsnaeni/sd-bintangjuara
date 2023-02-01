@@ -56,10 +56,10 @@
                                             </form>
                                         </td>
                                     </tr>
-                                @empty
-                                    <tr>
-                                        <td>Data Masih Kosong</td>
-                                    </tr>
+                                    @empty
+                                <tr>
+                                    <td colspan="6" class="text-center">Data Masih Kosong</td>
+                                </tr>
                                 @endforelse
                                 </tbody>
                             </table>
