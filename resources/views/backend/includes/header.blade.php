@@ -1,11 +1,13 @@
 <div class="main-header">
 			<!-- Logo Header -->
-			<div class="logo-header" data-background-color="blue">
+			<div class="logo-header " data-background-color="blue">
+			
 				
-				
-				<a href="{{ route('dashboard') }}" class="logo">
-					<img src="{{asset('back/img/logo.svg')}}" alt="navbar brand" class="navbar-brand">
-				</a>
+				<a href="{{ route('dashboard') }}" class="logo" >
+					<p>
+					<img src="{{asset('back/img/logo.png')}}" alt="navbar brand" class="navbar-brand"width="53" height="53" >ADMIN PAUD
+</p>
+					</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
 						<i class="icon-menu"></i>
