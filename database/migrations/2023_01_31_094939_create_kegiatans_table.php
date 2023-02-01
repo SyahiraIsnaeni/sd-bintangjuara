@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('gambar_artikel');
             $table->boolean('is_active');
             $table->integer('views');
-            $table->timestamps();
+            $table->timestamp('tanggal');
 
         });
     }
