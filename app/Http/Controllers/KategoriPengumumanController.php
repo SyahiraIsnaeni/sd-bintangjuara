@@ -8,6 +8,11 @@ use Illuminate\Support\Str;
 
 class KategoriPengumumanController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $kategori_pengumuman = KategoriPengumuman::all();

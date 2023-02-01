@@ -29,6 +29,3 @@ Route::resource('kategorikegiatan', KategoriKegiatanController::class);
 Route::resource('kategoriberita', KategoriBeritaController::class);
 Route::resource('kategoripengumuman', KategoriPengumumanController::class);
 Route::resource('kegiatan', KegiatanController::class);
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
