@@ -10,35 +10,17 @@
 								<span>
 									Hizrian
 									<span class="user-level">Administrator</span>
-									<span class="caret"></span>
+									
 								</span>
 							</a>
 							<div class="clearfix"></div>
 
-							<div class="collapse in" id="collapseExample">
-								<ul class="nav">
-									<li>
-										<a href="#profile">
-											<span class="link-collapse">My Profile</span>
-										</a>
-									</li>
-									<li>
-										<a href="#edit">
-											<span class="link-collapse">Edit Profile</span>
-										</a>
-									</li>
-									<li>
-										<a href="#settings">
-											<span class="link-collapse">Settings</span>
-										</a>
-									</li>
-								</ul>
-							</div>
+							
 						</div>
 					</div>
 					<ul class="nav nav-primary">
 						<li class="nav-item">
-							<a href="{{ route('dashboard') }}">
+							<a class="nav-link active" href="{{ route('dashboard') }}">
 								<i class="fas fa-home"></i>
 								<p>Dashboard</p>
 							</a>
@@ -47,7 +29,7 @@
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>
 							</span>
-							<h4 class="text-section">Components</h4>
+							<h4 class="text-section">Kategori</h4>
 						</li>
 
 						<!-- <li class="nav-item">
@@ -129,11 +111,23 @@
                                 <p>Kategori Pengumuman</p>
                             </a>
                         </li>
+						<li class="nav-section">
+							<span class="sidebar-mini-icon">
+								<i class="fa fa-ellipsis-h"></i>
+							</span>
+							<h4 class="text-section">Postingan</h4>
+						</li>
 						<li class="nav-item">
 							<a href="{{ route('kegiatan.index') }}">
 								<i class="fas fa-calendar"></i>
 								<p>Kegiatan</p>
 							</a>
+						</li>
+						<li class="nav-section">
+							<span class="sidebar-mini-icon">
+								<i class="fa fa-ellipsis-h"></i>
+							</span>
+							<h4 class="text-section">Profil Pengguna</h4>
 						</li>
 						<li class="nav-item">
 							<a href="{{ route('logout') }}"
