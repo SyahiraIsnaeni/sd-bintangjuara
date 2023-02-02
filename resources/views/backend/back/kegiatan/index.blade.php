@@ -51,7 +51,7 @@
                                         @else
                                         Draf
                                         @endif
-                                    </td>    
+                                    </td> 
                                     <td>
                                         <a href="{{route('kegiatan.edit', $row->id) }}" 
                                         class="btn btn-warning btn-sm">Edit</a>
