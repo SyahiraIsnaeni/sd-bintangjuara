@@ -25,7 +25,7 @@
 						<div class="col col-stats ml-3 ml-sm-0">
 							<div class="numbers">
 								<p class="card-category">User</p>
-								<h4 class="card-title">isi</h4>
+                                <div class="card-title">{{$admin->COUNT('id')}}</div>
 							</div>
 						</div>
 					</div>
@@ -44,7 +44,7 @@
 						<div class="col col-stats ml-3 ml-sm-0">
 							<div class="numbers">
 								<p class="card-category">Kegiatan</p>
-								<h4 class="card-title">70</h4>
+                                <div class="card-title">{{$kegiatan->COUNT('id')}}</div>
 							</div>
 						</div>
 					</div>
@@ -63,7 +63,7 @@
 						<div class="col col-stats ml-3 ml-sm-0">
 							<div class="numbers">
 								<p class="card-category">Berita</p>
-								<h4 class="card-title">80</h4>
+                                <div class="card-title">{{$berita->COUNT('id')}}</div>
 							</div>
 						</div>
 					</div>
@@ -83,7 +83,7 @@
 						<div class="col col-stats ml-3 ml-sm-0">
 							<div class="numbers">
 								<p class="card-category">Artikel</p>
-								<h4 class="card-title">90</h4>
+                                <div class="card-title">{{$artikel->COUNT('id')}}</div>
 							</div>
 						</div>
 					</div>
@@ -103,7 +103,7 @@
 						<div class="col col-stats ml-3 ml-sm-0">
 							<div class="numbers">
 								<p class="card-category">Pengumuman</p>
-								<h4 class="card-title">90</h4>
+                                <div class="card-title">{{$pengumuman->COUNT('id')}}</div>
 							</div>
 						</div>
 					</div>
@@ -185,6 +185,6 @@
 			</div>
 		</div>
 	</div>
-	
+
 </div>
 @endsection

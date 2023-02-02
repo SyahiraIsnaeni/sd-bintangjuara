@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pengumuman;
+use App\Models\Berita;
+use App\Models\Artikel;
+use App\Models\Kegiatan;
+use App\Models\User;
 
 class DashboardController extends Controller
 {
@@ -13,7 +18,12 @@ class DashboardController extends Controller
 
     public function index()
     {
-        return view('backend.back.dashboard');
+        $pengumuman = Pengumuman::all();
+        $berita = Berita::all();
+        $artikel = Artikel::all();
+        $kegiatan = Kegiatan::all();
+        $admin = User::all();
+        return view('backend.back.dashboard', compact('pengumuman','berita', 'artikel', 'kegiatan', 'admin'));
     }
 
     public function create()

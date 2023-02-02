@@ -15,7 +15,6 @@
                     <div class="card-header">
                         <div class="card-head-row">
                             <div class="card-title">Edit Pengumuman {{$pengumuman->judul}}</div>
-                            <a href="{{route('pengumuman.index')}}" class="btn btn-warning btn-sm ml-auto"> <i class="fas fa-undo"></i> Kembali </a>
                         </div>
                     </div>
                     <div class="card-body">
