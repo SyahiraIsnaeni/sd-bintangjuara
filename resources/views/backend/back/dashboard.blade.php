@@ -117,7 +117,6 @@
 						<div class="col-icon">
 							<div class="icon-big text-center icon-warning bubble-shadow-small">
 							<i class="fas fa-image"></i>
-
 							</div>
 						</div>
 						<div class="col col-stats ml-3 ml-sm-0">
@@ -138,10 +137,25 @@
 					<div class="card-head-row">
 						<div class="card-title">Draf Kegiatan</div>
 					</div>
+
 				</div>
 				<div class="card-body">
+                    <table class="table">
+                        <tbody>
+                        @forelse ($pengumuman as $row)
+                            <tr>
+                                <td><img src="{{asset('uploads/'.$row->gambar_pengumuman) }}" width="50"></td>
+                                <td>{{ $row->judul}}</td>
+                                <td>
+                                    <a href="{{route('pengumuman.edit', $row->id) }}"
+                                       class="btn btn-warning btn-sm">Edit</a>
+                                </td>
+                            </tr>
+                        @empty
 
-
+                        @endforelse
+                        </tbody>
+                    </table>
 				</div>
 			</div>
 		</div>
