@@ -29,7 +29,7 @@
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>
 							</span>
-							<h4 class="text-section">Kategori</h4>
+							<h4 class="text-section">Master Data</h4>
 						</li>
 
 						<!-- <li class="nav-item">
@@ -113,8 +113,8 @@
                             </a>
                         </li>
 						<li class="nav-item">
-                            <a href="{{ route('kategoripengumuman.index') }}">
-                                <i class="fas fa-list-ul"></i>
+                            <a href="{{ route('admin.index') }}">
+							<i class="fas fa-user"></i>
                                 <p>Admin</p>
                             </a>
                         </li>
@@ -132,20 +132,20 @@
 						</li>
                         <li class="nav-item">
                             <a href="{{ route('berita.index') }}">
-                                <i class="fas fa-calendar"></i>
+							<i class="fas fa-newspaper"></i>
                                 <p>Berita</p>
+                            </a>
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ route('artikel.index') }}">
+							<i class="fas fa-file"></i>
+                                <p>Artikel</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('pengumuman.index') }}">
-                                <i class="fas fa-calendar"></i>
+							<i class="fas fa-bullhorn"></i>
                                 <p>Pengumuman</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('artikel.index') }}">
-                                <i class="fas fa-calendar"></i>
-                                <p>Artikel</p>
                             </a>
                         </li>
 						<li class="nav-section">

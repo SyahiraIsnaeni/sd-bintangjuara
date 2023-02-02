@@ -131,7 +131,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-3">
+		<div class="col-md-6">
 			<div class="card full-height">
 				<div class="card-header">
 					<div class="card-head-row">
@@ -159,7 +159,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-6">
 			<div class="card full-height">
 				<div class="card-header">
 					<div class="card-head-row">
@@ -172,7 +172,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-6">
 			<div class="card full-height">
 				<div class="card-header">
 					<div class="card-head-row">
@@ -185,11 +185,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-6">
 			<div class="card full-height">
 				<div class="card-header">
 					<div class="card-head-row">
-						<div class="card-title">Draft Artikel</div>
+						<div class="card-title">Draft Pengumuman</div>
 					</div>
 				</div>
 				<div class="card-body">
