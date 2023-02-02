@@ -10,12 +10,12 @@
 								<span>
 									Hizrian
 									<span class="user-level">Administrator</span>
-									
+
 								</span>
 							</a>
 							<div class="clearfix"></div>
 
-							
+
 						</div>
 					</div>
 					<ul class="nav nav-primary">
@@ -123,6 +123,24 @@
 								<p>Kegiatan</p>
 							</a>
 						</li>
+                        <li class="nav-item">
+                            <a href="{{ route('berita.index') }}">
+                                <i class="fas fa-calendar"></i>
+                                <p>Berita</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('pengumuman.index') }}">
+                                <i class="fas fa-calendar"></i>
+                                <p>Pengumuman</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('artikel.index') }}">
+                                <i class="fas fa-calendar"></i>
+                                <p>Artikel</p>
+                            </a>
+                        </li>
 						<li class="nav-section">
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>

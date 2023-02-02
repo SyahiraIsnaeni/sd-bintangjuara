@@ -1,10 +1,10 @@
 @extends('backend.layouts.default')
 @section('content')
-    
+
 <div class="panel-header bg-primary-gradient">
 	<div class="page-inner py-5">
 		<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
-			
+
 		</div>
 	</div>
 </div>
@@ -61,10 +61,11 @@
 						<label for="gambar">Gambar Saat Ini</label><br>
 						<img src="{{asset('uploads/'.$kegiatan->gambar_artikel) }}" width="100">
 				    </div>
-					<div class="form-group">
-                    <button class="btn btn-primary btn-sm" type="submit"> Simpan </button>
-                    <button class="btn btn-danger btn-sm" type="reset"> Reset </button>
-					</div>
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-sm" type="submit"> Simpan </button>
+                            <button class="btn btn-danger btn-sm" type="reset"> Reset </button>
+                        </div>
+                    </form>
 				</div>
 			</div>
 		</div>
