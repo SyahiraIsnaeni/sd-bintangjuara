@@ -35,9 +35,9 @@
 	<!-- Atlantis JS -->
 	<script src="{{asset('back/js/atlantis.min.js')}}"></script>
 
-	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	<!-- Atlantis DEMO methods, don't include it in your project!
 	<script src="{{asset('back/js/setting-demo.js')}}"></script>
-	<script src="{{asset('back/js/demo.js')}}"></script>
+	<script src="{{asset('back/js/demo.js')}}"></script> -->
 	<script>
 		Circles.create({
 			id:'circles-1',

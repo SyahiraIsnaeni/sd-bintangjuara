@@ -19,8 +19,8 @@
 						</div>
 					</div>
 					<ul class="nav nav-primary">
-						<li class="nav-item">
-							<a class="nav-link active" href="{{ route('dashboard') }}">
+						<li class="nav-item active">
+							<a href="{{ route('dashboard') }}">
 								<i class="fas fa-home"></i>
 								<p>Dashboard</p>
 							</a>
@@ -97,6 +97,7 @@
 							<a href="{{ route('kategorikegiatan.index') }}">
 								<i class="fas fa-list-ul"></i>
 								<p>Kategori Kegiatan</p>
+								
 							</a>
 						</li>
                         <li class="nav-item">
@@ -109,6 +110,12 @@
                             <a href="{{ route('kategoripengumuman.index') }}">
                                 <i class="fas fa-list-ul"></i>
                                 <p>Kategori Pengumuman</p>
+                            </a>
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ route('kategoripengumuman.index') }}">
+                                <i class="fas fa-list-ul"></i>
+                                <p>Admin</p>
                             </a>
                         </li>
 						<li class="nav-section">
