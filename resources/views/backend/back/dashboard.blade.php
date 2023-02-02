@@ -144,11 +144,17 @@
                         <tbody>
                         @forelse ($kegiatan as $row)
                             <tr>
-                                <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="50"></td>
-                                <td>{{ $row->judul}}</td>
                                 <td>
-                                    <a href="{{route('kegiatan.edit', $row->id) }}"
-                                       class="btn btn-warning btn-sm">Edit</a>
+                                    @if ($row->is_active == '0')
+                                        <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="60"></td>
+                                        <td>{{ $row->judul}}</td>
+                                        <td>
+                                            <a href="{{route('kegiatan.edit', $row->id) }}"
+                                               class="btn btn-warning btn-sm">Edit</a>
+                                        </td>
+                                    @else
+
+                                    @endif
                                 </td>
                             </tr>
                         @empty
@@ -167,8 +173,28 @@
 					</div>
 				</div>
 				<div class="card-body">
+                    <table class="table">
+                        <tbody>
+                        @forelse ($berita as $row)
+                            <tr>
+                                <td>
+                                @if ($row->is_active == '0')
+                                    <td><img src="{{asset('uploads/'.$row->gambar_berita) }}" width="60"></td>
+                                    <td>{{ $row->judul}}</td>
+                                    <td>
+                                        <a href="{{route('berita.edit', $row->id) }}"
+                                           class="btn btn-warning btn-sm">Edit</a>
+                                    </td>
+                                    @else
 
+                                    @endif
+                                </td>
+                            </tr>
+                        @empty
 
+                        @endforelse
+                        </tbody>
+                    </table>
 				</div>
 			</div>
 		</div>
@@ -180,7 +206,28 @@
 					</div>
 				</div>
 				<div class="card-body">
+                    <table class="table">
+                        <tbody>
+                        @forelse ($artikel as $row)
+                            <tr>
+                                <td>
+                                @if ($row->is_active == '0')
+                                    <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="60"></td>
+                                    <td>{{ $row->judul}}</td>
+                                    <td>
+                                        <a href="{{route('artikel.edit', $row->id) }}"
+                                           class="btn btn-warning btn-sm">Edit</a>
+                                    </td>
+                                    @else
 
+                                    @endif
+                                    </td>
+                            </tr>
+                        @empty
+
+                        @endforelse
+                        </tbody>
+                    </table>
 
 				</div>
 			</div>
@@ -193,8 +240,28 @@
 					</div>
 				</div>
 				<div class="card-body">
+                    <table class="table">
+                        <tbody>
+                        @forelse ($pengumuman as $row)
+                            <tr>
+                                <td>
+                                @if ($row->is_active == '0')
+                                    <td><img src="{{asset('uploads/'.$row->gambar_pengumuman) }}" width="60"></td>
+                                    <td>{{ $row->judul}}</td>
+                                    <td>
+                                        <a href="{{route('pengumuman.edit', $row->id) }}"
+                                           class="btn btn-warning btn-sm">Edit</a>
+                                    </td>
+                                    @else
 
+                                    @endif
+                                    </td>
+                            </tr>
+                        @empty
 
+                        @endforelse
+                        </tbody>
+                    </table>
 				</div>
 			</div>
 		</div>
