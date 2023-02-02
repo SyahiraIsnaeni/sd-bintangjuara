@@ -2,11 +2,10 @@
 			<!-- Logo Header -->
 			<div class="logo-header " data-background-color="blue">
 			
-				
 				<a href="{{ route('dashboard') }}" class="logo" >
-					<p>
-					<img src="{{asset('back/img/logo.png')}}" alt="navbar brand" class="navbar-brand"width="53" height="53" >ADMIN PAUD
-</p>
+				<h2 class="text-white mt-1 fw-bold">
+					<img src="{{asset('back/img/logo.png')}}" alt="navbar brand" class="navbar-brand"width="51" height="51" >  Admin
+				</h2>
 					</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
@@ -40,20 +39,16 @@
 											<div class="avatar-lg"><img src="{{asset('back/img/profile.jpg')}}" alt="image profile" class="avatar-img rounded"></div>
 											<div class="u-text">
 												<h4>Hizrian</h4>
-												<p class="text-muted">hello@example.com</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+												<p class="text-muted">hello@example.com</p>
+												<a href="{{ route('logout') }}" class="btn btn-xs btn-secondary btn-sm" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+													 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+														@csrf
+                                    				 </form>
 											</div>
 										</div>
 									</li>
-									<li>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">My Profile</a>
-										<a class="dropdown-item" href="#">My Balance</a>
-										<a class="dropdown-item" href="#">Inbox</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">Account Setting</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">Logout</a>
-									</li>
+									
 								</div>
 							</ul>
 						</li>
@@ -61,4 +56,4 @@
 				</div>
 			</nav>
 			<!-- End Navbar -->
-		</div>
+</div>
