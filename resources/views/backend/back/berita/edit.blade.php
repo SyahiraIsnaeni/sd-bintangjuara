@@ -56,10 +56,10 @@
                             </div>
                             <div class="form-group">
                                 <label for="gambar">Gambar Berita</label>
-                                <input type="file" name="gambar_artikel" class="form-control">
+                                <input type="file" name="gambar_berita" class="form-control">
                                 <br>
                                 <label for="gambar">Gambar Saat Ini</label><br>
-                                <img src="{{asset('uploads/'.$berita->gambar_artikel) }}" width="100">
+                                <img src="{{asset('uploads/'.$berita->gambar_berita) }}" width="100">
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-primary btn-sm" type="submit"> Simpan </button>

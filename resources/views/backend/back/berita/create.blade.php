@@ -39,7 +39,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="gambar">Gambar Berita</label>
-                                <input type="file" name="gambar_artikel">
+                                <input type="file" name="gambar_berita">
                             </div>
                             <div class="form-group">
                                 <label for="berita">Status</label>

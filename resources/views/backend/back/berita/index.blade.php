@@ -44,7 +44,7 @@
                                         <td>{{ $row->judul}}</td>
                                         <td>{{ $row->slug}}</td>
                                         <td>{{ $row->kategori_berita->nama_kategori}}</td>
-                                        <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="100"></td>
+                                        <td><img src="{{asset('uploads/'.$row->gambar_berita) }}" width="100"></td>
                                         <td>
                                             @if ($row->is_active == '1')
                                                 Diterbitkan
