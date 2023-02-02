@@ -36,4 +36,4 @@ Route::resource('kegiatan', KegiatanController::class);
 Route::resource('berita', BeritaController::class);
 Route::resource('pengumuman', PengumumanController::class);
 Route::resource('artikel', ArtikelController::class);
-Route::resource('admin', UserController::class);
+Route::resource('user', UserController::class);

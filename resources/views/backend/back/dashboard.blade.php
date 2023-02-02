@@ -202,7 +202,7 @@
 			<div class="card full-height">
 				<div class="card-header">
 					<div class="card-head-row">
-						<div class="card-title">Draft Artikel</div>
+						<div class="card-title">Draf Artikel</div>
 					</div>
 				</div>
 				<div class="card-body">
@@ -236,7 +236,7 @@
 			<div class="card full-height">
 				<div class="card-header">
 					<div class="card-head-row">
-						<div class="card-title">Draft Pengumuman</div>
+						<div class="card-title">Draf Pengumuman</div>
 					</div>
 				</div>
 				<div class="card-body">

@@ -31,7 +31,6 @@
                                 <tr>
                                     <th>Nama Kategori</th>
                                     <th>Slug</th>
-                                    <th>Tanggal</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -40,7 +39,6 @@
                                     <tr>
                                         <td>{{ $row->nama_kategori}}</td>
                                         <td>{{ $row->slug}}</td>
-                                        <td>{{ $row->updated_at}}</td>
                                         <td>
                                             <a href="{{route('kategoriberita.edit', $row->id) }}"
                                                class="btn btn-warning btn-sm">Edit</a>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
@@ -16,21 +18,37 @@ class UserController extends Controller
         $user = User::all();
         return view('backend.back.user.index', compact('user'));
     }
-    protected function validator(array $data)
+    public function create()
     {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+
+
     }
-    protected function create(array $data)
+
+    public function store(Request $request)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+
+        $data = $request->all();
+        $data['name'] = Str::slug($request->judul);
+        $data['email'] = 0;
+        $data['gambar_pengumuman'] = $request->file('gambar_pengumuman')->store('pengumuman');
+
+        Pengumuman::create($data);
+
+        return redirect()->route('pengumuman.index')->with(['success'=> 'Data berhasil tersimpan']);
+    }
+
+    public function show($id)
+    {
+        //
+    }
+
+
+    public function destroy($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+
+        return redirect()->route('user.index')->with(['success'=> 'Data berhasil dihapus']);
     }
 }
 

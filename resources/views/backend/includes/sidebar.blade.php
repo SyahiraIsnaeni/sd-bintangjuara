@@ -97,7 +97,7 @@
 							<a href="{{ route('kategorikegiatan.index') }}">
 								<i class="fas fa-list-ul"></i>
 								<p>Kategori Kegiatan</p>
-								
+
 							</a>
 						</li>
                         <li class="nav-item">
@@ -113,7 +113,7 @@
                             </a>
                         </li>
 						<li class="nav-item">
-                            <a href="{{ route('admin.index') }}">
+                            <a href="{{ route('user.index') }}">
 							<i class="fas fa-user"></i>
                                 <p>Admin</p>
                             </a>
