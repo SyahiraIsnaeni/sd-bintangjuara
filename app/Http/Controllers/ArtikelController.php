@@ -23,8 +23,7 @@ class ArtikelController extends Controller
 
     public function create()
     {
-//        $kategori_berita = KategoriBerita::all();
-//        return view('backend.back.berita.create', compact('kategori_berita'));
+        return view('backend.back.artikel.create');
     }
 
     public function store(Request $request)
@@ -51,9 +50,8 @@ class ArtikelController extends Controller
     public function edit($id)
     {
         $artikel = Artikel::find($id);
-//        $kategori_artikel = KategoriBerita::all();
-//
-//        return view('backend.back.berita.edit', compact('berita', 'kategori_berita'));
+
+        return view('backend.back.artikel.edit', compact('artikel'));
     }
 
     public function update(Request $request, $id)
