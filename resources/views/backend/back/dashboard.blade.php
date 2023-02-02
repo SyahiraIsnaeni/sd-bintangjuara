@@ -142,12 +142,12 @@
 				<div class="card-body">
                     <table class="table">
                         <tbody>
-                        @forelse ($pengumuman as $row)
+                        @forelse ($kegiatan as $row)
                             <tr>
-                                <td><img src="{{asset('uploads/'.$row->gambar_pengumuman) }}" width="50"></td>
+                                <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="50"></td>
                                 <td>{{ $row->judul}}</td>
                                 <td>
-                                    <a href="{{route('pengumuman.edit', $row->id) }}"
+                                    <a href="{{route('kegiatan.edit', $row->id) }}"
                                        class="btn btn-warning btn-sm">Edit</a>
                                 </td>
                             </tr>
