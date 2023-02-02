@@ -530,7 +530,6 @@ class ComposerStaticInitd14b5c8c88edcf4e1021b18543533a43
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
-        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\KategoriBeritaController' => __DIR__ . '/../..' . '/app/Http/Controllers/KategoriBeritaController.php',
         'App\\Http\\Controllers\\KategoriKegiatanController' => __DIR__ . '/../..' . '/app/Http/Controllers/KategoriKegiatanController.php',
         'App\\Http\\Controllers\\KategoriPengumumanController' => __DIR__ . '/../..' . '/app/Http/Controllers/KategoriPengumumanController.php',

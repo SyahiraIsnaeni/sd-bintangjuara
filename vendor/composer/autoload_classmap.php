@@ -16,7 +16,6 @@ return array(
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\DashboardController' => $baseDir . '/app/Http/Controllers/DashboardController.php',
-    'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\KategoriBeritaController' => $baseDir . '/app/Http/Controllers/KategoriBeritaController.php',
     'App\\Http\\Controllers\\KategoriKegiatanController' => $baseDir . '/app/Http/Controllers/KategoriKegiatanController.php',
     'App\\Http\\Controllers\\KategoriPengumumanController' => $baseDir . '/app/Http/Controllers/KategoriPengumumanController.php',
