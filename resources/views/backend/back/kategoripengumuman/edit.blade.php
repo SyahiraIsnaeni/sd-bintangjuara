@@ -19,7 +19,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="{{ route('kategoripengumuman.update', $kategori_berita->id)}}">
+                        <form method="post" action="{{ route('kategoripengumuman.update', $kategori_pengumuman->id)}}">
                             @csrf
                             @method('PUT')
                             <div class="form-group">

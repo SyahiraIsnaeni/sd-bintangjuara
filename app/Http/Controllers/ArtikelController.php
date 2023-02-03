@@ -26,6 +26,11 @@ class ArtikelController extends Controller
         return view('backend.back.artikel.create');
     }
 
+    public function history()
+    {
+        return view('backend.back.artikel.history', compact('artikel'));
+    }
+
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -35,6 +40,7 @@ class ArtikelController extends Controller
         $data = $request->all();
         $data['slug'] = Str::slug($request->judul);
         $data['views'] = 0;
+        $data['delete'] = 'N';
         $data['gambar_artikel'] = $request->file('gambar_artikel')->store('artikel');
 
         Artikel::create($data);
@@ -81,6 +87,13 @@ class ArtikelController extends Controller
 
     public function destroy($id)
     {
+//
+//        $artikel = Artikel::find($id);
+//        $artikel->update([
+//            'judul' => 'N'
+//        ]);
+//
+//        return redirect()->route('artikel.history')->with(['success'=> 'Data berhasil dihapus']);
         $artikel = Artikel::find($id);
         Storage::delete($artikel->gambar_artikel);
         $artikel->delete();

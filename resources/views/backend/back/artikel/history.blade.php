@@ -14,11 +14,7 @@
                 <div class="card full-height">
                     <div class="card-header">
                         <div class="card-head-row">
-                            <div class="card-title">Data Artikel</div>
-{{--                            <a href="{{route('artikel.history')}}" class="btn btn-primary btn=sm ml-auto"> <i--}}
-{{--                                    class="fas fa-plus"></i>Riwayat Artikel </a>--}}
-                            <a href="{{route('artikel.create')}}" class="btn btn-primary btn=sm ml-auto"> <i
-                                    class="fas fa-plus"></i>Tambah Artikel </a>
+                            <div class="card-title">Data Riwayat Artikel</div>
                         </div>
                     </div>
                     <div class="card-body">
@@ -53,13 +49,11 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <a href="{{route('artikel.edit', $row->id) }}"
-                                               class="btn btn-warning btn-sm">Edit</a>
 
                                             <form action="{{route('artikel.destroy', $row->id)}}" method="post"
                                                   class="d-inline">
                                                 @csrf
-                                                @method('PUT')
+                                                @method('delete')
                                                 <button class="btn btn-danger btn-sm">
                                                     <i class="fas fa-trash"></i>
                                                 </button>
@@ -70,7 +64,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="6" class="text-center">Data Masih Kosong</td>
+                                        <td colspan="6" class="text-center">Tidak Ada Data Terhapus</td>
                                     </tr>
                                 @endforelse
                                 </tbody>
