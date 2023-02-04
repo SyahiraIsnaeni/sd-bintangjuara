@@ -42,8 +42,8 @@
 										<div class="user-box">
 											<div class="avatar-lg"><img src="{{asset('back/img/profile.jpg')}}" alt="image profile" class="avatar-img rounded"></div>
 											<div class="u-text">
-												<h4>Hizrian</h4>
-												<p class="text-muted">hello@example.com</p>
+												<h4>{{ Auth::user()->name }}</h4>
+												<p class="text-muted">{{ Auth::user()->email }}</p>
 												<a href="{{ route('logout') }}" class="btn btn-xs btn-secondary btn-sm" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
 													 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
