@@ -21,7 +21,9 @@
 
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="{{asset('back/css/bootstrap.min.css')}}">
-	<link rel="stylesheet" href="{{asset('back/css/atlantis.min.css')}}">
+	<!-- <link rel="stylesheet" href="{{asset('back/css/atlantis.min.css')}}"> -->
+	<link rel="stylesheet" href="{{asset('back/css/style.css')}}">
+	
 	
 
 	<!-- CSS Just for demo purpose, don't include it in your project
@@ -55,9 +57,9 @@
 	
 	</div>
 	<div class="main-panel">
-	<div class="content">
+		<div class="content">
 				@yield('content')
-	</div>
+		</div>
 	</div>
 	<footer class="footer">
 				<div class="container-fluid">
