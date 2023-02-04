@@ -10,6 +10,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\GaleriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,4 @@ Route::resource('berita', BeritaController::class);
 Route::resource('pengumuman', PengumumanController::class);
 Route::resource('artikel', ArtikelController::class);
 Route::resource('user', UserController::class);
+Route::resource('galeri', GaleriController::class);

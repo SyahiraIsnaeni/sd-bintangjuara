@@ -20,7 +20,7 @@
 					</div>
 					<ul class="nav nav-primary">
 						<li class="nav-item active">
-							<a href="{{ route('dashboard') }}">
+							<a class="nav-link active" href="{{ route('dashboard') }}">
 								<i class="fas fa-home"></i>
 								<p>Dashboard</p>
 							</a>
@@ -94,10 +94,10 @@
 							</div>
 						</li> -->
 						<li class="nav-item">
-							<a href="{{ route('kategorikegiatan.index') }}">
+							<a class="nav-link active" href="{{ route('kategorikegiatan.index') }}">
 								<i class="fas fa-list-ul"></i>
 								<p>Kategori Kegiatan</p>
-
+								
 							</a>
 						</li>
                         <li class="nav-item">
@@ -113,9 +113,15 @@
                             </a>
                         </li>
 						<li class="nav-item">
-                            <a href="{{ route('user.index') }}">
+                            <a href="{{ route('admin.index') }}">
 							<i class="fas fa-user"></i>
                                 <p>Admin</p>
+                            </a>
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ route('galeri.index') }}">
+							<i class="fas fa-image"></i>
+                                <p>Gambar</p>
                             </a>
                         </li>
 						<li class="nav-section">
@@ -125,7 +131,7 @@
 							<h4 class="text-section">Postingan</h4>
 						</li>
 						<li class="nav-item">
-							<a href="{{ route('kegiatan.index') }}">
+							<a class = "nav-link active" aria-current= "page" href="{{ route('kegiatan.index') }}">
 								<i class="fas fa-calendar"></i>
 								<p>Kegiatan</p>
 							</a>

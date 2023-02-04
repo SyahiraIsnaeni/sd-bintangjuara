@@ -1,6 +1,6 @@
 <footer class="footer">
 				<div class="container-fluid">
-					<nav class="pull-left">
+					<!-- <nav class="pull-left">
 						<ul class="nav">
 							<li class="nav-item">
 								<a class="nav-link" href="https://www.themekita.com">
@@ -17,10 +17,10 @@
 									Licenses
 								</a>
 							</li>
-						</ul>
+						</ul> -->
 					</nav>
 					<div class="copyright ml-auto">
-						2023, made with <i class="fa fa-heart heart text-danger"></i> by <a>AdminCantik</a>
+						Copyright © 2023 psbbintangjuara.com. All rights reserved
 					</div>				
 				</div>
 			</footer>
