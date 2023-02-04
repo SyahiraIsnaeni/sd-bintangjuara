@@ -41,7 +41,7 @@
                                         <td>{{ $row->name}}</td>
                                         <td>{{ $row->email}}</td>
                                         <td>
-                                            <form action="{{route('user.destroy', $row->id)}}" method="post"
+                                            <form action="#" method="post"
                                                   class="d-inline">
                                                 @csrf
                                                 @method('delete')
