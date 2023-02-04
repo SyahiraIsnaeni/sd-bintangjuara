@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<title>Dashboard</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no, mt-5' name='viewport' />
 	<link rel="icon" href="{{asset('back/img/icon.ico')}}" type="image/x-icon"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" crossorigin="anonymous">
 
 	<!-- Fonts and icons -->
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+	
 	<script src="{{ asset('back/js/plugin/webfont/webfont.min.js') }}"></script>
 	<script>
 		WebFont.load({
