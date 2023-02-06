@@ -15,7 +15,6 @@
 							</a>
 							<div class="clearfix"></div>
 
-
 						</div>
 					</div>
 					<ul class="nav nav-primary">
@@ -97,7 +96,7 @@
 							<a class="nav-link active" href="{{ route('kategorikegiatan.index') }}">
 								<i class="fas fa-list-ul"></i>
 								<p>Kategori Kegiatan</p>
-								
+
 							</a>
 						</li>
                         <li class="nav-item">

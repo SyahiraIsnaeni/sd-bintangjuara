@@ -40,7 +40,6 @@ class ArtikelController extends Controller
         $data = $request->all();
         $data['slug'] = Str::slug($request->judul);
         $data['views'] = 0;
-        $data['delete'] = 'N';
         $data['gambar_artikel'] = $request->file('gambar_artikel')->store('artikel');
 
         Artikel::create($data);
@@ -90,7 +89,7 @@ class ArtikelController extends Controller
 //
 //        $artikel = Artikel::find($id);
 //        $artikel->update([
-//            'judul' => 'N'
+//            'delete' => 'Y'
 //        ]);
 //
 //        return redirect()->route('artikel.history')->with(['success'=> 'Data berhasil dihapus']);

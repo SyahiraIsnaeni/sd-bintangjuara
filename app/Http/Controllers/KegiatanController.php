@@ -83,7 +83,7 @@ class KegiatanController extends Controller
             'gambar_artikel' => $request->file('gambar_artikel')->store('kegiatan'),
         ]);
         return redirect()->route('kegiatan.index')->with(['success'=> 'Data berhasil terupdate']);
-        } 
+        }
     }
 
     public function destroy($id)

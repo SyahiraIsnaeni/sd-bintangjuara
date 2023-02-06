@@ -31,7 +31,7 @@ class GaleriController extends Controller
         $this->validate($request, [
             'judul_gambar' => 'required|min:4',
         ]);
-        
+
         $data = $request->all();
         $data['slug'] = Str::slug($request->judul_gambar);
         $data['gambar_galeri'] = $request->file('gambar_galeri')->store('galeri');

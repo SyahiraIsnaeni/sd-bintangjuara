@@ -59,7 +59,7 @@
                                             <form action="{{route('artikel.destroy', $row->id)}}" method="post"
                                                   class="d-inline">
                                                 @csrf
-                                                @method('PUT')
+                                                @method('delete')
                                                 <button class="btn btn-danger btn-sm">
                                                     <i class="fas fa-trash"></i>
                                                 </button>
