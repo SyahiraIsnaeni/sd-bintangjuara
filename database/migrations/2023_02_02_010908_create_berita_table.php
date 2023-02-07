@@ -21,7 +21,6 @@ return new class extends Migration
             $table->integer('kategori_berita_id');
             $table->string('gambar_berita');
             $table->boolean('is_active');
-            $table->integer('views');
             $table->string('delete')->default('N');
             $table->timestamps();
         });

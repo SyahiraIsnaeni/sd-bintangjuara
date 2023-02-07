@@ -21,7 +21,6 @@ return new class extends Migration
             $table->integer('kategori_pengumuman_id');
             $table->string('gambar_pengumuman');
             $table->boolean('is_active');
-            $table->integer('views');
             $table->string('delete')->default('N');
             $table->timestamps();
         });

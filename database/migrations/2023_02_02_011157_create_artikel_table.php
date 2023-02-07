@@ -20,7 +20,6 @@ return new class extends Migration
             $table->text('body');
             $table->string('gambar_artikel');
             $table->boolean('is_active');
-            $table->integer('views');
             $table->string('delete')->default('N');
             $table->timestamps();
         });
