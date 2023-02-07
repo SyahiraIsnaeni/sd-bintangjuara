@@ -14,7 +14,7 @@
                 <div class="card full-height">
                     <div class="card-header">
                         <div class="card-head-row">
-                            <div class="card-title">Tambah Data Admin</div>
+                            <div class="card-title">Register Admin</div>
                         </div>
                     </div>
                     <div class="card-body">

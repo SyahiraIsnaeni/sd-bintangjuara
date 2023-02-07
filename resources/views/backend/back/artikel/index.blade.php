@@ -15,8 +15,6 @@
                     <div class="card-header">
                         <div class="card-head-row">
                             <div class="card-title">Data Artikel</div>
-{{--                            <a href="{{route('artikel.history')}}" class="btn btn-primary btn=sm ml-auto"> <i--}}
-{{--                                    class="fas fa-plus"></i>Riwayat Artikel </a>--}}
                             <a href="{{route('artikel.create')}}" class="btn btn-primary btn=sm ml-auto"> <i
                                     class="fas fa-plus"></i>Tambah Artikel </a>
                         </div>
@@ -42,30 +40,33 @@
                                 <tbody>
                                 @forelse ($artikel as $row)
                                     <tr>
-                                        <td>{{ $row->judul}}</td>
-                                        <td>{{ $row->slug}}</td>
-                                        <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="100"></td>
-                                        <td>
-                                            @if ($row->is_active == '1')
-                                                Diterbitkan
-                                            @else
-                                                Draf
-                                            @endif
-                                        </td>
-                                        <td>
-                                            <a href="{{route('artikel.edit', $row->id) }}"
-                                               class="btn btn-warning btn-sm">Edit</a>
+                                        @if ($row->delete == 'N')
+                                            <td>{{ $row->judul}}</td>
+                                            <td>{{ $row->slug}}</td>
+                                            <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="100"></td>
+                                            <td>
+                                                @if ($row->is_active == '1')
+                                                    Diterbitkan
+                                                @else
+                                                    Draf
+                                                @endif
+                                            </td>
+                                            <td>
+                                                <a href="{{route('artikel.edit', $row->id) }}"
+                                                   class="btn btn-warning btn-sm">Edit</a>
 
-                                            <form action="{{route('artikel.destroy', $row->id)}}" method="post"
-                                                  class="d-inline">
-                                                @csrf
-                                                @method('delete')
-                                                <button class="btn btn-danger btn-sm">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
+                                                <form action="{{route('artikel.destroy', $row->id)}}" method="post"
+                                                      class="d-inline">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-danger btn-sm">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
 
-                                            </form>
-                                        </td>
+                                                </form>
+                                            </td>
+                                        @else
+                                        @endif
 
                                     </tr>
                                 @empty

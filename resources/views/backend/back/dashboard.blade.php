@@ -119,12 +119,12 @@
 							<i class="fas fa-image"></i>
 							</div>
 						</div>
-						<div class="col col-stats ml-3 ml-sm-0">
-							<div class="numbers">
-								<p class="card-category">Gambar</p>
-								<h4 class="card-title">90</h4>
-							</div>
-						</div>
+                        <div class="col col-stats ml-3 ml-sm-0">
+                            <div class="numbers">
+                                <p class="card-category">Gambar</p>
+                                <div class="card-title">{{$galeri->COUNT('id')}}</div>
+                            </div>
+                        </div>
 					</div>
 				</div>
 			</div>

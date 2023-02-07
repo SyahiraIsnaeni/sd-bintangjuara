@@ -41,33 +41,37 @@
                                 <tbody>
                                 @forelse ($berita as $row)
                                     <tr>
-                                        <td>{{ $row->judul}}</td>
-                                        <td>{{ $row->slug}}</td>
-                                        <td>{{ $row->kategori_berita->nama_kategori}}</td>
-                                        <td><img src="{{asset('uploads/'.$row->gambar_berita) }}" width="100"></td>
-                                        <td>
-                                            @if ($row->is_active == '1')
-                                                Diterbitkan
-                                            @else
-                                                Draf
-                                            @endif
-                                        </td>
-                                        <td>
-                                            <a href="{{route('berita.edit', $row->id) }}"
-                                               class="btn btn-warning btn-sm">Edit</a>
+                                        @if ($row->delete == 'N')
+                                                <td>{{ $row->judul}}</td>
+                                                <td>{{ $row->slug}}</td>
+                                                <td>{{ $row->kategori_berita->nama_kategori}}</td>
+                                                <td><img src="{{asset('uploads/'.$row->gambar_berita) }}" width="100"></td>
+                                                <td>
+                                                    @if ($row->is_active == '1')
+                                                        Diterbitkan
+                                                    @else
+                                                        Draf
+                                                    @endif
+                                                </td>
+                                                <td>
+                                                    <a href="{{route('berita.edit', $row->id) }}"
+                                                       class="btn btn-warning btn-sm">Edit</a>
 
-                                            <form action="{{route('berita.destroy', $row->id)}}" method="post"
-                                                  class="d-inline">
-                                                @csrf
-                                                @method('delete')
-                                                <button class="btn btn-danger btn-sm">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
+                                                    <form action="{{route('berita.destroy', $row->id)}}" method="post"
+                                                          class="d-inline">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="btn btn-danger btn-sm">
+                                                            <i class="fas fa-trash"></i>
+                                                        </button>
 
-                                            </form>
-                                        </td>
+                                                    </form>
+                                                </td>
+                                        @else
 
+                                        @endif
                                     </tr>
+
                                 @empty
                                     <tr>
                                         <td colspan="6" class="text-center">Data Masih Kosong</td>

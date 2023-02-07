@@ -87,8 +87,9 @@ class PengumumanController extends Controller
     public function destroy($id)
     {
         $pengumuman = Pengumuman::find($id);
-        Storage::delete($pengumuman->gambar_pengumuman);
-        $pengumuman->delete();
+        $pengumuman->update([
+            'delete' => 'Y'
+        ]);
 
         return redirect()->route('pengumuman.index')->with(['success'=> 'Data berhasil dihapus']);
     }

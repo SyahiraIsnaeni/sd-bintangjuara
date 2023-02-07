@@ -11,6 +11,10 @@ use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\HistoryKegiatanController;
+use App\Http\Controllers\HistoryArtikelController;
+use App\Http\Controllers\HistoryBeritaController;
+use App\Http\Controllers\HistoryPengumumanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +43,7 @@ Route::resource('pengumuman', PengumumanController::class);
 Route::resource('artikel', ArtikelController::class);
 Route::resource('admin', UserController::class);
 Route::resource('galeri', GaleriController::class);
+Route::resource('history-kegiatan', HistoryKegiatanController::class);
+Route::resource('history-artikel', HistoryArtikelController::class);
+Route::resource('history-berita', HistoryBeritaController::class);
+Route::resource('history-pengumuman', HistoryPengumumanController::class);

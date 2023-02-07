@@ -89,8 +89,9 @@ class KegiatanController extends Controller
     public function destroy($id)
     {
         $kegiatan = Kegiatan::find($id);
-        Storage::delete($kegiatan->gambar_artikel);
-        $kegiatan->delete();
+        $kegiatan->update([
+            'delete' => 'Y'
+        ]);
 
         return redirect()->route('kegiatan.index')->with(['success'=> 'Data berhasil dihapus']);
     }

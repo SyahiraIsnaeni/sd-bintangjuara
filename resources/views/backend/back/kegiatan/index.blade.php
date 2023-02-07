@@ -1,10 +1,10 @@
 @extends('backend.layouts.default')
 @section('content')
-    
+
 <div class="panel-header bg-primary-gradient">
 	<div class="page-inner py-5">
 		<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
-			
+
 		</div>
 	</div>
 </div>
@@ -15,20 +15,20 @@
 				<div class="card-header">
 					<div class="card-head-row">
 						<div class="card-title">Data Kegiatan</div>
-                        <a href="{{route('kegiatan.create')}}" class="btn btn-primary btn=sm ml-auto"> <i 
+                        <a href="{{route('kegiatan.create')}}" class="btn btn-primary btn=sm ml-auto"> <i
                         class="fas fa-plus"></i>Tambah Kegiatan </a>
 					</div>
 				</div>
 				<div class="card-body">
                 <div class="mt-4">
-                    
+
 
 					@if(Session::has('success'))
                         <div class="alert alert-primary">
                             {{ Session('success')}}
                         </div>
                     @endif
-                 
+
 					    <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -43,33 +43,38 @@
                             <tbody>
                             @forelse ($kegiatan as $row)
                                 <tr>
-                                    <td>{{ $row->judul}}</td>
-                                    <td>{{ $row->slug}}</td>
-                                    <td>{{ $row->kategori_kegiatan->nama_kategori}}</td>
-                                    <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="100"></td>
-                                    <td>
-                                        @if ($row->is_active == '1')
-                                        Diterbitkan
-                                        @else
-                                        Draf
-                                        @endif
-                                    </td> 
-                                    <td>
-                                        <a href="{{route('kegiatan.edit', $row->id) }}" 
-                                        class="btn btn-warning btn-sm">Edit</a>
+                                    @if ($row->delete == 'N')
+                                            <td>{{ $row->judul}}</td>
+                                            <td>{{ $row->slug}}</td>
+                                            <td>{{ $row->kategori_kegiatan->nama_kategori}}</td>
+                                            <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="100"></td>
+                                            <td>
+                                                @if ($row->is_active == '1')
+                                                    Diterbitkan
+                                                @else
+                                                    Draf
+                                                @endif
+                                            </td>
+                                            <td>
+                                                <a href="{{route('kegiatan.edit', $row->id) }}"
+                                                   class="btn btn-warning btn-sm">Edit</a>
 
-                                        <form action="{{route('kegiatan.destroy', $row->id)}}" method="post"
-                                        class="d-inline">
-                                        @csrf
-                                        @method('delete')
-                                        <button class="btn btn-danger btn-sm">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
+                                                <form action="{{route('kegiatan.destroy', $row->id)}}" method="post"
+                                                      class="d-inline">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-danger btn-sm">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
 
-                                        </form>
-                                    </td>
-                                    
+                                                </form>
+                                            </td>
+                                    @else
+
+                                    @endif
+
                                 </tr>
+
                             @empty
                                 <tr>
                                     <td colspan="6" class="text-center">Data Masih Kosong</td>
@@ -77,7 +82,7 @@
                             @endforelse
                          </tbody>
                         </table>
-                    
+
 				</div>
 
 				</div>

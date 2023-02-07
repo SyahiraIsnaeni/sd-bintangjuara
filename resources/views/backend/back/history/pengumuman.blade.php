@@ -14,9 +14,7 @@
                 <div class="card full-height">
                     <div class="card-header">
                         <div class="card-head-row">
-                            <div class="card-title">Data Pengumuman</div>
-                            <a href="{{route('pengumuman.create')}}" class="btn btn-primary btn=sm ml-auto"> <i
-                                    class="fas fa-plus"></i>Tambah Pengumuman </a>
+                            <div class="card-title">Data Riwayat Pengumuman</div>
                         </div>
                     </div>
                     <div class="card-body">
@@ -32,32 +30,26 @@
                                 <tr>
                                     <th>Judul</th>
                                     <th>Slug</th>
-                                    <th>Kategori</th>
-                                    <th>Gambar</th>
                                     <th>Status</th>
                                     <th style="width:20%">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @forelse ($pengumuman as $row)
-                                    @if ($row->delete == 'N')
-                                        <tr>
+                                    <tr>
+                                        @if ($row->delete == 'Y')
                                             <td>{{ $row->judul}}</td>
                                             <td>{{ $row->slug}}</td>
-                                            <td>{{ $row->kategori_pengumuman->nama_kategori}}</td>
-                                            <td><img src="{{asset('uploads/'.$row->gambar_pengumuman) }}" width="100"></td>
                                             <td>
-                                                @if ($row->is_active == 'N')
+                                                @if ($row->is_active == '1')
                                                     Diterbitkan
                                                 @else
                                                     Draf
                                                 @endif
                                             </td>
                                             <td>
-                                                <a href="{{route('pengumuman.edit', $row->id) }}"
-                                                   class="btn btn-warning btn-sm">Edit</a>
 
-                                                <form action="{{route('pengumuman.destroy', $row->id)}}" method="post"
+                                                <form action="{{route('history-pengumuman.destroy', $row->id)}}" method="post"
                                                       class="d-inline">
                                                     @csrf
                                                     @method('DELETE')
@@ -67,13 +59,13 @@
 
                                                 </form>
                                             </td>
+                                        @else
+                                        @endif
 
-                                        </tr>
-                                    @else
-                                    @endif
+                                    </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="6" class="text-center">Data Masih Kosong</td>
+                                        <td colspan="6" class="text-center">Tidak Ada Riwayat Data</td>
                                     </tr>
                                 @endforelse
                                 </tbody>

@@ -12,7 +12,7 @@ class Berita extends Model
     protected $table = 'berita';
 
     protected $fillable = [
-        'judul', 'slug', 'body', 'kategori_berita_id', 'gambar_berita', 'is_active', 'views'
+        'judul', 'slug', 'body', 'kategori_berita_id', 'gambar_berita', 'is_active', 'views', 'delete'
     ];
 
     protected $hidden = [];

@@ -14,7 +14,7 @@
                 <div class="card full-height">
                     <div class="card-header">
                         <div class="card-head-row">
-                            <div class="card-title">Data Riwayat Artikel</div>
+                            <div class="card-title">Data Riwayat Berita</div>
                         </div>
                     </div>
                     <div class="card-body">
@@ -30,41 +30,42 @@
                                 <tr>
                                     <th>Judul</th>
                                     <th>Slug</th>
-                                    <th>Gambar</th>
                                     <th>Status</th>
                                     <th style="width:20%">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @forelse ($artikel as $row)
+                                @forelse ($berita as $row)
                                     <tr>
-                                        <td>{{ $row->judul}}</td>
-                                        <td>{{ $row->slug}}</td>
-                                        <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="100"></td>
-                                        <td>
-                                            @if ($row->is_active == '1')
-                                                Diterbitkan
-                                            @else
-                                                Draf
-                                            @endif
-                                        </td>
-                                        <td>
+                                        @if ($row->delete == 'Y')
+                                            <td>{{ $row->judul}}</td>
+                                            <td>{{ $row->slug}}</td>
+                                            <td>
+                                                @if ($row->is_active == '1')
+                                                    Diterbitkan
+                                                @else
+                                                    Draf
+                                                @endif
+                                            </td>
+                                            <td>
 
-                                            <form action="{{route('artikel.destroy', $row->id)}}" method="post"
-                                                  class="d-inline">
-                                                @csrf
-                                                @method('delete')
-                                                <button class="btn btn-danger btn-sm">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
+                                                <form action="{{route('history-berita.destroy', $row->id)}}" method="post"
+                                                      class="d-inline">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-danger btn-sm">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
 
-                                            </form>
-                                        </td>
+                                                </form>
+                                            </td>
+                                        @else
+                                        @endif
 
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="6" class="text-center">Tidak Ada Data Terhapus</td>
+                                        <td colspan="6" class="text-center">Tidak Ada Riwayat Data</td>
                                     </tr>
                                 @endforelse
                                 </tbody>

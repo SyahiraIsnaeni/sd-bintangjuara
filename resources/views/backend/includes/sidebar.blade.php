@@ -153,6 +153,36 @@
                                 <p>Pengumuman</p>
                             </a>
                         </li>
+                        <li class="nav-section">
+							<span class="sidebar-mini-icon">
+								<i class="fa fa-ellipsis-h"></i>
+							</span>
+                            <h4 class="text-section">Riwayat Data</h4>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('history-kegiatan.index') }}">
+                                <i class="fas fa-bullhorn"></i>
+                                <p>Riwayat Kegiatan</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('history-berita.index') }}">
+                                <i class="fas fa-bullhorn"></i>
+                                <p>Riwayat Berita</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('history-artikel.index') }}">
+                                <i class="fas fa-bullhorn"></i>
+                                <p>Riwayat Artikel</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('history-pengumuman.index') }}">
+                                <i class="fas fa-bullhorn"></i>
+                                <p>Riwayat Pengumuman</p>
+                            </a>
+                        </li>
 						<li class="nav-section">
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>

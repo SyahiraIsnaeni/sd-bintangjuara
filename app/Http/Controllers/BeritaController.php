@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\KategoriBerita;
 use App\Models\Berita;
+use App\Models\Kegiatan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -87,8 +88,9 @@ class BeritaController extends Controller
     public function destroy($id)
     {
         $berita = Berita::find($id);
-        Storage::delete($berita->gambar_berita);
-        $berita->delete();
+        $berita->update([
+            'delete' => 'Y'
+        ]);
 
         return redirect()->route('berita.index')->with(['success'=> 'Data berhasil dihapus']);
     }

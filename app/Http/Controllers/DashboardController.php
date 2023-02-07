@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Galeri;
 use Illuminate\Http\Request;
 use App\Models\Pengumuman;
 use App\Models\Berita;
@@ -23,7 +24,8 @@ class DashboardController extends Controller
         $artikel = Artikel::all();
         $kegiatan = Kegiatan::all();
         $admin = User::all();
-        return view('backend.back.dashboard', compact('pengumuman','berita', 'artikel', 'kegiatan', 'admin'));
+        $galeri = Galeri::all();
+        return view('backend.back.dashboard', compact('pengumuman','berita', 'artikel', 'kegiatan', 'admin', 'galeri'));
     }
 
     public function create()

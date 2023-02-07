@@ -28,7 +28,7 @@ class ArtikelController extends Controller
 
     public function history()
     {
-        return view('backend.back.artikel.history', compact('artikel'));
+
     }
 
     public function store(Request $request)
@@ -47,9 +47,10 @@ class ArtikelController extends Controller
         return redirect()->route('artikel.index')->with(['success'=> 'Data berhasil tersimpan']);
     }
 
-    public function show($id)
+    public function show()
     {
-        //
+        $artikel = Artikel::all();
+        return view('backend.back.artikel.history', compact('artikel'));
     }
 
     public function edit($id)
@@ -86,16 +87,11 @@ class ArtikelController extends Controller
 
     public function destroy($id)
     {
-//
-//        $artikel = Artikel::find($id);
-//        $artikel->update([
-//            'delete' => 'Y'
-//        ]);
-//
-//        return redirect()->route('artikel.history')->with(['success'=> 'Data berhasil dihapus']);
+
         $artikel = Artikel::find($id);
-        Storage::delete($artikel->gambar_artikel);
-        $artikel->delete();
+        $artikel->update([
+            'delete' => 'Y'
+        ]);
 
         return redirect()->route('artikel.index')->with(['success'=> 'Data berhasil dihapus']);
     }
