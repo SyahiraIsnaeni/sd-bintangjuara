@@ -41,7 +41,7 @@
                                         <td>{{ $row->slug}}</td>
                                         <td>
                                             <a href="{{route('kategoripengumuman.edit', $row->id) }}"
-                                               class="btn btn-warning btn-sm">Edit</a>
+                                               class="btn btn-warning btn-sm">Ubah</a>
 
                                             <form action="{{route('kategoripengumuman.destroy', $row->id)}}" method="post"
                                                   class="d-inline">

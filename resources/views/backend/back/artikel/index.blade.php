@@ -53,7 +53,7 @@
                                             </td>
                                             <td>
                                                 <a href="{{route('artikel.edit', $row->id) }}"
-                                                   class="btn btn-warning btn-sm">Edit</a>
+                                                   class="btn btn-warning btn-sm">Ubah</a>
 
                                                 <form action="{{route('artikel.destroy', $row->id)}}" method="post"
                                                       class="d-inline">

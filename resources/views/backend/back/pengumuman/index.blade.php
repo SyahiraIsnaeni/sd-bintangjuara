@@ -55,7 +55,7 @@
                                             </td>
                                             <td>
                                                 <a href="{{route('pengumuman.edit', $row->id) }}"
-                                                   class="btn btn-warning btn-sm">Edit</a>
+                                                   class="btn btn-warning btn-sm">Ubah</a>
 
                                                 <form action="{{route('pengumuman.destroy', $row->id)}}" method="post"
                                                       class="d-inline">

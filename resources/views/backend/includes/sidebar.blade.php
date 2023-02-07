@@ -9,7 +9,7 @@
 							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
 								{{ Auth::user()->name }}
-									<span class="user-level">Admin SD</span>
+									<span class="user-level">{{ Auth::user()->email }}</span>
 
 								</span>
 							</a>
@@ -161,25 +161,25 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('history-kegiatan.index') }}">
-                                <i class="fas fa-bullhorn"></i>
+							<i class="fas fa-recycle"></i>
                                 <p>Riwayat Kegiatan</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('history-berita.index') }}">
-                                <i class="fas fa-bullhorn"></i>
+							<i class="fas fa-recycle"></i>
                                 <p>Riwayat Berita</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('history-artikel.index') }}">
-                                <i class="fas fa-bullhorn"></i>
+							<i class="fas fa-recycle"></i>
                                 <p>Riwayat Artikel</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('history-pengumuman.index') }}">
-                                <i class="fas fa-bullhorn"></i>
+							<i class="fas fa-recycle"></i>
                                 <p>Riwayat Pengumuman</p>
                             </a>
                         </li>
