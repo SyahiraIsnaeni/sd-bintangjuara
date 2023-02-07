@@ -15,7 +15,7 @@
                     <div class="card-header">
                         <div class="card-head-row">
                             <div class="card-title">Data Admin</div>
-                            <a href="{{route('user.create')}}" class="btn btn-primary btn=sm ml-auto"> <i
+                            <a href="#" class="btn btn-primary btn=sm ml-auto"> <i
                                     class="fas fa-plus"></i>Tambah Admin </a>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                                         <td>{{ $row->name}}</td>
                                         <td>{{ $row->email}}</td>
                                         <td>
-                                            <form action="#" method="post"
+                                            <form action="{{route('admin.destroy', $row->id)}}" method="post"
                                                   class="d-inline">
                                                 @csrf
                                                 @method('delete')

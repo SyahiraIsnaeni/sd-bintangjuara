@@ -12,7 +12,7 @@ class UserController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('guest');
     }
     public function index()
     {
@@ -40,7 +40,7 @@ class UserController extends Controller
             'password' => Hash::make($request['password']),
         ]);
 
-        return redirect()->route('user.index')->with(['success'=> 'Data berhasil tersimpan']);
+        return redirect()->route('admin.index')->with(['success'=> 'Data berhasil tersimpan']);
     }
 
     public function show($id)
@@ -54,7 +54,7 @@ class UserController extends Controller
         $user = User::find($id);
         $user->delete();
 
-        return redirect()->route('user.index')->with(['success'=> 'Data berhasil dihapus']);
+        return redirect()->route('admin.index')->with(['success'=> 'Data berhasil dihapus']);
     }
 }
 

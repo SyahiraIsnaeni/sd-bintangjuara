@@ -1,4 +1,4 @@
-@extends('backend.layouts.default')
+@extends('backend.layouts.app')
 
 @section('content')
     <div class="panel-header bg-primary-gradient">

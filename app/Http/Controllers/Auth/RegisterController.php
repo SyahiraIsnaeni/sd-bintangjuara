@@ -24,11 +24,11 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
-    protected $redirectTo = RouteServiceProvider::DASHBOARD;
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('guest');
     }
 
     protected function validator(array $data)

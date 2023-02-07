@@ -15,11 +15,11 @@
                     <div class="card-header">
                         <div class="card-head-row">
                             <div class="card-title">Form Admin</div>
-                            <a href="{{route('user.index')}}" class="btn btn-warning btn-sm ml-auto"> <i class="fas fa-undo"></i> Kembali </a>
+                            <a href="{{route('admin.index')}}" class="btn btn-warning btn-sm ml-auto"> <i class="fas fa-undo"></i> Kembali </a>
                         </div>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('user.store')}}">
+                        <form method="POST" action="{{ route('admin.store')}}">
                             @csrf
 
                             <div class="row mb-3">
