@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -20,21 +21,26 @@ class UserController extends Controller
     }
     public function create()
     {
-
-
+        $user = User::all();
+        return view('backend.back.user.create', compact('user'));
     }
 
     public function store(Request $request)
     {
 
-        $data = $request->all();
-        $data['name'] = Str::slug($request->judul);
-        $data['email'] = 0;
-        $data['gambar_pengumuman'] = $request->file('gambar_pengumuman')->store('pengumuman');
+        $validate = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
 
-        Pengumuman::create($data);
+        User::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
 
-        return redirect()->route('pengumuman.index')->with(['success'=> 'Data berhasil tersimpan']);
+        return redirect()->route('user.index')->with(['success'=> 'Data berhasil tersimpan']);
     }
 
     public function show($id)

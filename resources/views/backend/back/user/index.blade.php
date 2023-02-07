@@ -15,7 +15,7 @@
                     <div class="card-header">
                         <div class="card-head-row">
                             <div class="card-title">Data Admin</div>
-                            <a href="{{ route('register') }}" class="btn btn-primary btn=sm ml-auto"> <i
+                            <a href="{{route('user.create')}}" class="btn btn-primary btn=sm ml-auto"> <i
                                     class="fas fa-plus"></i>Tambah Admin </a>
                         </div>
                     </div>
