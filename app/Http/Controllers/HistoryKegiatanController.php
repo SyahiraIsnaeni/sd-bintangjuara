@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kegiatan;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class HistoryKegiatanController extends Controller
 {
@@ -22,6 +23,7 @@ class HistoryKegiatanController extends Controller
         $kegiatan = Kegiatan::find($id);
         $kegiatan->delete();
 
-        return redirect()->route('history-kegiatan.index')->with(['success'=> 'Data berhasil dihapus']);
+        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        return redirect()->route('history-kegiatan.index');
     }
 }

@@ -8,6 +8,7 @@ use App\Models\KategoriKegiatan;
 use Illuminate\Support\Str;
 // use Iluminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class KegiatanController extends Controller
 {
@@ -43,7 +44,8 @@ class KegiatanController extends Controller
 
         Kegiatan::create($data);
 
-        return redirect()->route('kegiatan.index')->with(['success'=> 'Data berhasil tersimpan']);
+        Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+        return redirect()->route('kegiatan.index');
     }
 
     public function show($id)
@@ -70,7 +72,9 @@ class KegiatanController extends Controller
             'kategori_kegiatan_id' => $request->kategori_kegiatan_id,
             'is_active' => $request->is_active,
         ]);
-        return redirect()->route('kegiatan.index')->with(['success'=> 'Data berhasil terupdate']);
+
+        Alert::info('Diubah', 'Data Berhasil Terubah');
+        return redirect()->route('kegiatan.index');
         } else {
         $kegiatan = Kegiatan::find($id);
         Storage::delete($kegiatan->gambar_artikel);
@@ -82,7 +86,9 @@ class KegiatanController extends Controller
             'is_active' => $request->is_active,
             'gambar_artikel' => $request->file('gambar_artikel')->store('kegiatan'),
         ]);
-        return redirect()->route('kegiatan.index')->with(['success'=> 'Data berhasil terupdate']);
+
+        Alert::info('Diubah', 'Data Berhasil Terubah');
+        return redirect()->route('kegiatan.index');
         }
     }
 
@@ -93,6 +99,7 @@ class KegiatanController extends Controller
             'delete' => 'Y'
         ]);
 
-        return redirect()->route('kegiatan.index')->with(['success'=> 'Data berhasil dihapus']);
+        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        return redirect()->route('kegiatan.index');
     }
 }

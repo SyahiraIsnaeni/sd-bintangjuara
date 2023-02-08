@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\KategoriBerita;
 use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class KategoriBeritaController extends Controller
 {
@@ -35,7 +36,8 @@ class KategoriBeritaController extends Controller
             'slug' => Str::slug($request->nama_kategori)
         ]);
 
-        return redirect()->route('kategoriberita.index')->with(['success'=> 'Data berhasil tersimpan']);
+        Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+        return redirect()->route('kategoriberita.index');
     }
 
     public function show($id)
@@ -58,7 +60,8 @@ class KategoriBeritaController extends Controller
         $kategori_berita = KategoriBerita::findOrFail($id);
         $kategori_berita->update($data);
 
-        return redirect()->route('kategoriberita.index')->with(['update'=> 'Data berhasil diperbarui']);
+        Alert::info('Diubah', 'Data Berhasil Terubah');
+        return redirect()->route('kategoriberita.index');
     }
 
     public function destroy($id)
@@ -66,6 +69,7 @@ class KategoriBeritaController extends Controller
         $kategori_berita = KategoriBerita::find($id);
         $kategori_berita->delete();
 
-        return redirect()->route('kategoriberita.index')->with(['success'=> 'Data berhasil dihapus']);
+        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        return redirect()->route('kategoriberita.index');
     }
 }

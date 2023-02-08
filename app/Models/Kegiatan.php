@@ -12,7 +12,7 @@ class Kegiatan extends Model
     protected $table = 'kegiatan';
 
     protected $fillable = [
-        'judul', 'slug', 'body', 'kategori_kegiatan_id', 'gambar_artikel', 'is_active', 'views', 'delete'
+        'judul', 'slug', 'body', 'kategori_kegiatan_id', 'gambar_artikel', 'is_active', 'delete'
     ];
 
     protected $hidden = [];

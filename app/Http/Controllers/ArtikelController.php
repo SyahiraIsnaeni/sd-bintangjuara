@@ -6,6 +6,7 @@ use App\Models\Artikel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ArtikelController extends Controller
 {
@@ -44,7 +45,8 @@ class ArtikelController extends Controller
 
         Artikel::create($data);
 
-        return redirect()->route('artikel.index')->with(['success'=> 'Data berhasil tersimpan']);
+        Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+        return redirect()->route('artikel.index');
     }
 
     public function show()
@@ -70,7 +72,8 @@ class ArtikelController extends Controller
                 'slug' => Str::slug($request->judul),
                 'is_active' => $request->is_active,
             ]);
-            return redirect()->route('artikel.index')->with(['success'=> 'Data berhasil terupdate']);
+            Alert::info('Diubah', 'Data Berhasil Terubah');
+            return redirect()->route('artikel.index');
         } else {
             $artikel = Artikel::find($id);
             Storage::delete($artikel->gambar_artikel);
@@ -81,7 +84,9 @@ class ArtikelController extends Controller
                 'is_active' => $request->is_active,
                 'gambar_artikel' => $request->file('gambar_artikel')->store('artikel'),
             ]);
-            return redirect()->route('artikel.index')->with(['success'=> 'Data berhasil terupdate']);
+
+            Alert::info('Diubah', 'Data Berhasil Terubah');
+            return redirect()->route('artikel.index');
         }
     }
 
@@ -93,6 +98,7 @@ class ArtikelController extends Controller
             'delete' => 'Y'
         ]);
 
-        return redirect()->route('artikel.index')->with(['success'=> 'Data berhasil dihapus']);
+        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        return redirect()->route('artikel.index');
     }
 }
