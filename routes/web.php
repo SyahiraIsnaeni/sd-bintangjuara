@@ -31,19 +31,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-Route::resource('kategorikegiatan', KategoriKegiatanController::class);
-Route::resource('kategoriberita', KategoriBeritaController::class);
-Route::resource('kategoripengumuman', KategoriPengumumanController::class);
-Route::resource('kegiatan', KegiatanController::class);
-Route::resource('berita', BeritaController::class);
-Route::resource('pengumuman', PengumumanController::class);
-Route::resource('artikel', ArtikelController::class);
-Route::resource('admin', UserController::class);
-Route::resource('galeri', GaleriController::class);
-Route::resource('history-kegiatan', HistoryKegiatanController::class);
-Route::resource('history-artikel', HistoryArtikelController::class);
-Route::resource('history-berita', HistoryBeritaController::class);
-Route::resource('history-pengumuman', HistoryPengumumanController::class);
+Route::group(['middleware' => 'revalidate'], function(){
+    Auth::routes();
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('kategorikegiatan', KategoriKegiatanController::class);
+    Route::resource('kategoriberita', KategoriBeritaController::class);
+    Route::resource('kategoripengumuman', KategoriPengumumanController::class);
+    Route::resource('kegiatan', KegiatanController::class);
+    Route::resource('berita', BeritaController::class);
+    Route::resource('pengumuman', PengumumanController::class);
+    Route::resource('artikel', ArtikelController::class);
+    Route::resource('admin', UserController::class);
+    Route::resource('galeri', GaleriController::class);
+    Route::resource('history-kegiatan', HistoryKegiatanController::class);
+    Route::resource('history-artikel', HistoryArtikelController::class);
+    Route::resource('history-berita', HistoryBeritaController::class);
+    Route::resource('history-pengumuman', HistoryPengumumanController::class);
+});
