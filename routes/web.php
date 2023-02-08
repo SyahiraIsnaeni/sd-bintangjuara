@@ -47,3 +47,4 @@ Route::resource('history-kegiatan', HistoryKegiatanController::class);
 Route::resource('history-artikel', HistoryArtikelController::class);
 Route::resource('history-berita', HistoryBeritaController::class);
 Route::resource('history-pengumuman', HistoryPengumumanController::class);
+Route::get('/index', [\App\Http\Controllers\FrontendController::class, 'index']);
