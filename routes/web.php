@@ -27,12 +27,14 @@ use App\Http\Controllers\HistoryPengumumanController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::group(['middleware' => 'revalidate'], function(){
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
     Auth::routes();
+    
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('kategorikegiatan', KategoriKegiatanController::class);
     Route::resource('kategoriberita', KategoriBeritaController::class);
