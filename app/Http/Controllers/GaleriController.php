@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Galeri;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class GaleriController extends Controller
 {
@@ -38,7 +39,8 @@ class GaleriController extends Controller
 
         Galeri::create($data);
 
-        return redirect()->route('galeri.index')->with(['success'=> 'Data berhasil tersimpan']);
+        Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+        return redirect()->route('galeri.index');
     }
 
     public function show($id)
@@ -62,6 +64,7 @@ class GaleriController extends Controller
         Storage::delete($galeri->gambar_galeri);
         $galeri->delete();
 
-        return redirect()->route('galeri.index')->with(['success'=> 'Data berhasil dihapus']);
+        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        return redirect()->route('galeri.index');
     }
 }

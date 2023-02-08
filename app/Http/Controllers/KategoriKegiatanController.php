@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\KategoriKegiatan;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 
 
 class KategoriKegiatanController extends Controller
@@ -38,7 +39,8 @@ class KategoriKegiatanController extends Controller
             'slug' => Str::slug($request->nama_kategori),
         ]);
 
-        return redirect()->route('kategorikegiatan.index')->with(['success'=> 'Data berhasil tersimpan']);
+        Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+        return redirect()->route('kategorikegiatan.index');
     }
 
     public function show($id)
@@ -61,7 +63,8 @@ class KategoriKegiatanController extends Controller
         $kategori_kegiatan = KategoriKegiatan::findOrFail($id);
         $kategori_kegiatan->update($data);
 
-        return redirect()->route('kategorikegiatan.index')->with(['update'=> 'Data berhasil terupdate']);
+        Alert::info('Diubah', 'Data Berhasil Terubah');
+        return redirect()->route('kategorikegiatan.index');
     }
 
     public function destroy($id)
@@ -69,6 +72,7 @@ class KategoriKegiatanController extends Controller
         $kategori_kegiatan = KategoriKegiatan::find($id);
         $kategori_kegiatan->delete();
 
-        return redirect()->route('kategorikegiatan.index')->with(['success'=> 'Data berhasil dihapus']);
+        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        return redirect()->route('kategorikegiatan.index');
     }
 }

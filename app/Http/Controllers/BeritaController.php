@@ -8,6 +8,7 @@ use App\Models\Kegiatan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class BeritaController extends Controller
 {
@@ -42,7 +43,8 @@ class BeritaController extends Controller
 
         Berita::create($data);
 
-        return redirect()->route('berita.index')->with(['success'=> 'Data berhasil tersimpan']);
+        Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+        return redirect()->route('berita.index');
     }
 
     public function show($id)
@@ -69,7 +71,9 @@ class BeritaController extends Controller
                 'kategori_berita_id' => $request->kategori_berita_id,
                 'is_active' => $request->is_active,
             ]);
-            return redirect()->route('berita.index')->with(['success'=> 'Data berhasil terupdate']);
+
+            Alert::info('Diubah', 'Data Berhasil Terubah');
+            return redirect()->route('berita.index');
         } else {
             $berita = Berita::find($id);
             Storage::delete($berita->gambar_berita);
@@ -81,7 +85,9 @@ class BeritaController extends Controller
                 'is_active' => $request->is_active,
                 'gambar_berita' => $request->file('gambar_berita')->store('berita'),
             ]);
-            return redirect()->route('berita.index')->with(['success'=> 'Data berhasil terupdate']);
+
+            Alert::info('Diubah', 'Data Berhasil Terubah');
+            return redirect()->route('berita.index');
         }
     }
 
@@ -92,6 +98,7 @@ class BeritaController extends Controller
             'delete' => 'Y'
         ]);
 
-        return redirect()->route('berita.index')->with(['success'=> 'Data berhasil dihapus']);
+        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        return redirect()->route('berita.index');
     }
 }

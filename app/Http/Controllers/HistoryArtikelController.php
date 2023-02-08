@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Artikel;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class HistoryArtikelController extends Controller
 {
@@ -22,6 +23,7 @@ class HistoryArtikelController extends Controller
         $artikel = Artikel::find($id);
         $artikel->delete();
 
-        return redirect()->route('history-artikel.index')->with(['success'=> 'Data berhasil dihapus']);
+        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        return redirect()->route('history-artikel.index');
     }
 }

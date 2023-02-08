@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Berita;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class HistoryBeritaController extends Controller
 {
@@ -22,6 +23,7 @@ class HistoryBeritaController extends Controller
         $berita = Berita::find($id);
         $berita->delete();
 
-        return redirect()->route('history-berita.index')->with(['success'=> 'Data berhasil dihapus']);
+        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        return redirect()->route('history-berita.index');
     }
 }

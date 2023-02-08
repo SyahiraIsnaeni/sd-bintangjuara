@@ -7,6 +7,7 @@ use App\Models\Pengumuman;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PengumumanController extends Controller
 {
@@ -41,7 +42,8 @@ class PengumumanController extends Controller
 
         Pengumuman::create($data);
 
-        return redirect()->route('pengumuman.index')->with(['success'=> 'Data berhasil tersimpan']);
+        Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+        return redirect()->route('pengumuman.index');
     }
 
     public function show($id)
@@ -68,7 +70,9 @@ class PengumumanController extends Controller
                 'kategori_pengumuman_id' => $request->kategori_pengumuman_id,
                 'is_active' => $request->is_active,
             ]);
-            return redirect()->route('pengumuman.index')->with(['success'=> 'Data berhasil terupdate']);
+
+            Alert::info('Diubah', 'Data Berhasil Terubah');
+            return redirect()->route('pengumuman.index');
         } else {
             $pengumuman = Pengumuman::find($id);
             Storage::delete($pengumuman->gambar_pengumuman);
@@ -80,7 +84,9 @@ class PengumumanController extends Controller
                 'is_active' => $request->is_active,
                 'gambar_pengumuman' => $request->file('gambar_pengumuman')->store('pengumuman'),
             ]);
-            return redirect()->route('pengumuman.index')->with(['success'=> 'Data berhasil terupdate']);
+
+            Alert::info('Diubah', 'Data Berhasil Terubah');
+            return redirect()->route('pengumuman.index');
         }
     }
 
@@ -91,6 +97,7 @@ class PengumumanController extends Controller
             'delete' => 'Y'
         ]);
 
-        return redirect()->route('pengumuman.index')->with(['success'=> 'Data berhasil dihapus']);
+        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        return redirect()->route('pengumuman.index');
     }
 }

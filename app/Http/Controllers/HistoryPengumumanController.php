@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pengumuman;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class HistoryPengumumanController extends Controller
 {
@@ -22,6 +23,7 @@ class HistoryPengumumanController extends Controller
         $pengumuman = Pengumuman::find($id);
         $pengumuman->delete();
 
-        return redirect()->route('history-pengumuman.index')->with(['success'=> 'Data berhasil dihapus']);
+        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        return redirect()->route('history-pengumuman.index');
     }
 }
