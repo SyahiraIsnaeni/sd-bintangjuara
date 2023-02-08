@@ -49,4 +49,16 @@ Route::group(['middleware' => 'revalidate'], function(){
     Route::resource('history-artikel', HistoryArtikelController::class);
     Route::resource('history-berita', HistoryBeritaController::class);
     Route::resource('history-pengumuman', HistoryPengumumanController::class);
+    Route::get('/index', [\App\Http\Controllers\FrontendController::class, 'index']);
+    Route::get('/detail-artikel', [\App\Http\Controllers\FrontendController::class, 'artikel']);
+    Route::get('/detail-berita', [\App\Http\Controllers\FrontendController::class, 'berita']);
+    Route::get('/detail-kegiatan', [\App\Http\Controllers\FrontendController::class, 'kegiatan']);
+    Route::get('/detail-pengumuman', [\App\Http\Controllers\FrontendController::class, 'pengumuman']);
+    Route::get('/daftar-artikel', [\App\Http\Controllers\FrontendController::class, 'daftarArtikel']);
+    Route::get('/daftar-berita', [\App\Http\Controllers\FrontendController::class, 'daftarBerita']);
+    Route::get('/daftar-kegiatan', [\App\Http\Controllers\FrontendController::class, 'daftarKegiatan']);
+    Route::get('/daftar-pengumuman', [\App\Http\Controllers\FrontendController::class, 'daftarPengumuman']);
+    Route::get('/kontak', function () {
+        return view('frontend.kontak');
+    });
 });
