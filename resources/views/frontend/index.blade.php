@@ -73,7 +73,7 @@
       <div class="container mt-5">
             <div class="row fs-5">
               <div class="col-8">
-                  <h2>Selayang Pandang</h2>
+                  <h2>SELAYANG PANDANG</h2>
                   <p align="justify">SD ISLAM BINTANG JUARA adalah Islamic Character Based School yang mengedepankan pendidikan diniyyah seperti
                     pembiasaan ibadah, tahsin & tahfidz, serta penanaman adab dan akhlak mulia. Kami juga menerapkan pembelajaran
                     holistik integratif dengan mengintegrasikan segala aspek dan nilai-nilai dalam pendidikan seperti nilai moral, etis,
@@ -204,7 +204,7 @@
     </div>
     <section class="yt">
       <div class="row">
-        <div class="col-6">
+        <div class="col-12 col-md-6 col-lg-6">
           <div class="video1">
             <div class="bintangjuaravideo">
               <div class="elementor-widget-video" data-id="8b392b9" data-element_type="widget"
@@ -222,7 +222,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6 col-lg-6">
           <div class="bintangjuaravideo">
             <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
               <iframe class="elementor-video" frameborder="0" allowfullscreen="1"
