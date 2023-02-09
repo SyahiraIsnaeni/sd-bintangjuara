@@ -27,10 +27,10 @@ class FrontendController extends Controller
         return view('frontend.index', compact('pengumuman','berita', 'artikel', 'kegiatan', 'galeri', 'kegiatanPrioritas', 'beritaPrioritas', 'artikelPrioritas', 'pengumumanPrioritas'));
     }
 
-    public function artikel()
+    public function artikel($slug)
     {
-        $artikel = Artikel::all()->sortByDesc('updated_at');
-        return view('frontend.artikel', compact('artikel'));
+        $artikel = Artikel::where('slug', $slug)->first();
+        return view('frontend.artikel', ['artikel' => $artikel]);
     }
 
     public function daftarArtikel()
@@ -39,10 +39,10 @@ class FrontendController extends Controller
         return view('frontend.daftarartikel', compact('artikel'));
     }
 
-    public function berita()
+    public function berita($slug)
     {
-        $berita = Berita::all()->sortByDesc('updated_at');
-        return view('frontend.berita', compact('berita'));
+        $berita = Berita::where('slug', $slug)->first();
+        return view('frontend.berita', ['berita' => $berita]);
     }
 
     public function daftarBerita()
@@ -51,10 +51,10 @@ class FrontendController extends Controller
         return view('frontend.daftarberita', compact('berita'));
     }
 
-    public function kegiatan()
+    public function kegiatan($slug)
     {
-        $kegiatan = Kegiatan::all()->sortByDesc('updated_at');
-        return view('frontend.kegiatan', compact('kegiatan'));
+        $kegiatan = Kegiatan::where('slug', $slug)->first();
+        return view('frontend.kegiatan', ['kegiatan' => $kegiatan]);
     }
 
     public function daftarKegiatan()
@@ -63,10 +63,10 @@ class FrontendController extends Controller
         return view('frontend.daftarkegiatan', compact('kegiatan'));
     }
 
-    public function pengumuman()
+    public function pengumuman($slug)
     {
-        $pengumuman = Pengumuman::all()->sortByDesc('updated_at');
-        return view('frontend.pengumuman', compact('pengumuman'));
+        $pengumuman = Pengumuman::where('slug', $slug)->first();
+        return view('frontend.pengumuman', ['pengumuman' => $pengumuman]);
     }
 
     public function daftarPengumuman()

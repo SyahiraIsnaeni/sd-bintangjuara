@@ -52,10 +52,10 @@ Route::group(['middleware' => 'revalidate'], function(){
 });
 
 Route::get('/index', [\App\Http\Controllers\FrontendController::class, 'index']);
-Route::get('/detail-artikel', [\App\Http\Controllers\FrontendController::class, 'artikel']);
-Route::get('/detail-berita', [\App\Http\Controllers\FrontendController::class, 'berita']);
-Route::get('/detail-kegiatan', [\App\Http\Controllers\FrontendController::class, 'kegiatan']);
-Route::get('/detail-pengumuman', [\App\Http\Controllers\FrontendController::class, 'pengumuman']);
+Route::get('/detail-artikel/{slug}', [\App\Http\Controllers\FrontendController::class, 'artikel'])->name('detail-artikel');
+Route::get('/detail-berita/{slug}', [\App\Http\Controllers\FrontendController::class, 'berita'])->name('detail-berita');
+Route::get('/detail-kegiatan/{slug}', [\App\Http\Controllers\FrontendController::class, 'kegiatan'])->name('detail-kegiatan');
+Route::get('/detail-pengumuman/{slug}', [\App\Http\Controllers\FrontendController::class, 'pengumuman'])->name('detail-pengumuman');
 Route::get('/daftar-artikel', [\App\Http\Controllers\FrontendController::class, 'daftarArtikel']);
 Route::get('/daftar-berita', [\App\Http\Controllers\FrontendController::class, 'daftarBerita']);
 Route::get('/daftar-kegiatan', [\App\Http\Controllers\FrontendController::class, 'daftarKegiatan']);

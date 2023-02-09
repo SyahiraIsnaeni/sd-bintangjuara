@@ -104,7 +104,7 @@
                           @forelse ($kegiatan as $row)
                               <ul class="list-group list-group-flush">
                                   <li class="list-group-item">
-                                      <a  href="#" style="text-decoration: none;">
+                                      <a  href="{{route('detail-kegiatan', $row->slug)}}" style="text-decoration: none;">
                                           <h6 class="card-title text-black" >{{$row->judul}}</h6>
                                       </a>
                                   </li>
@@ -131,7 +131,7 @@
                           @forelse ($berita as $row)
                               <ul class="list-group list-group-flush">
                                   <li class="list-group-item">
-                                      <a  href="#" style="text-decoration: none;">
+                                      <a  href="{{route('detail-berita', $row->slug)}}" style="text-decoration: none;">
                                           <h6 class="card-title text-black" >{{$row->judul}}</h6>
                                       </a>
                                   </li>
@@ -154,12 +154,11 @@
                               <img src="{{asset('uploads/'.$row->gambar_artikel) }}" class="card-img-top" alt="events" height="250">
                           @empty
                           @endforelse
-
                           @forelse ($artikel as $row)
                               <ul class="list-group list-group-flush">
                                   <li class="list-group-item">
-                                      <a  href="#" style="text-decoration: none;">
-                                          <h6 class="card-title text-black" >{{$row->judul}}</h6>
+                                      <a href="{{route('detail-artikel', $row->slug)}}" style="text-decoration: none;">
+                                          <h6 class="card-title text-black">{{$row->judul}}</h6>
                                       </a>
                                   </li>
                               </ul>
@@ -186,7 +185,7 @@
                           @forelse ($pengumuman as $row)
                               <ul class="list-group list-group-flush">
                                   <li class="list-group-item">
-                                      <a  href="#" style="text-decoration: none;">
+                                      <a  href="{{route('detail-pengumuman', $row->slug)}}" style="text-decoration: none;">
                                           <h6 class="card-title text-black" >{{$row->judul}}</h6>
                                       </a>
                                   </li>
