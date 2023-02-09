@@ -20,7 +20,10 @@ class FrontendController extends Controller
         $galeri = Galeri::all()->sortByDesc('updated_at');
 
         $kegiatanPrioritas = Kegiatan::whereId(1)->get();
-        return view('frontend.index', compact('pengumuman','berita', 'artikel', 'kegiatan', 'galeri', 'kegiatanPrioritas'));
+        $beritaPrioritas = Berita::whereId(1)->get();
+        $artikelPrioritas = Artikel::whereId(1)->get();
+        $pengumumanPrioritas = Pengumuman::whereId(1)->get();
+        return view('frontend.index', compact('pengumuman','berita', 'artikel', 'kegiatan', 'galeri', 'kegiatanPrioritas', 'beritaPrioritas', 'artikelPrioritas', 'pengumumanPrioritas'));
     }
 
     public function artikel()
