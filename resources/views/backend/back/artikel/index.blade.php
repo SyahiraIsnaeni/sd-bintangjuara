@@ -42,6 +42,7 @@
                                     <th>Slug</th>
                                     <th>Gambar</th>
                                     <th>Status</th>
+                                    <th>Tanggal</th>
                                     <th style="width:20%">Action</th>
                                 </tr>
                                 </thead>
@@ -59,6 +60,7 @@
                                                     Draf
                                                 @endif
                                             </td>
+                                            <td>{{ $row->updated_at->format('d M Y')}}</td>
                                             <td>
                                                 <a href="{{route('artikel.edit', $row->id) }}"
                                                    class="btn btn-warning btn-sm">Ubah</a>

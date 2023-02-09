@@ -18,7 +18,7 @@ class ArtikelController extends Controller
 
     public function index()
     {
-        $artikel = Artikel::all();
+        $artikel = Artikel::all()->sortByDesc('updated_at');
         return view('backend.back.artikel.index', compact('artikel'));
     }
 

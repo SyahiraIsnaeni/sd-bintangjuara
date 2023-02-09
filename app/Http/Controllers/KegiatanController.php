@@ -20,7 +20,7 @@ class KegiatanController extends Controller
 
     public function index()
     {
-        $kegiatan = Kegiatan::all();
+        $kegiatan = Kegiatan::all()->sortByDesc('updated_at');
         return view('backend.back.kegiatan.index', compact('kegiatan'));
     }
 
