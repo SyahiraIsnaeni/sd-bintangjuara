@@ -14,7 +14,7 @@ class HistoryPengumumanController extends Controller
     }
     public function index()
     {
-        $pengumuman = Pengumuman::all();
+        $pengumuman = Pengumuman::all()->sortByDesc('updated_at');
         return view('backend.back.history.pengumuman', compact('pengumuman'));
     }
 

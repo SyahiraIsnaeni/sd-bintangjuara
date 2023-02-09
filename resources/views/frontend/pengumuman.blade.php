@@ -7,7 +7,7 @@
       <script src="https://kit.fontawesome.com/a59b9b09ab.js" crossorigin="anonymous"></script>
       <title>BINTANG JUARA</title>
       <!-- add icon link -->
-     <link rel = "icon" href = "C:\xampp\htdocs\sd-bintangjuara\resources\views\frontend\assets\logo1.png" type ="image/x-icon">
+     <link rel = "icon" href = "{{asset('front/logo1.png')}}" type ="image/x-icon">
      <link rel="stylesheet" type="text/css" href="style.css">
      <link rel="icon" href="2.jpeg" />
         <!-- Swiper CSS -->
@@ -50,17 +50,17 @@
   </nav>
   <!-- Akhir Navbar -->
 
-<!-- Gambar Artikel -->
+<!-- Gambar pengumuman -->
     <section id="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="assets/bg.jpeg" class="img-fluid" alt="bg">
+                <img src="{{asset('front/bg.jpeg')}}" class="img-fluid" alt="bg">
               </div>
         </section>
-<!-- Akhir Gambar Artikel -->
+<!-- Akhir Gambar pengumuman -->
 
-<!-- Isi Artikel -->
-<section id="isiartikel">
+<!-- Isi pengumuman -->
+<section id="isipengumuman">
     <div class="container mt-5">
         <div class="row">
             <div class="col">
@@ -71,14 +71,14 @@
         <div class="row">
             <div class="col-1">
                 <a>
-                    <img src="assets/logo1.png" alt="author" height="50">
+                    <img src="{{asset('front/logo1.png')}}" alt="author" height="50">
                   </a>
             </div>
             <div class="col">
                 <a>
                     <span id="span_1" style="font-size: large; font-weight: bold;"> Nama Penulis</span>
                     <br>
-                    <span id="span_2"style="font-size: small;">tanggal artikel</span>
+                    <span id="span_2"style="font-size: small;">tanggal pengumuman</span>
                   </a>
             </div>
         </div>
@@ -98,11 +98,11 @@
     </div>
 
 </section>
-<!-- Akhir Isi Artikel -->
+<!-- Akhir Isi pengumuman -->
 
-<!-- Artikel lainnya -->
+<!-- pengumuman lainnya -->
 
-<section id="artikellainnya">
+<section id="pengumumanlainnya">
     <div class="container mt-5 mb-5">
         <div class="container">
             <div class="row">
@@ -111,7 +111,7 @@
             <div class="row g-3">
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">                          
-                        <img src="assets/dummy.jpeg" class="card-img-top" alt="events">
+                        <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="events">
                         <div class="card-body">
                           <h5 class="card-title">Card title</h5>
                           <p class="card-text" align="justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -123,7 +123,7 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">
-                        <img src="assets/dummy.jpeg" class="card-img-top" alt="news">
+                        <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news">
                         <div class="card-body">
                           <h5 class="card-title">Card title</h5>
                           <p class="card-text" align="justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -135,7 +135,7 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">
-                        <img src="assets/dummy.jpeg" class="card-img-top" alt="videos">
+                        <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="videos">
                         <div class="card-body">
                           <h5 class="card-title">Card title</h5>
                           <p class="card-text"align="justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -149,7 +149,7 @@
           </div>
 </section>
 
-<!-- Akhir Artikel lainnya -->
+<!-- Akhir pengumuman lainnya -->
 
   <!-- Footer -->
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -161,8 +161,8 @@
       <div class="row align-items-center">
         <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
           <h5>
-            <img src="assets/logo2.png" alt="logo" height="50">
-            <img src="assets/logo1.png" alt="logo" height="50"> Bintang Juara
+            <img src="{{asset('front/logo2.png')}}" alt="logo" height="50">
+            <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"> Bintang Juara
           </h5>
           <p>
             <i class="fas fa-home mr-3"></i> &nbsp; Jl. Dewi Sartika No.17 A, Sukorejo, Kec. Gn. Pati, Kota Semarang, 50221
