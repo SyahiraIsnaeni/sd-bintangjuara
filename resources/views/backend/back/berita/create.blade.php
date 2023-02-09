@@ -27,7 +27,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="berita">Deskripsi</label>
-                                <textarea type="text" name="body" class="form-control" id="text" placeholder="Enter Deskripsi"> </textarea>
+                                <textarea type="text" name="body" class="form-control" id="task-textarea" placeholder="Enter Deskripsi"> </textarea>
                             </div>
                             <div class="form-group">
                                 <label for="berita">Kategori</label>
@@ -58,4 +58,14 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#task-textarea' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 @endsection
