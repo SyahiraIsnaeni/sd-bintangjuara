@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>User</title>
+	<title>Admin</title>
 </head>
 
 <body>

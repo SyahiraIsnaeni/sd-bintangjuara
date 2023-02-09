@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Tambah User</title>
+	<title>Tambah Admin</title>
 </head>
 
 <body>
