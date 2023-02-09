@@ -101,16 +101,14 @@
                               <img src="{{asset('uploads/'.$row->gambar_artikel) }}" class="card-img-top" alt="events" height="250">
                           @empty
                           @endforelse
-                          <div class="card-body">
-                              @forelse ($kegiatanPrioritas as $row)
-                                  <h5 class="card-title">{{$row->judul}}</h5>
-                              @empty
-                              @endforelse
-{{--                              <p class="card-text" align="justify">{!! $row->body !!}</p>--}}
-                          </div>
+
                           @forelse ($kegiatan as $row)
                               <ul class="list-group list-group-flush">
-                                  <li class="list-group-item">{{ $row->judul}}</li>
+                                  <li class="list-group-item">
+                                      <a  href="#" style="text-decoration: none;">
+                                          <h6 class="card-title text-black" >{{$row->judul}}</h6>
+                                      </a>
+                                  </li>
                               </ul>
                           @empty
                           @endforelse
@@ -126,16 +124,14 @@
                               <img src="{{asset('uploads/'.$row->gambar_berita) }}" class="card-img-top" alt="events" height="250">
                           @empty
                           @endforelse
-                          <div class="card-body">
-                              @forelse ($beritaPrioritas as $row)
-                                  <h5 class="card-title">{{$row->judul}}</h5>
-                              @empty
-                              @endforelse
-                              {{--                              <p class="card-text" align="justify">{!! $row->body !!}</p>--}}
-                          </div>
+
                           @forelse ($berita as $row)
                               <ul class="list-group list-group-flush">
-                                  <li class="list-group-item">{{ $row->judul}}</li>
+                                  <li class="list-group-item">
+                                      <a  href="#" style="text-decoration: none;">
+                                          <h6 class="card-title text-black" >{{$row->judul}}</h6>
+                                      </a>
+                                  </li>
                               </ul>
                           @empty
                           @endforelse
@@ -151,16 +147,14 @@
                               <img src="{{asset('uploads/'.$row->gambar_artikel) }}" class="card-img-top" alt="events" height="250">
                           @empty
                           @endforelse
-                          <div class="card-body">
-                              @forelse ($artikelPrioritas as $row)
-                                  <h5 class="card-title">{{$row->judul}}</h5>
-                              @empty
-                              @endforelse
-                              {{--                              <p class="card-text" align="justify">{!! $row->body !!}</p>--}}
-                          </div>
+
                           @forelse ($artikel as $row)
                               <ul class="list-group list-group-flush">
-                                  <li class="list-group-item">{{ $row->judul}}</li>
+                                  <li class="list-group-item">
+                                      <a  href="#" style="text-decoration: none;">
+                                          <h6 class="card-title text-black" >{{$row->judul}}</h6>
+                                      </a>
+                                  </li>
                               </ul>
                           @empty
                           @endforelse
@@ -177,16 +171,14 @@
                               <img src="{{asset('uploads/'.$row->gambar_pengumuman) }}" class="card-img-top" alt="events" height="250">
                           @empty
                           @endforelse
-                          <div class="card-body">
-                              @forelse ($pengumumanPrioritas as $row)
-                                  <h5 class="card-title">{{$row->judul}}</h5>
-                              @empty
-                              @endforelse
-                              {{--                              <p class="card-text" align="justify">{!! $row->body !!}</p>--}}
-                          </div>
+
                           @forelse ($pengumuman as $row)
                               <ul class="list-group list-group-flush">
-                                  <li class="list-group-item">{{ $row->judul}}</li>
+                                  <li class="list-group-item">
+                                      <a  href="#" style="text-decoration: none;">
+                                          <h6 class="card-title text-black" >{{$row->judul}}</h6>
+                                      </a>
+                                  </li>
                               </ul>
                           @empty
                           @endforelse

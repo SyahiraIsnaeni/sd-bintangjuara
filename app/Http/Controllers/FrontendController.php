@@ -8,21 +8,22 @@ use App\Models\Galeri;
 use App\Models\Kegiatan;
 use App\Models\Pengumuman;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FrontendController extends Controller
 {
     public function index()
     {
-        $pengumuman = Pengumuman::all()->sortByDesc('updated_at');
-        $berita = Berita::all()->sortByDesc('updated_at');
-        $artikel = Artikel::all()->sortByDesc('updated_at');
-        $kegiatan = Kegiatan::all()->sortByDesc('updated_at');
-        $galeri = Galeri::all()->sortByDesc('updated_at');
+        $pengumuman = Pengumuman::limit(5)->orderByDesc('updated_at')->get();
+        $berita = Berita::limit(5)->orderByDesc('updated_at')->get();
+        $artikel = Artikel::limit(5)->orderByDesc('updated_at')->get();
+        $kegiatan = Kegiatan::limit(5)->orderByDesc('updated_at')->get();
+        $galeri = Galeri::limit(5)->orderByDesc('updated_at')->get();
 
-        $kegiatanPrioritas = Kegiatan::whereId(1)->get();
-        $beritaPrioritas = Berita::whereId(1)->get();
-        $artikelPrioritas = Artikel::whereId(1)->get();
-        $pengumumanPrioritas = Pengumuman::whereId(1)->get();
+        $kegiatanPrioritas = Kegiatan::limit(1)->orderByDesc('updated_at')->get();
+        $beritaPrioritas = Berita::limit(1)->orderByDesc('updated_at')->get();
+        $artikelPrioritas = Artikel::limit(1)->orderByDesc('updated_at')->get();
+        $pengumumanPrioritas = Pengumuman::limit(1)->orderByDesc('updated_at')->get();
         return view('frontend.index', compact('pengumuman','berita', 'artikel', 'kegiatan', 'galeri', 'kegiatanPrioritas', 'beritaPrioritas', 'artikelPrioritas', 'pengumumanPrioritas'));
     }
 
