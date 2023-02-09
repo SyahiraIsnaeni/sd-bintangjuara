@@ -19,12 +19,13 @@ class DashboardController extends Controller
 
     public function index()
     {
-        $pengumuman = Pengumuman::all();
-        $berita = Berita::all();
-        $artikel = Artikel::all();
-        $kegiatan = Kegiatan::all();
-        $admin = User::all();
-        $galeri = Galeri::all();
+        $pengumuman = Pengumuman::all()->sortByDesc('updated_at');
+        $berita = Berita::all()->sortByDesc('updated_at');
+        $artikel = Artikel::all()->sortByDesc('updated_at');
+        $kegiatan = Kegiatan::all()->sortByDesc('updated_at');
+        $admin = User::all()->sortByDesc('updated_at');
+        $galeri = Galeri::all()->sortByDesc('updated_at');
+
         return view('backend.back.dashboard', compact('pengumuman','berita', 'artikel', 'kegiatan', 'admin', 'galeri'));
     }
 

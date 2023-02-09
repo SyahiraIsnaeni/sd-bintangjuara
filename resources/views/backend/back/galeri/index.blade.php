@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Gambar</title>
+</head>
+
+<body>
 @extends('backend.layouts.default')
 @section('content')
 
@@ -33,6 +41,7 @@
                                     <th>Judul Gambar</th>
                                     <th>Gambar</th>
                                     <th>Slug</th>
+                                    <th>Tanggal</th>
                                     <th style="width:20%">Action</th>
                                 </tr>
                                 </thead>
@@ -40,8 +49,9 @@
                                 @forelse ($galeri as $row)
                                     <tr>
                                         <td>{{ $row->judul_gambar}}</td>
-                                        <td><img src="{{asset('uploads/'.$row->gambar_galeri) }}" width="300" ></td>
+                                        <td><img src="{{asset('uploads/'.$row->gambar_galeri) }}" width="200" ></td>
                                         <td>{{ $row->slug}}</td>
+                                        <td>{{ $row->updated_at->format('d M Y')}}</td>
                                         <td>
                                             <form action="{{route('galeri.destroy', $row->id)}}" method="post"
                                                   class="d-inline">
@@ -71,3 +81,4 @@
         </div>
     </div>
 @endsection
+</body>

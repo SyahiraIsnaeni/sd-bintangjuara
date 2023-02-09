@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Tambah Pengumuman</title>
+</head>
+
+<body>
 @extends('backend.layouts.default')
 @section('content')
 
@@ -69,3 +77,4 @@
         } );
 </script>
 @endsection
+</body>
