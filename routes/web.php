@@ -15,6 +15,8 @@ use App\Http\Controllers\HistoryKegiatanController;
 use App\Http\Controllers\HistoryArtikelController;
 use App\Http\Controllers\HistoryBeritaController;
 use App\Http\Controllers\HistoryPengumumanController;
+use App\Http\Controllers\TestimoniController;
+use App\Http\Controllers\JumbotronController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +47,8 @@ Route::group(['middleware' => 'revalidate'], function(){
     Route::resource('artikel', ArtikelController::class);
     Route::resource('admin', UserController::class);
     Route::resource('galeri', GaleriController::class);
+    Route::resource('testimoni', TestimoniController::class);
+    Route::resource('jumbotron', JumbotronController::class);
     Route::resource('history-kegiatan', HistoryKegiatanController::class);
     Route::resource('history-artikel', HistoryArtikelController::class);
     Route::resource('history-berita', HistoryBeritaController::class);

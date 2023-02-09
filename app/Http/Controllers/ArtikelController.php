@@ -40,19 +40,12 @@ class ArtikelController extends Controller
 
         $data = $request->all();
         $data['slug'] = Str::slug($request->judul);
-        $data['views'] = 0;
         $data['gambar_artikel'] = $request->file('gambar_artikel')->store('artikel');
 
         Artikel::create($data);
 
         Alert::success('Berhasil', 'Data Berhasil Tersimpan');
         return redirect()->route('artikel.index');
-    }
-
-    public function show()
-    {
-        $artikel = Artikel::all();
-        return view('backend.back.artikel.history', compact('artikel'));
     }
 
     public function edit($id)
