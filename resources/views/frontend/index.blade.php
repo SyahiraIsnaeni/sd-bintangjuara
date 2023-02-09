@@ -19,7 +19,7 @@
       </style>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-      
+
     </head>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #45b0f8;">
@@ -74,8 +74,8 @@
             <div class="row fs-5">
               <div class="col-8">
                   <h2>Selayang Pandang</h2>
-                  <p align="justify">SD ISLAM BINTANG JUARA adalah Islamic Character Based School yang mengedepankan pendidikan diniyyah seperti 
-                    pembiasaan ibadah, tahsin & tahfidz, serta penanaman adab dan akhlak mulia. Kami juga menerapkan pembelajaran 
+                  <p align="justify">SD ISLAM BINTANG JUARA adalah Islamic Character Based School yang mengedepankan pendidikan diniyyah seperti
+                    pembiasaan ibadah, tahsin & tahfidz, serta penanaman adab dan akhlak mulia. Kami juga menerapkan pembelajaran
                     holistik integratif dengan mengintegrasikan segala aspek dan nilai-nilai dalam pendidikan seperti nilai moral, etis,
                     religius, psikologis dan sosial dalam kesatuan yang dilakukan secara menyeluruh antara jiwa dan badan serta aspek material
                     dan aspek spiritual untuk memenuhi kebutuhan esensial anak.
@@ -96,7 +96,7 @@
               <div class="row g-3">
                   <div class="col">
                     <h4 align="center">EVENTS</h4>
-                      <div class="card">                          
+                      <div class="card">
                           <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="events">
                           <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -150,7 +150,9 @@
                   </div>
                 </div>
             </div>
+      </div>
   </section>
+
   <!-- Akhir Events, News, Videos -->
 
     <!-- Kurikulum -->
@@ -174,20 +176,20 @@
                 <div class="col-2"></div>
                 <div class="col-12 col-md-12 col-lg-5">
                   <i class="fa-solid fa-person-circle-check fa-2x"></i><h3>Islamic Leadership</h3>
-                    <p align="justify">Membentuk leadership anak dengan membuat beragam project sesuai kurikulum dan kebutuhan lingkungan (individual maupun tim, kerjasama 
+                    <p align="justify">Membentuk leadership anak dengan membuat beragam project sesuai kurikulum dan kebutuhan lingkungan (individual maupun tim, kerjasama
                       dengan teman sekolah maupun anggota keluarga)</p>
                 </div>
               </div>
               <div class="row fs-5 ">
                 <div class="col-12 col-md-12 col-lg-5">
                   <i class="fa-solid fa-scale-unbalanced fa-2x"></i><h3>Materi Keislaman 60% & Materi Umum 40%</h3>
-                    <p align="justify">Menitikberatkan pada materi keislaman untuk menguatkan pondasi agama anak, mengajari akidah, akhlaq & adab, serta ibadah wajib dan 
+                    <p align="justify">Menitikberatkan pada materi keislaman untuk menguatkan pondasi agama anak, mengajari akidah, akhlaq & adab, serta ibadah wajib dan
                       sunnah</p>
                 </div>
                 <div class="col-2"></div>
                 <div class="col-12 col-md-12 col-lg-5">
                     <i class="fa-sharp fa-solid fa-circle-check fa-2x"></i> <h3>Karakter & Tanggung Jawab</h3>
-                    <p align="justify">Kami tidak hanya memberikan materi pendidikan secara teori, namun kami membiasakan ha-hal baik sebagai pendidikan tanggungjawab dan 
+                    <p align="justify">Kami tidak hanya memberikan materi pendidikan secara teori, namun kami membiasakan ha-hal baik sebagai pendidikan tanggungjawab dan
                       pembentukan karakter, sehingga anak bisa menjalanankan peran di masyarakat dengan baik</p>
                 </div>
               </div>
@@ -197,7 +199,7 @@
           <path fill="#45b0f8" fill-opacity="1" d="M0,96L48,122.7C96,149,192,203,288,208C384,213,480,171,576,138.7C672,107,768,85,864,106.7C960,128,1056,192,1152,218.7C1248,245,1344,235,1392,229.3L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
           </path>
           </svg>
-    </section>  
+    </section>
 
     <!-- Akhir Kurikulum -->
 
@@ -219,10 +221,10 @@
                 <div class="card-body">
                   <h5 class="card-title">Fakta 1</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                
+
                 </div>
-        </div>  
-        </div>   
+        </div>
+        </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
                 <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="videos">
@@ -239,9 +241,10 @@
                   <h5 class="card-title">Fakta 3</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
-               
+
               </div>
         </div>
+    </div>
     </div>
 </section>
 
@@ -287,7 +290,7 @@
 <!-- Akhir Gallery -->
 
     <!-- Testimoni -->
-    
+
     <section id="testimoni">
       <div class="container">
         <div class="row">
@@ -338,17 +341,17 @@
           </p>
           <p>
             <a  href="#" style="text-decoration: none;">
-              <strong class="text-white">Home</strong>              
+              <strong class="text-white">Home</strong>
             </a> .
             <a  href="#" style="text-decoration: none;">
-              <strong class="text-white">Kontak Kami</strong>              
+              <strong class="text-white">Kontak Kami</strong>
             </a> .
             <a  href="#" style="text-decoration: none;">
-              <strong class="text-white">Sitemap</strong>              
+              <strong class="text-white">Sitemap</strong>
             </a>
           </p>
         </div>
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3"> 
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
         </div>
         <div class="col-md-3 col-lg-3 col-xl-3  mt-3" style="text-align: end;">
           <h5> Follow us : </h5>
@@ -364,6 +367,7 @@
             <i class="fab fa-youtube"></i>
           </a>
             </li>
+          </ul>
         </div>
         <hr class="mb-4">
         <div class="row align-items-center pb-5">
@@ -371,7 +375,7 @@
             <p>
               Copyright ©2023 All rights reserved by:
               <a  href="#" style="text-decoration: none;">
-                <strong class="text-white">Bintang Juara</strong>              
+                <strong class="text-white">Bintang Juara</strong>
               </a>
             </p>
           </div>
@@ -396,5 +400,5 @@
     }
   </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  </body>
+  </section>
 </html>
