@@ -18,6 +18,7 @@
 			}
 		});
 	</script>
+	
 
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="{{asset('back/css/bootstrap.min.css')}}">
@@ -43,5 +44,7 @@
 	<!--   Core JS Files   -->
 @include('backend.includes.js')
 @include('sweetalert::alert', ['cdn'=>"https://cdn.jsdelivr.net/npm/sweetalert2@9"])
+<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+@yield('scripts')
 </body>
 </html>
