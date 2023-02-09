@@ -18,7 +18,7 @@ class GaleriController extends Controller
 
     public function index()
     {
-        $galeri = Galeri::all();
+        $galeri = Galeri::all()->sortByDesc('updated_at');
         return view('backend.back.galeri.index', compact('galeri'));
     }
 

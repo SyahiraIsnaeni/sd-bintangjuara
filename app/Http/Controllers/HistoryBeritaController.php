@@ -14,7 +14,7 @@ class HistoryBeritaController extends Controller
     }
     public function index()
     {
-        $berita = Berita::all();
+        $berita = Berita::all()->sortByDesc('updated_at');
         return view('backend.back.history.berita', compact('berita'));
     }
 

@@ -68,6 +68,7 @@
                                     <th>Slug</th>
                                     <th>Gambar</th>
                                     <th>Status</th>
+                                    <th>Tanggal</th>
                                     <th style="width:20%">Action</th>
                                 </tr>
                                 </thead>
@@ -85,6 +86,7 @@
                                                     Draf
                                                 @endif
                                             </td>
+                                            <td>{{ $row->updated_at->format('d M Y')}}</td>
                                             <td>
                                                 <a href="{{route('artikel.edit', $row->id) }}"
                                                    class="btn btn-warning btn-sm">Ubah</a>
@@ -118,14 +120,5 @@
             </div>
         </div>
     </div>
-</div>
-			@include('backend.includes.footer')
-</div>   
-</div>
-<!--   Core JS Files   -->
-@include('backend.includes.js')
-@include('sweetalert::alert', ['cdn'=>"https://cdn.jsdelivr.net/npm/sweetalert2@9"])
-<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
-@yield('scripts')
+@endsection
 </body>
-</html>

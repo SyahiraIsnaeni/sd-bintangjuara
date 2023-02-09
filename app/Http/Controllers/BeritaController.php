@@ -19,7 +19,7 @@ class BeritaController extends Controller
 
     public function index()
     {
-        $berita = Berita::all();
+        $berita = Berita::all()->sortByDesc('updated_at');
         return view('backend.back.berita.index', compact('berita'));
     }
 
