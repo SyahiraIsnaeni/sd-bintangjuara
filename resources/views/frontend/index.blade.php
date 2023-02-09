@@ -1,2 +1,400 @@
-<?php
-echo "test";
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <script src="https://kit.fontawesome.com/a59b9b09ab.js" crossorigin="anonymous"></script>
+      <title>BINTANG JUARA</title>
+      <!-- add icon link -->
+     <link rel = "icon" href = "{{asset('front/logo1.png')}}" type ="image/x-icon">
+     <link rel="stylesheet" type="text/css" href="style.css">
+     <link rel="icon" href="2.jpeg" />
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" crossorigin="anonymous">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+   </head>
+      <style>
+      </style>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+      
+    </head>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #45b0f8;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="{{asset('front/logo1.png')}}" alt="logo" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://sd.bintangjuara.sch.id/772-2/">Yuk Wakaf</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/">PPDB</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontak.html">Kontak</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Akhir Navbar -->
+
+    <!-- Carousel -->
+    <section id="carouse">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{asset('front/bg.jpeg')}}" class="img-fluid" alt="bg">
+          </div>
+          <div class="carousel-item active">
+            <img src="{{asset('front/bg.jpeg')}}" class="img-fluid" alt="bg">
+          </div>
+          <div class="carousel-item active">
+            <img src="{{asset('front/bg.jpeg')}}" class="img-fluid" alt="bg">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Carousel -->
+
+    <!-- Selayang Pandang -->
+    <section id="selayangpandang">
+      <div class="container mt-5">
+            <div class="row fs-5">
+              <div class="col-8">
+                  <h2>Selayang Pandang</h2>
+                  <p align="justify">SD ISLAM BINTANG JUARA adalah Islamic Character Based School yang mengedepankan pendidikan diniyyah seperti 
+                    pembiasaan ibadah, tahsin & tahfidz, serta penanaman adab dan akhlak mulia. Kami juga menerapkan pembelajaran 
+                    holistik integratif dengan mengintegrasikan segala aspek dan nilai-nilai dalam pendidikan seperti nilai moral, etis,
+                    religius, psikologis dan sosial dalam kesatuan yang dilakukan secara menyeluruh antara jiwa dan badan serta aspek material
+                    dan aspek spiritual untuk memenuhi kebutuhan esensial anak.
+                  </p>
+              </div>
+              <div class="col">
+                  <img src="{{asset('front/gedung1.jpg')}}" class="img-fluid" alt="bg">
+              </div>
+            </div>
+      </div>
+  </section>
+      <!-- Akhir Selayang Pandang -->
+
+    <!-- Events, News, Videos -->
+    <section id="env">
+      <div class="container mt-5">
+          <div class="container">
+              <div class="row g-3">
+                  <div class="col">
+                    <h4 align="center">EVENTS</h4>
+                      <div class="card">                          
+                          <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="events">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text" align="justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                          </ul>
+                          <div class="card-body">
+                            <button type="button" class="btn btn-outline-secondary">Selengkapnya</button>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="col">
+                    <h4 align="center">NEWS</h4>
+                      <div class="card">
+                          <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text" align="justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                          </ul>
+                          <div class="card-body">
+                            <button type="button" class="btn btn-outline-secondary">Selengkapnya</button>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="col">
+                    <h4 align="center">VIDEOS</h4>
+                      <div class="card">
+                          <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="videos">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text"align="justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                          </ul>
+                          <div class="card-body">
+                            <button type="button" class="btn btn-outline-secondary">Selengkapnya</button>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+            </div>
+  </section>
+  <!-- Akhir Events, News, Videos -->
+
+    <!-- Kurikulum -->
+    <section id="kurikulum">
+      <section id="Fakta" >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#45b0f8" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,90.7C384,85,480,107,576,112C672,117,768,107,864,122.7C960,139,1056,181,1152,165.3C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">'
+          </path>
+          </svg>
+        <div class="container-fluid text-white" style="background-color: #45b0f8;">
+            <div class="container">
+            <div class="row mb-3">
+                <h2>Fokus Kurikulum Kami</h2>
+            </div>
+              <div class="row fs-5">
+                <div class="col-12 col-md-12 col-lg-5">
+                  <i class="fa-solid fa-book-open fa-2x" ></i><h3>Perpaduan Pendidikan Al Qur'an & Al Hadist dengan kurikulum KTSP 2013</h3>
+                    <p align="justify">Kurikulum SD Islam Bintang Juara menggunakan acuan utama, yaitu Al-Qur’an, Hadist, serta Kurikulum SD yang berlaku dari Pemerintah
+                       (KTSP Tahun 2013) serta Referensi Tahapan Perkembangan Anak dan Konsep Multiple Intelligences.</p>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-12 col-md-12 col-lg-5">
+                  <i class="fa-solid fa-person-circle-check fa-2x"></i><h3>Islamic Leadership</h3>
+                    <p align="justify">Membentuk leadership anak dengan membuat beragam project sesuai kurikulum dan kebutuhan lingkungan (individual maupun tim, kerjasama 
+                      dengan teman sekolah maupun anggota keluarga)</p>
+                </div>
+              </div>
+              <div class="row fs-5 ">
+                <div class="col-12 col-md-12 col-lg-5">
+                  <i class="fa-solid fa-scale-unbalanced fa-2x"></i><h3>Materi Keislaman 60% & Materi Umum 40%</h3>
+                    <p align="justify">Menitikberatkan pada materi keislaman untuk menguatkan pondasi agama anak, mengajari akidah, akhlaq & adab, serta ibadah wajib dan 
+                      sunnah</p>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-12 col-md-12 col-lg-5">
+                    <i class="fa-sharp fa-solid fa-circle-check fa-2x"></i> <h3>Karakter & Tanggung Jawab</h3>
+                    <p align="justify">Kami tidak hanya memberikan materi pendidikan secara teori, namun kami membiasakan ha-hal baik sebagai pendidikan tanggungjawab dan 
+                      pembentukan karakter, sehingga anak bisa menjalanankan peran di masyarakat dengan baik</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">\
+          <path fill="#45b0f8" fill-opacity="1" d="M0,96L48,122.7C96,149,192,203,288,208C384,213,480,171,576,138.7C672,107,768,85,864,106.7C960,128,1056,192,1152,218.7C1248,245,1344,235,1392,229.3L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+          </path>
+          </svg>
+    </section>  
+
+    <!-- Akhir Kurikulum -->
+
+  <!-- Fakta -->
+
+  <section id="Fakta">
+    <div class="container mt-5 mb-5">
+        <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <h1>FAKTA TENTANG</h1></div>
+                <h2>SD Islam Bintang Juara</h2>
+            </div>
+        </div>
+    <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news">
+                <div class="card-body">
+                  <h5 class="card-title">Fakta 1</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
+                </div>
+        </div>  
+        </div>   
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="videos">
+                <div class="card-body">
+                  <h5 class="card-title">Fakta 2</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="videos">
+                <div class="card-body">
+                  <h5 class="card-title">Fakta 3</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+               
+              </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Akhir Fakta -->
+
+<!-- Gallery -->
+<!-- yang lain nya  -->
+<section id="lainya"  class="mt-5 mb-5">
+  <div class="container mt-5">
+  <div class="slide-container-swiper">
+    <div class="row fs-5">
+      <!-- <div class="row fs-5"> -->
+        <!-- <div class="col-8"> -->
+          <h1>GALERI</h1>
+      </div>
+      <div class="col-12">
+        <div class="main-scroll-div">
+          <div>
+            <button class="icon" onclick="scrollr()"><i class="fas fa-angle-double-left"></i></button>
+          </div>
+          <div class="cover">
+            <div class="scroll-images">
+              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
+              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
+              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
+              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
+              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
+              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
+              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
+              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
+            </div>
+          </div>
+          <div>
+            <button class="icon" onclick="scrolll()"><i class="fas fa-angle-double-right"></i></button>
+          </div>
+        </div>
+      </body>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Akhir Gallery -->
+
+    <!-- Testimoni -->
+    
+    <section id="testimoni">
+      <div class="container">
+        <div class="row">
+          <div class="col text-end">
+            <h2>Kata Mereka</h2>
+          </div>
+          <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-4">
+              <ul class="list-group">
+                <li class="list-group-item">Nama Lengkap</li>
+                <li class="list-group-item" align="justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea ab quisquam autem, voluptate quis est nobis optio voluptatum tenetur accusantium.</li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <ul class="list-group">
+                <li class="list-group-item">Nama Lengkap</li>
+                <li class="list-group-item" align="justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis tempore debitis voluptate soluta excepturi corrupti voluptatibus ullam ab sint rem.</li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <ul class="list-group">
+                <li class="list-group-item">Nama Lengkap</li>
+                <li class="list-group-item" align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sit, voluptatibus sed quasi sapiente ut temporibus ullam eum modi. Blanditiis.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  <!-- Akhir testimoni -->
+
+  <!-- Footer -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#45b0f8" fill-opacity="1" d="M0,160L48,138.7C96,117,192,75,288,90.7C384,107,480,181,576,197.3C672,213,768,171,864,160C960,149,1056,171,1152,165.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+    </path>
+  </svg>
+  <footer class="text-white" style="background-color: #45b0f8;">
+    <div class="container text-md-left">
+      <div class="row align-items-center">
+        <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
+          <h5>
+            <img src="{{asset('front/logo2.png')}}" alt="logo" height="50">
+            <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"> Bintang Juara
+          </h5>
+          <p>
+            <i class="fas fa-home mr-3"></i> &nbsp; Jl. Dewi Sartika No.17 A, Sukorejo, Kec. Gn. Pati, Kota Semarang, 50221
+          </p>
+          <p>
+            <a  href="#" style="text-decoration: none;">
+              <strong class="text-white">Home</strong>              
+            </a> .
+            <a  href="#" style="text-decoration: none;">
+              <strong class="text-white">Kontak Kami</strong>              
+            </a> .
+            <a  href="#" style="text-decoration: none;">
+              <strong class="text-white">Sitemap</strong>              
+            </a>
+          </p>
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3"> 
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-3  mt-3" style="text-align: end;">
+          <h5> Follow us : </h5>
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+          <a href="https://www.facebook.com/sdislambintangjuara/" class="btn-floating btn-sm text-white" style="font-size:35px;">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/sdislambintangjuara/" class="btn-floating btn-sm text-white" style="font-size:35px;">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UCmKyv8sPPwrv-LyDaES6L8w/" class="btn-floating btn-sm text-white" style="font-size:35px;">
+            <i class="fab fa-youtube"></i>
+          </a>
+            </li>
+        </div>
+        <hr class="mb-4">
+        <div class="row align-items-center pb-5">
+          <div class="col-md-7 col-lg-8">
+            <p>
+              Copyright ©2023 All rights reserved by:
+              <a  href="#" style="text-decoration: none;">
+                <strong class="text-white">Bintang Juara</strong>              
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Akhir Footer -->
+
+  <div class="lainya"></div>
+  <script>
+    function scrolll() {
+      var left = document.querySelector(".scroll-images");
+      left.scrollBy(350, 0);
+    }
+
+    function scrollr() {
+      var right = document.querySelector(".scroll-images");
+      right.scrollBy(-350, 0);
+    }
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
