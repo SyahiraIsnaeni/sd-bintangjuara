@@ -51,20 +51,20 @@ h3 {
 
 .main-scroll-div {
     width: 90%;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     /* border: 2px solid red; */
 }
 
-.cover {
+/* .cover {
     position: relative;
     width: 90%;
     height: 50%;
-}
+} */
 
-/* .cover::before {
+.cover::before {
     position: absolute;
     content: "";
     left: 0;
@@ -73,9 +73,9 @@ h3 {
     height: 100%;
     width: 150px;
     background-image: linear-gradient(90deg, black, transparent);
-  }
-  
-  .cover::after {
+}
+
+.cover::after {
     position: absolute;
     content: "";
     right: 0;
@@ -84,11 +84,11 @@ h3 {
     height: 100%;
     width: 150px;
     background-image: linear-gradient(-90deg, black, transparent);
-  } */
+}
 
 .scroll-images {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 600px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -98,8 +98,8 @@ h3 {
 }
 
 .child {
-    min-width: 90%;
-    height: 450px;
+    min-width: 100%;
+    height: 100%;
     margin: 10px 10px;
     cursor: pointer;
     border: 1px solid rgba(207, 201, 201, 0.3);
@@ -113,6 +113,7 @@ h3 {
 .child-img {
     width: 100%;
     height: 100%;
+    align-items: center;
 }
 
 .icon {
@@ -126,7 +127,7 @@ h3 {
 }
 
 .icon:hover {
-    color: #ffff;
+    color: #fced19;
 }
 
 .elementor-widget-video .container {

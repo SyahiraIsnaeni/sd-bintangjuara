@@ -339,37 +339,35 @@
 <!-- Gallery -->
 <!-- yang lain nya  -->
 <section id="lainya"  class="mt-5 mb-5">
-  <div class="container mt-5">
-  <div class="slide-container-swiper">
-    <div class="row fs-5">
-      <!-- <div class="row fs-5"> -->
-        <!-- <div class="col-8"> -->
-          <h1>GALERI</h1>
+  <div class="container mt-5 mb-5" >
+  <div class="slide-container-swiper mt-5 mb-5">
+    <div class="row">
+      <div class="col-3">
+        <h1>GALERI</h1>
       </div>
-      <div class="col-12">
+      <div class="col-9">
         <div class="main-scroll-div">
           <div>
             <button class="icon" onclick="scrollr()"><i class="fas fa-angle-double-left"></i></button>
           </div>
           <div class="cover">
             <div class="scroll-images">
+              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
               <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
+              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
+              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
+              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
+              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
+              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
+              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
             </div>
           </div>
           <div>
             <button class="icon" onclick="scrolll()"><i class="fas fa-angle-double-right"></i></button>
           </div>
         </div>
-      </body>
       </div>
-
+    </div>
     </div>
   </div>
 </section>
