@@ -1,6 +1,6 @@
 <div class="main-header">
 			<!-- Logo Header -->
-			<div class="logo-header " data-background-color="blue">
+			<div class="logo-header panel-header" data-background-color="blue">
 
 				<a href="{{ route('dashboard') }}" class="logo" >
 				<h2 class="text-white mt-1 fw-bold">
