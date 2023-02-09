@@ -19,7 +19,7 @@
       </style>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-      
+
     </head>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #45b0f8;">
@@ -68,105 +68,27 @@
     </section>
     <!-- Akhir Carousel -->
 
-    <!-- news 1 -->
-
-    <section id="news">
-        <div class="container mt-5">
+  @forelse ($berita as $row)
+      <section id="events">
+          <div class="container mt-5">
               <div class="row fs-5">
-                <div class="col-6 col-md-3 col-lg-3">
-                    <img src="{{asset('front/dummy.jpeg')}}"  class="img-fluid" alt="bg">
-                </div>
-                <div class="col-6 col-md-9 col-lg-9">
-                    <h2><strong> Judul berita</strong></h2>
-                    <p align="justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure qui perferendis sed nam ullam unde magnam in possimus, repellat quod consequuntur debitis quasi asperiores eaque at, suscipit sequi ipsum nemo! Velit sint numquam, tempore explicabo eum optio fugit facere, assumenda ad est nobis nemo fuga ipsam architecto beatae fugiat doloribus.
-                    </p>
-                </div>
-              </div>
-              <hr class="mb-4">
-        </div>
-    </section>
-    
-    <!-- Akhir news 1 -->
-
-        <!-- news 2 -->
-
-        <section id="news">
-            <div class="container mt-5">
-                  <div class="row fs-5">
-                    <div class="col-6 col-md-3 col-lg-3">
-                        <img src="{{asset('front/dummy.jpeg')}}"  class="img-fluid" alt="bg">
-                    </div>
-                    <div class="col-6 col-md-9 col-lg-9">
-                        <h2><strong> Judul berita</strong></h2>
-                        <p align="justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure qui perferendis sed nam ullam unde magnam in possimus, repellat quod consequuntur debitis quasi asperiores eaque at, suscipit sequi ipsum nemo! Velit sint numquam, tempore explicabo eum optio fugit facere, assumenda ad est nobis nemo fuga ipsam architecto beatae fugiat doloribus.
-                        </p>
-                    </div>
+                  <div class="col-6 col-md-3 col-lg-2">
+                      <img src="{{asset('uploads/'.$row->gambar_berita) }}"  class="img-fluid" alt="bg">
                   </div>
-                  <hr class="mb-4">
-            </div>
-        </section>
-        
-        <!-- Akhir news 2 -->
-
-            <!-- news 3 -->
-
-    <section id="news">
-        <div class="container mt-5">
-              <div class="row fs-5">
-                <div class="col-6 col-md-3 col-lg-3">
-                    <img src="{{asset('front/dummy.jpeg')}}"  class="img-fluid" alt="bg">
-                </div>
-                <div class="col-6 col-md-9 col-lg-9">
-                    <h2><strong> Judul berita</strong></h2>
-                    <p align="justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure qui perferendis sed nam ullam unde magnam in possimus, repellat quod consequuntur debitis quasi asperiores eaque at, suscipit sequi ipsum nemo! Velit sint numquam, tempore explicabo eum optio fugit facere, assumenda ad est nobis nemo fuga ipsam architecto beatae fugiat doloribus.
-                    </p>
-                </div>
-              </div>
-              <hr class="mb-4">
-        </div>
-    </section>
-    
-    <!-- Akhir news 3 -->
-
-        <!-- news 4 -->
-
-        <section id="news">
-            <div class="container mt-5">
-                  <div class="row fs-5">
-                    <div class="col-6 col-md-3 col-lg-3">
-                        <img src="{{asset('front/dummy.jpeg')}}"  class="img-fluid" alt="bg">
-                    </div>
-                    <div class="col-6 col-md-9 col-lg-9">
-                        <h2><strong> Judul berita</strong></h2>
-                        <p align="justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure qui perferendis sed nam ullam unde magnam in possimus, repellat quod consequuntur debitis quasi asperiores eaque at, suscipit sequi ipsum nemo! Velit sint numquam, tempore explicabo eum optio fugit facere, assumenda ad est nobis nemo fuga ipsam architecto beatae fugiat doloribus.
-                        </p>
-                    </div>
+                  <div class="col-6 col-md-9 col-lg-10">
+                      <a class="text-black" href="#" style="text-decoration: none;">
+                          <h2><strong>{{$row->judul}}</strong></h2>
+                          <p align="justify">
+                              {!! substr($row->body, 0, 400)!!} ...
+                          </p>
+                      </a>
                   </div>
-                  <hr class="mb-4">
-            </div>
-        </section>
-        
-        <!-- Akhir news 4 -->
-
-            <!-- news 5 -->
-
-    <section id="news">
-        <div class="container mt-5">
-              <div class="row fs-5">
-                <div class="col-6 col-md-3 col-lg-3">
-                    <img src="{{asset('front/dummy.jpeg')}}"  class="img-fluid" alt="bg">
-                </div>
-                <div class="col-6 col-md-9 col-lg-9">
-                    <h2><strong> Judul berita</strong></h2>
-                    <p align="justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure qui perferendis sed nam ullam unde magnam in possimus, repellat quod consequuntur debitis quasi asperiores eaque at, suscipit sequi ipsum nemo! Velit sint numquam, tempore explicabo eum optio fugit facere, assumenda ad est nobis nemo fuga ipsam architecto beatae fugiat doloribus.
-                    </p>
-                </div>
               </div>
               <hr class="mb-4">
-        </div>
-    </section>
-    
-    <!-- Akhir news 5 -->
+          </div>
+      </section>
+  @empty
+  @endforelse
 
 
   <!-- Footer -->
@@ -187,17 +109,17 @@
           </p>
           <p>
             <a  href="#" style="text-decoration: none;">
-              <strong class="text-white">Home</strong>              
+              <strong class="text-white">Home</strong>
             </a> .
             <a  href="#" style="text-decoration: none;">
-              <strong class="text-white">Kontak Kami</strong>              
+              <strong class="text-white">Kontak Kami</strong>
             </a> .
             <a  href="#" style="text-decoration: none;">
-              <strong class="text-white">Sitemap</strong>              
+              <strong class="text-white">Sitemap</strong>
             </a>
           </p>
         </div>
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3"> 
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
         </div>
         <div class="col-md-3 col-lg-3 col-xl-3  mt-3" style="text-align: end;">
           <h5> Follow us : </h5>
@@ -213,14 +135,16 @@
             <i class="fab fa-youtube"></i>
           </a>
             </li>
+          </ul>
         </div>
+      </div>
         <hr class="mb-4">
         <div class="row align-items-center pb-5">
           <div class="col-md-7 col-lg-8">
             <p>
               Copyright ©2023 All rights reserved by:
               <a  href="#" style="text-decoration: none;">
-                <strong class="text-white">Bintang Juara</strong>              
+                <strong class="text-white">Bintang Juara</strong>
               </a>
             </p>
           </div>
@@ -231,7 +155,7 @@
   </footer>
 
   <!-- Akhir Footer -->
-  
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>

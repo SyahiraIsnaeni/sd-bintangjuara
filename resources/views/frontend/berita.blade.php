@@ -19,7 +19,7 @@
       </style>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-      
+
     </head>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #45b0f8;">
@@ -56,6 +56,7 @@
               <div class="carousel-item active">
                 <img src="{{asset('front/bg.jpeg')}}" class="img-fluid" alt="bg">
               </div>
+            </div>
         </section>
 <!-- Akhir Gambar berita -->
 
@@ -110,7 +111,7 @@
             </div>
             <div class="row g-3">
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">                          
+                    <div class="card">
                         <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="events">
                         <div class="card-body">
                           <h5 class="card-title">Card title</h5>
@@ -147,6 +148,7 @@
                 </div>
               </div>
           </div>
+    </div>
 </section>
 
 <!-- Akhir berita lainnya -->
@@ -169,17 +171,17 @@
           </p>
           <p>
             <a  href="#" style="text-decoration: none;">
-              <strong class="text-white">Home</strong>              
+              <strong class="text-white">Home</strong>
             </a> .
             <a  href="#" style="text-decoration: none;">
-              <strong class="text-white">Kontak Kami</strong>              
+              <strong class="text-white">Kontak Kami</strong>
             </a> .
             <a  href="#" style="text-decoration: none;">
-              <strong class="text-white">Sitemap</strong>              
+              <strong class="text-white">Sitemap</strong>
             </a>
           </p>
         </div>
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3"> 
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
         </div>
         <div class="col-md-3 col-lg-3 col-xl-3  mt-3" style="text-align: end;">
           <h5> Follow us : </h5>
@@ -195,14 +197,16 @@
             <i class="fab fa-youtube"></i>
           </a>
             </li>
+          </ul>
         </div>
+      </div>
         <hr class="mb-4">
         <div class="row align-items-center pb-5">
           <div class="col-md-7 col-lg-8">
             <p>
               Copyright ©2023 All rights reserved by:
               <a  href="#" style="text-decoration: none;">
-                <strong class="text-white">Bintang Juara</strong>              
+                <strong class="text-white">Bintang Juara</strong>
               </a>
             </p>
           </div>

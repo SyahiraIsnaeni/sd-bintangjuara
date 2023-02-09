@@ -19,7 +19,6 @@
       </style>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
     </head>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #45b0f8;">
@@ -113,7 +112,11 @@
                           @empty
                           @endforelse
                           <div class="card-body">
-                            <button type="button" class="btn btn-outline-secondary">Selengkapnya</button>
+                              <button type="button" class="btn btn-outline-secondary">
+                                  <a class="text-black" href="{{'daftar-kegiatan'}}" style="text-decoration: none;">
+                                      Selengkapnya
+                                  </a>
+                              </button>
                           </div>
                         </div>
                   </div>
@@ -136,7 +139,11 @@
                           @empty
                           @endforelse
                           <div class="card-body">
-                            <button type="button" class="btn btn-outline-secondary">Selengkapnya</button>
+                              <button type="button" class="btn btn-outline-secondary">
+                                  <a class="text-black" href="{{'daftar-berita'}}" style="text-decoration: none;">
+                                      Selengkapnya
+                                  </a>
+                              </button>
                           </div>
                         </div>
                   </div>
@@ -159,7 +166,11 @@
                           @empty
                           @endforelse
                           <div class="card-body">
-                            <button type="button" class="btn btn-outline-secondary">Selengkapnya</button>
+                              <button type="button" class="btn btn-outline-secondary">
+                                  <a class="text-black" href="{{'daftar-artikel'}}" style="text-decoration: none;">
+                                      Selengkapnya
+                                  </a>
+                              </button>
                           </div>
                         </div>
                   </div>
@@ -183,7 +194,11 @@
                           @empty
                           @endforelse
                           <div class="card-body">
-                            <button type="button" class="btn btn-outline-secondary">Selengkapnya</button>
+                            <button type="button" class="btn btn-outline-secondary">
+                                <a class="text-black" href="{{'daftar-pengumuman'}}" style="text-decoration: none;">
+                                    Selengkapnya
+                                </a>
+                            </button>
                           </div>
                         </div>
                   </div>
