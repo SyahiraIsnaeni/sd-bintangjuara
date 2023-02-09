@@ -89,13 +89,13 @@
   </section>
       <!-- Akhir Selayang Pandang -->
 
-    <!-- Events, News, Videos -->
-    <section id="env">
-      <div class="container mt-5">
+ <!-- Events, News, Videos -->
+ <section id="env">
+      <div class="container mt-5 mb-5">
           <div class="container">
               <div class="row g-3">
-                  <div class="col">
-                    <h4 align="center">EVENTS</h4>
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <h3 align="center">Kegiatan</h3>
                       <div class="card">                          
                           <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="events">
                           <div class="card-body">
@@ -112,8 +112,8 @@
                           </div>
                         </div>
                   </div>
-                  <div class="col">
-                    <h4 align="center">NEWS</h4>
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <h3 align="center">Berita</h3>
                       <div class="card">
                           <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news">
                           <div class="card-body">
@@ -130,8 +130,8 @@
                           </div>
                         </div>
                   </div>
-                  <div class="col">
-                    <h4 align="center">VIDEOS</h4>
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <h3 align="center">Artikel</h3>
                       <div class="card">
                           <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="videos">
                           <div class="card-body">
@@ -148,6 +148,26 @@
                           </div>
                         </div>
                   </div>
+
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <h3 align="center">Pengumuman</h3>
+                      <div class="card">
+                          <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="videos">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text"align="justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                          </ul>
+                          <div class="card-body">
+                            <button type="button" class="btn btn-outline-secondary">Selengkapnya</button>
+                          </div>
+                        </div>
+                  </div>
+
                 </div>
             </div>
   </section>
