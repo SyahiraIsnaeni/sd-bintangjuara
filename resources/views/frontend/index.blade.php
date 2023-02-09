@@ -94,25 +94,29 @@
       <div class="container mt-5 mb-5">
           <div class="container">
               <div class="row g-3">
-<<<<<<< HEAD
                   <div class="col-12 col-md-6 col-lg-3">
                     <h3 align="center">Kegiatan</h3>
-                      <div class="card">                          
-=======
+                      <div class="card">
                   <div class="col">
                     <h4 align="center">EVENTS</h4>
                       <div class="card">
->>>>>>> 8e515c735f6992e457a389622a822b47dd6d16f4
-                          <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="events">
+                          @forelse ($kegiatanPrioritas as $row)
+                          <img src="{{asset('uploads/'.$row->gambar_artikel) }}" class="card-img-top" alt="events" height="300">
+                          @empty
+                          @endforelse
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text" align="justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            @forelse ($kegiatanPrioritas as $row)
+                            <h5 class="card-title">{{$row->judul}}</h5>
+                            @empty
+                            @endforelse
+                            <p class="card-text" align="justify">{!! $row->body !!}</p>
                           </div>
+                          @forelse ($kegiatan as $row)
                           <ul class="list-group list-group-flush">
-                            <li class="list-group-item">An item</li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">A third item</li>
+                            <li class="list-group-item">{{ $row->judul}}</li>
                           </ul>
+                          @empty
+                          @endforelse
                           <div class="card-body">
                             <button type="button" class="btn btn-outline-secondary">Selengkapnya</button>
                           </div>
@@ -177,7 +181,10 @@
                 </div>
             </div>
       </div>
+          </div>
+      </div>
   </section>
+
 
   <!-- Akhir Events, News, Videos -->
 
