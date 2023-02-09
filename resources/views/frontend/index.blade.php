@@ -202,6 +202,53 @@
   </section>
   <!-- Akhir Events, News, Videos -->
 
+<!-- video yt -->
+<div class="video yt">
+  <div class="container mt-5">
+    <div class="bintangjuaravideo">
+      <div class="heading">
+        <h1 class="title">Lebih Dekat dengan SD Islam Bintang Juara</h1>
+      </div>
+    </div>
+    <section class="yt">
+      <div class="row">
+        <div class="col-6">
+          <div class="video1">
+            <div class="bintangjuaravideo">
+              <div class="elementor-widget-video" data-id="8b392b9" data-element_type="widget"
+                data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/www.youtube.com\/watch?v=1GL6RJMI0S4&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;,&quot;aspect_ratio&quot;:&quot;169&quot;}"
+                data-widget_type="video.default">
+                <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
+                  <iframe class="elementor-video" frameborder="0" allowfullscreen="1"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    title="Video Profile SD Islam Bintang Juara Semarang | Sekolah Calon Pemimpin Muslim | Sekolah Ramah Anak"
+                    width="640" height="360"
+                    src="https://www.youtube.com/embed/1GL6RJMI0S4?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsd.bintangjuara.sch.id&amp;widgetid=1"
+                    id="widget2"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="bintangjuaravideo">
+            <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
+              <iframe class="elementor-video" frameborder="0" allowfullscreen="1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                title="Leadership Camp SD Islam Bintang Juara | &quot;More Than Just Adventure&quot;" width="640"
+                height="360"
+                src="https://www.youtube.com/embed/zvGGvawkXPo?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsd.bintangjuara.sch.id&amp;widgetid=3"
+                id="widget4"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<!-- akhir video yt -->
+
+
     <!-- Kurikulum -->
     <section id="kurikulum">
       <section id="Fakta" >
