@@ -90,12 +90,6 @@
                                 <p>Admin</p>
                             </a>
                         </li>
-						<li class="nav-item">
-                            <a href="{{ route('galeri.index') }}">
-							<i class="fas fa-image"></i>
-                                <p>Gambar</p>
-                            </a>
-                        </li>
 						<li class="nav-section">
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>
@@ -124,6 +118,24 @@
                             <a href="{{ route('pengumuman.index') }}">
 							<i class="fas fa-bullhorn"></i>
                                 <p>Pengumuman</p>
+                            </a>
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ route('galeri.index') }}">
+							<i class="fas fa-image"></i>
+                                <p>Galeri</p>
+                            </a>
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ route('galeri.index') }}">
+							<i class="fas fa-images"></i>
+                                <p>Jumbotron</p>
+                            </a>
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ route('galeri.index') }}">
+							<i class="fas fa-comment"></i>
+                                <p>Testimoni</p>
                             </a>
                         </li>
                         <li class="nav-section">

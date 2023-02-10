@@ -32,7 +32,7 @@
 						</li>
 
 						<li class="nav-item">
-							<a href="{{ route('kategorikegiatan.index') }}">
+							<a  href="{{ route('kategorikegiatan.index') }}">
 								<i class="fas fa-list-ul"></i>
 								<p>Kategori Kegiatan</p>
 
@@ -56,12 +56,6 @@
                                 <p>Admin</p>
                             </a>
                         </li>
-						<li class="nav-item">
-                            <a href="{{ route('galeri.index') }}">
-							<i class="fas fa-image"></i>
-                                <p>Gambar</p>
-                            </a>
-                        </li>
 						<li class="nav-section">
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>
@@ -69,7 +63,7 @@
 							<h4 class="text-section">Postingan</h4>
 						</li>
 						<li class="nav-item">
-							<a class = "nav-link active" aria-current= "page" href="{{ route('kegiatan.index') }}">
+							<a href="{{ route('kegiatan.index') }}">
 								<i class="fas fa-calendar"></i>
 								<p>Kegiatan</p>
 							</a>
@@ -80,7 +74,7 @@
                                 <p>Berita</p>
                             </a>
                         </li>
-						<li class="nav-item active">
+						<li class="nav-item">
                             <a href="{{ route('artikel.index') }}">
 							<i class="fas fa-file"></i>
                                 <p>Artikel</p>
@@ -90,6 +84,24 @@
                             <a href="{{ route('pengumuman.index') }}">
 							<i class="fas fa-bullhorn"></i>
                                 <p>Pengumuman</p>
+                            </a>
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ route('galeri.index') }}">
+							<i class="fas fa-image"></i>
+                                <p>Galeri</p>
+                            </a>
+                        </li>
+						<li class="nav-item active">
+                            <a href="{{ route('galeri.index') }}">
+							<i class="fas fa-images"></i>
+                                <p>Jumbotron</p>
+                            </a>
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ route('galeri.index') }}">
+							<i class="fas fa-comment"></i>
+                                <p>Testimoni</p>
                             </a>
                         </li>
                         <li class="nav-section">

@@ -47,7 +47,7 @@
                                     <div class="card-header">
                                         <div class="card-head-row">
                                             <div class="card-title">Data Artikel</div>
-                                                <a href="{{route('artikel.create')}}" class="btn btn-primary btn=sm ml-auto"> <i
+                                                <a href="{{route('artikel.create')}}" class="btn btn-info btn=sm ml-auto"> <i
                                                     class="fas fa-plus"></i>Tambah Artikel </a>
                                             </div>
                                         </div>
