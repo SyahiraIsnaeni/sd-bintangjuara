@@ -93,13 +93,13 @@
                             </a>
                         </li>
 						<li class="nav-item active">
-                            <a href="{{ route('galeri.index') }}">
+                            <a href="{{ route('jumbotron.index') }}">
 							<i class="fas fa-images"></i>
                                 <p>Jumbotron</p>
                             </a>
                         </li>
 						<li class="nav-item">
-                            <a href="{{ route('galeri.index') }}">
+                            <a href="{{ route('testimoni.index') }}">
 							<i class="fas fa-comment"></i>
                                 <p>Testimoni</p>
                             </a>

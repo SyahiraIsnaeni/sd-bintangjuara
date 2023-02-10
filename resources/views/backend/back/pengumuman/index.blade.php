@@ -78,10 +78,10 @@
                                         <tr>
                                             <td>{{ $row->judul}}</td>
                                             <td>{{ $row->slug}}</td>
-                                            <td>{{ $row->kategori_pengumuman->nama_kategori}}</td>
+                                            <td>{{ $row->kategori_pengumuman->nama_kategori ?? ''}}</td>
                                             <td><img src="{{asset('uploads/'.$row->gambar_pengumuman) }}" width="100"></td>
                                             <td>
-                                                @if ($row->is_active == 'N')
+                                                @if ($row->is_active == '1')
                                                     Diterbitkan
                                                 @else
                                                     Draf

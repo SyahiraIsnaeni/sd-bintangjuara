@@ -35,7 +35,7 @@ class TestimoniController extends Controller
     {
 
         $data = $request->all();
-        $data['gambar_artikel'] = $request->file('gambar_artikel')->store('artikel');
+        $data['foto'] = $request->file('foto')->store('testimoni');
 
         Testimoni::create($data);
 
@@ -70,7 +70,7 @@ class TestimoniController extends Controller
             ]);
 
             Alert::info('Diubah', 'Data Berhasil Terubah');
-            return redirect()->route('artikel.index');
+            return redirect()->route('testimoni.index');
         }
     }
 
