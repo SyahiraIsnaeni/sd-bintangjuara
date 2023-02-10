@@ -43,6 +43,15 @@
           <li class="nav-item">
             <a class="nav-link" href="kontak.html">Kontak</a>
           </li>
+            <li class="nav-item">
+                @if (Route::has('login'))
+                    @auth
+                        <a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a>
+                    @else
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    @endauth
+                @endif
+            </li>
         </ul>
       </div>
     </div>
@@ -53,15 +62,12 @@
     <section id="carouse">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
+            @forelse ($jumbotron as $row)
           <div class="carousel-item active">
-            <img src="{{asset('front/bg.jpeg')}}" class="img-fluid" alt="bg">
+                <img src="{{asset('uploads/'.$row->foto) }}" class="img-fluid" alt="bg">
           </div>
-          <div class="carousel-item active">
-            <img src="{{asset('front/bg.jpeg')}}" class="img-fluid" alt="bg">
-          </div>
-          <div class="carousel-item active">
-            <img src="{{asset('front/bg.jpeg')}}" class="img-fluid" alt="bg">
-          </div>
+            @empty
+            @endforelse
         </div>
       </div>
     </section>
@@ -366,14 +372,10 @@
           </div>
           <div class="cover">
             <div class="scroll-images">
-              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
+                @forelse ($galeri as $row)
+                    <div class="child"><img class="child-img" src="{{asset('uploads/'.$row->gambar_galeri) }}" alt="image" /></div>
+                @empty
+                @endforelse
             </div>
           </div>
           <div>
@@ -396,24 +398,16 @@
             <h2>Kata Mereka</h2>
           </div>
           <div class="row g-3">
+            @forelse ($testimoni as $row)
             <div class="col-12 col-md-6 col-lg-4">
               <ul class="list-group">
-                <li class="list-group-item">Nama Lengkap</li>
-                <li class="list-group-item" align="justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea ab quisquam autem, voluptate quis est nobis optio voluptatum tenetur accusantium.</li>
+                <img src="{{asset('uploads/'.$row->foto) }}" alt="events" height="300">
+                <li class="list-group-item">{{ $row->nama}}</li>
+                <li class="list-group-item" align="justify">{!! $row->testimoni !!}</li>
               </ul>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <ul class="list-group">
-                <li class="list-group-item">Nama Lengkap</li>
-                <li class="list-group-item" align="justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis tempore debitis voluptate soluta excepturi corrupti voluptatibus ullam ab sint rem.</li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <ul class="list-group">
-                <li class="list-group-item">Nama Lengkap</li>
-                <li class="list-group-item" align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sit, voluptatibus sed quasi sapiente ut temporibus ullam eum modi. Blanditiis.</li>
-              </ul>
-            </div>
+            @empty
+            @endforelse
           </div>
         </div>
       </div>

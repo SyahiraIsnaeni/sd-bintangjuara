@@ -64,7 +64,7 @@ class GaleriController extends Controller
         Storage::delete($galeri->gambar_galeri);
         $galeri->delete();
 
-        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        Alert::success('Dihapus', 'Data Berhasil Terhapus');
         return redirect()->route('galeri.index');
     }
 }

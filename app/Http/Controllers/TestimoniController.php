@@ -56,6 +56,7 @@ class TestimoniController extends Controller
             $testimoni = Testimoni::find($id);
             $testimoni->update([
                 'nama' => $request->nama,
+                'is_active' => $request->is_active,
                 'testimoni' => $request->testimoni
             ]);
             Alert::info('Diubah', 'Data Berhasil Terubah');
@@ -66,6 +67,7 @@ class TestimoniController extends Controller
             $testimoni->update([
                 'nama' => $request->nama,
                 'foto' => $request->file('foto')->store('testimoni'),
+                'is_active' => $request->is_active,
                 'testimoni' => $request->testimoni
             ]);
 
@@ -79,7 +81,7 @@ class TestimoniController extends Controller
         $testimoni = Testimoni::find($id);
         $testimoni->delete();
 
-        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        Alert::success('Dihapus', 'Data Berhasil Terhapus');
         return redirect()->route('testimoni.index');
     }
 }

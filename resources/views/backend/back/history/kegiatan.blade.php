@@ -18,7 +18,7 @@
 			}
 		});
 	</script>
-	
+
 
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="{{asset('back/css/bootstrap.min.css')}}">
@@ -26,7 +26,7 @@
 
 	<!-- CSS Just for demo purpose, don't include it in your project
 	<link rel="stylesheet" href="{{asset('back/css/demo.css')}}"> -->
-	
+
 </head>
 <body>
 	<div class="wrapper">
@@ -81,6 +81,9 @@
                                                 </td>
                                                 <td>
 
+                                                    <a href="{{route('history-kegiatan.edit', $row->id) }}"
+                                                       class="btn btn-warning btn-sm">Restore</a>
+
                                                     <form action="{{route('history-kegiatan.destroy', $row->id)}}" method="post"
                                                         class="d-inline">
                                                         @csrf
@@ -111,7 +114,7 @@
             </div>
         </div>
             </div>
-            @include('backend.includes.footer') 
+            @include('backend.includes.footer')
         </div>
 	</div>
 	<!--   Core JS Files   -->

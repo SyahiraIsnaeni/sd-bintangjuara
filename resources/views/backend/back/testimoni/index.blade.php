@@ -18,7 +18,7 @@
 			}
 		});
 	</script>
-	
+
 
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="{{asset('back/css/bootstrap.min.css')}}">
@@ -26,7 +26,7 @@
 
 	<!-- CSS Just for demo purpose, don't include it in your project
 	<link rel="stylesheet" href="{{asset('back/css/demo.css')}}"> -->
-	
+
 </head>
 <body>
 	<div class="wrapper">
@@ -47,7 +47,7 @@
                 <div class="card full-height">
                     <div class="card-header">
                         <div class="card-head-row">
-                            <div class="card-title">Data Tetsimoni</div>
+                            <div class="card-title">Data Testimoni</div>
                             <a href="{{route('testimoni.create')}}" class="btn btn-info btn=sm ml-auto"> <i
                                     class="fas fa-plus"></i>Tambah Testimoni </a>
                         </div>
@@ -98,8 +98,8 @@
                                             </td>
 
                                         </tr>
-                                    
-                                    
+
+
                                 @empty
                                     <tr>
                                         <td colspan="7" class="text-center">Data Masih Kosong</td>
@@ -116,7 +116,7 @@
         </div>
     </div>
             </div>
-            @include('backend.includes.footer') 
+            @include('backend.includes.footer')
         </div>
 	</div>
 	<!--   Core JS Files   -->

@@ -99,7 +99,7 @@ class KegiatanController extends Controller
             'delete' => 'Y'
         ]);
 
-        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        Alert::success('Dihapus', 'Data Berhasil Terhapus');
         return redirect()->route('kegiatan.index');
     }
 }

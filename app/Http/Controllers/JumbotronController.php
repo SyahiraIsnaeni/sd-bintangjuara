@@ -48,7 +48,7 @@ class JumbotronController extends Controller
         $jumbotron = Jumbotron::find($id);
         $jumbotron->delete();
 
-        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        Alert::success('Dihapus', 'Data Berhasil Terhapus');
         return redirect()->route('jumbotron.index');
     }
 }

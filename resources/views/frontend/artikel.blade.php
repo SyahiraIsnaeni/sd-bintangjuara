@@ -102,42 +102,25 @@
                 <h3><strong>What to Read Next</strong></h3>
             </div>
             <div class="row g-3">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="events">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text" align="justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                @forelse ($nextArtikel as $row)
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="{{asset('uploads/'.$row->gambar_artikel) }}" class="card-img-top" alt="events" height="250">
+                            <div class="card-body">
+                                <h5 class="card-title">{{$row->judul}}</h5>
+                                <p class="card-text" align="justify">{!! substr($row->body, 0, 100)!!} ...</p>
+                            </div>
+                            <div class="card-body">
+                                <button type="button" class="btn btn-outline-secondary">
+                                    <a class="text-black" href="{{route('detail-artikel', $row->slug)}}" style="text-decoration: none;">
+                                        Selengkapnya
+                                    </a>
+                                </button>
+                            </div>
                         </div>
-                        <div class="card-body">
-                          <button type="button" class="btn btn-outline-secondary">Selengkapnya</button>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text" align="justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                        <div class="card-body">
-                          <button type="button" class="btn btn-outline-secondary">Selengkapnya</button>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="videos">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text"align="justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                        <div class="card-body">
-                          <button type="button" class="btn btn-outline-secondary">Selengkapnya</button>
-                        </div>
-                      </div>
-                </div>
+                    </div>
+                @empty
+                @endforelse
               </div>
           </div>
     </div>

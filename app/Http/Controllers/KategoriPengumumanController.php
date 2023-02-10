@@ -69,7 +69,7 @@ class KategoriPengumumanController extends Controller
         $kategori_pengumuman = KategoriPengumuman::find($id);
         $kategori_pengumuman->delete();
 
-        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        Alert::success('Dihapus', 'Data Berhasil Terhapus');
         return redirect()->route('kategoripengumuman.index');
     }
 }

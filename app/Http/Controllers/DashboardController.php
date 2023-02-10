@@ -26,7 +26,12 @@ class DashboardController extends Controller
         $admin = User::all()->sortByDesc('updated_at');
         $galeri = Galeri::all()->sortByDesc('updated_at');
 
-        return view('backend.back.dashboard', compact('pengumuman','berita', 'artikel', 'kegiatan', 'admin', 'galeri'));
+        $drafPengumuman = Pengumuman::where('is_active', '0')->get();
+        $drafBerita = Berita::where('is_active', '0')->get();
+        $drafKegiatan = Kegiatan::where('is_active', '0')->get();
+        $drafArtikel = Artikel::where('is_active', '0')->get();
+
+        return view('backend.back.dashboard', compact('pengumuman','berita', 'artikel', 'kegiatan', 'admin', 'galeri', 'drafBerita', 'drafPengumuman', 'drafArtikel', 'drafKegiatan'));
     }
 
     public function create()

@@ -142,19 +142,15 @@
 				<div class="card-body">
                     <table class="table">
                         <tbody>
-                        @forelse ($kegiatan as $row)
+                        @forelse ($drafKegiatan as $row)
                             <tr>
                                 <td>
-                                    @if ($row->is_active == '0')
-                                        <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="60"></td>
-                                        <td>{{ $row->judul}}</td>
-                                        <td>
-                                            <a href="{{route('kegiatan.edit', $row->id) }}"
-                                               class="btn btn-warning btn-sm">Edit</a>
-                                        </td>
-                                    @else
-									
-                                    @endif
+                                    <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="60"></td>
+                                    <td>{{ $row->judul}}</td>
+                                    <td>
+                                        <a href="{{route('kegiatan.edit', $row->id) }}"
+                                           class="btn btn-warning btn-sm">Edit</a>
+                                    </td>
                                 </td>
                             </tr>
                         @empty
@@ -175,19 +171,15 @@
 				<div class="card-body">
                     <table class="table">
                         <tbody>
-                        @forelse ($berita as $row)
+                        @forelse ($drafBerita as $row)
                             <tr>
                                 <td>
-                                @if ($row->is_active == '0')
                                     <td><img src="{{asset('uploads/'.$row->gambar_berita) }}" width="60"></td>
                                     <td>{{ $row->judul}}</td>
                                     <td>
                                         <a href="{{route('berita.edit', $row->id) }}"
                                            class="btn btn-warning btn-sm">Edit</a>
                                     </td>
-                                    @else
-
-                                    @endif
                                 </td>
                             </tr>
                         @empty
@@ -208,20 +200,16 @@
 				<div class="card-body">
                     <table class="table">
                         <tbody>
-                        @forelse ($artikel as $row)
+                        @forelse ($drafArtikel as $row)
                             <tr>
                                 <td>
-                                @if ($row->is_active == '0')
                                     <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="60"></td>
                                     <td>{{ $row->judul}}</td>
                                     <td>
                                         <a href="{{route('artikel.edit', $row->id) }}"
                                            class="btn btn-warning btn-sm">Edit</a>
                                     </td>
-                                    @else
-
-                                    @endif
-                                    </td>
+                                </td>
                             </tr>
                         @empty
 
@@ -242,20 +230,16 @@
 				<div class="card-body">
                     <table class="table">
                         <tbody>
-                        @forelse ($pengumuman as $row)
+                        @forelse ($drafPengumuman as $row)
                             <tr>
                                 <td>
-                                @if ($row->is_active == '0')
                                     <td><img src="{{asset('uploads/'.$row->gambar_pengumuman) }}" width="60"></td>
                                     <td>{{ $row->judul}}</td>
                                     <td>
                                         <a href="{{route('pengumuman.edit', $row->id) }}"
                                            class="btn btn-warning btn-sm">Edit</a>
                                     </td>
-                                    @else
-
-                                    @endif
-                                    </td>
+                                </td>
                             </tr>
                         @empty
 
