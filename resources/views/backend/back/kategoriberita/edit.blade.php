@@ -35,7 +35,7 @@
                                 <input type="text" name="nama_kategori" value=" {{$kategori_berita->nama_kategori}}" class="form-control" id="text" placeholder="Enter Kategori Berita">
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-primary btn-sm" type="submit"> Simpan </button>
+                                <button class="btn btn-info btn-sm" type="submit"> Simpan </button>
                             </div>
                         </form>
                     </div>

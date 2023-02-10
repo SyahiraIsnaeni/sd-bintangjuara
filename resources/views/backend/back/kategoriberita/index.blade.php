@@ -23,7 +23,7 @@
                     <div class="card-header">
                         <div class="card-head-row">
                             <div class="card-title">Data Kategori Berita</div>
-                            <a href="{{route('kategoriberita.create')}}" class="btn btn-primary btn=sm ml-auto"> <i
+                            <a href="{{route('kategoriberita.create')}}" class="btn btn-info btn=sm ml-auto"> <i
                                     class="fas fa-plus"></i>Tambah Kategori</a>
                         </div>
                     </div>

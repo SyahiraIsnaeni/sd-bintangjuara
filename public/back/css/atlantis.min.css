@@ -84,7 +84,7 @@ danger-color : #f3545d
 }
 
 .alert,
-.brand,
+.brand, 
 .btn-simple,
 .h1,
 .h2,
@@ -886,7 +886,7 @@ body {
     > .nav-item
     a[data-toggle="collapse"][aria-expanded="true"]
     i {
-    color: #1572e8 !important;
+    color: #45b0f8 !important;
 }
 
 .sidebar
@@ -897,7 +897,7 @@ body {
     .nav.nav-primary
     > .nav-item
     a[data-toggle="collapse"][aria-expanded="true"]:before {
-    background: #1572e8 !important;
+    background: #45b0f8 !important;
 }
 
 .sidebar .nav.nav-primary > .nav-item.active a:before,
@@ -905,7 +905,7 @@ body {
     .nav.nav-primary
     > .nav-item.active
     a:before {
-    background: #1572e8 !important;
+    background: #45b0f8 !important;
 }
 
 .sidebar .nav.nav-primary > .nav-item.active a i,
@@ -914,7 +914,7 @@ body {
     > .nav-item.active
     a
     i {
-    color: #1572e8 !important;
+    color: #45b0f8 !important;
 }
 
 .sidebar .nav.nav-secondary > .nav-item a:focus i,
@@ -1277,7 +1277,7 @@ body {
 }
 
 .sidebar.sidebar-style-2 .nav.nav-primary > .nav-item.active > a {
-    background: #1572e8 !important;
+    background: #45b0f8 !important;
     box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
         4px 4px 15px -5px rgba(21, 114, 232, 0.4) !important;
 }

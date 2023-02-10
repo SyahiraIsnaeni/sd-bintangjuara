@@ -36,7 +36,7 @@
 				    </div>
                     <div class="form-group">
 						<label for="kegiatan">Deskripsi</label>
-						<textarea name="body" class="form-control">{{ $kegiatan->body}}</textarea>
+						<textarea name="body" class="form-control" id="task-textarea">{{ $kegiatan->body}}</textarea>
 				    </div>
                     <div class="form-group">
 						<label for="kegiatan">Kategori</label>
@@ -70,7 +70,7 @@
 						<img src="{{asset('uploads/'.$kegiatan->gambar_artikel) }}" width="100">
 				    </div>
                         <div class="form-group">
-                            <button class="btn btn-primary btn-sm" type="submit"> Simpan </button>
+                            <button class="btn btn-info btn-sm" type="submit"> Simpan </button>
                             <button class="btn btn-danger btn-sm" type="reset"> Reset </button>
                         </div>
                     </form>
@@ -79,5 +79,15 @@
 		</div>
 	</div>
 </div>
+@endsection
+
+@section('scripts')
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#task-textarea' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 @endsection
 </body>

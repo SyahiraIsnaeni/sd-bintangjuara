@@ -23,7 +23,7 @@
 				<div class="card-header">
 					<div class="card-head-row">
 						<div class="card-title">Data Kegiatan</div>
-                        <a href="{{route('kegiatan.create')}}" class="btn btn-primary btn=sm ml-auto"> <i
+                        <a href="{{route('kegiatan.create')}}" class="btn btn-info btn=sm ml-auto"> <i
                         class="fas fa-plus"></i>Tambah Kegiatan </a>
 					</div>
 				</div>

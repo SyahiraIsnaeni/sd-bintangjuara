@@ -66,7 +66,7 @@
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link active" href="{{ route('kategorikegiatan.index') }}">
+							<a  href="{{ route('kategorikegiatan.index') }}">
 								<i class="fas fa-list-ul"></i>
 								<p>Kategori Kegiatan</p>
 
@@ -178,7 +178,6 @@
 				</div>
 			</div>
 		</div>
-
 		<!-- End Sidebar -->
 		<div class="main-panel">
 			<div class="content">
@@ -188,9 +187,9 @@
 		</div>
 	</div>
 	<!--   Core JS Files   -->
-@include('backend.includes.js')
-@include('sweetalert::alert', ['cdn'=>"https://cdn.jsdelivr.net/npm/sweetalert2@9"])
-<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
-@yield('scripts')
+	@include('backend.includes.js')
+	@include('sweetalert::alert', ['cdn'=>"https://cdn.jsdelivr.net/npm/sweetalert2@9"])
+	<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+	@yield('scripts')
 </body>
 </html>

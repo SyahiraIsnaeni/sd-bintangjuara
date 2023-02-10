@@ -23,7 +23,7 @@
                     <div class="card-header">
                         <div class="card-head-row">
                             <div class="card-title">Daftar Gambar</div>
-                            <a href="{{route('galeri.create')}}" class="btn btn-primary btn=sm ml-auto"> <i
+                            <a href="{{route('galeri.create')}}" class="btn btn-info btn=sm ml-auto"> <i
                                     class="fas fa-plus"></i>Tambah Gambar </a>
                         </div>
                     </div>

@@ -38,7 +38,7 @@
                                 <input type="file" name="gambar_galeri">
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-primary btn-sm" type="submit"> Simpan </button>
+                                <button class="btn btn-info btn-sm" type="submit"> Simpan </button>
                                 <button class="btn btn-danger btn-sm" type="reset"> Reset </button>
                             </div>
                         </form>
