@@ -76,7 +76,7 @@
 						Copyright © 2023 psbbintangjuara.com. All rights reserved
 					</div>				
 				</div>
-			</footer>
+	</footer>
 	<!--   Core JS Files   -->
 @include('backend.includes.js')
 </body>

@@ -575,13 +575,13 @@ body {
 .sidebar .user,
 .sidebar[data-background-color="white"] .user {
     margin-top: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 8px;
+    padding-right: 25px;
     padding-bottom: 12.5px;
     border-bottom: 1px solid #f1f1f1;
     display: block;
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 25px;
 }
 
 .sidebar .user .info a,
@@ -610,14 +610,17 @@ body {
 .sidebar .user .info a > span .user-level,
 .sidebar[data-background-color="white"] .user .info a > span .user-level {
     color: #555;
-    font-weight: 600;
-    font-size: 12px;
+    font-weight: 500;
+    font-size: 10px;
     margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column
 }
 
 .sidebar .user .info a .link-collapse,
 .sidebar[data-background-color="white"] .user .info a .link-collapse {
-    padding: 7px 0;
+    padding: 7px ;
 }
 
 .sidebar .user .info .caret,
