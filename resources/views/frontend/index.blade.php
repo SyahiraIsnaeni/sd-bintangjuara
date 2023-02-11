@@ -43,10 +43,12 @@
           <li class="nav-item">
             <a class="nav-link" href="kontak.html">Kontak</a>
           </li>
-            <li class="nav-item">
+        </ul>
+        <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
                 @if (Route::has('login'))
                     @auth
-                        <a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a>
+                        <a class="nav-link" href="{{ url('/dashboard') }}">Dashboard Admin</a>
                     @else
                         <a class="nav-link" href="{{ route('login') }}">Login</a>
                     @endauth
