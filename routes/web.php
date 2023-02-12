@@ -28,7 +28,7 @@ use App\Http\Controllers\JumbotronController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+ 
 
 Route::group(['middleware' => 'revalidate'], function(){
     Route::get('/', function () {
