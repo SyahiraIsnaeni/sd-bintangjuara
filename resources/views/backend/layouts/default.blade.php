@@ -138,6 +138,18 @@
                                 <p>Testimoni</p>
                             </a>
                         </li>
+						<li class="nav-item">
+                            <a href="{{ route('waqaf.index') }}">
+							<i class="fas fa-comment"></i>
+                                <p>Waqaf</p>
+                            </a>
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ route('guru.index') }}">
+							<i class="fas fa-comment"></i>
+                                <p>Guru</p>
+                            </a>
+                        </li>
                         <li class="nav-section">
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>

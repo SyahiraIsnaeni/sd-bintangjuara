@@ -104,7 +104,7 @@
                                 <p>Testimoni</p>
                             </a>
                         </li>
-						<li class="nav-item">
+						<li class="nav-item active">
                             <a href="{{ route('waqaf.index') }}">
 							<i class="fas fa-comment"></i>
                                 <p>Waqaf</p>
@@ -128,7 +128,7 @@
                                 <p>Riwayat Kegiatan</p>
                             </a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a href="{{ route('history-berita.index') }}">
 							<i class="fas fa-recycle"></i>
                                 <p>Riwayat Berita</p>
