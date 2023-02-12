@@ -24,14 +24,14 @@
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #45b0f8;">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="{{asset('front/logo1.png')}}" alt="logo" height="50">
+        <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"> SD Islam Bintang Juara
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
+        <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Profile</a>
           </li>
           <li class="nav-item">
@@ -43,8 +43,6 @@
           <li class="nav-item">
             <a class="nav-link" href="kontak.html">Kontak</a>
           </li>
-        </ul>
-        <ul class="navbar-nav ms-auto">
         <li class="nav-item">
                 @if (Route::has('login'))
                     @auth
@@ -365,7 +363,7 @@
   <div class="slide-container-swiper mt-5 mb-5">
     <div class="row">
       <div class="col-3">
-        <h1>GALERI</h1>
+        <h1>Galeri</h1>
       </div>
       <div class="col-9">
         <div class="main-scroll-div">
@@ -403,10 +401,12 @@
         @forelse ($testimoni as $row)
           <div class="col-lg-4 mb-3 d-flex align-items-stretch">
             <div class="card">
-              <img src="{{asset('uploads/'.$row->foto) }}" class="card-img-top" alt="Card Image">
+              <img src="{{asset('uploads/'.$row->foto) }}" class="card-img-top" alt="Card Image" height="360">
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title text-center">{{ $row->nama}}</h5>
-                  <p class="card-text mb-1">{!! $row->testimoni !!}</p>
+                  <div class="text-center">
+                  {{$row->testimoni}}
+                  </div>
                 </div>
             </div>
           </div>
