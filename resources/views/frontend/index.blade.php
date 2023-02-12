@@ -392,29 +392,29 @@
 <!-- Akhir Gallery -->
 
     <!-- Testimoni -->
-
     <section id="testimoni">
       <div class="container">
-        <div class="row">
-          <div class="col text-end">
+        <div class="row pt-5">
+          <div class="col text-end mb-4">
             <h2>Kata Mereka</h2>
           </div>
-          <div class="row g-3">
-            @forelse ($testimoni as $row)
-            <div class="col-12 col-md-6 col-lg-4">
-              <ul class="list-group">
-                <img src="{{asset('uploads/'.$row->foto) }}" alt="events" height="300">
-                <li class="list-group-item">{{ $row->nama}}</li>
-                <li class="list-group-item" align="justify">{!! $row->testimoni !!}</li>
-              </ul>
-            </div>
-            @empty
-            @endforelse
-          </div>
         </div>
+        <div class="row g-3">
+        @forelse ($testimoni as $row)
+          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+            <div class="card">
+              <img src="{{asset('uploads/'.$row->foto) }}" class="card-img-top" alt="Card Image">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title text-center">{{ $row->nama}}</h5>
+                  <p class="card-text mb-1">{!! $row->testimoni !!}</p>
+                </div>
+            </div>
+          </div>
+          @empty
+          @endforelse
       </div>
-
-    </section>
+    </div>
+</section>
   <!-- Akhir testimoni -->
 
   <!-- Footer -->
