@@ -60,7 +60,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="testimoni">Testimoni</label>
-                                <textarea type="text" name="testimoni" class="form-control" id="task-textarea" placeholder="Enter Testimoni"> </textarea>
+                                <textarea type="text" name="testimoni" class="form-control" placeholder="Enter Testimoni"> </textarea>
                             </div>
                             <div class="form-group">
                                 <label for="gambar">Foto</label>
@@ -83,15 +83,7 @@
             </div>
         </div>
     </div>
-                @section('scripts')
-                <script>
-                    ClassicEditor
-                        .create( document.querySelector( '#task-textarea' ) )
-                        .catch( error => {
-                            console.error( error );
-                        } );
-                </script>
-                @endsection
+                
             </div>
             @include('backend.includes.footer')
         </div>
@@ -99,7 +91,5 @@
 	<!--   Core JS Files   -->
 	@include('backend.includes.js')
 	@include('sweetalert::alert', ['cdn'=>"https://cdn.jsdelivr.net/npm/sweetalert2@9"])
-	<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
-	@yield('scripts')
 </body>
 </html>
