@@ -140,24 +140,24 @@
 
 				</div>
 				<div class="card-body">
-                    <table class="table">
-                        <tbody>
-                        @forelse ($drafKegiatan as $row)
-                            <tr>
-                                <td>
-                                    <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="60"></td>
-                                    <td>{{ $row->judul}}</td>
-                                    <td>
-                                        <a href="{{route('kegiatan.edit', $row->id) }}"
+				@forelse ($drafKegiatan as $row)
+					<div class="row fs-5">
+						<div class="col-2 col-md-2 col-lg-2 ml-3 mt-2 mb-2">
+							<img src="{{asset('uploads/'.$row->gambar_artikel) }}"  class="img-fluid" alt="bg" width="90">
+						</div>
+						<div class="col-8 col-md-8 col-lg-8 mt-3 mb-3">
+							<a class="text-black" style="text-decoration: none; font-size: small; ">
+								<h5>{{$row->judul}}</h5>
+							</a>
+							
+						</div>
+						<div class="col-1 col-md-1 col-lg-1 mt-3 mb-3">
+						<a href="{{route('kegiatan.edit', $row->id) }}"
                                            class="btn btn-warning btn-sm">Edit</a>
-                                    </td>
-                                </td>
-                            </tr>
-                        @empty
-
-                        @endforelse
-                        </tbody>
-                    </table>
+						</div>
+					</div>
+					@empty
+					@endforelse
 				</div>
 			</div>
 		</div>
@@ -169,24 +169,24 @@
 					</div>
 				</div>
 				<div class="card-body">
-                    <table class="table">
-                        <tbody>
-                        @forelse ($drafBerita as $row)
-                            <tr>
-                                <td>
-                                    <td><img src="{{asset('uploads/'.$row->gambar_berita) }}" width="60"></td>
-                                    <td>{{ $row->judul}}</td>
-                                    <td>
-                                        <a href="{{route('berita.edit', $row->id) }}"
+				@forelse ($drafBerita as $row)
+					<div class="row fs-5">
+						<div class="col-2 col-md-2 col-lg-2 ml-3 mt-2 mb-2">
+							<img src="{{asset('uploads/'.$row->gambar_berita) }}"  class="img-fluid" alt="bg" width="90">
+						</div>
+						<div class="col-8 col-md-8 col-lg-8 mt-3 mb-3">
+							<a class="text-black" style="text-decoration: none; font-size: small; ">
+								<h5>{{$row->judul}}</h5>
+							</a>
+							
+						</div>
+						<div class="col-1 col-md-1 col-lg-1 mt-3 mb-3">
+						<a href="{{route('berita.edit', $row->id) }}"
                                            class="btn btn-warning btn-sm">Edit</a>
-                                    </td>
-                                </td>
-                            </tr>
-                        @empty
-
-                        @endforelse
-                        </tbody>
-                    </table>
+						</div>
+					</div>
+					@empty
+					@endforelse
 				</div>
 			</div>
 		</div>
@@ -198,25 +198,24 @@
 					</div>
 				</div>
 				<div class="card-body">
-                    <table class="table">
-                        <tbody>
-                        @forelse ($drafArtikel as $row)
-                            <tr>
-                                <td>
-                                    <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="60"></td>
-                                    <td>{{ $row->judul}}</td>
-                                    <td>
-                                        <a href="{{route('artikel.edit', $row->id) }}"
+				@forelse ($drafArtikel as $row)
+					<div class="row fs-5">
+						<div class="col-2 col-md-2 col-lg-2 ml-3 mt-2 mb-2">
+							<img src="{{asset('uploads/'.$row->gambar_artikel) }}"  class="img-fluid" alt="bg" width="90">
+						</div>
+						<div class="col-8 col-md-8 col-lg-8 mt-3 mb-3">
+							<a class="text-black" style="text-decoration: none; font-size: small; ">
+								<h5>{{$row->judul}}</h5>
+							</a>
+							
+						</div>
+						<div class="col-1 col-md-1 col-lg-1 mt-3 mb-3">
+						<a href="{{route('artikel.edit', $row->id) }}"
                                            class="btn btn-warning btn-sm">Edit</a>
-                                    </td>
-                                </td>
-                            </tr>
-                        @empty
-
-                        @endforelse
-                        </tbody>
-                    </table>
-
+						</div>
+					</div>
+					@empty
+					@endforelse
 				</div>
 			</div>
 		</div>
@@ -228,24 +227,24 @@
 					</div>
 				</div>
 				<div class="card-body">
-                    <table class="table">
-                        <tbody>
-                        @forelse ($drafPengumuman as $row)
-                            <tr>
-                                <td>
-                                    <td><img src="{{asset('uploads/'.$row->gambar_pengumuman) }}" width="60"></td>
-                                    <td>{{ $row->judul}}</td>
-                                    <td>
-                                        <a href="{{route('pengumuman.edit', $row->id) }}"
+				@forelse ($drafPengumuman as $row)
+					<div class="row fs-5">
+						<div class="col-2 col-md-2 col-lg-2 ml-3 mt-2 mb-2">
+							<img src="{{asset('uploads/'.$row->gambar_pengumuman) }}"  class="img-fluid" alt="bg" width="90">
+						</div>
+						<div class="col-8 col-md-8 col-lg-8 mt-3 mb-3">
+							<a class="text-black" style="text-decoration: none; font-size: small; ">
+								<h5>{{$row->judul}}</h5>
+							</a>
+							
+						</div>
+						<div class="col-1 col-md-1 col-lg-1 mt-3 mb-3">
+						<a href="{{route('pengumuman.edit', $row->id) }}"
                                            class="btn btn-warning btn-sm">Edit</a>
-                                    </td>
-                                </td>
-                            </tr>
-                        @empty
-
-                        @endforelse
-                        </tbody>
-                    </table>
+						</div>
+					</div>
+					@empty
+					@endforelse
 				</div>
 			</div>
 		</div>
