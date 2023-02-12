@@ -33,16 +33,22 @@ class PengumumanController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required|min:4',
+            'gambar_pengumuman' => 'required|image|mimes:jpeg,jpg,png',
         ]);
 
         $data = $request->all();
-        $data['slug'] = Str::slug($request->judul);
-        $data['views'] = 0;
-        $data['gambar_pengumuman'] = $request->file('gambar_pengumuman')->store('pengumuman');
+        if(is_null($data['judul']) || is_null($data['body']) || is_null($data['kategori_pengumuman_id'])){
 
-        Pengumuman::create($data);
+            Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+            return redirect()->route('pengumuman.create');
+        }else{
+            $data['slug'] = Str::slug($request->judul);
+            $data['gambar_pengumuman'] = $request->file('gambar_pengumuman')->store('pengumuman');
 
-        Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+            Pengumuman::create($data);
+            Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+        }
+
         return redirect()->route('pengumuman.index');
     }
 

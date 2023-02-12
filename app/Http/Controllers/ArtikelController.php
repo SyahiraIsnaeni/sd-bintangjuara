@@ -36,15 +36,23 @@ class ArtikelController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required|min:4',
+            'gambar_artikel' => 'required|image|mimes:jpeg,jpg,png',
         ]);
 
         $data = $request->all();
-        $data['slug'] = Str::slug($request->judul);
-        $data['gambar_artikel'] = $request->file('gambar_artikel')->store('artikel');
+        if(is_null($data['judul']) || is_null($data['body'])){
 
-        Artikel::create($data);
+            Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+            return redirect()->route('artikel.create');
+        }else{
+            $data['slug'] = Str::slug($request->judul);
+            $data['gambar_artikel'] = $request->file('gambar_artikel')->store('artikel');
 
-        Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+            Artikel::create($data);
+
+            Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+        }
+
         return redirect()->route('artikel.index');
     }
 

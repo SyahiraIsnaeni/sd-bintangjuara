@@ -34,16 +34,23 @@ class BeritaController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required|min:4',
+            'gambar_berita' => 'required|image|mimes:jpeg,jpg,png',
         ]);
 
         $data = $request->all();
-        $data['slug'] = Str::slug($request->judul);
-        $data['views'] = 0;
-        $data['gambar_berita'] = $request->file('gambar_berita')->store('berita');
+        if(is_null($data['judul']) || is_null($data['body']) || is_null($data['kategori_berita_id'])){
 
-        Berita::create($data);
+            Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+            return redirect()->route('berita.create');
+        }else{
+            $data['slug'] = Str::slug($request->judul);
+            $data['gambar_berita'] = $request->file('gambar_berita')->store('berita');
 
-        Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+            Berita::create($data);
+
+            Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+        }
+
         return redirect()->route('berita.index');
     }
 

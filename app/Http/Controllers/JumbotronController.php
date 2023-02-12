@@ -33,6 +33,9 @@ class JumbotronController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'foto' => 'required|image|mimes:jpeg,jpg,png',
+        ]);
 
         $data = $request->all();
         $data['foto'] = $request->file('foto')->store('jumbotron');

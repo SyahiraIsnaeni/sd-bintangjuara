@@ -33,18 +33,26 @@ class KegiatanController extends Controller
 
     public function store(Request $request)
     {
+
         $this->validate($request, [
             'judul' => 'required|min:4',
+            'gambar_artikel' => 'required|image|mimes:jpeg,jpg,png',
         ]);
 
         $data = $request->all();
-        $data['slug'] = Str::slug($request->judul);
-        $data['views'] = 0;
-        $data['gambar_artikel'] = $request->file('gambar_artikel')->store('kegiatan');
+        if(is_null($data['judul']) || is_null($data['body']) || is_null($data['kategori_kegiatan_id'])){
 
-        Kegiatan::create($data);
+            Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+            return redirect()->route('kegiatan.create');
+        }else{
 
-        Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+            $data['slug'] = Str::slug($request->judul);
+            $data['gambar_artikel'] = $request->file('gambar_artikel')->resize(250)->store('kegiatan');
+
+            Kegiatan::create($data);
+            Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+        }
+
         return redirect()->route('kegiatan.index');
     }
 
