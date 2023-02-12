@@ -18,7 +18,7 @@
 			}
 		});
 	</script>
-	
+
 
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="{{asset('back/css/bootstrap.min.css')}}">
@@ -26,7 +26,7 @@
 
 	<!-- CSS Just for demo purpose, don't include it in your project
 	<link rel="stylesheet" href="{{asset('back/css/demo.css')}}"> -->
-	
+
 </head>
 <body>
 	<div class="wrapper">
@@ -55,6 +55,10 @@
                         <form method="post" action="{{ route('pengumuman.update', $pengumuman->id)}}" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
+                            <div class="form-group">
+                                <label for="pengumuman">Nama Penulis</label>
+                                <input type="text" name="nama_penulis" class="form-control" id="text" value="{{$pengumuman->nama_penulis}}">
+                            </div>
                             <div class="form-group">
                                 <label for="pengumuman">Judul</label>
                                 <input type="text" name="judul" class="form-control" id="text" value="{{$pengumuman->judul}}">

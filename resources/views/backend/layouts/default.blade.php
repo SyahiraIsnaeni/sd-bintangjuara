@@ -18,7 +18,7 @@
 			}
 		});
 	</script>
-	
+
 
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="{{asset('back/css/bootstrap.min.css')}}">
@@ -26,7 +26,7 @@
 
 	<!-- CSS Just for demo purpose, don't include it in your project
 	<link rel="stylesheet" href="{{asset('back/css/demo.css')}}"> -->
-	
+
 </head>
 <body>
 	<div class="wrapper">
@@ -148,6 +148,12 @@
                             <a href="{{ route('guru.index') }}">
 							<i class="fas fa-comment"></i>
                                 <p>Guru</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('fakta.index') }}">
+                                <i class="fas fa-comment"></i>
+                                <p>Fakta</p>
                             </a>
                         </li>
                         <li class="nav-section">

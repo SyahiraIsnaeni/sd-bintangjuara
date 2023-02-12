@@ -32,12 +32,11 @@ class PengumumanController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'judul' => 'required|min:4',
             'gambar_pengumuman' => 'required|image|mimes:jpeg,jpg,png',
         ]);
 
         $data = $request->all();
-        if(is_null($data['judul']) || is_null($data['body']) || is_null($data['kategori_pengumuman_id'])){
+        if(is_null($data['nama_penulis']) || is_null($data['judul']) || is_null($data['body']) || is_null($data['kategori_pengumuman_id'])){
 
             Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
             return redirect()->route('pengumuman.create');
@@ -70,6 +69,7 @@ class PengumumanController extends Controller
         if(empty($request->file('gambar_pengumuman'))) {
             $pengumuman = Pengumuman::find($id);
             $pengumuman->update([
+                'nama_penulis' => $request->nama_penulis,
                 'judul' => $request->judul,
                 'body' => $request->body,
                 'slug' => Str::slug($request->judul),
@@ -83,6 +83,7 @@ class PengumumanController extends Controller
             $pengumuman = Pengumuman::find($id);
             Storage::delete($pengumuman->gambar_pengumuman);
             $pengumuman->update([
+                'nama_penulis' => $request->nama_penulis,
                 'judul' => $request->judul,
                 'body' => $request->body,
                 'slug' => Str::slug($request->judul),

@@ -116,6 +116,12 @@
                                 <p>Guru</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('fakta.index') }}">
+                                <i class="fas fa-comment"></i>
+                                <p>Fakta</p>
+                            </a>
+                        </li>
                         <li class="nav-section">
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>

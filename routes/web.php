@@ -19,6 +19,7 @@ use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\JumbotronController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\WaqafController;
+use App\Http\Controllers\FaktaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,8 +34,11 @@ use App\Http\Controllers\WaqafController;
 
 
 Route::group(['middleware' => 'revalidate'], function(){
+//    Route::get('/', function () {
+//        return view('auth.login');
+//    });
     Route::get('/', function () {
-        return view('auth.login');
+        return view('welcome');
     });
 
     Auth::routes();
@@ -53,6 +57,7 @@ Route::group(['middleware' => 'revalidate'], function(){
     Route::resource('jumbotron', JumbotronController::class);
     Route::resource('guru', GuruController::class);
     Route::resource('waqaf', WaqafController::class);
+    Route::resource('fakta', FaktaController::class);
     Route::resource('history-kegiatan', HistoryKegiatanController::class);
     Route::resource('history-artikel', HistoryArtikelController::class);
     Route::resource('history-berita', HistoryBeritaController::class);
@@ -70,4 +75,8 @@ Route::get('/daftar-kegiatan', [\App\Http\Controllers\FrontendController::class,
 Route::get('/daftar-pengumuman', [\App\Http\Controllers\FrontendController::class, 'daftarPengumuman']);
 Route::get('/kontak', function () {
     return view('frontend.kontak');
+});
+
+Route::get('/welcome', function () {
+    return view('welcome');
 });

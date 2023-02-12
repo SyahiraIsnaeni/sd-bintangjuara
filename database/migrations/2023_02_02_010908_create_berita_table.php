@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('berita', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nama_penulis')->default('Admin Bintang Juara');
             $table->string('judul');
             $table->text('slug');
             $table->text('body');

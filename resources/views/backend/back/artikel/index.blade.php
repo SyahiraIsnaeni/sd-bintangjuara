@@ -18,7 +18,7 @@
 			}
 		});
 	</script>
-	
+
 
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="{{asset('back/css/bootstrap.min.css')}}">
@@ -26,7 +26,7 @@
 
 	<!-- CSS Just for demo purpose, don't include it in your project
 	<link rel="stylesheet" href="{{asset('back/css/demo.css')}}"> -->
-	
+
 </head>
 <body>
 	<div class="wrapper">
@@ -61,6 +61,7 @@
                                                 <table class="table table-bordered">
                                                     <thead>
                                                         <tr>
+                                                            <th>Nama Penulis</th>
                                                             <th>Judul</th>
                                                             <th>Slug</th>
                                                             <th>Gambar</th>
@@ -73,6 +74,7 @@
                                                         @forelse ($artikel as $row)
                                                         <tr>
                                                             @if ($row->delete == 'N')
+                                                            <td>{{ $row->nama_penulis}}</td>
                                                             <td>{{ $row->judul}}</td>
                                                             <td>{{ $row->slug}}</td>
                                                             <td><img src="{{asset('uploads/'.$row->gambar_artikel) }}" width="100"></td>
@@ -114,7 +116,7 @@
                             </div>
                         </div>
                     </div>
-                    @include('backend.includes.footer')  
+                    @include('backend.includes.footer')
             </div>
         </div>
 	</div>
