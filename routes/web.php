@@ -17,6 +17,8 @@ use App\Http\Controllers\HistoryBeritaController;
 use App\Http\Controllers\HistoryPengumumanController;
 use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\JumbotronController;
+use App\Http\Controllers\GuruController;
+use App\Http\Controllers\WaqafController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,11 +30,11 @@ use App\Http\Controllers\JumbotronController;
 | contains the "web" middleware group. Now create something great!
 |
 */
- 
+
 
 Route::group(['middleware' => 'revalidate'], function(){
     Route::get('/', function () {
-        return view('welcome');
+        return view('auth.login');
     });
 
     Auth::routes();
@@ -49,6 +51,8 @@ Route::group(['middleware' => 'revalidate'], function(){
     Route::resource('galeri', GaleriController::class);
     Route::resource('testimoni', TestimoniController::class);
     Route::resource('jumbotron', JumbotronController::class);
+    Route::resource('guru', GuruController::class);
+    Route::resource('waqaf', WaqafController::class);
     Route::resource('history-kegiatan', HistoryKegiatanController::class);
     Route::resource('history-artikel', HistoryArtikelController::class);
     Route::resource('history-berita', HistoryBeritaController::class);
