@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #45b0f8">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="assets/logo1.png" alt="logo" height="50" />
+          <img src="{{asset('front/logo1.png')}}" alt="logo" height="50" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -52,27 +52,27 @@
     <div class="container">
       <div class="box">
         <div class="dream">
-          <img src="assets/1.jpg" />
-          <img src="assets/2.jpg" />
-          <img src="assets/3.jpg" />
-          <img src="assets/4.jpg" />
-          <img src="assets/5.jpg" />
+          <img src="{{asset('front/1.jpg')}}" />
+          <img src= "{{asset('front/2.jpg')}}" />
+          <img src="{{asset('front/3.jpg')}}" />
+          <img src="{{asset('front/4.jpg')}}" />
+          <img src="{{asset('front/5.jpg')}}" />
         </div>
 
         <div class="dream">
-          <img src="assets/6.jpg" />
-          <img src="assets/7.jpg" />
-          <img src="assets/8.jpg" />
-          <img src="assets/9.jpg" />
-          <img src="assets/10.jpg" />
+          <img src="{{asset('front/6.jpg')}}" />
+          <img src="{{asset('front/7.jpg')}}"/>
+          <img src="{{asset('front/8.jpg')}}"/>
+          <img src="{{asset('front/9.jpg')}}"/>
+          <img src="{{asset('front/10.jpg')}}" />
         </div>
 
         <div class="dream">
-          <img src="assets/11.jpg" />
-          <img src="assets/12.jpg" />
-          <img src="assets/13.jpg" />
-          <img src="assets/14.jpg" />
-          <img src="assets/15.jpg" />
+          <img src="{{asset('front/11.jpg')}}" />
+          <img src="{{asset('front/12.jpg')}}" />
+          <img src="{{asset('front/13.jpg')}}" />
+          <img src="{{asset('front/14.jpg')}}" />
+          <img src="{{asset('front/15.jpg')}}" />
         </div>
       </div>
       <div class="btn">
