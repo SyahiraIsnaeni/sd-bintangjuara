@@ -23,7 +23,18 @@ class HistoryPengumumanController extends Controller
         $pengumuman = Pengumuman::find($id);
         $pengumuman->delete();
 
-        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        Alert::success('Dihapus', 'Data Berhasil Terhapus');
+        return redirect()->route('history-pengumuman.index');
+    }
+
+    public function edit($id)
+    {
+        $pengumuman = Pengumuman::find($id);
+        $pengumuman->update([
+            'delete' => 'N'
+        ]);
+
+        Alert::info('Dipulihkan', 'Data Berhasil Dipulihkan');
         return redirect()->route('history-pengumuman.index');
     }
 }

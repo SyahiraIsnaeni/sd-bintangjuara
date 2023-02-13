@@ -54,7 +54,7 @@
     <section id="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="{{asset('front/bg.jpeg')}}" class="img-fluid" alt="bg">
+                  <img src="{{asset('uploads/'.$berita->gambar_berita) }}" class="card-img-top" alt="events" height="400">
               </div>
             </div>
         </section>
@@ -65,7 +65,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col">
-                <h2><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, minus!</strong></h2>
+                <h2><strong>{{$berita->judul}}</strong></h2>
                 <p></p>
             </div>
         </div>
@@ -79,21 +79,13 @@
                 <a>
                     <span id="span_1" style="font-size: large; font-weight: bold;"> Nama Penulis</span>
                     <br>
-                    <span id="span_2"style="font-size: small;">tanggal berita</span>
+                    <span id="span_2"style="font-size: small;">{{$berita->updated_at->format('d M Y')}}</span>
                   </a>
             </div>
         </div>
         <div class="row mt-3">
             <p align="justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quas sed magni accusamus ullam enim, saepe laudantium corrupti officiis? Atque ex itaque accusamus eligendi quas fuga expedita. Est enim non saepe laboriosam obcaecati cum ea expedita voluptates ipsa reprehenderit reiciendis quam blanditiis doloremque facere, culpa labore rerum illo ab sunt asperiores magnam suscipit veniam natus recusandae! Repellendus minus recusandae eius ab voluptatem. Hic accusantium amet accusamus, enim rerum, earum veniam, officia ab iusto minus iste corrupti totam. Quia enim, quasi exercitationem ratione animi at, mollitia laudantium, doloribus eos corporis itaque iure pariatur atque! Vero molestiae facilis, officia cupiditate similique enim?
-            </p>
-
-            <p align="justify">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum natus eveniet corporis, quaerat, beatae et eius ex necessitatibus aperiam nesciunt ad, quibusdam nobis praesentium modi vitae error sunt inventore neque consectetur hic excepturi vero nemo! Praesentium, similique? Adipisci labore aliquam maxime praesentium? Repudiandae optio modi laudantium dolorum doloremque quas cum ipsa soluta fugiat adipisci omnis aliquid accusantium deserunt voluptatem fuga minus, recusandae laborum dolorem nihil perferendis cumque mollitia sequi quam ad! In quisquam vitae non, laborum dolores praesentium adipisci, eveniet nisi ex soluta nulla molestiae sunt repellat autem exercitationem sed voluptatem illo earum aspernatur dolorem. Numquam asperiores maxime quisquam similique!
-            </p>
-
-            <p align="justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui at, voluptates deserunt maiores doloribus tempore in ut aut asperiores harum dolore corrupti quos eligendi repellendus possimus nisi saepe consectetur perspiciatis fuga ipsa accusamus assumenda? Error expedita sint, corrupti dolor molestias culpa, commodi incidunt quo consectetur vero nisi a ipsam pariatur libero cum quibusdam nesciunt quis recusandae asperiores iure est! Maxime tenetur at illum quasi sint ex quas vitae! Quis, ut quae. Non ea distinctio quae, quidem facere odio cumque. In ea, repudiandae ad consequatur ex veritatis amet deserunt et rerum fugiat fuga, mollitia dignissimos nostrum modi nam illo accusantium aliquam.
+                {!! $berita->body !!}
             </p>
         </div>
     </div>
@@ -110,43 +102,26 @@
                 <h3><strong>What to Read Next</strong></h3>
             </div>
             <div class="row g-3">
+                @forelse ($nextBerita as $row)
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="events">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text" align="justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                        <div class="card-body">
-                          <button type="button" class="btn btn-outline-secondary">Selengkapnya</button>
-                        </div>
-                      </div>
+                          <div class="card">
+                               <img src="{{asset('uploads/'.$row->gambar_berita) }}" class="card-img-top" alt="events" height="250">
+                               <div class="card-body">
+                                    <h5 class="card-title">{{$row->judul}}</h5>
+                                    <p class="card-text" align="justify">{!! substr($row->body, 0, 100)!!} ...</p>
+                               </div>
+                               <div class="card-body">
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <a class="text-black" href="{{route('detail-berita', $row->slug)}}" style="text-decoration: none;">
+                                                Selengkapnya
+                                            </a>
+                                        </button>
+                               </div>
+                          </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text" align="justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                        <div class="card-body">
-                          <button type="button" class="btn btn-outline-secondary">Selengkapnya</button>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="videos">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text"align="justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                        <div class="card-body">
-                          <button type="button" class="btn btn-outline-secondary">Selengkapnya</button>
-                        </div>
-                      </div>
-                </div>
-              </div>
+                @empty
+                @endforelse
+            </div>
           </div>
     </div>
 </section>

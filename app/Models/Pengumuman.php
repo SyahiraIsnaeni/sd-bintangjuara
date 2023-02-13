@@ -12,7 +12,7 @@ class Pengumuman extends Model
     protected $table = 'pengumuman';
 
     protected $fillable = [
-        'judul', 'slug', 'body', 'kategori_pengumuman_id', 'gambar_pengumuman', 'is_active', 'delete'
+        'nama_penulis', 'judul', 'slug', 'body', 'kategori_pengumuman_id', 'gambar_pengumuman', 'is_active', 'delete'
     ];
 
     protected $hidden = [];

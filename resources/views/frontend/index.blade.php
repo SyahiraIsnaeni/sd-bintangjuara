@@ -21,17 +21,18 @@
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     </head>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #45b0f8;">
+  <nav class="navbar navbar-expand-lg navbar-dark p-md-2 fixed-top ">
+  
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="{{asset('front/logo1.png')}}" alt="logo" height="50">
+      <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><strong>&nbsp SD Islam Bintang Juara</strong>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
+        <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Profile</a>
           </li>
           <li class="nav-item">
@@ -43,6 +44,15 @@
           <li class="nav-item">
             <a class="nav-link" href="kontak.html">Kontak</a>
           </li>
+        <li class="nav-item">
+                @if (Route::has('login'))
+                    @auth
+                        <a class="nav-link" href="{{ url('/dashboard') }}">Dashboard Admin</a>
+                    @else
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    @endauth
+                @endif
+            </li>
         </ul>
       </div>
     </div>
@@ -53,15 +63,12 @@
     <section id="carouse">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
+            @forelse ($jumbotron as $row)
           <div class="carousel-item active">
-            <img src="{{asset('front/bg.jpeg')}}" class="img-fluid" alt="bg">
+                <img src="{{asset('uploads/'.$row->foto) }}" class="img-fluid"  alt="bg" width="100%" height="100%">
           </div>
-          <div class="carousel-item active">
-            <img src="{{asset('front/bg.jpeg')}}" class="img-fluid" alt="bg">
-          </div>
-          <div class="carousel-item active">
-            <img src="{{asset('front/bg.jpeg')}}" class="img-fluid" alt="bg">
-          </div>
+            @empty
+            @endforelse
         </div>
       </div>
     </section>
@@ -104,7 +111,7 @@
                           @forelse ($kegiatan as $row)
                               <ul class="list-group list-group-flush">
                                   <li class="list-group-item">
-                                      <a  href="#" style="text-decoration: none;">
+                                      <a  href="{{route('detail-kegiatan', $row->slug)}}" style="text-decoration: none;">
                                           <h6 class="card-title text-black" >{{$row->judul}}</h6>
                                       </a>
                                   </li>
@@ -131,7 +138,7 @@
                           @forelse ($berita as $row)
                               <ul class="list-group list-group-flush">
                                   <li class="list-group-item">
-                                      <a  href="#" style="text-decoration: none;">
+                                      <a  href="{{route('detail-berita', $row->slug)}}" style="text-decoration: none;">
                                           <h6 class="card-title text-black" >{{$row->judul}}</h6>
                                       </a>
                                   </li>
@@ -154,12 +161,11 @@
                               <img src="{{asset('uploads/'.$row->gambar_artikel) }}" class="card-img-top" alt="events" height="250">
                           @empty
                           @endforelse
-
                           @forelse ($artikel as $row)
                               <ul class="list-group list-group-flush">
                                   <li class="list-group-item">
-                                      <a  href="#" style="text-decoration: none;">
-                                          <h6 class="card-title text-black" >{{$row->judul}}</h6>
+                                      <a href="{{route('detail-artikel', $row->slug)}}" style="text-decoration: none;">
+                                          <h6 class="card-title text-black">{{$row->judul}}</h6>
                                       </a>
                                   </li>
                               </ul>
@@ -186,7 +192,7 @@
                           @forelse ($pengumuman as $row)
                               <ul class="list-group list-group-flush">
                                   <li class="list-group-item">
-                                      <a  href="#" style="text-decoration: none;">
+                                      <a  href="{{route('detail-pengumuman', $row->slug)}}" style="text-decoration: none;">
                                           <h6 class="card-title text-black" >{{$row->judul}}</h6>
                                       </a>
                                   </li>
@@ -358,7 +364,7 @@
   <div class="slide-container-swiper mt-5 mb-5">
     <div class="row">
       <div class="col-3">
-        <h1>GALERI</h1>
+        <h1>Galeri</h1>
       </div>
       <div class="col-9">
         <div class="main-scroll-div">
@@ -367,14 +373,10 @@
           </div>
           <div class="cover">
             <div class="scroll-images">
-              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/OIP.jpeg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
-              <div class="child"><img class="child-img" src="{{asset('front/gedung1.jpg')}}" alt="image" /></div>
+                @forelse ($galeri as $row)
+                    <div class="child"><img class="child-img" src="{{asset('uploads/'.$row->gambar_galeri) }}" alt="image" /></div>
+                @empty
+                @endforelse
             </div>
           </div>
           <div>
@@ -389,37 +391,31 @@
 <!-- Akhir Gallery -->
 
     <!-- Testimoni -->
-
     <section id="testimoni">
       <div class="container">
-        <div class="row">
-          <div class="col text-end">
+        <div class="row pt-5">
+          <div class="col text-end mb-4">
             <h2>Kata Mereka</h2>
           </div>
-          <div class="row g-3">
-            <div class="col-12 col-md-6 col-lg-4">
-              <ul class="list-group">
-                <li class="list-group-item">Nama Lengkap</li>
-                <li class="list-group-item" align="justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea ab quisquam autem, voluptate quis est nobis optio voluptatum tenetur accusantium.</li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <ul class="list-group">
-                <li class="list-group-item">Nama Lengkap</li>
-                <li class="list-group-item" align="justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis tempore debitis voluptate soluta excepturi corrupti voluptatibus ullam ab sint rem.</li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <ul class="list-group">
-                <li class="list-group-item">Nama Lengkap</li>
-                <li class="list-group-item" align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sit, voluptatibus sed quasi sapiente ut temporibus ullam eum modi. Blanditiis.</li>
-              </ul>
+        </div>
+        <div class="row g-3">
+        @forelse ($testimoni as $row)
+          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+            <div class="card">
+              <img src="{{asset('uploads/'.$row->foto) }}" class="card-img-top" alt="Card Image" height="360">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title text-center">{{ $row->nama}}</h5>
+                  <div class="text-center">
+                  {{$row->testimoni}}
+                  </div>
+                </div>
             </div>
           </div>
-        </div>
+          @empty
+          @endforelse
       </div>
-
-    </section>
+    </div>
+</section>
   <!-- Akhir testimoni -->
 
   <!-- Footer -->
@@ -500,4 +496,16 @@
   </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+      var nav = document.querySelector('nav');
+
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 100) {
+          nav.classList.add('bg-info', 'shadow');
+        } else {
+          nav.classList.remove('bg-info', 'shadow');
+        }
+      });
+    </script>
 </html>

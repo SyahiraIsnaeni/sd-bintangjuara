@@ -4,9 +4,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>Admin SD Islam Bintang Juara</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" href="{{asset('back/img/icon.ico')}}" type="image/x-icon"/>
+	<link rel="icon" href="{{asset('front/logo1.png')}}" type="image/x-icon"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" crossorigin="anonymous">
-
+	
 	<!-- Fonts and icons -->
 	<script src="{{ asset('back/js/plugin/webfont/webfont.min.js') }}"></script>
 	<script>
@@ -18,7 +18,7 @@
 			}
 		});
 	</script>
-	
+
 
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="{{asset('back/css/bootstrap.min.css')}}">
@@ -26,7 +26,7 @@
 
 	<!-- CSS Just for demo purpose, don't include it in your project
 	<link rel="stylesheet" href="{{asset('back/css/demo.css')}}"> -->
-	
+
 </head>
 <body>
 	<div class="wrapper">
@@ -66,7 +66,7 @@
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link active" href="{{ route('kategorikegiatan.index') }}">
+							<a  href="{{ route('kategorikegiatan.index') }}">
 								<i class="fas fa-list-ul"></i>
 								<p>Kategori Kegiatan</p>
 
@@ -88,12 +88,6 @@
                             <a href="{{ route('admin.index') }}">
 							<i class="fas fa-user"></i>
                                 <p>Admin</p>
-                            </a>
-                        </li>
-						<li class="nav-item">
-                            <a href="{{ route('galeri.index') }}">
-							<i class="fas fa-image"></i>
-                                <p>Gambar</p>
                             </a>
                         </li>
 						<li class="nav-section">
@@ -124,6 +118,42 @@
                             <a href="{{ route('pengumuman.index') }}">
 							<i class="fas fa-bullhorn"></i>
                                 <p>Pengumuman</p>
+                            </a>
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ route('galeri.index') }}">
+							<i class="fas fa-image"></i>
+                                <p>Galeri</p>
+                            </a>
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ route('galeri.index') }}">
+							<i class="fas fa-images"></i>
+                                <p>Jumbotron</p>
+                            </a>
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ route('galeri.index') }}">
+							<i class="fas fa-comment"></i>
+                                <p>Testimoni</p>
+                            </a>
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ route('waqaf.index') }}">
+							<i class="fas fa-comment"></i>
+                                <p>Waqaf</p>
+                            </a>
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ route('guru.index') }}">
+							<i class="fas fa-comment"></i>
+                                <p>Guru</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('fakta.index') }}">
+                                <i class="fas fa-comment"></i>
+                                <p>Fakta</p>
                             </a>
                         </li>
                         <li class="nav-section">
@@ -178,7 +208,6 @@
 				</div>
 			</div>
 		</div>
-
 		<!-- End Sidebar -->
 		<div class="main-panel">
 			<div class="content">
@@ -188,9 +217,9 @@
 		</div>
 	</div>
 	<!--   Core JS Files   -->
-@include('backend.includes.js')
-@include('sweetalert::alert', ['cdn'=>"https://cdn.jsdelivr.net/npm/sweetalert2@9"])
-<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
-@yield('scripts')
+	@include('backend.includes.js')
+	@include('sweetalert::alert', ['cdn'=>"https://cdn.jsdelivr.net/npm/sweetalert2@9"])
+	<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+	@yield('scripts')
 </body>
 </html>

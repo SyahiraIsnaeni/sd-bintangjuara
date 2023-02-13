@@ -23,7 +23,18 @@ class HistoryArtikelController extends Controller
         $artikel = Artikel::find($id);
         $artikel->delete();
 
-        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        Alert::success('Dihapus', 'Data Berhasil Terhapus');
+        return redirect()->route('history-artikel.index');
+    }
+
+    public function edit($id)
+    {
+        $artikel = Artikel::find($id);
+        $artikel->update([
+            'delete' => 'N'
+        ]);
+
+        Alert::info('Dipulihkan', 'Data Berhasil Dipulihkan');
         return redirect()->route('history-artikel.index');
     }
 }

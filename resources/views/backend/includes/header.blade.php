@@ -44,7 +44,7 @@
 											<div class="u-text">
 												<h4>{{ Auth::user()->name }}</h4>
 												<p class="text-muted">{{ Auth::user()->email }}</p>
-												<a href="{{ route('logout') }}" class="btn btn-xs btn-primary btn-sm" onclick="event.preventDefault();
+												<a href="{{ route('logout') }}" class="btn btn-xs btn-info btn-sm" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
 													 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
 														@csrf

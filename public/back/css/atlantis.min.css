@@ -84,7 +84,7 @@ danger-color : #f3545d
 }
 
 .alert,
-.brand,
+.brand, 
 .btn-simple,
 .h1,
 .h2,
@@ -575,13 +575,13 @@ body {
 .sidebar .user,
 .sidebar[data-background-color="white"] .user {
     margin-top: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 8px;
+    padding-right: 25px;
     padding-bottom: 12.5px;
     border-bottom: 1px solid #f1f1f1;
     display: block;
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 25px;
 }
 
 .sidebar .user .info a,
@@ -610,14 +610,17 @@ body {
 .sidebar .user .info a > span .user-level,
 .sidebar[data-background-color="white"] .user .info a > span .user-level {
     color: #555;
-    font-weight: 600;
-    font-size: 12px;
+    font-weight: 500;
+    font-size: 10px;
     margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column
 }
 
 .sidebar .user .info a .link-collapse,
 .sidebar[data-background-color="white"] .user .info a .link-collapse {
-    padding: 7px 0;
+    padding: 7px ;
 }
 
 .sidebar .user .info .caret,
@@ -886,7 +889,7 @@ body {
     > .nav-item
     a[data-toggle="collapse"][aria-expanded="true"]
     i {
-    color: #1572e8 !important;
+    color: #45b0f8 !important;
 }
 
 .sidebar
@@ -897,7 +900,7 @@ body {
     .nav.nav-primary
     > .nav-item
     a[data-toggle="collapse"][aria-expanded="true"]:before {
-    background: #1572e8 !important;
+    background: #45b0f8 !important;
 }
 
 .sidebar .nav.nav-primary > .nav-item.active a:before,
@@ -905,7 +908,7 @@ body {
     .nav.nav-primary
     > .nav-item.active
     a:before {
-    background: #1572e8 !important;
+    background: #45b0f8 !important;
 }
 
 .sidebar .nav.nav-primary > .nav-item.active a i,
@@ -914,7 +917,7 @@ body {
     > .nav-item.active
     a
     i {
-    color: #1572e8 !important;
+    color: #45b0f8 !important;
 }
 
 .sidebar .nav.nav-secondary > .nav-item a:focus i,
@@ -1277,7 +1280,7 @@ body {
 }
 
 .sidebar.sidebar-style-2 .nav.nav-primary > .nav-item.active > a {
-    background: #1572e8 !important;
+    background: #45b0f8 !important;
     box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
         4px 4px 15px -5px rgba(21, 114, 232, 0.4) !important;
 }

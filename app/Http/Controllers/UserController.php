@@ -56,7 +56,7 @@ class UserController extends Controller
         $user = User::find($id);
         $user->delete();
 
-        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        Alert::success('Dihapus', 'Data Berhasil Terhapus');
         return redirect()->route('admin.index');
     }
 }

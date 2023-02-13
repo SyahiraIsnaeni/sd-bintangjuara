@@ -33,18 +33,25 @@ class KegiatanController extends Controller
 
     public function store(Request $request)
     {
+
         $this->validate($request, [
-            'judul' => 'required|min:4',
+            'gambar_artikel' => 'required|image|mimes:jpeg,jpg,png',
         ]);
 
         $data = $request->all();
-        $data['slug'] = Str::slug($request->judul);
-        $data['views'] = 0;
-        $data['gambar_artikel'] = $request->file('gambar_artikel')->store('kegiatan');
+        if(is_null($data['nama_penulis']) || is_null($data['judul']) || is_null($data['body']) || is_null($data['kategori_kegiatan_id'])){
 
-        Kegiatan::create($data);
+            Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+            return redirect()->route('kegiatan.create');
+        }else{
 
-        Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+            $data['slug'] = Str::slug($request->judul);
+            $data['gambar_artikel'] = $request->file('gambar_artikel')->store('kegiatan');
+
+            Kegiatan::create($data);
+            Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+        }
+
         return redirect()->route('kegiatan.index');
     }
 
@@ -64,31 +71,33 @@ class KegiatanController extends Controller
     public function update(Request $request, $id)
     {
         if(empty($request->file('gambar_artikel'))) {
-        $kegiatan = Kegiatan::find($id);
-        $kegiatan->update([
-            'judul' => $request->judul,
-            'body' => $request->body,
-            'slug' => Str::slug($request->judul),
-            'kategori_kegiatan_id' => $request->kategori_kegiatan_id,
-            'is_active' => $request->is_active,
-        ]);
+            $kegiatan = Kegiatan::find($id);
+            $kegiatan->update([
+                'nama_penulis' => $request->nama_penulis,
+                'judul' => $request->judul,
+                'body' => $request->body,
+                'slug' => Str::slug($request->judul),
+                'kategori_kegiatan_id' => $request->kategori_kegiatan_id,
+                'is_active' => $request->is_active,
+            ]);
 
-        Alert::info('Diubah', 'Data Berhasil Terubah');
-        return redirect()->route('kegiatan.index');
+            Alert::info('Diubah', 'Data Berhasil Terubah');
+            return redirect()->route('kegiatan.index');
         } else {
-        $kegiatan = Kegiatan::find($id);
-        Storage::delete($kegiatan->gambar_artikel);
-        $kegiatan->update([
-            'judul' => $request->judul,
-            'body' => $request->body,
-            'slug' => Str::slug($request->judul),
-            'kategori_kegiatan_id' => $request->kategori_kegiatan_id,
-            'is_active' => $request->is_active,
-            'gambar_artikel' => $request->file('gambar_artikel')->store('kegiatan'),
-        ]);
+            $kegiatan = Kegiatan::find($id);
+            Storage::delete($kegiatan->gambar_artikel);
+            $kegiatan->update([
+                'nama_penulis' => $request->nama_penulis,
+                'judul' => $request->judul,
+                'body' => $request->body,
+                'slug' => Str::slug($request->judul),
+                'kategori_kegiatan_id' => $request->kategori_kegiatan_id,
+                'is_active' => $request->is_active,
+                'gambar_artikel' => $request->file('gambar_artikel')->store('kegiatan'),
+            ]);
 
-        Alert::info('Diubah', 'Data Berhasil Terubah');
-        return redirect()->route('kegiatan.index');
+            Alert::info('Diubah', 'Data Berhasil Terubah');
+            return redirect()->route('kegiatan.index');
         }
     }
 
@@ -99,7 +108,7 @@ class KegiatanController extends Controller
             'delete' => 'Y'
         ]);
 
-        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        Alert::success('Dihapus', 'Data Berhasil Terhapus');
         return redirect()->route('kegiatan.index');
     }
 }

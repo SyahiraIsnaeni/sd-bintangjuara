@@ -23,7 +23,18 @@ class HistoryKegiatanController extends Controller
         $kegiatan = Kegiatan::find($id);
         $kegiatan->delete();
 
-        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        Alert::success('Dihapus', 'Data Berhasil Terhapus');
+        return redirect()->route('history-kegiatan.index');
+    }
+
+    public function edit($id)
+    {
+        $kegiatan = Kegiatan::find($id);
+        $kegiatan->update([
+            'delete' => 'N'
+        ]);
+
+        Alert::info('Dipulihkan', 'Data Berhasil Dipulihkan');
         return redirect()->route('history-kegiatan.index');
     }
 }

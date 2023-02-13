@@ -72,7 +72,7 @@ class KategoriKegiatanController extends Controller
         $kategori_kegiatan = KategoriKegiatan::find($id);
         $kategori_kegiatan->delete();
 
-        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        Alert::success('Dihapus', 'Data Berhasil Terhapus');
         return redirect()->route('kategorikegiatan.index');
     }
 }

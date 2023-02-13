@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\KategoriBerita;
 use App\Models\Berita;
-use App\Models\Kegiatan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -33,17 +32,23 @@ class BeritaController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'judul' => 'required|min:4',
+            'gambar_berita' => 'required|image|mimes:jpeg,jpg,png',
         ]);
 
         $data = $request->all();
-        $data['slug'] = Str::slug($request->judul);
-        $data['views'] = 0;
-        $data['gambar_berita'] = $request->file('gambar_berita')->store('berita');
+        if(is_null($data['nama_penulis']) || is_null($data['judul']) || is_null($data['body']) || is_null($data['kategori_berita_id'])){
 
-        Berita::create($data);
+            Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+            return redirect()->route('berita.create');
+        }else{
+            $data['slug'] = Str::slug($request->judul);
+            $data['gambar_berita'] = $request->file('gambar_berita')->store('berita');
 
-        Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+            Berita::create($data);
+
+            Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+        }
+
         return redirect()->route('berita.index');
     }
 
@@ -65,6 +70,7 @@ class BeritaController extends Controller
         if(empty($request->file('gambar_berita'))) {
             $berita = Berita::find($id);
             $berita->update([
+                'nama_penulis' => $request->nama_penulis,
                 'judul' => $request->judul,
                 'body' => $request->body,
                 'slug' => Str::slug($request->judul),
@@ -78,6 +84,7 @@ class BeritaController extends Controller
             $berita = Berita::find($id);
             Storage::delete($berita->gambar_berita);
             $berita->update([
+                'nama_penulis' => $request->nama_penulis,
                 'judul' => $request->judul,
                 'body' => $request->body,
                 'slug' => Str::slug($request->judul),
@@ -98,7 +105,7 @@ class BeritaController extends Controller
             'delete' => 'Y'
         ]);
 
-        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        Alert::success('Dihapus', 'Data Berhasil Terhapus');
         return redirect()->route('berita.index');
     }
 }

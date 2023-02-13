@@ -78,7 +78,7 @@
                       <img src="{{asset('uploads/'.$row->gambar_artikel) }}"  class="img-fluid" alt="bg">
                   </div>
                   <div class="col-6 col-md-9 col-lg-10">
-                      <a class="text-black" href="#" style="text-decoration: none;">
+                      <a class="text-black" href="{{route('detail-artikel', $row->slug)}}" style="text-decoration: none;">
                           <h2><strong>{{$row->judul}}</strong></h2>
                           <p align="justify">
                               {!! substr($row->body, 0, 400)!!} ...

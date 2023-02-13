@@ -35,24 +35,24 @@ class ArtikelController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'judul' => 'required|min:4',
+            'gambar_artikel' => 'required|image|mimes:jpeg,jpg,png',
         ]);
 
         $data = $request->all();
-        $data['slug'] = Str::slug($request->judul);
-        $data['views'] = 0;
-        $data['gambar_artikel'] = $request->file('gambar_artikel')->store('artikel');
+        if(is_null($data['nama_penulis']) || is_null($data['judul']) || is_null($data['body'])){
 
-        Artikel::create($data);
+            Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+            return redirect()->route('artikel.create');
+        }else{
+            $data['slug'] = Str::slug($request->judul);
+            $data['gambar_artikel'] = $request->file('gambar_artikel')->store('artikel');
 
-        Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+            Artikel::create($data);
+
+            Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+        }
+
         return redirect()->route('artikel.index');
-    }
-
-    public function show()
-    {
-        $artikel = Artikel::all();
-        return view('backend.back.artikel.history', compact('artikel'));
     }
 
     public function edit($id)
@@ -67,6 +67,7 @@ class ArtikelController extends Controller
         if(empty($request->file('gambar_artikel'))) {
             $artikel = Artikel::find($id);
             $artikel->update([
+                'nama_penulis' => $request->nama_penulis,
                 'judul' => $request->judul,
                 'body' => $request->body,
                 'slug' => Str::slug($request->judul),
@@ -78,6 +79,7 @@ class ArtikelController extends Controller
             $artikel = Artikel::find($id);
             Storage::delete($artikel->gambar_artikel);
             $artikel->update([
+                'nama_penulis' => $request->nama_penulis,
                 'judul' => $request->judul,
                 'body' => $request->body,
                 'slug' => Str::slug($request->judul),
@@ -98,7 +100,7 @@ class ArtikelController extends Controller
             'delete' => 'Y'
         ]);
 
-        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        Alert::success('Dihapus', 'Data Berhasil Terhapus');
         return redirect()->route('artikel.index');
     }
 }

@@ -31,15 +31,24 @@ class GaleriController extends Controller
     {
         $this->validate($request, [
             'judul_gambar' => 'required|min:4',
+            'gambar_galeri' => 'required|image|mimes:jpeg,jpg,png',
         ]);
 
         $data = $request->all();
-        $data['slug'] = Str::slug($request->judul_gambar);
-        $data['gambar_galeri'] = $request->file('gambar_galeri')->store('galeri');
 
-        Galeri::create($data);
+        if(is_null($data['judul_gambar'])){
 
-        Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+            Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+            return redirect()->route('galeri.create');
+        }else{
+            $data['slug'] = Str::slug($request->judul_gambar);
+            $data['gambar_galeri'] = $request->file('gambar_galeri')->store('galeri');
+
+            Galeri::create($data);
+
+            Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+        }
+
         return redirect()->route('galeri.index');
     }
 
@@ -64,7 +73,7 @@ class GaleriController extends Controller
         Storage::delete($galeri->gambar_galeri);
         $galeri->delete();
 
-        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        Alert::success('Dihapus', 'Data Berhasil Terhapus');
         return redirect()->route('galeri.index');
     }
 }

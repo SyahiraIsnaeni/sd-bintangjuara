@@ -32,17 +32,22 @@ class PengumumanController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'judul' => 'required|min:4',
+            'gambar_pengumuman' => 'required|image|mimes:jpeg,jpg,png',
         ]);
 
         $data = $request->all();
-        $data['slug'] = Str::slug($request->judul);
-        $data['views'] = 0;
-        $data['gambar_pengumuman'] = $request->file('gambar_pengumuman')->store('pengumuman');
+        if(is_null($data['nama_penulis']) || is_null($data['judul']) || is_null($data['body']) || is_null($data['kategori_pengumuman_id'])){
 
-        Pengumuman::create($data);
+            Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+            return redirect()->route('pengumuman.create');
+        }else{
+            $data['slug'] = Str::slug($request->judul);
+            $data['gambar_pengumuman'] = $request->file('gambar_pengumuman')->store('pengumuman');
 
-        Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+            Pengumuman::create($data);
+            Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+        }
+
         return redirect()->route('pengumuman.index');
     }
 
@@ -64,6 +69,7 @@ class PengumumanController extends Controller
         if(empty($request->file('gambar_pengumuman'))) {
             $pengumuman = Pengumuman::find($id);
             $pengumuman->update([
+                'nama_penulis' => $request->nama_penulis,
                 'judul' => $request->judul,
                 'body' => $request->body,
                 'slug' => Str::slug($request->judul),
@@ -77,6 +83,7 @@ class PengumumanController extends Controller
             $pengumuman = Pengumuman::find($id);
             Storage::delete($pengumuman->gambar_pengumuman);
             $pengumuman->update([
+                'nama_penulis' => $request->nama_penulis,
                 'judul' => $request->judul,
                 'body' => $request->body,
                 'slug' => Str::slug($request->judul),
@@ -97,7 +104,7 @@ class PengumumanController extends Controller
             'delete' => 'Y'
         ]);
 
-        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        Alert::success('Dihapus', 'Data Berhasil Terhapus');
         return redirect()->route('pengumuman.index');
     }
 }

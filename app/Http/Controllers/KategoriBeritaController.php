@@ -69,7 +69,7 @@ class KategoriBeritaController extends Controller
         $kategori_berita = KategoriBerita::find($id);
         $kategori_berita->delete();
 
-        Alert::error('Dihapus', 'Data Berhasil Terhapus');
+        Alert::success('Dihapus', 'Data Berhasil Terhapus');
         return redirect()->route('kategoriberita.index');
     }
 }
