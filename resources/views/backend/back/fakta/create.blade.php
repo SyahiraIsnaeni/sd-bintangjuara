@@ -31,7 +31,7 @@
 <body>
 <div class="wrapper">
     @include('backend.includes.header')
-    @include('backend.includes.sidebarartikel')
+    @include('backend.includes.sidebarfakta')
     <div class="main-panel">
         <div class="content">
             <div class="panel-header bg-primary-gradient">

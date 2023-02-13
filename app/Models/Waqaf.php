@@ -12,7 +12,7 @@ class Waqaf extends Model
     protected $table = 'waqaf';
 
     protected $fillable = [
-        'nama_bank', 'nama_rekening', 'total_kebutuhan', 'dana_terkumpul', 'total_kekurangan'
+        'nama_bank', 'nama_rekening', 'nomor_rekening', 'total_kebutuhan', 'dana_terkumpul', 'total_kekurangan'
     ];
 
     protected $hidden = [];

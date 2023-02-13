@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Waqaf;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
 
 class WaqafController extends Controller
@@ -27,14 +28,20 @@ class WaqafController extends Controller
     {
 
         $data = $request->all();
-        if(is_null($data['nama_bank']) || is_null($data['nama_rekening']) || is_null($data['total_kebutuhan']) || is_null($data['dana_terkumpul']) || is_null($data['total_kekurangan'])){
-
-            Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
-            return redirect()->route('waqaf.create');
+        $waqaf = Waqaf::all();
+        if($waqaf->count('id') == 1){
+            Alert::error('Gagal', 'Tidak Dapat Menambahkan Data Lebih Dari Satu');
+            return redirect()->route('waqaf.index');
         }else{
-            Waqaf::create($data);
+            if(is_null($data['nama_bank']) || is_null($data['nama_rekening']) || is_null($data['nomor_rekening']) || is_null($data['total_kebutuhan']) || is_null($data['dana_terkumpul']) || is_null($data['total_kekurangan'])){
 
-            Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+                Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+                return redirect()->route('waqaf.create');
+            }else{
+                Waqaf::create($data);
+
+                Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+            }
         }
 
         return redirect()->route('waqaf.index');
@@ -58,6 +65,7 @@ class WaqafController extends Controller
         $waqaf->update([
             'nama_bank' => $request->nama_bank,
             'nama_rekening' => $request->nama_rekening,
+            'nomor_rekening' => $request->nomor_rekening,
             'total_kebutuhan' => $request->total_kebutuhan,
             'dana_terkumpul' => $request->dana_terkumpul,
             'total_kekurangan' => $request->total_kekurangan,

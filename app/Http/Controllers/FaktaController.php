@@ -27,13 +27,19 @@ class FaktaController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        if(is_null($data['jumlah_siswa']) || is_null($data['jumlah_guru']) || is_null($data['tahun_berjalan'])){
-
-            Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
-            return redirect()->route('fakta.create');
+        $fakta = Fakta::all();
+        if($fakta->count('id') == 1){
+            Alert::error('Gagal', 'Tidak Dapat Menambahkan Data Lebih Dari Satu');
+            return redirect()->route('fakta.index');
         }else{
-            Fakta::create($data);
+            if(is_null($data['jumlah_siswa']) || is_null($data['jumlah_guru']) || is_null($data['tahun_berjalan'])){
 
+                Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+                return redirect()->route('fakta.create');
+            }else{
+                Fakta::create($data);
+
+            }
         }
 
         Alert::success('Berhasil', 'Data Berhasil Tersimpan');

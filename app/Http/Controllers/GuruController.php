@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Guru;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Storage;
 
 class GuruController extends Controller
 {
@@ -43,7 +45,7 @@ class GuruController extends Controller
             Alert::success('Berhasil', 'Data Berhasil Tersimpan');
         }
 
-        return redirect()->route('berita.index');
+        return redirect()->route('guru.index');
     }
 
     public function show($id)
