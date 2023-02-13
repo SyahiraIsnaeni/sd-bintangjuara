@@ -9,9 +9,9 @@
         <script src="https://kit.fontawesome.com/a59b9b09ab.js" crossorigin="anonymous"></script>
         <title>BINTANG JUARA</title>
         <!-- add icon link -->
-        <link rel="icon" href="assets/logo1.png" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="icon" href="2.jpeg" />
+        <link rel = "icon" href = "{{asset('front/logo1.png')}}" type ="image/x-icon">
+     <link rel="stylesheet" type="text/css" href="{{asset('front/css/style.css')}}">
+     <link rel="icon" href="2.jpeg" />
         <!-- Swiper CSS -->
         <link rel="stylesheet" href="css/swiper-bundle.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" crossorigin="anonymous">
