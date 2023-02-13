@@ -64,7 +64,7 @@
         <div class="carousel-inner">
             @forelse ($jumbotron as $row)
           <div class="carousel-item active">
-                <img src="{{asset('uploads/'.$row->foto) }}" class="img-fluid" alt="bg">
+                <img src="{{asset('uploads/'.$row->foto) }}" class="img-fluid"  alt="bg" width="100%" height="100%">
           </div>
             @empty
             @endforelse

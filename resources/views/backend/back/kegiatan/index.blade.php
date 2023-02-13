@@ -4,7 +4,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>Kegiatan</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" href="{{asset('back/img/icon.ico')}}" type="image/x-icon"/>
+	<link rel="icon" href="{{asset('front/logo1.png')}}" type="image/x-icon"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" crossorigin="anonymous">
 
 	<!-- Fonts and icons -->
@@ -114,7 +114,7 @@
 
                             @empty
                                 <tr>
-                                    <td colspan="7" class="text-center">Data Masih Kosong</td>
+                                    <td colspan="8" class="text-center">Data Masih Kosong</td>
                                 </tr>
                             @endforelse
                          </tbody>
