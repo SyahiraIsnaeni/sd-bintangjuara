@@ -9,6 +9,8 @@ use App\Models\Jumbotron;
 use App\Models\Kegiatan;
 use App\Models\Pengumuman;
 use App\Models\Testimoni;
+use App\Models\Fakta;
+use App\Models\Waqaf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -23,6 +25,7 @@ class FrontendController extends Controller
         $galeri = Galeri::limit(5)->orderByDesc('updated_at')->get();
         $jumbotron = Jumbotron::orderByDesc('updated_at')->get();
         $testimoni = Testimoni::where('is_active', '1')->orderByDesc('updated_at')->get();
+        $fakta = Fakta::all();
 
         $kegiatanPrioritas = Kegiatan::where('is_active', '1')->limit(1)->orderByDesc('updated_at')->get();
         $beritaPrioritas = Berita::where('is_active', '1')->limit(1)->orderByDesc('updated_at')->get();
@@ -30,7 +33,7 @@ class FrontendController extends Controller
         $pengumumanPrioritas = Pengumuman::where('is_active', '1')->limit(1)->orderByDesc('updated_at')->get();
         return view('frontend.index', compact('pengumuman','berita', 'artikel',
             'kegiatan', 'galeri', 'kegiatanPrioritas', 'beritaPrioritas', 'artikelPrioritas',
-            'pengumumanPrioritas', 'jumbotron', 'testimoni'));
+            'pengumumanPrioritas', 'jumbotron', 'testimoni', 'fakta'));
     }
 
     public function artikel($slug)
@@ -83,6 +86,12 @@ class FrontendController extends Controller
     {
         $pengumuman = Pengumuman::where('is_active', '1')->orderByDesc('updated_at')->get();
         return view('frontend.daftarpengumuman', compact('pengumuman'));
+    }
+
+    public function waqaf()
+    {
+        $waqaf = Waqaf::all();
+        return view('frontend.waqaf', compact('waqaf'));
     }
 
 }

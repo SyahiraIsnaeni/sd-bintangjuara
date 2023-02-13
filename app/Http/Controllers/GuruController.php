@@ -62,29 +62,35 @@ class GuruController extends Controller
 
     public function update(Request $request, $id)
     {
-        if(empty($request->file('foto'))) {
-            $guru = Guru::find($id);
-            $guru->update([
-                'nama' => $request->nama,
-                'jabatan' => $request->jabatan,
-                'nip' => $request->nip,
-            ]);
+        $guru = Guru::find($id);
+        if(is_null($guru['nama']) || is_null($guru['jabatan']) || is_null($guru['nip'])){
 
-            Alert::info('Diubah', 'Data Berhasil Terubah');
-            return redirect()->route('guru.index');
-        } else {
-            $guru = Guru::find($id);
-            Storage::delete($guru->foto);
-            $guru->update([
-                'nama' => $request->nama,
-                'jabatan' => $request->jabatan,
-                'nip' => $request->nip,
-                'foto' => $request->file('foto')->store('guru'),
-            ]);
+            Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+            return redirect()->route('guru.edit');
+        }else{
+            if(empty($request->file('foto'))) {
+                $guru->update([
+                    'nama' => $request->nama,
+                    'jabatan' => $request->jabatan,
+                    'nip' => $request->nip,
+                ]);
 
-            Alert::info('Diubah', 'Data Berhasil Terubah');
-            return redirect()->route('guru.index');
+                Alert::info('Diubah', 'Data Berhasil Terubah');
+                return redirect()->route('guru.index');
+            } else {
+                Storage::delete($guru->foto);
+                $guru->update([
+                    'nama' => $request->nama,
+                    'jabatan' => $request->jabatan,
+                    'nip' => $request->nip,
+                    'foto' => $request->file('foto')->store('guru'),
+                ]);
+
+                Alert::info('Diubah', 'Data Berhasil Terubah');
+                return redirect()->route('guru.index');
+            }
         }
+
     }
 
     public function destroy($id)

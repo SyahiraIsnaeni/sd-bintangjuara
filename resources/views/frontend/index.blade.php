@@ -22,7 +22,7 @@
     </head>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark p-md-2 fixed-top ">
-  
+
     <div class="container">
       <a class="navbar-brand" href="index.html">
       <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><strong>&nbsp SD Islam Bintang Juara</strong>
@@ -36,7 +36,7 @@
             <a class="nav-link active" aria-current="page" href="index.html">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://sd.bintangjuara.sch.id/772-2/">Yuk Wakaf</a>
+            <a class="nav-link" href="{{'detail-waqaf'}}">Yuk Wakaf</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/">PPDB</a>
@@ -321,13 +321,14 @@
                 <h2>SD Islam Bintang Juara</h2>
             </div>
         </div>
+@forelse ($fakta as $row)
     <div class="row g-3">
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
                 <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news">
                 <div class="card-body">
-                  <h5 class="card-title">Fakta 1</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 class="card-title">Jumlah Siswa</h5>
+                  <p class="card-text">{{$row->jumlah_siswa}}</p>
 
                 </div>
         </div>
@@ -336,8 +337,8 @@
             <div class="card">
                 <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="videos">
                 <div class="card-body">
-                  <h5 class="card-title">Fakta 2</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 class="card-title">Jumlah Guru</h5>
+                  <p class="card-text">{{$row->jumlah_guru}}</p>
                 </div>
               </div>
         </div>
@@ -345,13 +346,15 @@
             <div class="card">
                 <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="videos">
                 <div class="card-body">
-                  <h5 class="card-title">Fakta 3</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 class="card-title">Tahun Berjalan</h5>
+                  <p class="card-text">{{$row->tahun_berjalan}}</p>
                 </div>
 
               </div>
         </div>
     </div>
+        @empty
+        @endforelse
     </div>
 </section>
 

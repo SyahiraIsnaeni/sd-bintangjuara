@@ -73,6 +73,7 @@ Route::get('/daftar-artikel', [\App\Http\Controllers\FrontendController::class, 
 Route::get('/daftar-berita', [\App\Http\Controllers\FrontendController::class, 'daftarBerita']);
 Route::get('/daftar-kegiatan', [\App\Http\Controllers\FrontendController::class, 'daftarKegiatan']);
 Route::get('/daftar-pengumuman', [\App\Http\Controllers\FrontendController::class, 'daftarPengumuman']);
+Route::get('/detail-waqaf', [\App\Http\Controllers\FrontendController::class, 'waqaf']);
 Route::get('/kontak', function () {
     return view('frontend.kontak');
 });

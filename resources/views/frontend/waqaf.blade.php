@@ -110,12 +110,13 @@
 <!-- akhir yukwakaf -->
 
 <!-- NoRek -->
+@forelse ($waqaf as $row)
 <section id="norek">
     <div class="container mt-5 mb-5">
         <div class="row fs-5 text-center">
-            <h1>BSI (Bank Syariah Islam)</h1>
-            <h3>a/n YAYASAN DEWI SARTIKA SEMARANG</h3>
-            <h3>248-445-4925</h3>
+            <h1>{{$row->nama_bank}}</h1>
+            <h3>a/n {{$row->nama_rekening}}</h3>
+            <h3>{{$row->nomor_rekening}}</h3>
         </div>
     </div>
     </div>
@@ -136,21 +137,24 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <i class="fa-solid fa-book-open fa-2x"></i>
                     <h3>Total Kebutuhan</h3>
-                    <p>Rp 1.700.000.000</p>
+                    <p>Rp {{$row->total_kebutuhan}}</p>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <i class="fa-solid fa-book-open fa-2x"></i>
                     <h3>Dana Terkumpul</h3>
-                    <p>Rp 300.000.000</p>
+                    <p>Rp {{$row->dana_terkumpul}}</p>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <i class="fa-solid fa-book-open fa-2x"></i>
                     <h3>Total Kekurangan</h3>
-                    <p>Rp 1.400.000.000</p>
+                    <p>Rp {{$row->total_kekurangan}}</p>
                 </div>
             </div>
+        </div>
+    </div>
 </section>
-
+@empty
+@endforelse
 <!-- Akhir totaldonasi -->
 
 
@@ -204,6 +208,7 @@
                             <i class="fab fa-youtube"></i>
                         </a>
                     </li>
+                </ul>
             </div>
             <hr class="mb-4">
             <div class="row align-items-center pb-5">
