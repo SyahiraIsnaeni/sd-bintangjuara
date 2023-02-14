@@ -112,10 +112,10 @@ class FrontendController extends Controller
 
     public function guru()
     {
-        $guru1 = Galeri::whereRaw('MOD(id, 4) = 0')->orderByDesc('updated_at')->get();
-        $guru2 = Galeri::whereRaw('MOD(id, 4) = 1')->orderByDesc('updated_at')->get();
-        $guru3 = Galeri::whereRaw('MOD(id, 4) = 2')->orderByDesc('updated_at')->get();
-        $guru4 = Galeri::whereRaw('MOD(id, 4) = 3')->orderByDesc('updated_at')->get();
+        $guru1 = Guru::whereRaw('MOD(id, 4) = 0')->orderByDesc('updated_at')->get();
+        $guru2 = Guru::whereRaw('MOD(id, 4) = 1')->orderByDesc('updated_at')->get();
+        $guru3 = Guru::whereRaw('MOD(id, 4) = 2')->orderByDesc('updated_at')->get();
+        $guru4 = Guru::whereRaw('MOD(id, 4) = 3')->orderByDesc('updated_at')->get();
         return view('frontend.guru', compact('guru1', 'guru2', 'guru3', 'guru4'));
     }
 

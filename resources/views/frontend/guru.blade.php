@@ -32,10 +32,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Profile</a>
+              <a class="nav-link active" aria-current="page" href="profile">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://sd.bintangjuara.sch.id/772-2/">Yuk Wakaf</a>
+              <a class="nav-link" href="detail-waqaf">Yuk Wakaf</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/">PPDB</a>
@@ -52,109 +52,75 @@
     <!-- team guru -->
     <section id="Fakta">
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="row g-3">
+        <div class="col">
+          <div class="row">
               <div class="col-12 col-md-6 col-lg-3">
-                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news" style="margin-bottom: 5%" />
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Debora Oktaria<br />
-                      21120120120032
-                    </h5>
-                    <p class="card-text">OWNER</p>
-                  </div>
-                </div>
+                  @forelse ($guru1 as $row)
+                    <div class="row g-3 mt-2">
+                        <img src="{{asset('uploads/'.$row->foto) }}" class="card-img-top" alt="foto" style="margin-bottom: 0" width="30" height="400" />
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">
+                                {{$row->nama}}<br />
+                                {{$row->nip}}
+                            </h5>
+                            <p class="card-text">{{$row->jabatan}}</p>
+                          </div>
+                        </div>
+                    </div>
+                  @empty
+                  @endforelse
               </div>
               <div class="col-12 col-md-6 col-lg-3">
-                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news" style="margin-bottom: 5%" />
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Debora Oktaria<br />
-                      21120120120032
-                    </h5>
-                    <p class="card-text">OWNER</p>
-                  </div>
-                </div>
+                  @forelse ($guru2 as $row)
+                      <div class="row g-3 mt-2">
+                          <img src="{{asset('uploads/'.$row->foto) }}" class="card-img-top" alt="foto" style="margin-bottom: 0%" width="30" height="400"/>
+                          <div class="card">
+                              <div class="card-body">
+                                  <h5 class="card-title">
+                                      {{$row->nama}}<br />
+                                      {{$row->nip}}
+                                  </h5>
+                                  <p class="card-text">{{$row->jabatan}}</p>
+                              </div>
+                          </div>
+                      </div>
+                  @empty
+                  @endforelse
               </div>
               <div class="col-12 col-md-6 col-lg-3">
-                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news" style="margin-bottom: 5%" />
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Debora Oktaria<br />
-                      21120120120032
-                    </h5>
-                    <p class="card-text">OWNER</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news" style="margin-bottom: 5%" />
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Debora Oktaria<br />
-                      21120120120032
-                    </h5>
-                    <p class="card-text">OWNER</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br />
-            <div class="row g-3">
-              <div class="col-12 col-md-6 col-lg-3">
-                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news" style="margin-bottom: 5%" />
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Debora Oktaria<br />
-                      21120120120032
-                    </h5>
-                    <p class="card-text">OWNER</p>
-                  </div>
-                </div>
+                  @forelse ($guru3 as $row)
+                      <div class="row g-3 mt-2">
+                          <img src="{{asset('uploads/'.$row->foto) }}" class="card-img-top" alt="news" style="margin-bottom: 0%" width="30" height="400" />
+                          <div class="card">
+                              <div class="card-body">
+                                  <h5 class="card-title">
+                                      {{$row->nama}}<br />
+                                      {{$row->nip}}
+                                  </h5>
+                                  <p class="card-text">{{$row->jabatan}}</p>
+                              </div>
+                          </div>
+                      </div>
+                  @empty
+                  @endforelse
               </div>
               <div class="col-12 col-md-6 col-lg-3">
-                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news" style="margin-bottom: 5%" />
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Debora Oktaria<br />
-                      21120120120032
-                    </h5>
-                    <p class="card-text">OWNER</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-lg-3">
-                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news" style="margin-bottom: 5%" />
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Debora Oktaria<br />
-                      21120120120032
-                    </h5>
-                    <p class="card-text">OWNER</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news" style="margin-bottom: 5%" />
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Debora Oktaria<br />
-                      21120120120032
-                    </h5>
-                    <p class="card-text">OWNER</p>
-                  </div>
-                </div>
+                  @forelse ($guru4 as $row)
+                      <div class="row g-3 mt-2">
+                          <img src="{{asset('uploads/'.$row->foto) }}" class="card-img-top" alt="news" style="margin-bottom: 0%" width="30" height="400"/>
+                          <div class="card">
+                              <div class="card-body">
+                                  <h5 class="card-title">
+                                      {{$row->nama}}<br />
+                                      {{$row->nip}}
+                                  </h5>
+                                  <p class="card-text">{{$row->jabatan}}</p>
+                              </div>
+                          </div>
+                      </div>
+                  @empty
+                  @endforelse
               </div>
             </div>
           </div>

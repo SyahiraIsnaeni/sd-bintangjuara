@@ -74,7 +74,7 @@
       </a>
     </div>
   </div>
-  
+
 </section>
 
 <!-- akhiran -->
@@ -357,7 +357,7 @@
       </div>
     </div>
   </div>
-  
+
 </section>
 <!-- akhir team guru -->
 
@@ -410,6 +410,7 @@
               <i class="fab fa-youtube"></i>
             </a>
           </li>
+        </ul>
       </div>
       <hr class="mb-4">
       <div class="row align-items-center pb-5">
