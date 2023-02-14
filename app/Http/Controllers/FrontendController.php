@@ -97,9 +97,9 @@ class FrontendController extends Controller
 
     public function gallery()
     {
+        $galeri3 = Galeri::whereRaw('MOD(id, 3) = 1')->orderByDesc('updated_at')->get();
+        $galeri2 = Galeri::whereRaw('MOD(id, 3) = 2')->orderByDesc('updated_at')->get();
         $galeri1 = Galeri::whereRaw('MOD(id, 3) = 0')->orderByDesc('updated_at')->get();
-        $galeri2 = Galeri::whereRaw('MOD(id, 3) = 1')->orderByDesc('updated_at')->get();
-        $galeri3 = Galeri::whereRaw('MOD(id, 3) = 2')->orderByDesc('updated_at')->get();
 
         return view('frontend.gallery', compact('galeri1', 'galeri2', 'galeri3'));
     }
@@ -112,10 +112,10 @@ class FrontendController extends Controller
 
     public function guru()
     {
-        $guru1 = Guru::whereRaw('MOD(id, 4) = 0')->orderByDesc('updated_at')->get();
-        $guru2 = Guru::whereRaw('MOD(id, 4) = 1')->orderByDesc('updated_at')->get();
+        $guru4 = Guru::whereRaw('MOD(id, 4) = 1')->orderByDesc('updated_at')->get();
         $guru3 = Guru::whereRaw('MOD(id, 4) = 2')->orderByDesc('updated_at')->get();
-        $guru4 = Guru::whereRaw('MOD(id, 4) = 3')->orderByDesc('updated_at')->get();
+        $guru2 = Guru::whereRaw('MOD(id, 4) = 3')->orderByDesc('updated_at')->get();
+        $guru1 = Guru::whereRaw('MOD(id, 4) = 0')->orderByDesc('updated_at')->get();
         return view('frontend.guru', compact('guru1', 'guru2', 'guru3', 'guru4'));
     }
 
