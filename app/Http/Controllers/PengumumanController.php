@@ -66,8 +66,9 @@ class PengumumanController extends Controller
 
     public function update(Request $request, $id)
     {
+        $pengumuman = Pengumuman::find($id);
+
         if(empty($request->file('gambar_pengumuman'))) {
-            $pengumuman = Pengumuman::find($id);
             $pengumuman->update([
                 'nama_penulis' => $request->nama_penulis,
                 'judul' => $request->judul,
@@ -80,7 +81,6 @@ class PengumumanController extends Controller
             Alert::info('Diubah', 'Data Berhasil Terubah');
             return redirect()->route('pengumuman.index');
         } else {
-            $pengumuman = Pengumuman::find($id);
             Storage::delete($pengumuman->gambar_pengumuman);
             $pengumuman->update([
                 'nama_penulis' => $request->nama_penulis,

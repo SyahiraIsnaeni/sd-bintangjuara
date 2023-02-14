@@ -33,7 +33,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Profile</a>
+            <a class="nav-link active" aria-current="page" href="profile">Profile</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{'detail-waqaf'}}">Yuk Wakaf</a>
