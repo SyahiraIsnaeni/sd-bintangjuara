@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>BINTANG JUARA</title>
     <!-- add icon link -->
-    <link rel="icon" href="assets/logo1.png" type="image/x-icon">
+    <link rel="icon" href="{{asset('front/dummy.jpeg')}}"type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -26,7 +26,7 @@
 <nav class="navbar navbar-expand-lg fixed-top text-white">
   <div class="container">
     <a class="collapse navbar-collapse" href="index.html">
-      <img src="assets/logo1.png" alt="logo" height="50">
+      <img src="{{asset('front/dummy.jpeg')}}" alt="logo" height="50">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,7 +90,7 @@
         </div>
         <div class="col">
           <div style="text-align: right;">
-            <img src="assets/gedung1.jpg" class="gambar" alt="bg"></div></div>
+            <img src="{{asset('front/gedung1.jpg')}}" class="gambar" alt="bg"></div></div>
           </div>
         </div>
       </div>
@@ -112,7 +112,7 @@
   <div class="container">
     <div class="row fs-5">
       <div class="col-6">
-        <img src="assets/Buvivi.jpg" class="gambar" alt="bg">
+        <img src="{{asset('front/Buvivi.jpg')}}"class="gambar" alt="bg">
       </div>
       <div class="col">
         <p align="justify">SD Islam Bintang Juara adalah sebuah wadah belajar bagi anak-anak usia sekolah dasar yang
@@ -207,7 +207,7 @@
         </div>
         <div class="col">
           <div style="text-align: right;">
-            <img src="assets/otak.png" class="gambar" alt="bg"></div></div>
+            <img src="{{asset('front/otak.png')}}" class="gambar" alt="bg"></div></div>
           </div>
         </div>
       </div>
@@ -226,7 +226,7 @@
   <div class="container">
     <div class="row fs-5">
       <div class="col-6">
-        <img src="assets/tujuan.png" class="gambar" alt="bg">
+        <img src="{{asset('front/tujuan.png')}}" class="gambar" alt="bg">
       </div>
       <div class="col">
         <h2><strong>TUJUAN</strong></h2>
@@ -274,7 +274,7 @@
         <div class="col">
           <div class="row">
             <div style="text-align: right;">
-          <img src="assets/gedung1.jpg" class="gambar" alt="bg"></div></div>
+          <img src="{{asset('front/gedung1.jpg')}}"class="gambar" alt="bg"></div></div>
         </div>
       </div>
     </div>
@@ -306,7 +306,7 @@
         <div class="row g-3">
           <div class="col-12 col-md-6 col-lg-3">
             <div class="card">
-              <img src="assets/dummy.jpeg" class="card-img-top" alt="news">
+              <img src="{{asset('front/dummy.jpeg')}}"class="card-img-top" alt="news">
               <div class="card-body">
                 <h5 class="card-title">Debora Oktaria<br> 21120120120032</h5>
                 <p class="card-text">OWNER</p>
@@ -316,7 +316,7 @@
           </div>
           <div class="col-12 col-md-6 col-lg-3">
             <div class="card">
-              <img src="assets/dummy.jpeg" class="card-img-top" alt="videos">
+              <img src="{{asset('front/dummy.jpeg')}}"class="card-img-top" alt="videos">
               <div class="card-body">
                 <h5 class="card-title">JOJO<br>21212123435</h5>
                 <p class="card-text">BABU</p>
@@ -325,7 +325,7 @@
           </div>
           <div class="col-12 col-md-6 col-lg-3">
             <div class="card">
-              <img src="assets/dummy.jpeg" class="card-img-top" alt="videos">
+              <img src="{{asset('front/dummy.jpeg')}}"class="card-img-top" alt="videos">
               <div class="card-body">
                 <h5 class="card-title">DIMSA<br>321372819923</h5>
                 <p class="card-text">BABU2</p>
@@ -336,7 +336,7 @@
 
           <div class="col-12 col-md-6 col-lg-3">
             <div class="card">
-              <img src="assets/dummy.jpeg" class="card-img-top" alt="videos">
+              <img src="{{asset('front/dummy.jpeg')}}"class="card-img-top" alt="videos">
               <div class="card-body">
                 <h5 class="card-title">IRUL<br>74278468634782</h5>
                 <p class="card-text">BABU3</p>
@@ -363,8 +363,8 @@
     <div class="row align-items-center">
       <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
         <h5>
-          <img src="assets/logo2.png" alt="logo" height="50">
-          <img src="assets/logo1.png" alt="logo" height="50"> Bintang Juara
+          <img src="{{asset('front/logo2.png')}}" alt="logo" height="50">
+          <img src="{{asset('front/logo1.png')}}"alt="logo" height="50"> Bintang Juara
         </h5>
         <p>
           <i class="fas fa-home mr-3"></i> &nbsp; Jl. Dewi Sartika No.17 A, Sukorejo, Kec. Gn. Pati, Kota Semarang,

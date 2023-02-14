@@ -7,8 +7,8 @@
       <script src="https://kit.fontawesome.com/a59b9b09ab.js" crossorigin="anonymous"></script>
       <title>BINTANG JUARA</title>
       <!-- add icon link -->
-      <link rel="icon" href="assets/logo1.png" type="image/x-icon" />
-      <link rel="icon" href="2.jpeg" />
+      <link rel="icon" href="{{asset('front/logo1.png')}}" type="image/x-icon" />
+      <link rel="icon" href="{{asset('front/2.jpg')}}" />
       <!-- Swiper CSS -->
       <link rel="stylesheet" type="text/css" href="stylegallery.css" />
       <link rel="stylesheet" href="css/swiper-bundle.min.css" />
@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #45b0f8">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="assets/logo1.png" alt="logo" height="50" />
+          <img src="{{asset('front/dummy.jpeg')}}" alt="logo" height="50" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -56,7 +56,7 @@
           <div class="col">
             <div class="row g-3">
               <div class="col-12 col-md-6 col-lg-3">
-                <img src="assets/dummy.jpeg" class="card-img-top" alt="news" style="margin-bottom: 5%" />
+                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news" style="margin-bottom: 5%" />
                 <div class="card">
                   <div class="card-body">
                     <h5 class="card-title">
@@ -68,7 +68,7 @@
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-3">
-                <img src="assets/dummy.jpeg" class="card-img-top" alt="news" style="margin-bottom: 5%" />
+                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news" style="margin-bottom: 5%" />
                 <div class="card">
                   <div class="card-body">
                     <h5 class="card-title">
@@ -80,7 +80,7 @@
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-3">
-                <img src="assets/dummy.jpeg" class="card-img-top" alt="news" style="margin-bottom: 5%" />
+                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news" style="margin-bottom: 5%" />
                 <div class="card">
                   <div class="card-body">
                     <h5 class="card-title">
@@ -93,7 +93,7 @@
               </div>
 
               <div class="col-12 col-md-6 col-lg-3">
-                <img src="assets/dummy.jpeg" class="card-img-top" alt="news" style="margin-bottom: 5%" />
+                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news" style="margin-bottom: 5%" />
                 <div class="card">
                   <div class="card-body">
                     <h5 class="card-title">
@@ -108,7 +108,7 @@
             <br />
             <div class="row g-3">
               <div class="col-12 col-md-6 col-lg-3">
-                <img src="assets/dummy.jpeg" class="card-img-top" alt="news" style="margin-bottom: 5%" />
+                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news" style="margin-bottom: 5%" />
                 <div class="card">
                   <div class="card-body">
                     <h5 class="card-title">
@@ -120,7 +120,7 @@
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-3">
-                <img src="assets/dummy.jpeg" class="card-img-top" alt="news" style="margin-bottom: 5%" />
+                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news" style="margin-bottom: 5%" />
                 <div class="card">
                   <div class="card-body">
                     <h5 class="card-title">
@@ -132,7 +132,7 @@
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-3">
-                <img src="assets/dummy.jpeg" class="card-img-top" alt="news" style="margin-bottom: 5%" />
+                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news" style="margin-bottom: 5%" />
                 <div class="card">
                   <div class="card-body">
                     <h5 class="card-title">
@@ -145,7 +145,7 @@
               </div>
 
               <div class="col-12 col-md-6 col-lg-3">
-                <img src="assets/dummy.jpeg" class="card-img-top" alt="news" style="margin-bottom: 5%" />
+                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news" style="margin-bottom: 5%" />
                 <div class="card">
                   <div class="card-body">
                     <h5 class="card-title">
