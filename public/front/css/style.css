@@ -2,14 +2,14 @@ p {
     font-family: Helvetica;
     font-weight: normal;
     font-size: large;
-    margin-right: 40px;
-    text-align: justify;
+    /* margin-right: 40px;
+    text-align: justify; */
     line-height: 2;
 }
 
 h1 {
-    text-align: center;
-    align-self: center;
+    /* text-align: center;
+    align-self: center; */
     font-family: "Franklin Gothic Medium";
     font-weight: bolder;
     font-size: 40px;
@@ -30,6 +30,10 @@ h3 {
     font-weight: 300;
 }
 
+.pertama {
+    color: white;
+}
+
 /* * {
           margin: 0px;
           padding: 0px;
@@ -37,34 +41,32 @@ h3 {
           background-color: black;
         } */
 
+/* GALERI */
+
 .lainya {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* height: 100vh; */
+    height: 100vh;
     width: 100%;
-    padding: 0px;
-    margin: 0px;
-    /* box-sizing: border-box; */
-    /* background-color: black; */
 }
 
 .main-scroll-div {
     width: 90%;
-    /* height: 100%; */
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     /* border: 2px solid red; */
 }
 
-/* .cover {
-    position: relative;
-    width: 90%;
-    height: 50%;
-} */
+.cover {
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+}
 
-/* .cover::before {
+.cover::before {
     position: absolute;
     content: "";
     left: 0;
@@ -84,13 +86,13 @@ h3 {
     height: 100%;
     width: 150px;
     background-image: linear-gradient(-90deg, black, transparent);
-} */
+}
 
 .scroll-images {
-    width: auto;
-    height: 600px;
+    width: 100%;
+    height: auto;
     display: flex;
-    justify-content: start;
+    justify-content: left;
     align-items: center;
     overflow: auto;
     position: relative;
@@ -98,9 +100,9 @@ h3 {
 }
 
 .child {
-    min-width: 100%;
-    height: 100%;
-    margin: 10px 10px;
+    min-width: 200px;
+    height: 250px;
+    margin: 1px 10px;
     cursor: pointer;
     border: 1px solid rgba(207, 201, 201, 0.3);
     overflow: hidden;
@@ -113,59 +115,74 @@ h3 {
 .child-img {
     width: 100%;
     height: 100%;
-    align-items: center;
 }
 
 .icon {
     color: #45b0f8;
-    /* background-color: black; */
+    background-color: #ffffff;
     font-size: 50px;
     outline: none;
     border: none;
-    padding: 0px 20px;
+    padding: opx 20px;
     cursor: pointer;
 }
 
 .icon:hover {
-    color: #fced19;
+    color: yellow;
 }
 
-.elementor-widget-video .container {
-    overflow: hidden;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+/* AKHIR VIDEO YT */
+
+/* selayang */
+/* .row p {
+    line-height: 1.4;
+    text-align: justify;
+    margin-bottom: 5px;
+  } */
+
+/* selayang pandang */
+
+#check {
+    display: none;
 }
 
-.elementor-widget-video
-    .elementor-open-inline
-    .elementor-custom-embed-image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: 50%;
+.content {
+    display: none;
+    transition: 0.5s linear;
 }
-
-.elementor-widget-video .elementor-custom-embed-image-overlay {
+label {
+    display: inline-block;
+    color: #45b0f8;
     cursor: pointer;
-    text-align: center;
+    font-weight: 600;
 }
 
-.elementor-widget-video
-    .elementor-custom-embed-image-overlay:hover
-    .elementor-custom-embed-play
-    i {
-    opacity: 1;
-}
-
-.elementor-widget-video .elementor-custom-embed-image-overlay img {
+#check:checked ~ .content {
     display: block;
-    width: 100%;
 }
 
-.elementor-widget-video .e-hosted-video .elementor-video {
-    -o-object-fit: cover;
-    object-fit: cover;
+#check:checked ~ label {
+    visibility: hidden;
+}
+
+#check:checked ~ label:after {
+    content: "Show Less";
+    display: block;
+    visibility: visible;
+}
+
+/* akhir selayang pandang */
+
+.gambar {
+    border-radius: 20px 20px 20px 20px;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.banner {
+    background: url("assets/gedung1.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    color: #ffffff;
 }
