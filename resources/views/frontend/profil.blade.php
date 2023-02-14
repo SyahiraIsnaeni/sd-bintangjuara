@@ -311,50 +311,26 @@
         <p align="justify">Komitmen kami menyediakan guru-guru terbaik yang telah
            lulus program pelatihan dan pengembangan SDM Yayasan Dewi Sartika hingga siap mendampingi siswa.</p>
            <br><br>
-           <p align="justify"> mengenai team guru dapat dilihat  <button type="button" class="btn btn-outline-secondary">Selengkapnya</button></p>
+           <p align="justify"> mengenai team guru dapat dilihat  <a href="detail-guru">selengkapnya</a></p>
       </div>
 
       <div class="col-8">
         <div class="row g-3">
+          @forelse ($guru as $row)
           <div class="col-12 col-md-6 col-lg-3">
-            <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="team" style="margin-bottom: 5%;">
+            <img src="{{asset('uploads/'.$row->foto) }}" class="card-img-top" alt="team" style="margin-bottom: 5%;" height="250">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Debora Oktaria<br> 21120120120032</h5>
-                <p class="card-text">OWNER</p>
+                <h5 class="card-title">{{$row->nama}}<br> {{$row->nip}}</h5>
+                <p class="card-text">{{$row->jabatan}}</p>
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="team" style="margin-bottom: 5%;">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Debora Oktaria<br> 21120120120032</h5>
-                <p class="card-text">OWNER</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="team" style="margin-bottom: 5%;">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Debora Oktaria<br> 21120120120032</h5>
-                <p class="card-text">OWNER</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-3">
-            <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="team" style="margin-bottom: 5%;">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Debora Oktaria<br> 21120120120032</h5>
-                <p class="card-text">OWNER</p>
-              </div>
-            </div>
-          </div>
+          @empty
+          @endforelse
         </div>
       </div>
+
     </div>
   </div>
 
