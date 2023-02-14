@@ -36,7 +36,7 @@
               <a class="nav-link active" aria-current="page" href="index.html">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://sd.bintangjuara.sch.id/772-2/">Yuk Wakaf</a>
+              <a class="nav-link" href="{{'detail-waqaf'}}">Yuk Wakaf</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/">PPDB</a>
@@ -52,31 +52,23 @@
     <div class="container">
       <div class="box">
         <div class="dream">
-          <img src="{{asset('front/1.jpg')}}" />
-          <img src= "{{asset('front/2.jpg')}}" />
-          <img src="{{asset('front/3.jpg')}}" />
-          <img src="{{asset('front/4.jpg')}}" />
-          <img src="{{asset('front/5.jpg')}}" />
+            @forelse ($galeri1 as $row)
+                <img src="{{asset('uploads/'.$row->gambar_galeri) }}" />
+            @empty
+            @endforelse
         </div>
-
         <div class="dream">
-          <img src="{{asset('front/6.jpg')}}" />
-          <img src="{{asset('front/7.jpg')}}"/>
-          <img src="{{asset('front/8.jpg')}}"/>
-          <img src="{{asset('front/9.jpg')}}"/>
-          <img src="{{asset('front/10.jpg')}}" />
+            @forelse ($galeri2 as $row)
+                <img src="{{asset('uploads/'.$row->gambar_galeri) }}" />
+            @empty
+            @endforelse
         </div>
-
         <div class="dream">
-          <img src="{{asset('front/11.jpg')}}" />
-          <img src="{{asset('front/12.jpg')}}" />
-          <img src="{{asset('front/13.jpg')}}" />
-          <img src="{{asset('front/14.jpg')}}" />
-          <img src="{{asset('front/15.jpg')}}" />
+            @forelse ($galeri3 as $row)
+                <img src="{{asset('uploads/'.$row->gambar_galeri) }}" />
+            @empty
+            @endforelse
         </div>
-      </div>
-      <div class="btn">
-        <a href="#">More</a>
       </div>
     </div>
   </body>

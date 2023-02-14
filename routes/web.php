@@ -74,6 +74,9 @@ Route::get('/daftar-berita', [\App\Http\Controllers\FrontendController::class, '
 Route::get('/daftar-kegiatan', [\App\Http\Controllers\FrontendController::class, 'daftarKegiatan']);
 Route::get('/daftar-pengumuman', [\App\Http\Controllers\FrontendController::class, 'daftarPengumuman']);
 Route::get('/detail-waqaf', [\App\Http\Controllers\FrontendController::class, 'waqaf']);
+Route::get('/gallery', [\App\Http\Controllers\FrontendController::class, 'gallery']);
+Route::get('/profile', [\App\Http\Controllers\FrontendController::class, 'profil']);
+Route::get('/detail-guru', [\App\Http\Controllers\FrontendController::class, 'guru']);
 Route::get('/kontak', function () {
     return view('frontend.kontak');
 });
