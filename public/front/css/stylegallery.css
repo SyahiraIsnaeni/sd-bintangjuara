@@ -1,28 +1,9 @@
 /* halaman gallery */
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 40px 20px 0 20px;
-}
 
-.container .heading {
-    width: 50%;
-    padding-bottom: 50px;
-}
-.container .heading h3 {
-    font-size: 3em;
-    font-weight: bolder;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #222;
-}
 
-.container .heading h3 span {
-    font-weight: 100;
-}
+
 .container .box {
+    padding-top: 18px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
