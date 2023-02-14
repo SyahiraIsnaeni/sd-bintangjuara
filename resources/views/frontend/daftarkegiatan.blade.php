@@ -8,7 +8,7 @@
       <title>Daftar Kegiatan</title>
       <!-- add icon link -->
       <link rel = "icon" href = "{{asset('front/logo1.png')}}" type ="image/x-icon">
-     <link rel="icon" href="{{asset('front/2.jpg')}}" />
+     
      <link rel="stylesheet" type="text/css" href="{{asset('front/css/style.css')}}">
         <!-- Swiper CSS -->
         <link rel="stylesheet" href="css/swiper-bundle.min.css">

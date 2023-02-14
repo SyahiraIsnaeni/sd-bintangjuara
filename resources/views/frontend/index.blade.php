@@ -243,11 +243,13 @@ body {
   <div class="container mt-5">
     <div class="bintangjuaravideo">
       <div class="heading">
+        <div class="text-center">
         <h1 class="title">Lebih Dekat dengan SD Islam Bintang Juara</h1>
+</div>
       </div>
     </div>
     <section class="yt">
-      <div class="row">
+      <div class="row mt-5">
         <div class="col-12 col-md-6 col-lg-6">
           <div class="video1">
             <div class="bintangjuaravideo">
