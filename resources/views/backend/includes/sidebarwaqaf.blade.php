@@ -106,19 +106,19 @@
                         </li>
 						<li class="nav-item active">
                             <a href="{{ route('waqaf.index') }}">
-							<i class="fas fa-comment"></i>
+							<i class="fas fa-hand-holding-heart"></i>
                                 <p>Waqaf</p>
                             </a>
                         </li>
 						<li class="nav-item">
                             <a href="{{ route('guru.index') }}">
-							<i class="fas fa-comment"></i>
+							<i class="fas fa-users"></i>
                                 <p>Guru</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('fakta.index') }}">
-                                <i class="fas fa-comment"></i>
+							<i class="far fa-comment-dots"></i>
                                 <p>Fakta</p>
                             </a>
                         </li>

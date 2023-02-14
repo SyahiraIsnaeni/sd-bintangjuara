@@ -105,23 +105,23 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('waqaf.index') }}">
-                        <i class="fas fa-comment"></i>
-                        <p>Waqaf</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('guru.index') }}">
-                        <i class="fas fa-comment"></i>
-                        <p>Guru</p>
-                    </a>
-                </li>
-                <li class="nav-item active">
-                    <a href="{{ route('fakta.index') }}">
-                        <i class="fas fa-comment"></i>
-                        <p>Fakta</p>
-                    </a>
-                </li>
+                            <a href="{{ route('waqaf.index') }}">
+							<i class="fas fa-hand-holding-heart"></i>
+                                <p>Waqaf</p>
+                            </a>
+                        </li>
+						<li class="nav-item">
+                            <a href="{{ route('guru.index') }}">
+							<i class="fas fa-users"></i>
+                                <p>Guru</p>
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="{{ route('fakta.index') }}">
+							<i class="far fa-comment-dots"></i>
+                                <p>Fakta</p>
+                            </a>
+                        </li>
                 <li class="nav-section">
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>
