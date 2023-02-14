@@ -19,10 +19,29 @@
       </style>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.profile-circel-image-200 img {
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+}
+.vv img {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.vv img:hover {
+    opacity: 0.8;
+    box-shadow: 0px 0px 5px 8px rgba(0,0,0,0.08);
+}
+      </style>
     </head>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark p-md-2 fixed-top ">
-
+  
     <div class="container">
       <a class="navbar-brand" href="index.html">
       <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><strong>&nbsp SD Islam Bintang Juara</strong>
@@ -33,10 +52,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="profile">Profile</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{'detail-waqaf'}}">Yuk Wakaf</a>
+            <a class="nav-link" href="https://sd.bintangjuara.sch.id/772-2/">Yuk Wakaf</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/">PPDB</a>
@@ -271,7 +290,7 @@
           </svg>
         <div class="container-fluid text-white" style="background-color: #45b0f8;">
             <div class="container">
-            <div class="row mb-3">
+            <div class="row mb-5">
                 <h2>Fokus Kurikulum Kami</h2>
             </div>
               <div class="row fs-5">
@@ -312,8 +331,8 @@
 
   <!-- Fakta -->
 
-  <section id="Fakta">
-    <div class="container mt-5 mb-5">
+  <section id="Fakta ">
+    <div class="container mb-5">
         <div class="container text-center">
             <div class="row">
               <div class="col">
@@ -321,14 +340,13 @@
                 <h2>SD Islam Bintang Juara</h2>
             </div>
         </div>
-@forelse ($fakta as $row)
     <div class="row g-3">
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
                 <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news">
                 <div class="card-body">
-                  <h5 class="card-title">Jumlah Siswa</h5>
-                  <p class="card-text">{{$row->jumlah_siswa}}</p>
+                  <h5 class="card-title">Fakta 1</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
                 </div>
         </div>
@@ -337,8 +355,8 @@
             <div class="card">
                 <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="videos">
                 <div class="card-body">
-                  <h5 class="card-title">Jumlah Guru</h5>
-                  <p class="card-text">{{$row->jumlah_guru}}</p>
+                  <h5 class="card-title">Fakta 2</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
               </div>
         </div>
@@ -346,15 +364,13 @@
             <div class="card">
                 <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="videos">
                 <div class="card-body">
-                  <h5 class="card-title">Tahun Berjalan</h5>
-                  <p class="card-text">{{$row->tahun_berjalan}}</p>
+                  <h5 class="card-title">Fakta 3</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
 
               </div>
         </div>
     </div>
-        @empty
-        @endforelse
     </div>
 </section>
 
@@ -403,9 +419,14 @@
         </div>
         <div class="row g-3">
         @forelse ($testimoni as $row)
-          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+          <div class="col-lg-4 mb-3 ">
+            <div class="text-center">
+          <div class="vv profile-circel-image-200">
+          <img src="{{asset('uploads/'.$row->foto) }}" class="img-fluid rounded-circle" alt="Card Image">
+          </div>
+          </div>
+          <br>
             <div class="card">
-              <img src="{{asset('uploads/'.$row->foto) }}" class="card-img-top" alt="Card Image" height="360">
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title text-center">{{ $row->nama}}</h5>
                   <div class="text-center">

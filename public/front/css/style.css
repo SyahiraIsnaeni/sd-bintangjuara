@@ -74,7 +74,7 @@ h3 {
     z-index: 99;
     height: 100%;
     width: 150px;
-    background-image: linear-gradient(90deg, black, transparent);
+    /* background-image: linear-gradient(90deg, black, transparent); */
 }
 
 .cover::after {
@@ -85,7 +85,7 @@ h3 {
     z-index: 99;
     height: 100%;
     width: 150px;
-    background-image: linear-gradient(-90deg, black, transparent);
+    /* background-image: linear-gradient(-90deg, black, transparent); */
 }
 
 .scroll-images {
