@@ -8,8 +8,9 @@
       <title>BINTANG JUARA</title>
       <!-- add icon link -->
      <link rel = "icon" href = "{{asset('front/logo1.png')}}" type ="image/x-icon">
+     <link rel="icon" href="{{asset('front/2.jpg')}}" />
      <link rel="stylesheet" type="text/css" href="{{asset('front/css/style.css')}}">
-     <link rel="icon" href="2.jpeg" />
+     
         <!-- Swiper CSS -->
         <link rel="stylesheet" href="css/swiper-bundle.min.css">
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" crossorigin="anonymous">
@@ -51,17 +52,20 @@ body {
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Profile</a>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ 'index' }}">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://sd.bintangjuara.sch.id/772-2/">Yuk Wakaf</a>
+            <a class="nav-link" aria-current="page" href="{{ 'profile' }}">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ 'detail-waqaf' }}">Yuk Wakaf</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/">PPDB</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="kontak.html">Kontak</a>
+            <a class="nav-link" href="{{ 'kontak' }}">Kontak</a>
           </li>
         <li class="nav-item">
                 @if (Route::has('login'))
@@ -383,10 +387,10 @@ body {
   <div class="container mt-5 mb-5" >
   <div class="slide-container-swiper mt-5 mb-5">
     <div class="row">
-      <div class="col-3">
+      <div class="col-2">
         <h1>Galeri</h1>
       </div>
-      <div class="col-9">
+      <div class="col-10">
         <div class="main-scroll-div">
           <div>
             <button class="icon" onclick="scrollr()"><i class="fas fa-angle-double-left"></i></button>
@@ -506,8 +510,6 @@ body {
   </footer>
 
   <!-- Akhir Footer -->
-
-  <div class="lainya"></div>
   <script>
     function scrolll() {
       var left = document.querySelector(".scroll-images");

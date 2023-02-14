@@ -35,34 +35,45 @@
 
 </head>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top text-white">
-  <div class="container">
-    <a class="collapse navbar-collapse" href="index.html">
-      <img src="{{asset('front/logo1.png')}}" alt="logo" height="50">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse text-white" id="navbarNav">
-      <ul class="navbar-nav text-white">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="profil.html">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://sd.bintangjuara.sch.id/772-2/">Yuk Wakaf</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/">PPDB</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="kontak.html">Kontak</a>
-        </li>
+<nav class="navbar navbar-expand-lg navbar-dark p-md-2 fixed-top ">
 
-      </ul>
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+      <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><strong>&nbsp SD Islam Bintang Juara</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{ 'index' }}">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ 'profile' }}">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ 'detail-waqaf' }}">Yuk Wakaf</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/">PPDB</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ 'kontak' }}">Kontak</a>
+          </li>
+        <li class="nav-item">
+                @if (Route::has('login'))
+                    @auth
+                        <a class="nav-link" href="{{ url('/dashboard') }}">Dashboard Admin</a>
+                    @else
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    @endauth
+                @endif
+            </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 <!-- Akhir Navbar -->
 
 <!-- awalan -->
@@ -422,5 +433,17 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
+<script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+      var nav = document.querySelector('nav');
+
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 100) {
+          nav.classList.add('bg-info', 'shadow');
+        } else {
+          nav.classList.remove('bg-info', 'shadow');
+        }
+      });
+    </script>
 
 </html>

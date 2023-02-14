@@ -28,29 +28,41 @@
 
 </head>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark p-md-2 fixed-top ">
+
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="assets/logo1.png" alt="logo" height="50">
+      <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><strong>&nbsp SD Islam Bintang Juara</strong>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto ">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="profil.html "><p class="pertama">Profile</p></a>
+            <a class="nav-link" aria-current="page" href="{{ 'index' }}">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="https://sd.bintangjuara.sch.id/772-2/"><p class="pertama">Yuk Waqaf</p></a>
+            <a class="nav-link" aria-current="page" href="{{ 'profile' }}">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/"><p class="pertama">PPDB</p></a>
+            <a class="nav-link active" href="{{ 'detail-waqaf' }}">Yuk Wakaf</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="kontak.html"><p class="pertama">Kontak</p></a>
+            <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/">PPDB</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ 'kontak' }}">Kontak</a>
+          </li>
+        <li class="nav-item">
+                @if (Route::has('login'))
+                    @auth
+                        <a class="nav-link" href="{{ url('/dashboard') }}">Dashboard Admin</a>
+                    @else
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    @endauth
+                @endif
+            </li>
         </ul>
       </div>
     </div>
@@ -62,12 +74,12 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="assets/bg.jpeg" class="img-fluid" alt="bg">
+                <img src="{{asset('front/bg.jpeg')}}" class="img-fluid" alt="bg">
                 <div class="carousel-caption d-none d-md-block">
                     <div class="col-12 col-md-12 col-lg-6">
                     <div class="row">
                         <h1 align="left">Yuk Wakaf</h1>
-                        <h4 align="justify">Untuk pembebasan lahan guna membangun Mushola dan mengembangkan Sekolah Dasar Islma
+                        <h4 align="justify">Untuk pembebasan lahan guna membangun Mushola dan mengembangkan Sekolah Dasar Islam
                             Bintang Juara</h4>
                     </div>
                     <div class="row mt-3">
@@ -131,7 +143,7 @@
     <div class="container">
         <div class="container text-center">
             <div class="row">
-                <h1>TOTALA DONASI</h1>
+                <h1>TOTAL DONASI</h1>
             </div>
             <div class="row g-3 mt-3 text-center">
                 <div class="col-12 col-md-6 col-lg-4">
@@ -243,6 +255,18 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+      var nav = document.querySelector('nav');
+
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 100) {
+          nav.classList.add('bg-info', 'shadow');
+        } else {
+          nav.classList.remove('bg-info', 'shadow');
+        }
+      });
+    </script>
 </body>
 
 </html>
