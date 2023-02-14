@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Artikel;
 use App\Models\Berita;
 use App\Models\Galeri;
+use App\Models\Guru;
 use App\Models\Jumbotron;
 use App\Models\Kegiatan;
 use App\Models\Pengumuman;
@@ -92,6 +93,30 @@ class FrontendController extends Controller
     {
         $waqaf = Waqaf::all();
         return view('frontend.waqaf', compact('waqaf'));
+    }
+
+    public function gallery()
+    {
+        $galeri1 = Galeri::whereRaw('MOD(id, 3) = 0')->orderByDesc('updated_at')->get();
+        $galeri2 = Galeri::whereRaw('MOD(id, 3) = 1')->orderByDesc('updated_at')->get();
+        $galeri3 = Galeri::whereRaw('MOD(id, 3) = 2')->orderByDesc('updated_at')->get();
+
+        return view('frontend.gallery', compact('galeri1', 'galeri2', 'galeri3'));
+    }
+
+    public function profil()
+    {
+        $guru = Guru::limit(4)->orderByDesc('updated_at')->get();
+        return view('frontend.profil', compact('guru'));
+    }
+
+    public function guru()
+    {
+        $guru1 = Galeri::whereRaw('MOD(id, 4) = 0')->orderByDesc('updated_at')->get();
+        $guru2 = Galeri::whereRaw('MOD(id, 4) = 1')->orderByDesc('updated_at')->get();
+        $guru3 = Galeri::whereRaw('MOD(id, 4) = 2')->orderByDesc('updated_at')->get();
+        $guru4 = Galeri::whereRaw('MOD(id, 4) = 3')->orderByDesc('updated_at')->get();
+        return view('frontend.guru', compact('guru1', 'guru2', 'guru3', 'guru4'));
     }
 
 }
