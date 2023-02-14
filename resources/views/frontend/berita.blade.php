@@ -23,31 +23,44 @@
     </head>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #45b0f8;">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="{{asset('front/logo1.png')}}" alt="logo" height="50">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://sd.bintangjuara.sch.id/772-2/">Yuk Wakaf</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/">PPDB</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="kontak.html">Kontak</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+
+<div class="container">
+  <a class="navbar-brand" href="{{ 'index' }}">
+  <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><strong>&nbsp SD Islam Bintang Juara</strong>
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="{{ 'index' }}">Beranda</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="{{ 'profile' }}">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ 'detail-waqaf' }}">Yuk Wakaf</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/">PPDB</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ 'kontak' }}">Kontak</a>
+      </li>
+    <li class="nav-item">
+            @if (Route::has('login'))
+                @auth
+                    <a class="nav-link" href="{{ url('/dashboard') }}">Dashboard Admin</a>
+                @else
+                    <a class="nav-link" href="{{ route('login') }}">Login</a>
+                @endauth
+            @endif
+        </li>
+    </ul>
+  </div>
+</div>
+</nav>
   <!-- Akhir Navbar -->
 
 <!-- Gambar berita -->
