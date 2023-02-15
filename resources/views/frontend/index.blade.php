@@ -103,7 +103,7 @@ body {
 
 
         <div class="row">
-          <h2>Selayang Pandang</h2> 
+          <h2><b>Selayang Pandang</b></h2> 
         </div>
         <div class="row">
         <div class="col-7">
@@ -246,7 +246,7 @@ body {
                 </div>
             </div>
       </div>
-  </section>
+  </section><br><br>
   <!-- Akhir Events, News, Videos -->
 
 <!-- video yt -->
@@ -255,12 +255,11 @@ body {
     <div class="bintangjuaravideo">
       <div class="heading">
         <div class="text-center">
-        <h2 class="title">Lebih Dekat dengan SD Islam Bintang Juara</h2>
-</div>
+        <h2 class="title"><b>Lebih Dekat dengan SD Islam Bintang Juara</b></h2></div>
       </div>
     </div>
     <section class="yt">
-      <div class="row mt-5">
+      <div class="row mt-3">
         <div class="col-12 col-md-6 col-lg-6">
           <div class="video1">
             <div class="bintangjuaravideo">
@@ -309,31 +308,33 @@ body {
     </svg>
     <div class="container-fluid text-white" style="background-color: #45b0f8;">
     <div class="container">
-        <div class="row mb-3">
-          <h1>Fokus Kurikulum Kami</h1>
+        <div class="row mb-3 center">
+        <div style="text-align: center;">
+          <h1><b>Fokus Kurikulum Kami</b></h1>
         </div>
-        <div class="row fs-5">
+        </div><br>
+        <debodiv class="row fs-5">
           <div class="col-12 col-md-12 col-lg-6">
             <div class="row">
               <div class="col-2"><i class="fa-solid fa-book-open fa-3x"></i></div>
               <div class="col">
-                <h3 align="justify">Perpaduan Pendidikan Al Qur'an & Al Hadist dengan kurikulum KTSP 2013</h3>
+                <h4 align="justify">Perpaduan Pendidikan Al Qur'an & Al Hadist dengan kurikulum KTSP 2013</h4>
               </div>
-            </div>
+            </div><br>
             <div class="row">
               <p align="justify">Kurikulum SD Islam Bintang Juara menggunakan acuan utama, yaitu Al-Qur’an, Hadist,
                 serta Kurikulum SD yang berlaku dari Pemerintah
                 (KTSP Tahun 2013) serta Referensi Tahapan Perkembangan Anak dan Konsep Multiple Intelligences.</p>
-            </div>
+            </div><br>
           </div>
           <div class="col-1"></div>
           <div class="col-12 col-md-12 col-lg-5">
             <div class="row">
               <div class="col-2"><i class="fa-solid fa-person-circle-check fa-3x"></i></div>
               <div class="col">
-                <h3 align="justify">Islamic Leadership</h3>
+                <h4 align="justify">Islamic Leadership</h4>
               </div>
-            </div>
+            </div><br>
             <div class="row">
               <p align="justify">Membentuk leadership anak dengan membuat beragam project sesuai kurikulum dan kebutuhan
                 lingkungan (individual maupun tim, kerjasama
@@ -345,7 +346,7 @@ body {
               <div class="row">
                 <div class="col-2"><i class="fa-solid fa-scale-unbalanced fa-3x"></i></div>
               <div class="col">
-              <h3 align="justify">Materi Keislaman 60% & Materi Umum 40%</h3></div></div>
+              <h4 align="justify">Materi Keislaman 60% & Materi Umum 40%</h4></div></div><br>
               <div class="row">
                 <p align="justify">Menitikberatkan pada materi keislaman untuk menguatkan pondasi agama anak, mengajari
                   akidah, akhlaq & adab, serta ibadah wajib dan
@@ -356,8 +357,9 @@ body {
             <div class="col-12 col-md-12 col-lg-5">
               <div class="row">
                 <div class="col-2"><i class="fa-sharp fa-solid fa-circle-check fa-3x"></i></div>
-                <div class="col"><h3 align="justify">Karakter & Tanggung Jawab</h3></div>
+                <div class="col"><h4 align="justify">Karakter & Tanggung Jawab</h4></div>
               </div>
+              <br>
               <div class="row">
                 <p align="justify">Kami tidak hanya memberikan materi pendidikan secara teori, namun kami membiasakan
                   ha-hal
@@ -366,7 +368,7 @@ body {
               </div>
             </div>
           </div>
-        </div>
+        </debodiv>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">\
@@ -385,7 +387,7 @@ body {
         <div class="container text-center">
             <div class="row">
               <div class="col">
-                <h2>FAKTA TENTANG</h2></div>
+                <h2> <b> FAKTA TENTANG</b></h2></div>
                 <h3>SD Islam Bintang Juara</h3>
             </div>
         </div>
@@ -397,7 +399,7 @@ body {
 
             <div class="card text-center">
                 <div class="card-body">
-                  <h3 class="card-title">Jumlah Siswa</h3>
+                  <h4 class="card-title">Jumlah Siswa</h4>
                   <p class="card-text">{{$row->jumlah_siswa}}</p>
 
                 </div>
@@ -409,7 +411,7 @@ body {
     </div>
             <div class="card text-center">
                 <div class="card-body">
-                  <h3 class="card-title">Jumlah Guru</h3>
+                  <h4 class="card-title">Jumlah Guru</h4>
                   <p class="card-text">{{$row->jumlah_guru}}</p>
                 </div>
               </div>
@@ -420,7 +422,7 @@ body {
     </div>
             <div class="card text-center">
                 <div class="card-body">
-                  <h3 class="card-title">Tahun Berjalan</h3>
+                  <h4 class="card-title">Tahun Berjalan</h4>
                   <p class="card-text">{{$row->tahun_berjalan}}</p>
                 </div>
 
@@ -439,7 +441,7 @@ body {
   <div class="slide-container-swiper mt-5 mb-5">
     <div class="row">
       <div class="col-2">
-        <h2>Galeri</h2>
+        <h2><b>Galeri</b></h2>
       </div>
       <div class="col-10">
         <div class="main-scroll-div">
@@ -470,7 +472,7 @@ body {
       <div class="container">
         <div class="row pt-5">
           <div class="col text-end mb-4">
-            <h2>Kata Mereka</h2>
+            <h2><b>Kata Mereka</b></h2>
           </div>
         </div>
         <div class="row g-3">
