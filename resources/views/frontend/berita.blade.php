@@ -25,7 +25,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #45b0f8;">
 
 <div class="container">
-  <a class="navbar-brand" href="{{ 'index' }}">
+  <a class="navbar-brand" href="../index">
   <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><strong>&nbsp SD Islam Bintang Juara</strong>
   </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,21 +63,18 @@
 </nav>
   <!-- Akhir Navbar -->
 
-<!-- Gambar berita -->
-    <section id="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <img src="{{asset('uploads/'.$berita->gambar_berita) }}" class="card-img-top" alt="events" height="400">
-              </div>
-            </div>
-        </section>
-<!-- Akhir Gambar berita -->
-
 <!-- Isi berita -->
 <section id="isiartikel">
-    <div class="container mt-5">
+    <div class="container mt-4">
         <div class="row">
             <div class="col">
+              <div class="text-center">
+            <img src="{{asset('uploads/'.$berita->gambar_berita) }}" class="img-fluid" alt="events" >
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mt-4">
                 <h2><strong>{{$berita->judul}}</strong></h2>
                 <p></p>
             </div>
@@ -90,9 +87,9 @@
             </div>
             <div class="col">
                 <a>
-                    <span id="span_1" style="font-size: large; font-weight: bold;"> Nama Penulis</span>
+                    <span id="span_1" style="font-size: large; font-weight: bold;">{{$berita->nama_penulis}}</span>
                     <br>
-                    <span id="span_2"style="font-size: small;">{{$berita->updated_at->format('d M Y')}}</span>
+                    <span id="span_2"style="font-size: small;">{{$berita->updated_at->format('d M Y')}} | {{$berita->kategori_berita->nama_kategori}}</span>
                   </a>
             </div>
         </div>

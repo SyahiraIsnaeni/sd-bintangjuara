@@ -25,7 +25,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark p-md-2 fixed-top ">
 
     <div class="container">
-      <a class="navbar-brand" href="{{ 'index' }}">
+      <a class="navbar-brand" href="../index">
       <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><strong>&nbsp SD Islam Bintang Juara</strong>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,19 +34,19 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{{ 'index' }}">Beranda</a>
+            <a class="nav-link" aria-current="page" href="../index' }}">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{{ 'profile' }}">Profile</a>
+            <a class="nav-link" aria-current="page" href="../profile' }}">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ 'detail-waqaf' }}">Yuk Wakaf</a>
+            <a class="nav-link" href="../detail-waqaf' }}">Yuk Wakaf</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/">PPDB</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ 'kontak' }}">Kontak</a>
+            <a class="nav-link" href="../kontak' }}">Kontak</a>
           </li>
         <li class="nav-item">
                 @if (Route::has('login'))
