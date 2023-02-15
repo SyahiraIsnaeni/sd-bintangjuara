@@ -6,7 +6,7 @@
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="{{asset('front/logo1.png')}}" type="image/x-icon"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" crossorigin="anonymous">
-	
+
 	<!-- Fonts and icons -->
 	<script src="{{ asset('back/js/plugin/webfont/webfont.min.js') }}"></script>
 	<script>
@@ -58,6 +58,12 @@
 								<p>Dashboard</p>
 							</a>
 						</li>
+                        <li class="nav-item">
+                            <a href="index">
+                                <i class="fas fa-home"></i>
+                                <p>Beranda</p>
+                            </a>
+                        </li>
 						<li class="nav-section">
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>
