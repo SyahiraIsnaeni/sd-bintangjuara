@@ -525,24 +525,35 @@ body {
     <div class="row align-items-center">
       <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
         <h5>
-          <img src="assets/logo2.png" alt="logo" height="50">
-          <img src="assets/logo1.png" alt="logo" height="50"> Bintang Juara
+          <img src="{{asset('front/logo2.png')}}" alt="logo" height="50">
+          <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"> Bintang Juara
         </h5>
+        <div class="row">
+        <div class="col-1">
         <p>
-          <i class="fas fa-home mr-3"></i> &nbsp; Jl. Dewi Sartika No.17 A, Sukorejo, Kec. Gn. Pati, Kota Semarang,
-          50221
-        </p>
+          <i class="fas fa-home mr-3"></i>
+        </p></div>
+        <div class="col">
+          <div class="row">
+        <p align="justify">Jl. Dewi Sartika No.17 A, Sukorejo, Kec. Gn. Pati, Kota Semarang,
+          50221</p>
+          </div>
+          <div class="row">
         <p>
           <a href="#" style="text-decoration: none;">
             <strong class="text-white">Home</strong>
-          </a> .
+          </a>  .
           <a href="#" style="text-decoration: none;">
             <strong class="text-white">Kontak Kami</strong>
-          </a> .
+          </a>  .
           <a href="#" style="text-decoration: none;">
             <strong class="text-white">Sitemap</strong>
           </a>
         </p>
+        </div>
+        </div>
+        </div>
+
       </div>
       <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
       </div>
@@ -553,7 +564,9 @@ body {
               class="btn-floating btn-sm text-white">
               <i class="fab fa-youtube fa-2x"></i></a></div>
           <div class="col">
-            <p>Bintang Juara</p>
+          <a class="text-white" href="https://www.youtube.com/channel/UCmKyv8sPPwrv-LyDaES6L8w/" style="text-decoration: none;">
+          <p>SD Islam Bintang Juara</p>
+            </a>
           </div>
         </div>
         <div class="row">
@@ -561,7 +574,9 @@ body {
               class="btn-floating btn-sm text-white">
               <i class="fab fa-facebook fa-2x"></i></a></div>
           <div class="col">
-            <p>Bintang Juara</p>
+          <a class="text-white" href="https://www.facebook.com/sdislambintangjuara/" style="text-decoration: none;">
+          <p>SD Islam Bintang Juara</p>
+            </a>
           </div>
         </div>
         <div class="row">
@@ -569,20 +584,20 @@ body {
               class="btn-floating btn-sm text-white">
               <i class="fab fa-instagram fa-2x"></i></a></div>
           <div class="col">
-            <p>Bintang Juara</p>
+          <a class="text-white" href="https://www.instagram.com/sdislambintangjuara/" style="text-decoration: none;">
+          <p>@sdislambintangjuara</p>
+            </a>
           </div>
         </div>
       </div>
       <hr class="mb-4">
       <div class="row align-items-center text-center pb-5">
-        <!-- <div class="col-md-7 col-lg-8"> -->
           <p>
             Copyright ©2023 All rights reserved by:
             <a href="#" style="text-decoration: none;">
               <strong class="text-white">Bintang Juara</strong>
             </a>
           </p>
-        </div>
       </div>
     </div>
   </div>
