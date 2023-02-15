@@ -7,12 +7,12 @@
 <footer class="text-white" style="background-color: #45b0f8;">
   <div class="container text-md-left">
     <div class="row align-items-center">
-      <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
+      <div class="col-md-3 col-lg-3 col-xl-4 mt-3">
         <h5>
           <img src="{{asset('front/logo2.png')}}" alt="logo" height="50">
           <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"> Bintang Juara
         </h5>
-        <div class="row">
+        <div class="row mt-4">
         <div class="col-1">
         <p>
           <i class="fas fa-home mr-3"></i>
@@ -43,7 +43,7 @@
       </div>
       <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
         <h5> Follow us : </h5>
-        <div class="row">
+        <div class="row mt-4 ">
           <div class="col-2"><a href="https://www.youtube.com/channel/UCmKyv8sPPwrv-LyDaES6L8w/" target="/blank"
               class="btn-floating btn-sm text-white">
               <i class="fab fa-youtube fa-2x"></i></a></div>
