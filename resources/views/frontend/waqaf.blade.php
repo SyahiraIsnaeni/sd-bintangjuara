@@ -95,14 +95,9 @@
 
 <!-- NoRek -->
 @forelse ($waqaf as $row)
-<section id="norek" style="margin-top :-200px;">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="#ffffff" fill-opacity="1"
-      d="M0,160L48,144C96,128,192,96,288,90.7C384,85,480,107,576,112C672,117,768,107,864,122.7C960,139,1056,181,1152,165.3C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-      '
-    </path>
-  </svg>
-    <div class="container mb-5">
+<section id="norek" style="margin-bottom :100px;">
+  
+    <div class="container mt-5 mb-4">
         <div class="row fs-5 text-center">
             <h1>{{$row->nama_bank}}</h1>
             <h3>a/n {{$row->nama_rekening}}</h3>
@@ -123,7 +118,7 @@
             <div class="row">
                 <h1>TOTAL DONASI</h1>
             </div>
-            <div class="row g-3 mt-3 text-center">
+            <div class="row g-3 mt-5 text-center">
                 <div class="col-12 col-md-6 col-lg-4">
                     <i class="fa-solid fa-book-open fa-2x"></i>
                     <h3>Total Kebutuhan</h3>
@@ -157,7 +152,17 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+      var nav = document.querySelector('nav');
 
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 100) {
+          nav.classList.add('bg-primary', 'shadow');
+        } else {
+          nav.classList.remove('bg-primary', 'shadow');
+        }
+      });
+    </script>
 </body>
 
 </html>
