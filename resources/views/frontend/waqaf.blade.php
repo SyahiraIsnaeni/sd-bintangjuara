@@ -69,34 +69,22 @@
   </nav>
   <!-- Akhir Navbar -->
 
-<!-- Carousel -->
-<section id="carouse">
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{asset('front/bg.jpeg')}}" class="img-fluid" alt="bg">
-                <div class="carousel-caption d-none d-md-block">
-                    <div class="col-12 col-md-12 col-lg-6">
-                    <div class="row">
-                        <h1 align="left">Yuk Wakaf</h1>
-                        <h4 align="justify">Untuk pembebasan lahan guna membangun Mushola dan mengembangkan Sekolah Dasar Islam
-                            Bintang Juara</h4>
-                    </div>
-                    <div class="row mt-3">
-                        <a align="left"
-                            href="https://api.whatsapp.com/send?phone=6282314930833&text=Assalamualaikum%20Warahmatullah%20Wabarokatuh%2C%0A%0ABerikut%20saya%20sampaikan%20kepada%20staff%20Yayasan%20Dewi%20Sartika%20Semarang%2C%20konfirmasi%20donasi%20untuk%20pengembangan%20SD%20Islam%20Bintang%20Juara.%0A%0ATerimakasih">
-                            <button type="button" class="btn btn-secondary">
-                                Donasi Sekarang
-                            </button>
-                        </a>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
+<!-- jumbotron -->
+<section id="jumbotron">
+<div class="container-fluid banner">
+    <div class="container text-start">
+        <h1 class="display-5">Yuk Wakaf</h1>
+        <h4>Untuk pembebasan lahan guna membangun Mushola dan mengembangkan Sekolah Dasar Islma
+            Bintang Juara</h4>
+            <a href="#">
+                <button type="button" class="btn btn-outline-secondary">
+                        Donasi Sekarang
+                    </button>
+            </a>
     </div>
+</div>
 </section>
-<!-- Akhir Carousel -->
+<!-- akhir jumbotron -->
 
 <!-- yukwakaf -->
 <!-- <section id="wakaf">
