@@ -34,13 +34,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../' }}">Beranda</a>
+            <a class="nav-link" aria-current="page" href="../">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../profile' }}">Profile</a>
+            <a class="nav-link" aria-current="page" href="../profile">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../detail-waqaf' }}">Yuk Wakaf</a>
+            <a class="nav-link" href="../detail-waqaf">Yuk Wakaf</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/">PPDB</a>
@@ -90,9 +90,9 @@
 
   @forelse ($berita as $row)
       <section id="events">
-          <div class="container mt-5">
+          <div class="container mt-4">
               <div class="row fs-5">
-                  <div class="col-6 col-md-3 col-lg-2">
+                  <div class="col-6 col-md-3 col-lg-2 mt-4">
                       <img src="{{asset('uploads/'.$row->gambar_berita) }}"  class="img-fluid" alt="bg">
                   </div>
                   <div class="col-6 col-md-9 col-lg-10">
