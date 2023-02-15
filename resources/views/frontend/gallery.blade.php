@@ -47,7 +47,7 @@
                     <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/">PPDB</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../gallery">Galeri</a>
+                    <a class="nav-link active" href="../gallery">Galeri</a>
                 </li>
                 <li class="nav-item">
                     @if (Route::has('login'))
