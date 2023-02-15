@@ -99,7 +99,7 @@
   
     <div class="container mt-5 mb-4">
         <div class="row fs-5 text-center">
-            <h1>{{$row->nama_bank}}</h1>
+            <h1 class="text-primary"><b>{{$row->nama_bank}}</b></h1>
             <h3>a/n {{$row->nama_rekening}}</h3>
             <h3>{{$row->nomor_rekening}}</h3>
         </div>
@@ -116,7 +116,7 @@
     <div class="container">
         <div class="container text-center">
             <div class="row">
-                <h1>TOTAL DONASI</h1>
+                <h1 class="text-primary"><b>TOTAL DONASI</b></h1>
             </div>
             <div class="row g-3 mt-5 text-center">
                 <div class="col-12 col-md-6 col-lg-4">
