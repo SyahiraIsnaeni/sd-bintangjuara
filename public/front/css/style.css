@@ -14,8 +14,8 @@ strong {
 
 li {
     font-family: "Poppins", sans-serif;
-  font-weight: normal;
-  font-size: large;
+    font-weight: normal;
+    font-size: large;
 }
 
 h1 {
@@ -138,7 +138,7 @@ h5 {
     font-size: 50px;
     outline: none;
     border: none;
-    padding: opx 20px;
+    padding: 0px 20px;
     cursor: pointer;
 }
 
