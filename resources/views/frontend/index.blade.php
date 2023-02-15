@@ -8,9 +8,9 @@
       <title>SD Islam Bintang Juara</title>
       <!-- add icon link -->
      <link rel = "icon" href = "{{asset('front/logo1.png')}}" type ="image/x-icon">
-     
+
      <link rel="stylesheet" type="text/css" href="{{asset('front/css/style.css')}}">
-     
+
         <!-- Swiper CSS -->
         <link rel="stylesheet" href="css/swiper-bundle.min.css">
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" crossorigin="anonymous">
@@ -44,7 +44,7 @@ body {
   <nav class="navbar navbar-expand-lg navbar-dark p-md-2 fixed-top ">
 
     <div class="container">
-      <a class="navbar-brand" href="{{ 'index' }}">
+      <a class="navbar-brand" href="/">
       <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><strong>&nbsp SD Islam Bintang Juara</strong>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +53,7 @@ body {
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ 'index' }}">Beranda</a>
+            <a class="nav-link active" aria-current="page" href="/">Beranda</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="{{ 'profile' }}">Profile</a>
@@ -100,8 +100,8 @@ body {
     <!-- Selayang Pandang -->
     <section id="selayangpandang">
   <div class="container mt-5">
-    
-      
+
+
         <div class="row">
           <h2>Selayang Pandang</h2>
         </div>
@@ -363,7 +363,7 @@ body {
                   ha-hal
                   baik sebagai pendidikan tanggungjawab dan
                   pembentukan karakter, sehingga anak bisa menjalanankan peran di masyarakat dengan baik.</p>
-              </div>            
+              </div>
             </div>
           </div>
         </div>
@@ -394,7 +394,7 @@ body {
         <div class="container text-center mb-3">
         <i class="fa-solid fa-people-line fa-5x"></i>
     </div>
-        
+
             <div class="card text-center">
                 <div class="card-body">
                   <h5 class="card-title">Jumlah Siswa</h5>

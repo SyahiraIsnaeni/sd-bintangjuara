@@ -24,13 +24,13 @@
           </div>
           <div class="row">
         <p>
-          <a href="../index" style="text-decoration: none;">
+          <a href="../" style="text-decoration: none;">
             <strong class="text-white">Home</strong>
           </a>  .
           <a href="#" style="text-decoration: none;">
             <strong class="text-white">Kontak Kami</strong>
           </a>  .
-          <a href="../index" style="text-decoration: none;">
+          <a href="../" style="text-decoration: none;">
             <strong class="text-white">Sitemap</strong>
           </a>
         </p>

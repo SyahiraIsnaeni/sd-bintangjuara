@@ -8,7 +8,7 @@
       <title>Daftar Guru</title>
       <!-- add icon link -->
       <link rel="icon" href="{{asset('front/logo1.png')}}" type="image/x-icon" />
-      
+
       <!-- Swiper CSS -->
       <link rel="stylesheet" type="text/css" href="stylegallery.css" />
       <link rel="stylesheet" href="css/swiper-bundle.min.css" />
@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #45b0f8;">
 
 <div class="container">
-  <a class="navbar-brand" href="{{ 'index' }}">
+  <a class="navbar-brand" href="/">
   <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><strong>&nbsp SD Islam Bintang Juara</strong>
   </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

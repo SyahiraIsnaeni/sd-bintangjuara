@@ -37,7 +37,7 @@ Route::group(['middleware' => 'revalidate'], function(){
 //    Route::get('/', function () {
 //        return view('auth.login');
 //    });
-    Route::get('/', function () {
+    Route::get('/index', function () {
         return view('welcome');
     });
 
@@ -64,7 +64,7 @@ Route::group(['middleware' => 'revalidate'], function(){
     Route::resource('history-pengumuman', HistoryPengumumanController::class);
 });
 
-Route::get('/index', [\App\Http\Controllers\FrontendController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\FrontendController::class, 'index']);
 Route::get('/detail-artikel/{slug}', [\App\Http\Controllers\FrontendController::class, 'artikel'])->name('detail-artikel');
 Route::get('/detail-berita/{slug}', [\App\Http\Controllers\FrontendController::class, 'berita'])->name('detail-berita');
 Route::get('/detail-kegiatan/{slug}', [\App\Http\Controllers\FrontendController::class, 'kegiatan'])->name('detail-kegiatan');

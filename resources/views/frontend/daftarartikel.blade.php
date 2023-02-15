@@ -15,7 +15,7 @@
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" crossorigin="anonymous">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
    </head>
-   
+
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
@@ -24,7 +24,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark p-md-2 fixed-top ">
 
     <div class="container">
-      <a class="navbar-brand" href="../index">
+      <a class="navbar-brand" href="../">
       <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><strong>&nbsp SD Islam Bintang Juara</strong>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index">Beranda</a>
+            <a class="nav-link" aria-current="page" href="../">Beranda</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="../profile">Profile</a>
@@ -80,7 +80,7 @@
                   </div>
                 </div>
                 <img src="{{asset('front/gedung4.png')}}" class="img-fluid1" alt="bg">
-              
+
             </div>
         </div>
     </div>

@@ -77,7 +77,7 @@ body {
 <nav class="navbar navbar-expand-lg navbar-dark p-md-2 fixed-top ">
 
     <div class="container">
-      <a class="navbar-brand" href="{{ 'index' }}">
+      <a class="navbar-brand" href="/">
       <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><strong>&nbsp SD Islam Bintang Juara</strong>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -86,7 +86,7 @@ body {
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{{ 'index' }}">Beranda</a>
+            <a class="nav-link" aria-current="page" href="/">Beranda</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{ 'profile' }}">Profile</a>
@@ -158,7 +158,7 @@ body {
                 data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/www.youtube.com\/watch?v=1GL6RJMI0S4&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;,&quot;aspect_ratio&quot;:&quot;169&quot;}"
                 data-widget_type="video.default">
                 <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
-                  <iframe class="elementor-video" frameborder="1" allowfullscreen="1" 
+                  <iframe class="elementor-video" frameborder="1" allowfullscreen="1"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     title="Video Profile SD Islam Bintang Juara Semarang | Sekolah Calon Pemimpin Muslim | Sekolah Ramah Anak"
                     width="620" height="360"
