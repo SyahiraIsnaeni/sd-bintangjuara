@@ -33,20 +33,26 @@ class TestimoniController extends Controller
 
     public function store(Request $request)
     {
+        $testimoni = Testimoni::all();
         $this->validate($request, [
             'foto' => 'required|image|mimes:jpeg,jpg,png',
         ]);
 
         $data = $request->all();
-        if(is_null($data['nama']) || is_null($data['testimoni'])){
-
-            Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
-            return redirect()->route('testimoni.create');
+        if($testimoni->count('id') == 3){
+            Alert::error('Gagal', 'Tidak Dapat Menambahkan Data Lebih Dari Tiga');
+            return redirect()->route('testimoni.index');
         }else{
-            $data['foto'] = $request->file('foto')->store('testimoni');
+            if(is_null($data['nama']) || is_null($data['testimoni'])){
 
-            Testimoni::create($data);
-            Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+                Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+                return redirect()->route('testimoni.create');
+            }else{
+                $data['foto'] = $request->file('foto')->store('testimoni');
+
+                Testimoni::create($data);
+                Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+            }
         }
 
         return redirect()->route('testimoni.index');

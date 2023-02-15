@@ -54,7 +54,7 @@
 					<ul class="nav nav-primary">
 						<li class="nav-item active">
 							<a href="{{ route('dashboard') }}">
-								<i class="fas fa-home"></i>
+								<i class="fas fa-chart-area"></i>
 								<p>Dashboard</p>
 							</a>
 						</li>

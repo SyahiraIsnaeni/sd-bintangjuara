@@ -30,7 +30,7 @@ class GaleriController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'judul_gambar' => 'required|min:4',
+            'judul_gambar' => 'required|min:3',
             'gambar_galeri' => 'required|image|mimes:jpeg,jpg,png',
         ]);
 

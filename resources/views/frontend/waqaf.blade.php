@@ -120,19 +120,19 @@
                 </div>
                 <div class="row g-3 mt-5 text-center">
                     <div class="col-12 col-md-6 col-lg-4">
-                    <i class="fa-solid fa-cart-shopping fa-3x"></i>
+                    <i class="fa-solid fa-money-bill-wave fa-5x"></i>
                     <br></br>
                         <h3>Total Kebutuhan</h3>
                         <p>Rp {{$row->total_kebutuhan}}</p>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
-                        <i class="fa-solid fa-wallet fa-3x"></i>
+                        <i class="fa-solid fa-wallet fa-5x"></i>
                         <br></br>
                         <h3>Dana Terkumpul</h3>
                         <p>Rp {{$row->dana_terkumpul}}</p>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
-                    <i class="fa-solid fa-credit-card fa-3x"></i>
+                    <i class="fa-solid fa-credit-card fa-5x"></i>
                     <br></br>
                         <h3>Total Kekurangan</h3>
                         <p>Rp {{$row->total_kekurangan}}</p>

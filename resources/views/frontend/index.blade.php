@@ -111,7 +111,7 @@
                 <p align="justify">SD ISLAM BINTANG JUARA adalah Islamic Character Based School yang mengedepankan pendidikan
                     diniyyah seperti pembiasaan ibadah, tahsin & tahfidz, serta penanaman adab dan akhlak mulia.
                 <div class="content">
-                    <p>Kami juga menerapkan pembelajaran
+                    <p align="justify">Kami juga menerapkan pembelajaran
                         holistik integratif dengan mengintegrasikan segala aspek dan nilai-nilai dalam pendidikan seperti nilai
                         moral, etis,
                         religius, psikologis dan sosial dalam kesatuan yang dilakukan secara menyeluruh antara jiwa dan badan

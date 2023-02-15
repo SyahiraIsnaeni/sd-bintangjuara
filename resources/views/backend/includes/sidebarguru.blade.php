@@ -18,12 +18,12 @@
 						</div>
 					</div>
 					<ul class="nav nav-primary">
-						<li class="nav-item">
-							<a href="{{ route('dashboard') }}">
-								<i class="fas fa-home"></i>
-								<p>Dashboard</p>
-							</a>
-						</li>
+                        <li class="nav-item active">
+                            <a href="{{ route('dashboard') }}">
+                                <i class="fas fa-chart-area"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
 						<li class="nav-item">
                             <a href="/">
                                 <i class="fas fa-home"></i>

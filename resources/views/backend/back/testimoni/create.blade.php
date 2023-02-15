@@ -18,7 +18,7 @@
 			}
 		});
 	</script>
-	
+
 
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="{{asset('back/css/bootstrap.min.css')}}">
@@ -26,7 +26,7 @@
 
 	<!-- CSS Just for demo purpose, don't include it in your project
 	<link rel="stylesheet" href="{{asset('back/css/demo.css')}}"> -->
-	
+
 </head>
 <body>
 	<div class="wrapper">
@@ -70,7 +70,7 @@
                             <p> *Klik untuk melakukan resize foto (1:1)  <a target="/blank" href="https://www.fotor.com/features/crop">Klik disini</a></p>
                             </div>
                             <div class="form-group">
-                                <label for="pengumuman">Status</label>
+                                <label for="testimoni">Status</label>
                                 <select name="is_active" class="form-control">
                                     <option value="1">Terbitkan</option>
                                     <option value="0">Draf</option>
@@ -86,7 +86,7 @@
             </div>
         </div>
     </div>
-                
+
             </div>
             @include('backend.includes.footer')
         </div>

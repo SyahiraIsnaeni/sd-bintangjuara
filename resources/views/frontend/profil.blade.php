@@ -204,6 +204,9 @@
         <div class="container ">
             <div class="row fs-5">
                 <div class="col-8">
+                    <br>
+                    <br>
+                    <br>
                     <h2><strong>VISI</strong></h2>
                     <p align="justify">Terwujudnya Calon Pemimpin Muslim yang Berilmu, Berakhlakul Karimah dan Bermanfaat.</p>
                 </div>
