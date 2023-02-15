@@ -545,9 +545,9 @@ body {
 
       window.addEventListener('scroll', function () {
         if (window.pageYOffset > 100) {
-          nav.classList.add('bg-info', 'shadow');
+          nav.classList.add('bg-primary', 'shadow');
         } else {
-          nav.classList.remove('bg-info', 'shadow');
+          nav.classList.remove('bg-primary', 'shadow');
         }
       });
     </script>
