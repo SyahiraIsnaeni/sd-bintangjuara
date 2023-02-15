@@ -4,32 +4,32 @@ p {
     font-family: "Poppins", sans-serif;
     font-weight: normal;
     font-size: large;
-    /* margin-right: 40px;
-  text-align: justify; */
-    line-height: 2;
+}
+
+strong {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+li {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 15px;
 }
 
 h1 {
-    /* text-align: center;
-  align-self: center; */
     font-family: "Poppins", sans-serif;
     font-weight: bolder;
-    font-size: 40px;
-    font-weight: 800;
 }
 
 h2 {
     font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-size: 8px;
-    font-weight: 800;
 }
 
 h3 {
     font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-size: 38px;
-    font-weight: 800;
+    font-weight: normal;
 }
 
 .pertama {

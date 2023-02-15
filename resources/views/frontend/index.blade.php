@@ -45,7 +45,7 @@ body {
 
     <div class="container">
       <a class="navbar-brand" href="/">
-      <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><p><strong>&nbsp SD Islam Bintang Juara</strong></p>
+      <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><strong>&nbsp SD Islam Bintang Juara</strong>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -103,7 +103,7 @@ body {
 
 
         <div class="row">
-          <h2>Selayang Pandang</h2>
+          <div><h1>Selayang Pandang</h1> </div>
         </div>
         <div class="row">
         <div class="col-7">
@@ -310,7 +310,7 @@ body {
     <div class="container-fluid text-white" style="background-color: #45b0f8;">
     <div class="container">
         <div class="row mb-3">
-          <h2>FOKUS KURIKULUM KAMI</h2>
+          <h1>FOKUS KURIKULUM KAMI</h1>
         </div>
         <div class="row fs-5">
           <div class="col-12 col-md-12 col-lg-6">
