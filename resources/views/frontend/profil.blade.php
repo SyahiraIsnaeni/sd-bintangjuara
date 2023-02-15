@@ -9,6 +9,7 @@
     <title>Profil</title>
     <!-- add icon link -->
     <link rel="icon" href="{{asset('front/logo1.png')}}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{asset('front/css/style.css')}}">
     <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -31,22 +32,7 @@
   padding-bottom: 20%;
   color: #ffffff;
 }
-p {
-  font-family: "Poppins", sans-serif;
-  font-weight: normal;
-  font-size: large;
-  /* margin-right: 40px;
-  text-align: justify; */
-  line-height: 2;
-}
-li {
-  font-family: "Poppins", sans-serif;
-  font-weight: normal;
-  font-size: large;
-  /* margin-right: 40px;
-  text-align: justify; */
-  line-height: 2;
-}
+
 
 @font-face {
   font-family: EntezareZohoor2;
@@ -240,7 +226,7 @@ body {
       <div class="col-6">
       </div>
       <div class="col">
-        <h2><strong>VISI</strong></h2>
+        <h2><strong>MISI</strong></h2>
         <ol>
           <li align="justify">Menyelenggarakan metode pembelajaran yang selaras dengan kebutuhan perkembangan anak &
             mengoptimalkan
@@ -307,7 +293,7 @@ body {
       <div class="col-6">
         <img src="{{asset('front/tujuan.png')}}" class="img-fluid" alt="bg">
       </div>
-      <div class="col">
+      <div class="col mt-5">
         <h2><strong>TUJUAN</strong></h2>
         <ol>
           <li align="justify">Mempersiapkan generasi muslim yang berjiwa kepemimpinan, cinta Al-Qur’an,
@@ -376,7 +362,7 @@ body {
       <div class="col-4">
         <!-- <div class="row"> -->
         <!-- <div class="col"> -->
-        <h1>TEAM GURU</h1>
+        <h1><b>TEAM GURU</b></h1>
         <p align="justify">Komitmen kami menyediakan guru-guru terbaik yang telah
            lulus program pelatihan dan pengembangan SDM Yayasan Dewi Sartika hingga siap mendampingi siswa.</p>
            <br><br>

@@ -8,7 +8,7 @@
       <title>Detail Kegiatan</title>
       <!-- add icon link -->
      <link rel = "icon" href = "{{asset('front/logo1.png')}}" type ="image/x-icon">
-     <link rel="stylesheet" type="text/css" href="style.css">
+     <link rel="stylesheet" type="text/css" href="{{asset('front/css/style.css')}}">
      <link rel="icon" href="2.jpeg" />
         <!-- Swiper CSS -->
         <link rel="stylesheet" href="css/swiper-bundle.min.css">
@@ -74,8 +74,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col mt-4">
-                <h2><strong>{{$kegiatan->judul}}</strong></h2>
+            <div class="col mt-4 mb-1">
+                <h2>{{$kegiatan->judul}}></h2>
                 <p></p>
             </div>
         </div>
@@ -86,14 +86,14 @@
                   </a>
             </div>
             <div class="col">
-                <a>
+                <p>
                     <span id="span_1" style="font-size: large; font-weight: bold;">{{$kegiatan->nama_penulis}}</span>
                     <br>
                     <span id="span_2"style="font-size: small;">{{$kegiatan->updated_at->format('d M Y')}} | {{$kegiatan->kategori_kegiatan->nama_kategori}}</span>
-                  </a>
+</p>
             </div>
         </div>
-        <div class="row mt-2">
+        <div class="row mt-1">
             <p align="justify">
                 {!! $kegiatan->body !!}
             </p>

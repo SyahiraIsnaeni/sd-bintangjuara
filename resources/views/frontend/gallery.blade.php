@@ -8,6 +8,7 @@
       <title>Galeri SD Islam Bintang Juara</title>
       <!-- add icon link -->
       <link rel = "icon" href = "{{asset('front/logo1.png')}}" type ="image/x-icon">
+      <link rel="stylesheet" type="text/css" href="{{asset('front/css/style.css')}}">
      <link rel="stylesheet" type="text/css" href="{{asset('front/css/stylegallery.css')}}">
      <link rel="icon" href="2.jpeg" />
       <!-- Swiper CSS -->

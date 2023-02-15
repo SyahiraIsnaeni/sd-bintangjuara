@@ -8,7 +8,7 @@
       <title>Detail Pengumuman</title>
       <!-- add icon link -->
      <link rel = "icon" href = "{{asset('front/logo1.png')}}" type ="image/x-icon">
-     <link rel="stylesheet" type="text/css" href="style.css">
+     <link rel="stylesheet" type="text/css" href="{{asset('front/css/style.css')}}">
      <link rel="icon" href="2.jpeg" />
         <!-- Swiper CSS -->
         <link rel="stylesheet" href="css/swiper-bundle.min.css">
@@ -73,9 +73,9 @@
             </div>
             </div>
         </div>
-        <div class="row mt-4">
+        <div class="row mt-4 mb-1">
             <div class="col">
-                <h2><strong>{{$pengumuman->judul}}</strong></h2>
+                <h2>{{$pengumuman->judul}}</h2>
                 <p></p>
             </div>
         </div>
@@ -86,14 +86,14 @@
                   </a>
             </div>
             <div class="col">
-                <a>
+                <p>
                     <span id="span_1" style="font-size: large; font-weight: bold;">{{$pengumuman->nama_penulis}}</span>
                     <br>
                     <span id="span_2"style="font-size: small;">{{$pengumuman->updated_at->format('d M Y')}}</span>
-                  </a>
+</p>
             </div>
         </div>
-        <div class="row mt-3">
+        <div class="row mt-2">
             <p align="justify">
                 {!! $pengumuman->body !!}
             </p>
