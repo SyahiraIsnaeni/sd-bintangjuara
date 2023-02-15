@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use http\Env\Request;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
