@@ -21,7 +21,7 @@
     </head>
     <style>
     .banner {
-    background: url("{{asset('front/gedung3.jpg')}}") no-repeat center center;
+    background: url("{{asset('front/gedung5.png')}}") no-repeat center center;
     background-size: cover;
     padding-top: 20%;
     padding-bottom: 20%;
@@ -80,8 +80,8 @@
 <section id="jumbotron">
 <div class="container-fluid banner fixed-down">
     <div class="container text-start">
-        <h1 class="display-5">Yuk Wakaf</h1>
-        <h4>Untuk pembebasan lahan guna membangun Mushola dan mengembangkan Sekolah Dasar Islam
+        <h1 class="display-5" style="text-shadow: 2px 2px 10px #000000;">Yuk Wakaf</h1>
+        <h4 style="text-shadow: 2px 2px 10px #000000;">Untuk pembebasan lahan guna membangun Mushola dan mengembangkan Sekolah Dasar Islam
             Bintang Juara</h4>
             <a href="https://wa.link/nzkkz3" target="_blank">
                 <button type="button" class="btn btn-primary">
