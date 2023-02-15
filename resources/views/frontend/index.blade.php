@@ -428,7 +428,7 @@ body {
         </div>
     </div>
     </div>
-</section>
+</section><br></br>
 @empty
 @endforelse
   <!-- Akhir Fakta -->
