@@ -203,10 +203,15 @@ body {
   <div class="container-fluid text-white" style="background-color: #45b0f8;">
     <div class="container ">
       <div class="row fs-5">
-        <div class="col-5">
+        <div class="col-8">
           <h2><strong>VISI</strong></h2>
           <p align="justify">Terwujudnya Calon Pemimpin Muslim yang Berilmu, Berakhlakul Karimah dan Bermanfaat.</p>
         </div>
+
+        <div class="col-4">
+        <div style="text-align: right;">
+      <img src="{{asset('front/visi.png')}}" class="img-fluid" alt="bg"></div></div>
+
       </div>
     </div>
   </div>
@@ -222,10 +227,10 @@ body {
 <section id="misi">
 
   <div class="container">
-    <div class="row fs-5">
-      <div class="col-6">
-      </div>
-      <div class="col">
+    <div class="row ">
+      <div class="col-5">
+      <img src="{{asset('front/misi.png')}}" class="img-fluid" alt="bg"></div>
+      <div class="col-7">
         <h2><strong>MISI</strong></h2>
         <ol>
           <li align="justify">Menyelenggarakan metode pembelajaran yang selaras dengan kebutuhan perkembangan anak &
@@ -239,8 +244,8 @@ body {
             siswa, masyarakat dan pemerintah guna mendukung program pendidikan sekolah dasar Islami yang selaras kebutuhan perkembangan anak.</li>
         </ol>
         </div>
+        </div>
     </div>
-
   </div>
 
 </section>
