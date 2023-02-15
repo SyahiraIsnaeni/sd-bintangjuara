@@ -79,7 +79,7 @@
                     </div>
                   </div>
                 </div>
-                <img src="{{asset('front/gedung4.png')}}" class="img-fluid" alt="bg">
+                <img src="{{asset('front/gedung4.png')}}" class="img-fluid1" alt="bg">
               
             </div>
         </div>
