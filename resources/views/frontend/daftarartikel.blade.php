@@ -91,9 +91,9 @@
 
   @forelse ($artikel as $row)
       <section id="events">
-          <div class="container mt-5">
+          <div class="container mt-4">
               <div class="row fs-5">
-                  <div class="col-6 col-md-3 col-lg-2">
+                  <div class="col-6 col-md-3 col-lg-2 mt-4">
                       <img src="{{asset('uploads/'.$row->gambar_artikel) }}"  class="img-fluid" alt="bg">
                   </div>
                   <div class="col-6 col-md-9 col-lg-10">

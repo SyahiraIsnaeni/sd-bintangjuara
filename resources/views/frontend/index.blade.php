@@ -103,7 +103,7 @@ body {
 
 
         <div class="row">
-          <div><h1>Selayang Pandang</h1> </div>
+          <h2>Selayang Pandang</h2> 
         </div>
         <div class="row">
         <div class="col-7">
@@ -135,7 +135,7 @@ body {
           <div class="container">
               <div class="row g-3">
                   <div class="col-12 col-md-6 col-lg-3">
-                    <h3 align="center">Kegiatan</h3>
+                    <h4 align="center">Kegiatan</h4>
                       <div class="card">
                           @forelse ($kegiatanPrioritas as $row)
                               <img src="{{asset('uploads/'.$row->gambar_artikel) }}" class="card-img-top" alt="events" height="250">
@@ -162,7 +162,7 @@ body {
                         </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-3">
-                    <h3 align="center">Berita</h3>
+                    <h4 align="center">Berita</h4>
                       <div class="card">
                           @forelse ($beritaPrioritas as $row)
                               <img src="{{asset('uploads/'.$row->gambar_berita) }}" class="card-img-top" alt="events" height="250">
@@ -189,7 +189,7 @@ body {
                         </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-3">
-                    <h3 align="center">Artikel</h3>
+                    <h4 align="center">Artikel</h4>
                       <div class="card">
                           @forelse ($artikelPrioritas as $row)
                               <img src="{{asset('uploads/'.$row->gambar_artikel) }}" class="card-img-top" alt="events" height="250">
@@ -208,7 +208,7 @@ body {
                           <div class="card-body">
                               <button type="button" class="btn btn-outline-secondary">
                                   <a class="text-black" href="{{'daftar-artikel'}}" style="text-decoration: none;">
-                                      <p>Selengkapnya</p>
+                                      Selengkapnya
                                   </a>
                               </button>
                           </div>
@@ -216,7 +216,7 @@ body {
                   </div>
 
                   <div class="col-12 col-md-6 col-lg-3">
-                    <h3 align="center">Pengumuman</h3>
+                    <h4 align="center">Pengumuman</h4>
                       <div class="card">
                           @forelse ($pengumumanPrioritas as $row)
                               <img src="{{asset('uploads/'.$row->gambar_pengumuman) }}" class="card-img-top" alt="events" height="250">
@@ -310,7 +310,7 @@ body {
     <div class="container-fluid text-white" style="background-color: #45b0f8;">
     <div class="container">
         <div class="row mb-3">
-          <h1>FOKUS KURIKULUM KAMI</h1>
+          <h1>Fokus Kurikulum Kami</h1>
         </div>
         <div class="row fs-5">
           <div class="col-12 col-md-12 col-lg-6">
