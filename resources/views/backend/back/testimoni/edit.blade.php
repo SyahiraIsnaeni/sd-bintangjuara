@@ -61,7 +61,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="testimoni">Testimoni</label>
-                                <textarea name="testimoni" class="form-control" id="task-textarea">{{ $testimoni->testimoni}}</textarea>
+                                <textarea name="testimoni" class="form-control" >{{ $testimoni->testimoni}}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="gambar">Foto</label>
