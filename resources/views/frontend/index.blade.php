@@ -103,7 +103,7 @@ body {
 
 
         <div class="row">
-          <div><h1>Selayang Pandang</h1> </div>
+          <h2>Selayang Pandang</h2> 
         </div>
         <div class="row">
         <div class="col-7">
@@ -135,7 +135,7 @@ body {
           <div class="container">
               <div class="row g-3">
                   <div class="col-12 col-md-6 col-lg-3">
-                    <h3 align="center">Kegiatan</h3>
+                    <h4 align="center">Kegiatan</h4>
                       <div class="card">
                           @forelse ($kegiatanPrioritas as $row)
                               <img src="{{asset('uploads/'.$row->gambar_artikel) }}" class="card-img-top" alt="events" height="250">
@@ -162,7 +162,7 @@ body {
                         </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-3">
-                    <h3 align="center">Berita</h3>
+                    <h4 align="center">Berita</h4>
                       <div class="card">
                           @forelse ($beritaPrioritas as $row)
                               <img src="{{asset('uploads/'.$row->gambar_berita) }}" class="card-img-top" alt="events" height="250">
@@ -189,7 +189,7 @@ body {
                         </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-3">
-                    <h3 align="center">Artikel</h3>
+                    <h4 align="center">Artikel</h4>
                       <div class="card">
                           @forelse ($artikelPrioritas as $row)
                               <img src="{{asset('uploads/'.$row->gambar_artikel) }}" class="card-img-top" alt="events" height="250">
@@ -216,7 +216,7 @@ body {
                   </div>
 
                   <div class="col-12 col-md-6 col-lg-3">
-                    <h3 align="center">Pengumuman</h3>
+                    <h4 align="center">Pengumuman</h4>
                       <div class="card">
                           @forelse ($pengumumanPrioritas as $row)
                               <img src="{{asset('uploads/'.$row->gambar_pengumuman) }}" class="card-img-top" alt="events" height="250">
