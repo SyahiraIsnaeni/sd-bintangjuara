@@ -63,21 +63,18 @@
 </nav>
   <!-- Akhir Navbar -->
 
-<!-- Gambar kegiatan -->
-    <section id="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <img src="{{asset('uploads/'.$kegiatan->gambar_artikel) }}" class="card-img-top" alt="events" height="400">
-              </div>
-            </div>
-        </section>
-<!-- Akhir Gambar kegiatan -->
-
 <!-- Isi kegiatan -->
 <section id="isikegiatan">
-    <div class="container mt-5">
+    <div class="container mt-4">
         <div class="row">
             <div class="col">
+              <div class="text-center">
+            <img src="{{asset('uploads/'.$kegiatan->gambar_artikel) }}" class="img-fluid" alt="events" >
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mt-3">
                 <h2><strong>{{$kegiatan->judul}}</strong></h2>
                 <p></p>
             </div>
@@ -90,13 +87,13 @@
             </div>
             <div class="col">
                 <a>
-                    <span id="span_1" style="font-size: large; font-weight: bold;"> Nama Penulis</span>
+                    <span id="span_1" style="font-size: large; font-weight: bold;">{{$kegiatan->nama_penulis}}</span>
                     <br>
                     <span id="span_2"style="font-size: small;">{{$kegiatan->updated_at->format('d M Y')}}</span>
                   </a>
             </div>
         </div>
-        <div class="row mt-3">
+        <div class="row mt-2">
             <p align="justify">
                 {!! $kegiatan->body !!}
             </p>
