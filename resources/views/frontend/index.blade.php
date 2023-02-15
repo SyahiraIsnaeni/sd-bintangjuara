@@ -99,23 +99,34 @@ body {
 
     <!-- Selayang Pandang -->
     <section id="selayangpandang">
-      <div class="container mt-5">
-            <div class="row fs-5">
-              <div class="col-8">
-                  <h2>SELAYANG PANDANG</h2>
-                  <p align="justify">SD ISLAM BINTANG JUARA adalah Islamic Character Based School yang mengedepankan pendidikan diniyyah seperti
-                    pembiasaan ibadah, tahsin & tahfidz, serta penanaman adab dan akhlak mulia. Kami juga menerapkan pembelajaran
-                    holistik integratif dengan mengintegrasikan segala aspek dan nilai-nilai dalam pendidikan seperti nilai moral, etis,
-                    religius, psikologis dan sosial dalam kesatuan yang dilakukan secara menyeluruh antara jiwa dan badan serta aspek material
-                    dan aspek spiritual untuk memenuhi kebutuhan esensial anak.
-                  </p>
-              </div>
-              <div class="col">
-                  <img src="{{asset('front/gedung1.jpg')}}" class="img-fluid" alt="bg">
-              </div>
-            </div>
+  <div class="container mt-5">
+    
+      
+        <div class="row">
+          <h2>Selayang Pandang</h2>
+        </div>
+        <div class="row">
+        <div class="col-7">
+          <input type="checkbox" id="check" />
+          <p align="justify">SD ISLAM BINTANG JUARA adalah Islamic Character Based School yang mengedepankan pendidikan
+            diniyyah seperti pembiasaan ibadah, tahsin & tahfidz, serta penanaman adab dan akhlak mulia.
+          <div class="content">
+            <p>Kami juga menerapkan pembelajaran
+              holistik integratif dengan mengintegrasikan segala aspek dan nilai-nilai dalam pendidikan seperti nilai
+              moral, etis,
+              religius, psikologis dan sosial dalam kesatuan yang dilakukan secara menyeluruh antara jiwa dan badan
+              serta aspek material
+              dan aspek spiritual untuk memenuhi kebutuhan esensial anak.</p>
+          </div>
+          </p>
+          <label for="check">Read More</label>
       </div>
-  </section>
+      <div class="col">
+        <img src="{{asset('front/gedung1.jpg')}}" class="img-fluid" alt="bg">
+      </div>
+    </div>
+  </div>
+</section>
       <!-- Akhir Selayang Pandang -->
 
 <!-- Events, News, Videos -->
