@@ -25,7 +25,7 @@
 							</a>
 						</li>
 						<li class="nav-item">
-                            <a href="index">
+                            <a href="i/">
                                 <i class="fas fa-home"></i>
                                 <p>Beranda</p>
                             </a>
