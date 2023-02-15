@@ -308,7 +308,7 @@ body {
       </path>
     </svg>
     <div class="container-fluid text-white" style="background-color: #45b0f8;">
-      <div class="container">
+    <div class="container">
         <div class="row mb-3">
           <h1>FOKUS KURIKULUM KAMI</h1>
         </div>
@@ -367,6 +367,7 @@ body {
             </div>
           </div>
         </div>
+        </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">\
         <path fill="#45b0f8" fill-opacity="1"
@@ -388,10 +389,13 @@ body {
                 <h2>SD Islam Bintang Juara</h2>
             </div>
         </div>
-    <div class="row g-3">
+    <div class="row g-3 mt-3">
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="news">
+        <div class="container text-center mb-3">
+        <i class="fa-solid fa-people-line fa-5x"></i>
+    </div>
+        
+            <div class="card text-center">
                 <div class="card-body">
                   <h5 class="card-title">Jumlah Siswa</h5>
                   <p class="card-text">{{$row->jumlah_siswa}}</p>
@@ -400,8 +404,10 @@ body {
         </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="videos">
+        <div class="container text-center mb-3">
+        <i class="fa-solid fa-chalkboard-user fa-5x"></i>
+    </div>
+            <div class="card text-center">
                 <div class="card-body">
                   <h5 class="card-title">Jumlah Guru</h5>
                   <p class="card-text">{{$row->jumlah_guru}}</p>
@@ -409,8 +415,10 @@ body {
               </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                <img src="{{asset('front/dummy.jpeg')}}" class="card-img-top" alt="videos">
+        <div class="container text-center mb-3">
+        <i class="fa-solid fa-school fa-5x"></i>
+    </div>
+            <div class="card text-center">
                 <div class="card-body">
                   <h5 class="card-title">Tahun Berjalan</h5>
                   <p class="card-text">{{$row->tahun_berjalan}}</p>
@@ -426,7 +434,6 @@ body {
   <!-- Akhir Fakta -->
 
 <!-- Gallery -->
-<!-- yang lain nya  -->
 <section id="lainya"  class="mt-5 mb-5">
   <div class="container mt-5 mb-5" >
   <div class="slide-container-swiper mt-5 mb-5">
