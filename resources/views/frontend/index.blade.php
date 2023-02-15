@@ -460,6 +460,29 @@ body {
 </section>
   <!-- Akhir testimoni -->
 
+  <!-- kontak dan maps -->
+<section id="kontak">
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+  <div class="row">
+  <div class="col-12 col-md-6 col-lg-6">
+    <h3><strong>Kontak Kami</strong></h3>
+    <p><i class="fas fa-home mr-3"></i> &nbsp; Jl. Dewi Sartika No.17 A, Sukorejo, Kec. Gn. Pati, Kota Semarang, 50221</p>
+    <p><i class="fas fa-clock mr-3"></i> &nbsp; Senin - Sabtu (07.00 - 15.00)</p>
+    <p><i class="fas fa-phone mr-3"></i> &nbsp; 0823-1493-0833</p>
+    <p><i class="fas fa-phone mr-3"></i> &nbsp; 0823-1493-0833</p>
+  </div>
+  <div class="col-12 col-md-6 col-lg-6">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1979.9422714849622!2d110.38611055872192!3d-7.022855500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708bbd641c18cb%3A0xb100361d402b0f30!2sSD%20ISLAM%20BINTANG%20JUARA!5e0!3m2!1sen!2sus!4v1676260730522!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- akhir kontak dan maps -->
+
   <!-- Footer -->
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path fill="#45b0f8" fill-opacity="1" d="M0,160L48,138.7C96,117,192,75,288,90.7C384,107,480,181,576,197.3C672,213,768,171,864,160C960,149,1056,171,1152,165.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
