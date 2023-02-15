@@ -55,9 +55,12 @@
                         <form method="post" action="{{ route('jumbotron.store')}}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label for="gambar">Gambar</label>
+                                <label for="gambar">Gambar*</label>
                                 <input type="file" name="foto">
                             </div>
+                            <div class="ml-2">
+                            <p> *Klik untuk melakukan resize foto (16:9)  <a target="/blank" href="https://www.img2go.com/crop-image">Klik disini</a></p>
+    </div>
                             <div class="form-group">
                                 <button class="btn btn-info btn-sm" type="submit"> Simpan </button>
                                 <button class="btn btn-danger btn-sm" type="reset"> Reset </button>
