@@ -8,6 +8,7 @@
       <title>Daftar Guru</title>
       <!-- add icon link -->
       <link rel="icon" href="{{asset('front/logo1.png')}}" type="image/x-icon" />
+      <link rel="stylesheet" type="text/css" href="{{asset('front/css/style.css')}}">
 
       <!-- Swiper CSS -->
       <link rel="stylesheet" type="text/css" href="stylegallery.css" />
