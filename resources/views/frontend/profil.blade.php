@@ -141,7 +141,7 @@ body {
   <div class="container-fluid text-white " style="background-color: #45b0f8;">
     <div class="container">
       <div class="row fs-5">
-        <div class="col-6">
+        <div class="col-12 col-md-6 col-lg-6">
           <h2><strong>Tentang kami</strong> </h2>
           <p align="justify">SD ISLAM BINTANG JUARA berdiri pada tahun 2017 oleh karena komitmen kami untuk memberikan
             layanan pendidikan
@@ -150,18 +150,19 @@ body {
             PAUD ISLAM BINTANG
             JUARA.</p>
         </div>
-        <div class="col-6">
-          <di<div class="col-12 col-md-6 col-lg-6">
+      
+          <div class="col-12 col-md-6 col-lg-6">
+          <div style="text-align: center;">
           <div class="video1">
             <div class="bintangjuaravideo">
               <div class="elementor-widget-video" data-id="8b392b9" data-element_type="widget"
                 data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/www.youtube.com\/watch?v=1GL6RJMI0S4&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;,&quot;aspect_ratio&quot;:&quot;169&quot;}"
                 data-widget_type="video.default">
                 <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
-                  <iframe class="elementor-video" frameborder="1" allowfullscreen="1"
+                  <iframe class="elementor-video" frameborder="1" allowfullscreen="1" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     title="Video Profile SD Islam Bintang Juara Semarang | Sekolah Calon Pemimpin Muslim | Sekolah Ramah Anak"
-                    width="620" height="360"
+                    width="620px" height="360px"
                     src="https://www.youtube.com/embed/1GL6RJMI0S4?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsd.bintangjuara.sch.id&amp;widgetid=1"
                     id="widget2"></iframe>
                 </div>
@@ -169,8 +170,9 @@ body {
             </div>
           </div>
         </div>
+</div>
         </div>
-      </div>
+      
     </div>
   </div>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">\

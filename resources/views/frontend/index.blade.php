@@ -45,7 +45,7 @@ body {
 
     <div class="container">
       <a class="navbar-brand" href="/">
-      <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><strong>&nbsp SD Islam Bintang Juara</strong>
+      <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><p><strong>&nbsp SD Islam Bintang Juara</strong></p>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -208,7 +208,7 @@ body {
                           <div class="card-body">
                               <button type="button" class="btn btn-outline-secondary">
                                   <a class="text-black" href="{{'daftar-artikel'}}" style="text-decoration: none;">
-                                      Selengkapnya
+                                      <p>Selengkapnya</p>
                                   </a>
                               </button>
                           </div>
@@ -255,7 +255,7 @@ body {
     <div class="bintangjuaravideo">
       <div class="heading">
         <div class="text-center">
-        <h1 class="title">Lebih Dekat dengan SD Islam Bintang Juara</h1>
+        <h2 class="title">Lebih Dekat dengan SD Islam Bintang Juara</h2>
 </div>
       </div>
     </div>
@@ -310,7 +310,7 @@ body {
     <div class="container-fluid text-white" style="background-color: #45b0f8;">
     <div class="container">
         <div class="row mb-3">
-          <h1>FOKUS KURIKULUM KAMI</h1>
+          <h2>FOKUS KURIKULUM KAMI</h2>
         </div>
         <div class="row fs-5">
           <div class="col-12 col-md-12 col-lg-6">
@@ -385,8 +385,8 @@ body {
         <div class="container text-center">
             <div class="row">
               <div class="col">
-                <h1>FAKTA TENTANG</h1></div>
-                <h2>SD Islam Bintang Juara</h2>
+                <h2>FAKTA TENTANG</h2></div>
+                <h3>SD Islam Bintang Juara</h3>
             </div>
         </div>
     <div class="row g-3 mt-3">
@@ -397,7 +397,7 @@ body {
 
             <div class="card text-center">
                 <div class="card-body">
-                  <h5 class="card-title">Jumlah Siswa</h5>
+                  <h3 class="card-title">Jumlah Siswa</h3>
                   <p class="card-text">{{$row->jumlah_siswa}}</p>
 
                 </div>
@@ -409,7 +409,7 @@ body {
     </div>
             <div class="card text-center">
                 <div class="card-body">
-                  <h5 class="card-title">Jumlah Guru</h5>
+                  <h3 class="card-title">Jumlah Guru</h3>
                   <p class="card-text">{{$row->jumlah_guru}}</p>
                 </div>
               </div>
@@ -420,7 +420,7 @@ body {
     </div>
             <div class="card text-center">
                 <div class="card-body">
-                  <h5 class="card-title">Tahun Berjalan</h5>
+                  <h3 class="card-title">Tahun Berjalan</h3>
                   <p class="card-text">{{$row->tahun_berjalan}}</p>
                 </div>
 
@@ -439,7 +439,7 @@ body {
   <div class="slide-container-swiper mt-5 mb-5">
     <div class="row">
       <div class="col-2">
-        <h1>Galeri</h1>
+        <h2>Galeri</h2>
       </div>
       <div class="col-10">
         <div class="main-scroll-div">
@@ -505,7 +505,7 @@ body {
     <div class="card-body">
   <div class="row">
   <div class="col-12 col-md-6 col-lg-6">
-    <h3><strong>Kontak Kami</strong></h3>
+    <h2><strong>Kontak Kami</strong></h2>
     <p><i class="fas fa-home mr-3"></i> &nbsp; Jl. Dewi Sartika No.17 A, Sukorejo, Kec. Gn. Pati, Kota Semarang, 50221</p>
     <p><i class="fas fa-clock mr-3"></i> &nbsp; Senin - Sabtu (07.00 - 15.00)</p>
     <p><i class="fas fa-phone mr-3"></i> &nbsp; 0823-1493-0833</p>
