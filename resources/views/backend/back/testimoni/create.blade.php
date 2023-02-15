@@ -63,8 +63,11 @@
                                 <textarea type="text" name="testimoni" class="form-control" placeholder="Enter Testimoni"> </textarea>
                             </div>
                             <div class="form-group">
-                                <label for="gambar">Foto</label>
+                                <label for="gambar">Foto*</label>
                                 <input type="file" name="foto">
+                            </div>
+                            <div class="ml-2">
+                            <p> *Klik untuk melakukan resize foto (1:1)  <a target="/blank" href="https://www.img2go.com/crop-image">Klik disini</a></p>
                             </div>
                             <div class="form-group">
                                 <label for="pengumuman">Status</label>
