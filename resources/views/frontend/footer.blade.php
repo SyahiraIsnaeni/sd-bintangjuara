@@ -24,13 +24,13 @@
           </div>
           <div class="row">
         <p>
-          <a href="#" style="text-decoration: none;">
+          <a href="../index" style="text-decoration: none;">
             <strong class="text-white">Home</strong>
           </a>  .
           <a href="#" style="text-decoration: none;">
             <strong class="text-white">Kontak Kami</strong>
           </a>  .
-          <a href="#" style="text-decoration: none;">
+          <a href="../index" style="text-decoration: none;">
             <strong class="text-white">Sitemap</strong>
           </a>
         </p>
@@ -44,31 +44,31 @@
       <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
         <h5> Follow us : </h5>
         <div class="row">
-          <div class="col-2"><a href="https://www.youtube.com/channel/UCmKyv8sPPwrv-LyDaES6L8w/"
+          <div class="col-2"><a href="https://www.youtube.com/channel/UCmKyv8sPPwrv-LyDaES6L8w/" target="/blank"
               class="btn-floating btn-sm text-white">
               <i class="fab fa-youtube fa-2x"></i></a></div>
           <div class="col">
-          <a class="text-white" href="https://www.youtube.com/channel/UCmKyv8sPPwrv-LyDaES6L8w/" style="text-decoration: none;">
+          <a class="text-white" href="https://www.youtube.com/channel/UCmKyv8sPPwrv-LyDaES6L8w/" target="/blank" style="text-decoration: none;">
           <p>SD Islam Bintang Juara</p>
             </a>
           </div>
         </div>
         <div class="row">
-          <div class="col-2"><a href="https://www.facebook.com/sdislambintangjuara/"
+          <div class="col-2"><a href="https://www.facebook.com/sdislambintangjuara/" target="/blank"
               class="btn-floating btn-sm text-white">
               <i class="fab fa-facebook fa-2x"></i></a></div>
           <div class="col">
-          <a class="text-white" href="https://www.facebook.com/sdislambintangjuara/" style="text-decoration: none;">
+          <a class="text-white" href="https://www.facebook.com/sdislambintangjuara/" style="text-decoration: none;" target="/blank">
           <p>SD Islam Bintang Juara</p>
             </a>
           </div>
         </div>
         <div class="row">
-          <div class="col-2"><a href="https://www.instagram.com/sdislambintangjuara/"
+          <div class="col-2"><a href="https://www.instagram.com/sdislambintangjuara/" target="/blank"
               class="btn-floating btn-sm text-white">
               <i class="fab fa-instagram fa-2x"></i></a></div>
           <div class="col">
-          <a class="text-white" href="https://www.instagram.com/sdislambintangjuara/" style="text-decoration: none;">
+          <a class="text-white" href="https://www.instagram.com/sdislambintangjuara/" style="text-decoration: none;" target="/blank">
           <p>@sdislambintangjuara</p>
             </a>
           </div>
