@@ -25,7 +25,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #45b0f8;">
 
 <div class="container">
-  <a class="navbar-brand" href="{{ 'index' }}">
+  <a class="navbar-brand" href="../index">
   <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"><strong>&nbsp SD Islam Bintang Juara</strong>
   </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,19 +34,19 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ms-auto">
       <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="{{ 'index' }}">Beranda</a>
+        <a class="nav-link" aria-current="page" href="../index">Beranda</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="{{ 'profile' }}">Profile</a>
+        <a class="nav-link" aria-current="page" href="../profile">Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ 'detail-waqaf' }}">Yuk Wakaf</a>
+        <a class="nav-link" href="../detail-waqaf">Yuk Wakaf</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/">PPDB</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ 'kontak' }}">Kontak</a>
+        <a class="nav-link" href="../kontak">Kontak</a>
       </li>
     <li class="nav-item">
             @if (Route::has('login'))
@@ -74,7 +74,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col mt-3">
+            <div class="col mt-4">
                 <h2><strong>{{$kegiatan->judul}}</strong></h2>
                 <p></p>
             </div>
@@ -89,7 +89,7 @@
                 <a>
                     <span id="span_1" style="font-size: large; font-weight: bold;">{{$kegiatan->nama_penulis}}</span>
                     <br>
-                    <span id="span_2"style="font-size: small;">{{$kegiatan->updated_at->format('d M Y')}}</span>
+                    <span id="span_2"style="font-size: small;">{{$kegiatan->updated_at->format('d M Y')}} | {{$kegiatan->kategori_kegiatan->nama_kategori}}</span>
                   </a>
             </div>
         </div>
