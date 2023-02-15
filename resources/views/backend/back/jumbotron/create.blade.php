@@ -59,7 +59,7 @@
                                 <input type="file" name="foto">
                             </div>
                             <div class="ml-2">
-                            <p> *Klik untuk melakukan resize foto (16:9)  <a target="/blank" href="https://www.img2go.com/crop-image">Klik disini</a></p>
+                            <p> *Klik untuk melakukan resize foto (16:9)  <a target="/blank" href="https://www.fotor.com/features/crop">Klik disini</a></p>
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-info btn-sm" type="submit"> Simpan </button>
