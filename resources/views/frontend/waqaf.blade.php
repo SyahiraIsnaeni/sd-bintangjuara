@@ -81,10 +81,10 @@
 <div class="container-fluid banner fixed-down">
     <div class="container text-start">
         <h1 class="display-5">Yuk Wakaf</h1>
-        <h4>Untuk pembebasan lahan guna membangun Mushola dan mengembangkan Sekolah Dasar Islma
+        <h4>Untuk pembebasan lahan guna membangun Mushola dan mengembangkan Sekolah Dasar Islam
             Bintang Juara</h4>
-            <a href="#">
-                <button type="button" class="btn btn-outline-secondary">
+            <a href="https://wa.link/nzkkz3" target="_blank">
+                <button type="button" class="btn btn-primary">
                         Donasi Sekarang
                     </button>
             </a>
@@ -93,33 +93,16 @@
 </section>
 <!-- akhir jumbotron -->
 
-<!-- yukwakaf -->
-<!-- <section id="wakaf">
-    <div class="container mt-5">
-        <div class="col-12 col-md-12 col-lg-6">
-            <div class="row">
-                <h1>Yuk Wakaf</h1>
-                <h4 align="justify">Untuk pembebasan lahan guna membangun Mushola dan mengembangkan Sekolah Dasar Islma
-                    Bintang Juara</h4>
-            </div>
-            <div class="row mt-3">
-                <a
-                    href="https://api.whatsapp.com/send?phone=6282314930833&text=Assalamualaikum%20Warahmatullah%20Wabarokatuh%2C%0A%0ABerikut%20saya%20sampaikan%20kepada%20staff%20Yayasan%20Dewi%20Sartika%20Semarang%2C%20konfirmasi%20donasi%20untuk%20pengembangan%20SD%20Islam%20Bintang%20Juara.%0A%0ATerimakasih">
-                    <button type="button" class="btn btn-outline-secondary">
-                        Donasi Sekarang
-                    </button>
-                </a>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-<!-- akhir yukwakaf -->
-
 <!-- NoRek -->
 @forelse ($waqaf as $row)
-<section id="norek">
-    <div class="container mt-5 mb-5">
+<section id="norek" style="margin-top :-200px;">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#ffffff" fill-opacity="1"
+      d="M0,160L48,144C96,128,192,96,288,90.7C384,85,480,107,576,112C672,117,768,107,864,122.7C960,139,1056,181,1152,165.3C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      '
+    </path>
+  </svg>
+    <div class="container mb-5">
         <div class="row fs-5 text-center">
             <h1>{{$row->nama_bank}}</h1>
             <h3>a/n {{$row->nama_rekening}}</h3>
@@ -165,103 +148,103 @@
 <!-- Akhir totaldonasi -->
 
 
-
 <!-- Footer -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="#45b0f8" fill-opacity="1"
-        d="M0,160L48,138.7C96,117,192,75,288,90.7C384,107,480,181,576,197.3C672,213,768,171,864,160C960,149,1056,171,1152,165.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-    </path>
+  <path fill="#45b0f8" fill-opacity="1"
+    d="M0,160L48,138.7C96,117,192,75,288,90.7C384,107,480,181,576,197.3C672,213,768,171,864,160C960,149,1056,171,1152,165.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+  </path>
 </svg>
 <footer class="text-white" style="background-color: #45b0f8;">
-    <div class="container text-md-left">
-        <div class="row align-items-center">
-            <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
-                <h5>
-                    <img src="assets/logo2.png" alt="logo" height="50">
-                    <img src="assets/logo1.png" alt="logo" height="50"> Bintang Juara
-                </h5>
-                <p>
-                    <i class="fas fa-home mr-3"></i> &nbsp; Jl. Dewi Sartika No.17 A, Sukorejo, Kec. Gn. Pati, Kota
-                    Semarang, 50221
-                </p>
-                <p>
-                    <a href="#" style="text-decoration: none;">
-                        <strong class="text-white">Home</strong>
-                    </a> .
-                    <a href="#" style="text-decoration: none;">
-                        <strong class="text-white">Kontak Kami</strong>
-                    </a> .
-                    <a href="#" style="text-decoration: none;">
-                        <strong class="text-white">Sitemap</strong>
-                    </a>
-                </p>
-            </div>
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            </div>
-            <div class="col-md-3 col-lg-3 col-xl-3  mt-3" style="text-align: end;">
-                <h5> Follow us : </h5>
-                <ul class="list-unstyled list-inline">
-                    <li class="list-inline-item">
-                        <a href="https://www.facebook.com/sdislambintangjuara/" class="btn-floating btn-sm text-white"
-                            style="font-size:35px;">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="https://www.instagram.com/sdislambintangjuara/" class="btn-floating btn-sm text-white"
-                            style="font-size:35px;">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCmKyv8sPPwrv-LyDaES6L8w/"
-                            class="btn-floating btn-sm text-white" style="font-size:35px;">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <hr class="mb-4">
-            <div class="row align-items-center pb-5">
-                <div class="col-md-7 col-lg-8">
-                    <p>
-                        Copyright ©2023 All rights reserved by:
-                        <a href="#" style="text-decoration: none;">
-                            <strong class="text-white">Bintang Juara</strong>
-                        </a>
-                    </p>
-                </div>
-            </div>
+  <div class="container text-md-left">
+    <div class="row align-items-center">
+      <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
+        <h5>
+          <img src="{{asset('front/logo2.png')}}" alt="logo" height="50">
+          <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"> Bintang Juara
+        </h5>
+        <div class="row">
+        <div class="col-1">
+        <p>
+          <i class="fas fa-home mr-3"></i>
+        </p></div>
+        <div class="col">
+          <div class="row">
+        <p align="justify">Jl. Dewi Sartika No.17 A, Sukorejo, Kec. Gn. Pati, Kota Semarang,
+          50221</p>
+          </div>
+          <div class="row">
+        <p>
+          <a href="#" style="text-decoration: none;">
+            <strong class="text-white">Home</strong>
+          </a>  .
+          <a href="#" style="text-decoration: none;">
+            <strong class="text-white">Kontak Kami</strong>
+          </a>  .
+          <a href="#" style="text-decoration: none;">
+            <strong class="text-white">Sitemap</strong>
+          </a>
+        </p>
         </div>
+        </div>
+        </div>
+
+      </div>
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+      </div>
+      <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
+        <h5> Follow us : </h5>
+        <div class="row">
+          <div class="col-2"><a href="https://www.youtube.com/channel/UCmKyv8sPPwrv-LyDaES6L8w/"
+              class="btn-floating btn-sm text-white">
+              <i class="fab fa-youtube fa-2x"></i></a></div>
+          <div class="col">
+          <a class="text-white" href="https://www.youtube.com/channel/UCmKyv8sPPwrv-LyDaES6L8w/" target="_blank" style="text-decoration: none;">
+          <p>SD Islam Bintang Juara</p>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2"><a href="https://www.facebook.com/sdislambintangjuara/"
+              class="btn-floating btn-sm text-white">
+              <i class="fab fa-facebook fa-2x"></i></a></div>
+          <div class="col">
+          <a class="text-white" href="https://www.facebook.com/sdislambintangjuara/" target="_blank" style="text-decoration: none;">
+          <p>SD Islam Bintang Juara</p>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2"><a href="https://www.instagram.com/sdislambintangjuara/"
+              class="btn-floating btn-sm text-white">
+              <i class="fab fa-instagram fa-2x"></i></a></div>
+          <div class="col">
+          <a class="text-white" href="https://www.instagram.com/sdislambintangjuara/" target="_blank" style="text-decoration: none;">
+          <p>@sdislambintangjuara</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr class="mb-4">
+      <div class="row align-items-center text-center pb-5">
+          <p>
+            Copyright ©2023 All rights reserved by:
+            <a href="#" style="text-decoration: none;">
+              <strong class="text-white">Bintang Juara</strong>
+            </a>
+          </p>
+      </div>
     </div>
+  </div>
 
 </footer>
 
 <!-- Akhir Footer -->
 
-<div class="lainya"></div>
-<script>
-    function scrolll() {
-        var left = document.querySelector(".scroll-images");
-        left.scrollBy(350, 0);
-    }
-
-    function scrollr() {
-        var right = document.querySelector(".scroll-images");
-        right.scrollBy(-350, 0);
-    }
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript">
-      var nav = document.querySelector('nav');
 
-      window.addEventListener('scroll', function () {
-        if (window.pageYOffset > 100) {
-          nav.classList.add('bg-info', 'shadow');
-        } else {
-          nav.classList.remove('bg-info', 'shadow');
-        }
-      });
-    </script>
 </body>
 
 </html>

@@ -8,15 +8,14 @@
       <title>Daftar Artikel</title>
       <!-- add icon link -->
      <link rel = "icon" href = "{{asset('front/logo1.png')}}"  type ="image/x-icon">
-     <link rel="stylesheet" type="text/css" href="style.css">
+     <link rel="stylesheet" type="text/css" href="{{asset('front/css/style.css')}}">
      <link rel="icon" href="2.jpeg" />
         <!-- Swiper CSS -->
         <link rel="stylesheet" href="css/swiper-bundle.min.css">
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" crossorigin="anonymous">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
    </head>
-      <style>
-      </style>
+   
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
@@ -63,23 +62,30 @@
   </nav>
   <!-- Akhir Navbar -->
 
-    <!-- Carousel -->
-    <section id="carouse">
+  <!-- Carousel -->
+  <section id="carouse">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="{{asset('front/bg.jpeg')}}"  class="img-fluid" alt="bg">
-          </div>
-          <div class="carousel-item active">
-            <img src="{{asset('front/bg.jpeg')}}"  class="img-fluid" alt="bg">
-          </div>
-          <div class="carousel-item active">
-            <img src="{{asset('front/bg.jpeg')}}"  class="img-fluid" alt="bg">
-          </div>
+            <div class="carousel-item active">
+              <div class="carousel-caption d-none d-md-block">
+                    <div class="col-12 col-md-12 col-lg-6">
+                    <div class="row mb-3 ">
+                        <h1 align="left" style="text-shadow: 2px 2px 10px #000000;">Daftar Artikel</h1>
+                        <h4 align="justify" style="text-shadow: 2px 2px 10px #000000;">Kumpulan artikel SD Islam Bintang Juara</h4>
+                    </div>
+                    <div class="row mb-5">
+                        <a>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <img src="{{asset('front/gedung4.png')}}" class="img-fluid" alt="bg">
+              
+            </div>
         </div>
-      </div>
-    </section>
-    <!-- Akhir Carousel -->
+    </div>
+</section>
+<!-- Akhir Carousel -->
 
     <!-- Article 1 -->
 
