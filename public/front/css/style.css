@@ -1,33 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 p {
-    font-family: Helvetica;
+    font-family: "Poppins", sans-serif;
     font-weight: normal;
     font-size: large;
     /* margin-right: 40px;
-    text-align: justify; */
+  text-align: justify; */
     line-height: 2;
 }
 
 h1 {
     /* text-align: center;
-    align-self: center; */
-    font-family: "Franklin Gothic Medium";
+  align-self: center; */
+    font-family: "Poppins", sans-serif;
     font-weight: bolder;
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 h2 {
-    font-family: "Franklin Gothic Medium";
-    /* font-weight: bold; */
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
     font-size: 8px;
-    font-weight: 500;
+    font-weight: 800;
 }
 
 h3 {
-    font-family: "Franklin Gothic Medium";
-    /* font-weight: bold; */
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
     font-size: 38px;
-    font-weight: 300;
+    font-weight: 800;
 }
 
 .pertama {
@@ -43,6 +45,14 @@ h3 {
 
 /* GALERI */
 
+.img-fluid {
+    border-radius: 20px 20px 20px 20px;
+}
+
+.elementor-video {
+    border-radius: 20px 20px 20px 20px;
+}
+
 .lainya {
     display: flex;
     align-items: center;
@@ -52,7 +62,7 @@ h3 {
 }
 
 .main-scroll-div {
-    width: 90%;
+    width: 93%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -100,9 +110,9 @@ h3 {
 }
 
 .child {
-    min-width: 200px;
+    min-width: 215px;
     height: 250px;
-    margin: 1px 10px;
+    margin: 1px 5px;
     cursor: pointer;
     border: 1px solid rgba(207, 201, 201, 0.3);
     overflow: hidden;

@@ -271,7 +271,7 @@ body {
                   <iframe class="elementor-video" frameborder="0" allowfullscreen="1"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     title="Video Profile SD Islam Bintang Juara Semarang | Sekolah Calon Pemimpin Muslim | Sekolah Ramah Anak"
-                    width="640" height="360"
+                    width="620" height="360"
                     src="https://www.youtube.com/embed/1GL6RJMI0S4?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsd.bintangjuara.sch.id&amp;widgetid=1"
                     id="widget2"></iframe>
                 </div>
@@ -284,7 +284,7 @@ body {
             <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
               <iframe class="elementor-video" frameborder="0" allowfullscreen="1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                title="Leadership Camp SD Islam Bintang Juara | &quot;More Than Just Adventure&quot;" width="640"
+                title="Leadership Camp SD Islam Bintang Juara | &quot;More Than Just Adventure&quot;" width="620"
                 height="360"
                 src="https://www.youtube.com/embed/zvGGvawkXPo?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsd.bintangjuara.sch.id&amp;widgetid=3"
                 id="widget4"></iframe>

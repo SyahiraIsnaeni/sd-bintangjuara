@@ -15,7 +15,13 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
   </head>
   <style>
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 .img-fluid{
+  border-radius: 20px 20px 20px 20px;
+}
+.elementor-video {
   border-radius: 20px 20px 20px 20px;
 }
 .banner {
@@ -25,22 +31,22 @@
   padding-bottom: 20%;
   color: #ffffff;
 }
-/* p {
-  font-family: Helvetica;
+p {
+  font-family: "Poppins", sans-serif;
   font-weight: normal;
-  font-size: large; */
+  font-size: large;
   /* margin-right: 40px;
   text-align: justify; */
-  /* line-height: 2;
-} */
-/* li{
-  font-family: Helvetica;
+  line-height: 2;
+}
+li {
+  font-family: "Poppins", sans-serif;
   font-weight: normal;
-  font-size: large; */
+  font-size: large;
   /* margin-right: 40px;
   text-align: justify; */
-  /* line-height: 2;
-}  */
+  line-height: 2;
+}
 
 @font-face {
   font-family: EntezareZohoor2;
@@ -145,9 +151,24 @@ body {
             JUARA.</p>
         </div>
         <div class="col-6">
-          <div style="text-align: right;">
-            <img src="{{asset('front/gedung1.jpg')}}"class="img-fluid" alt="bg">
+          <di<div class="col-12 col-md-6 col-lg-6">
+          <div class="video1">
+            <div class="bintangjuaravideo">
+              <div class="elementor-widget-video" data-id="8b392b9" data-element_type="widget"
+                data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/www.youtube.com\/watch?v=1GL6RJMI0S4&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;,&quot;aspect_ratio&quot;:&quot;169&quot;}"
+                data-widget_type="video.default">
+                <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
+                  <iframe class="elementor-video" frameborder="1" allowfullscreen="1" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    title="Video Profile SD Islam Bintang Juara Semarang | Sekolah Calon Pemimpin Muslim | Sekolah Ramah Anak"
+                    width="620" height="360"
+                    src="https://www.youtube.com/embed/1GL6RJMI0S4?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsd.bintangjuara.sch.id&amp;widgetid=1"
+                    id="widget2"></iframe>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
