@@ -45,7 +45,7 @@
         <a class="nav-link" href="http://ppdb.bintangjuara.sch.id/">PPDB</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ 'kontak' }}">Kontak</a>
+      <a class="nav-link" href="{{ 'gallery' }}">Galeri</a>
       </li>
     <li class="nav-item">
             @if (Route::has('login'))
@@ -141,6 +141,6 @@
       </div>
     </section>
     <!-- akhir team guru -->
-    
+    @extends('frontend.footer')
   </body>
 </html>

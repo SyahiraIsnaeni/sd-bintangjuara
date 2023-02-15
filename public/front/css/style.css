@@ -110,7 +110,7 @@ h3 {
 }
 
 .child {
-    min-width: 215px;
+    min-width: 400px;
     height: 250px;
     margin: 1px 5px;
     cursor: pointer;
