@@ -208,7 +208,7 @@ body {
                           <div class="card-body">
                               <button type="button" class="btn btn-outline-secondary">
                                   <a class="text-black" href="{{'daftar-artikel'}}" style="text-decoration: none;">
-                                      <p>Selengkapnya</p>
+                                      Selengkapnya
                                   </a>
                               </button>
                           </div>
@@ -310,7 +310,7 @@ body {
     <div class="container-fluid text-white" style="background-color: #45b0f8;">
     <div class="container">
         <div class="row mb-3">
-          <h1>FOKUS KURIKULUM KAMI</h1>
+          <h1>Fokus Kurikulum Kami</h1>
         </div>
         <div class="row fs-5">
           <div class="col-12 col-md-12 col-lg-6">
