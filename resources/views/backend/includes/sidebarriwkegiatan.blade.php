@@ -24,6 +24,12 @@
 								<p>Dashboard</p>
 							</a>
 						</li>
+						<li class="nav-item">
+                            <a href="index">
+                                <i class="fas fa-home"></i>
+                                <p>Beranda</p>
+                            </a>
+                        </li>
 						<li class="nav-section">
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>
