@@ -298,53 +298,84 @@ body {
 <!-- akhir video yt -->
 
 
-    <!-- Kurikulum -->
-    <section id="kurikulum">
-      <section id="Fakta" >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path fill="#45b0f8" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,90.7C384,85,480,107,576,112C672,117,768,107,864,122.7C960,139,1056,181,1152,165.3C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">'
-          </path>
-          </svg>
-        <div class="container-fluid text-white" style="background-color: #45b0f8;">
-            <div class="container">
-            <div class="row mb-5">
-                <h2>Fokus Kurikulum Kami</h2>
-            </div>
-              <div class="row fs-5">
-                <div class="col-12 col-md-12 col-lg-5">
-                  <i class="fa-solid fa-book-open fa-2x" ></i><h3>Perpaduan Pendidikan Al Qur'an & Al Hadist dengan kurikulum KTSP 2013</h3>
-                    <p align="justify">Kurikulum SD Islam Bintang Juara menggunakan acuan utama, yaitu Al-Qur’an, Hadist, serta Kurikulum SD yang berlaku dari Pemerintah
-                       (KTSP Tahun 2013) serta Referensi Tahapan Perkembangan Anak dan Konsep Multiple Intelligences.</p>
-                </div>
-                <div class="col-2"></div>
-                <div class="col-12 col-md-12 col-lg-5">
-                  <i class="fa-solid fa-person-circle-check fa-2x"></i><h3>Islamic Leadership</h3>
-                    <p align="justify">Membentuk leadership anak dengan membuat beragam project sesuai kurikulum dan kebutuhan lingkungan (individual maupun tim, kerjasama
-                      dengan teman sekolah maupun anggota keluarga)</p>
-                </div>
-              </div>
-              <div class="row fs-5 ">
-                <div class="col-12 col-md-12 col-lg-5">
-                  <i class="fa-solid fa-scale-unbalanced fa-2x"></i><h3>Materi Keislaman 60% & Materi Umum 40%</h3>
-                    <p align="justify">Menitikberatkan pada materi keislaman untuk menguatkan pondasi agama anak, mengajari akidah, akhlaq & adab, serta ibadah wajib dan
-                      sunnah</p>
-                </div>
-                <div class="col-2"></div>
-                <div class="col-12 col-md-12 col-lg-5">
-                    <i class="fa-sharp fa-solid fa-circle-check fa-2x"></i> <h3>Karakter & Tanggung Jawab</h3>
-                    <p align="justify">Kami tidak hanya memberikan materi pendidikan secara teori, namun kami membiasakan ha-hal baik sebagai pendidikan tanggungjawab dan
-                      pembentukan karakter, sehingga anak bisa menjalanankan peran di masyarakat dengan baik</p>
-                </div>
-              </div>
-            </div>
+<!-- Kurikulum -->
+<section id="kurikulum">
+  <section id="Fakta">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#45b0f8" fill-opacity="1"
+        d="M0,160L48,144C96,128,192,96,288,90.7C384,85,480,107,576,112C672,117,768,107,864,122.7C960,139,1056,181,1152,165.3C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        '
+      </path>
+    </svg>
+    <div class="container-fluid text-white" style="background-color: #45b0f8;">
+      <div class="container">
+        <div class="row mb-3">
+          <h1>FOKUS KURIKULUM KAMI</h1>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">\
-          <path fill="#45b0f8" fill-opacity="1" d="M0,96L48,122.7C96,149,192,203,288,208C384,213,480,171,576,138.7C672,107,768,85,864,106.7C960,128,1056,192,1152,218.7C1248,245,1344,235,1392,229.3L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
-          </path>
-          </svg>
-    </section>
+        <div class="row fs-5">
+          <div class="col-12 col-md-12 col-lg-6">
+            <div class="row">
+              <div class="col-2"><i class="fa-solid fa-book-open fa-3x"></i></div>
+              <div class="col">
+                <h3 align="justify">Perpaduan Pendidikan Al Qur'an & Al Hadist dengan kurikulum KTSP 2013</h3>
+              </div>
+            </div>
+            <div class="row">
+              <p align="justify">Kurikulum SD Islam Bintang Juara menggunakan acuan utama, yaitu Al-Qur’an, Hadist,
+                serta Kurikulum SD yang berlaku dari Pemerintah
+                (KTSP Tahun 2013) serta Referensi Tahapan Perkembangan Anak dan Konsep Multiple Intelligences.</p>
+            </div>
+          </div>
+          <div class="col-1"></div>
+          <div class="col-12 col-md-12 col-lg-5">
+            <div class="row">
+              <div class="col-2"><i class="fa-solid fa-person-circle-check fa-3x"></i></div>
+              <div class="col">
+                <h3 align="justify">Islamic Leadership</h3>
+              </div>
+            </div>
+            <div class="row">
+              <p align="justify">Membentuk leadership anak dengan membuat beragam project sesuai kurikulum dan kebutuhan
+                lingkungan (individual maupun tim, kerjasama
+                dengan teman sekolah maupun anggota keluarga).</p>
+            </div>
+          </div>
+          <div class="row fs-5 ">
+            <div class="col-12 col-md-12 col-lg-6">
+              <div class="row">
+                <div class="col-2"><i class="fa-solid fa-scale-unbalanced fa-3x"></i></div>
+              <div class="col">
+              <h3 align="justify">Materi Keislaman 60% & Materi Umum 40%</h3></div></div>
+              <div class="row">
+                <p align="justify">Menitikberatkan pada materi keislaman untuk menguatkan pondasi agama anak, mengajari
+                  akidah, akhlaq & adab, serta ibadah wajib dan
+                  sunnah.</p>
+              </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-12 col-md-12 col-lg-5">
+              <div class="row">
+                <div class="col-2"><i class="fa-sharp fa-solid fa-circle-check fa-3x"></i></div>
+                <div class="col"><h3 align="justify">Karakter & Tanggung Jawab</h3></div>
+              </div>
+              <div class="row">
+                <p align="justify">Kami tidak hanya memberikan materi pendidikan secara teori, namun kami membiasakan
+                  ha-hal
+                  baik sebagai pendidikan tanggungjawab dan
+                  pembentukan karakter, sehingga anak bisa menjalanankan peran di masyarakat dengan baik.</p>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">\
+        <path fill="#45b0f8" fill-opacity="1"
+          d="M0,96L48,122.7C96,149,192,203,288,208C384,213,480,171,576,138.7C672,107,768,85,864,106.7C960,128,1056,192,1152,218.7C1248,245,1344,235,1392,229.3L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+        </path>
+      </svg>
+  </section>
 
-    <!-- Akhir Kurikulum -->
+  <!-- Akhir Kurikulum -->
 
   <!-- Fakta -->
 @forelse ($fakta as $row)
@@ -483,69 +514,83 @@ body {
 </section>
 <!-- akhir kontak dan maps -->
 
-  <!-- Footer -->
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="#45b0f8" fill-opacity="1" d="M0,160L48,138.7C96,117,192,75,288,90.7C384,107,480,181,576,197.3C672,213,768,171,864,160C960,149,1056,171,1152,165.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-    </path>
-  </svg>
-  <footer class="text-white" style="background-color: #45b0f8;">
-    <div class="container text-md-left">
-      <div class="row align-items-center">
-        <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
-          <h5>
-            <img src="{{asset('front/logo2.png')}}" alt="logo" height="50">
-            <img src="{{asset('front/logo1.png')}}" alt="logo" height="50"> Bintang Juara
-          </h5>
-          <p>
-            <i class="fas fa-home mr-3"></i> &nbsp; Jl. Dewi Sartika No.17 A, Sukorejo, Kec. Gn. Pati, Kota Semarang, 50221
-          </p>
-          <p>
-            <a  href="#" style="text-decoration: none;">
-              <strong class="text-white">Home</strong>
-            </a> .
-            <a  href="#" style="text-decoration: none;">
-              <strong class="text-white">Kontak Kami</strong>
-            </a> .
-            <a  href="#" style="text-decoration: none;">
-              <strong class="text-white">Sitemap</strong>
-            </a>
-          </p>
-        </div>
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-        </div>
-        <div class="col-md-3 col-lg-3 col-xl-3  mt-3" style="text-align: end;">
-          <h5> Follow us : </h5>
-          <ul class="list-unstyled list-inline">
-            <li class="list-inline-item">
-          <a href="https://www.facebook.com/sdislambintangjuara/" class="btn-floating btn-sm text-white" style="font-size:35px;">
-            <i class="fab fa-facebook"></i>
+<!-- Footer -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#45b0f8" fill-opacity="1"
+    d="M0,160L48,138.7C96,117,192,75,288,90.7C384,107,480,181,576,197.3C672,213,768,171,864,160C960,149,1056,171,1152,165.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+  </path>
+</svg>
+<footer class="text-white" style="background-color: #45b0f8;">
+  <div class="container text-md-left">
+    <div class="row align-items-center">
+      <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
+        <h5>
+          <img src="assets/logo2.png" alt="logo" height="50">
+          <img src="assets/logo1.png" alt="logo" height="50"> Bintang Juara
+        </h5>
+        <p>
+          <i class="fas fa-home mr-3"></i> &nbsp; Jl. Dewi Sartika No.17 A, Sukorejo, Kec. Gn. Pati, Kota Semarang,
+          50221
+        </p>
+        <p>
+          <a href="#" style="text-decoration: none;">
+            <strong class="text-white">Home</strong>
+          </a> .
+          <a href="#" style="text-decoration: none;">
+            <strong class="text-white">Kontak Kami</strong>
+          </a> .
+          <a href="#" style="text-decoration: none;">
+            <strong class="text-white">Sitemap</strong>
           </a>
-          <a href="https://www.instagram.com/sdislambintangjuara/" class="btn-floating btn-sm text-white" style="font-size:35px;">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.youtube.com/channel/UCmKyv8sPPwrv-LyDaES6L8w/" class="btn-floating btn-sm text-white" style="font-size:35px;">
-            <i class="fab fa-youtube"></i>
-          </a>
-            </li>
-          </ul>
+        </p>
+      </div>
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+      </div>
+      <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
+        <h5> Follow us : </h5>
+        <div class="row">
+          <div class="col-2"><a href="https://www.youtube.com/channel/UCmKyv8sPPwrv-LyDaES6L8w/"
+              class="btn-floating btn-sm text-white">
+              <i class="fab fa-youtube fa-2x"></i></a></div>
+          <div class="col">
+            <p>Bintang Juara</p>
+          </div>
         </div>
-        <hr class="mb-4">
-        <div class="row align-items-center pb-5">
-          <div class="col-md-7 col-lg-8">
-            <p>
-              Copyright ©2023 All rights reserved by:
-              <a  href="#" style="text-decoration: none;">
-                <strong class="text-white">Bintang Juara</strong>
-              </a>
-            </p>
+        <div class="row">
+          <div class="col-2"><a href="https://www.facebook.com/sdislambintangjuara/"
+              class="btn-floating btn-sm text-white">
+              <i class="fab fa-facebook fa-2x"></i></a></div>
+          <div class="col">
+            <p>Bintang Juara</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2"><a href="https://www.instagram.com/sdislambintangjuara/"
+              class="btn-floating btn-sm text-white">
+              <i class="fab fa-instagram fa-2x"></i></a></div>
+          <div class="col">
+            <p>Bintang Juara</p>
           </div>
         </div>
       </div>
+      <hr class="mb-4">
+      <div class="row align-items-center text-center pb-5">
+        <!-- <div class="col-md-7 col-lg-8"> -->
+          <p>
+            Copyright ©2023 All rights reserved by:
+            <a href="#" style="text-decoration: none;">
+              <strong class="text-white">Bintang Juara</strong>
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
 
-  </footer>
+</footer>
 
-  <!-- Akhir Footer -->
+<!-- Akhir Footer -->
+
   <script>
     function scrolll() {
       var left = document.querySelector(".scroll-images");
