@@ -15,17 +15,50 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
   </head>
   <style>
-    .img-fluid{
-      border-radius: 20px 20px 20px 20px;
-    }
-
-    .banner {
+.img-fluid{
+  border-radius: 20px 20px 20px 20px;
+}
+.banner {
   background: url("{{asset('front/gedung1.jpg')}}") no-repeat center center;
   background-size: cover;
   padding-top: 20%;
   padding-bottom: 20%;
   color: #ffffff;
 }
+/* p {
+  font-family: Helvetica;
+  font-weight: normal;
+  font-size: large; */
+  /* margin-right: 40px;
+  text-align: justify; */
+  /* line-height: 2;
+} */
+/* li{
+  font-family: Helvetica;
+  font-weight: normal;
+  font-size: large; */
+  /* margin-right: 40px;
+  text-align: justify; */
+  /* line-height: 2;
+}  */
+
+@font-face {
+  font-family: EntezareZohoor2;
+  src: url('fonts/EntezareZohoor2.eot');
+  src: url('fonts/EntezareZohoor2.eot?') format('☺'),
+       url('fonts/EntezareZohoor2.woff') format('woff'),
+       url('fonts/EntezareZohoor2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* use */
+body {
+    font-family: EntezareZohoor2, Tahoma, serif;
+}
+
+
+
 
   </style>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -185,18 +218,18 @@
       </div>
       <div class="col">
         <h2><strong>VISI</strong></h2>
-        <p align="justify">1.Menyelenggarakan metode pembelajaran yang selaras dengan kebutuhan perkembangan anak &
-          mengoptimalkan
-          seluruh aspek perkembangan secara holistik integratif.</p>
-        <p align="justify">2.Mendidik anak usia sekolah dasar menjadi calon pemimpin muslim yang cinta Allah SWT,
-          Rasulullah, Al Qur’an,
-          berakhlakul karimah dan bermanfaat bagi masyarakat.</p>
-        <p align="justify">3.Menyediakan lingkungan pendidikan dan pengasuhan yang Islami dengan pondasi akidah,
-          akhlak, adab dan tarbiyah ibadah.</p>
-        <p align="justify">4.Menyelenggarakan program pemberdayaan masyarakat serta menjalin sinergi dengan orang tua
-          siswa, masyarakat dan pemerintah
-          guna mendukung program pendidikan sekolah dasar Islami yang selaras kebutuhan perkembangan anak.</p>
-      </div>
+        <ol>
+          <li align="justify">Menyelenggarakan metode pembelajaran yang selaras dengan kebutuhan perkembangan anak &
+            mengoptimalkan
+            seluruh aspek perkembangan secara holistik integratif.</li>
+          <li align="justify">Mendidik anak usia sekolah dasar menjadi calon pemimpin muslim yang cinta Allah SWT,
+              Rasulullah, Al Qur’an, berakhlakul karimah dan bermanfaat bagi masyarakat.</li>
+          <li align="justify">Menyediakan lingkungan pendidikan dan pengasuhan yang Islami dengan pondasi akidah,
+            akhlak, adab dan tarbiyah ibadah.</li>
+          <li align="justify">Menyelenggarakan program pemberdayaan masyarakat serta menjalin sinergi dengan orang tua
+            siswa, masyarakat dan pemerintah guna mendukung program pendidikan sekolah dasar Islami yang selaras kebutuhan perkembangan anak.</li>
+        </ol>
+        </div>
     </div>
 
   </div>
@@ -216,18 +249,18 @@
       <div class="row fs-5">
         <div class="col-6">
           <h2><strong>Rancangan Kurikulum</strong> </h2>
-          <p align="justify">1. Kurikulum SD Islam Bintang Juara menggunakan acuan utama, yaitu Al-Qur’an, Hadist,
+          <ol>
+            <li align="justify">Kurikulum SD Islam Bintang Juara menggunakan acuan utama, yaitu Al-Qur’an, Hadist,
             Kurikulum SD yang berlaku
             dari Pemerintah (Kurikulum 2013) serta Referensi Tahapan Perkembangan Anak dan Konsep Multiple
-            Intelligences.
-          </p>
-          <p align="justify">2. Bobot muatan : materi keislaman 60%, materi umum 40% :
-          <p>a. Akidah,<br>b. Akhlak dan Adab,<br>c. Ibadah wajib dan sunnah.</p>
-          </p>
-          <p align="justify">3. Program hafalan Al Quran : minimal juz 30 (saat Lulus SD).</p>
-          <p align="justify">4. Islamic Leadership dengan membuat beragam project sesuai kurikulum
-            (bersifat individual maupun team – kerjasama dengan teman sekolah maupun keluarga)</p>
-        </div>
+            Intelligences. </li>
+          <li align="justify">Bobot muatan : materi keislaman 60%, materi umum 40% :
+          <p>a. Akidah,<br>b. Akhlak dan Adab,<br>c. Ibadah wajib dan sunnah.</p></li>
+          <li align="justify">Program hafalan Al Quran : minimal juz 30 (saat Lulus SD).</li>
+          <li align="justify">Islamic Leadership dengan membuat beragam project sesuai kurikulum
+            (bersifat individual maupun team – kerjasama dengan teman sekolah maupun keluarga)</li>
+          </ol>
+          </div>
         <div class="col">
           <div style="text-align: right;">
             <img src="{{asset('front/otak.png')}}" class="img-fluid" alt="bg"></div></div>
@@ -253,16 +286,17 @@
       </div>
       <div class="col">
         <h2><strong>TUJUAN</strong></h2>
-        <p align="justify">1. Mempersiapkan generasi muslim yang berjiwa kepemimpinan, cinta Al-Qur’an,
-          berakhlakul karimah dan bermanfaat bagi umat dan alam semesta.</p>
-        <p align="justify">2. Memperkuat pondasi Akidah.</p>
-        <p align="justify">3. Melatih sikap dan perilaku akhlakul karimah serta memiliki adab Islami.</p>
-        <p align="justify">4. Mendidik anak mencintai Allah SWT dengan mengerjakan ibadah wajib dan sunnah sesuai
-          usianya.</p>
-        <p align="justify">5. Mengoptimalkan seluruh aspek perkembangan anak dan mengalirkan materi pembelajaran secara
-          holistik
-          integratif melalui Metode Pembelajaran berbasis Multiple Intelligences dan Brain based Learning</p>
-      </div>
+        <ol>
+          <li align="justify">Mempersiapkan generasi muslim yang berjiwa kepemimpinan, cinta Al-Qur’an,
+            berakhlakul karimah dan bermanfaat bagi umat dan alam semesta.</li>
+          <li align="justify">Memperkuat pondasi Akidah.</li>
+          <li align="justify">Melatih sikap dan perilaku akhlakul karimah serta memiliki adab Islami.</li>
+          <li align="justify">Mendidik anak mencintai Allah SWT dengan mengerjakan ibadah wajib dan sunnah sesuai
+            usianya.</li>
+          <li align="justify">Mengoptimalkan seluruh aspek perkembangan anak dan mengalirkan materi pembelajaran secara
+            holistik integratif melalui Metode Pembelajaran berbasis Multiple Intelligences dan Brain based Learning</li>
+        </ol>
+        </div>
     </div>
   </div>
 
@@ -282,17 +316,18 @@
       <div class="row fs-5">
         <div class="col-6">
           <h2><strong>Kengapa kami full day school?</strong> </h2>
-          <p align="justify">1.Prioritas kami adalah memberikan pondasi yang kuat
-            pada aspek akidah, akhlak dan adab Islami. Perlu kesinambungan program kegiatan sejak anak datang hingga
-            pulang sekolah.</p>
-          <p align="justify">2.Kami siap berkomitmen menjadi mitra terbaik orang tua dalam menguatkan pondasi sejak anak
-            usia dini hingga sekolah dasar,
-            sebagai persiapan anak memasuki masa baligh, siap menjadi pribadi yang akil (membedakan yang haq dan
-            bathil).
-          </p>
-          <p align="justify">3.Selama di sekolah, anak full dengan kegiatan yang bermutu dan dapat menyambungkan syaraf
-            otak secara
-            optimal tanpa terstimulasi televisi dan smartphone.</p>
+          <ol>
+            <li align="justify">Prioritas kami adalah memberikan pondasi yang kuat
+              pada aspek akidah, akhlak dan adab Islami. Perlu kesinambungan program kegiatan sejak anak datang hingga
+              pulang sekolah.</li>
+            <li align="justify">Kami siap berkomitmen menjadi mitra terbaik orang tua dalam menguatkan pondasi sejak anak
+              usia dini hingga sekolah dasar,
+              sebagai persiapan anak memasuki masa baligh, siap menjadi pribadi yang akil (membedakan yang haq dan
+              bathil).</li>
+            <li align="justify">Selama di sekolah, anak full dengan kegiatan yang bermutu dan dapat menyambungkan syaraf
+              otak secara
+              optimal tanpa terstimulasi televisi dan smartphone.</li>
+          </ol>
         </div>
         <div class="col">
           <div class="row">

@@ -180,7 +180,7 @@ label {
 }
 
 .banner {
-    background: url("assets/gedung1.jpg") no-repeat center center;
+    background: url("{{asset('front/gedung3.jpg')}}") no-repeat center center;
     background-size: cover;
     padding-top: 20%;
     padding-bottom: 20%;

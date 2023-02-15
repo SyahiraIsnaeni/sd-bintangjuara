@@ -20,6 +20,13 @@
             crossorigin="anonymous" />
     </head>
     <style>
+    .banner {
+    background: url("{{asset('front/gedung3.jpg')}}") no-repeat center center;
+    background-size: cover;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    color: #ffffff;
+}
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
@@ -71,7 +78,7 @@
 
 <!-- jumbotron -->
 <section id="jumbotron">
-<div class="container-fluid banner">
+<div class="container-fluid banner fixed-down">
     <div class="container text-start">
         <h1 class="display-5">Yuk Wakaf</h1>
         <h4>Untuk pembebasan lahan guna membangun Mushola dan mengembangkan Sekolah Dasar Islma
