@@ -77,9 +77,7 @@ Route::get('/detail-waqaf', [\App\Http\Controllers\FrontendController::class, 'w
 Route::get('/gallery', [\App\Http\Controllers\FrontendController::class, 'gallery']);
 Route::get('/profile', [\App\Http\Controllers\FrontendController::class, 'profil']);
 Route::get('/detail-guru', [\App\Http\Controllers\FrontendController::class, 'guru']);
-Route::get('/kontak', function () {
-    return view('frontend.kontak');
-});
+
 
 Route::get('/welcome', function () {
     return view('welcome');
