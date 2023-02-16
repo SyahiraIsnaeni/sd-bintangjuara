@@ -12,7 +12,7 @@ class KategoriBerita extends Model
     protected $table = 'kategori_berita';
 
     protected $fillable = [
-        'nama_kategori', 'slug'
+        'nama_kategori', 'slug',
     ];
 
     protected $hidden = [];

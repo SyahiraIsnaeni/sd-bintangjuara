@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\KategoriBerita;
 use App\Models\Berita;
+use App\Models\KategoriBerita;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -19,14 +19,15 @@ class BeritaController extends Controller
     public function index()
     {
         $berita = Berita::all()->sortByDesc('updated_at');
+
         return view('backend.back.berita.index', compact('berita'));
     }
 
     public function create()
     {
         $kategori_berita = KategoriBerita::all();
-        return view('backend.back.berita.create', compact('kategori_berita'));
 
+        return view('backend.back.berita.create', compact('kategori_berita'));
     }
 
     public function store(Request $request)
@@ -36,11 +37,11 @@ class BeritaController extends Controller
         ]);
 
         $data = $request->all();
-        if(is_null($data['nama_penulis']) || is_null($data['judul']) || is_null($data['body']) || is_null($data['kategori_berita_id'])){
-
+        if (is_null($data['nama_penulis']) || is_null($data['judul']) || is_null($data['body']) || is_null($data['kategori_berita_id'])) {
             Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+
             return redirect()->route('berita.create');
-        }else{
+        } else {
             $data['slug'] = Str::slug($request->judul);
             $data['gambar_berita'] = $request->file('gambar_berita')->store('berita');
 
@@ -67,7 +68,7 @@ class BeritaController extends Controller
 
     public function update(Request $request, $id)
     {
-        if(empty($request->file('gambar_berita'))) {
+        if (empty($request->file('gambar_berita'))) {
             $berita = Berita::find($id);
             $berita->update([
                 'nama_penulis' => $request->nama_penulis,
@@ -79,6 +80,7 @@ class BeritaController extends Controller
             ]);
 
             Alert::info('Diubah', 'Data Berhasil Terubah');
+
             return redirect()->route('berita.index');
         } else {
             $berita = Berita::find($id);
@@ -94,6 +96,7 @@ class BeritaController extends Controller
             ]);
 
             Alert::info('Diubah', 'Data Berhasil Terubah');
+
             return redirect()->route('berita.index');
         }
     }
@@ -102,10 +105,11 @@ class BeritaController extends Controller
     {
         $berita = Berita::find($id);
         $berita->update([
-            'delete' => 'Y'
+            'delete' => 'Y',
         ]);
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('berita.index');
     }
 }

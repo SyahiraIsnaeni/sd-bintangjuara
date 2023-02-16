@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Waqaf;
-use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class WaqafController extends Controller
 {
@@ -16,6 +16,7 @@ class WaqafController extends Controller
     public function index()
     {
         $waqaf = Waqaf::all()->sortByDesc('updated_at');
+
         return view('backend.back.waqaf.index', compact('waqaf'));
     }
 
@@ -26,18 +27,18 @@ class WaqafController extends Controller
 
     public function store(Request $request)
     {
-
         $data = $request->all();
         $waqaf = Waqaf::all();
-        if($waqaf->count('id') == 1){
+        if ($waqaf->count('id') == 1) {
             Alert::error('Gagal', 'Tidak Dapat Menambahkan Data Lebih Dari Satu');
-            return redirect()->route('waqaf.index');
-        }else{
-            if(is_null($data['nama_bank']) || is_null($data['nama_rekening']) || is_null($data['nomor_rekening']) || is_null($data['total_kebutuhan']) || is_null($data['dana_terkumpul']) || is_null($data['total_kekurangan'])){
 
+            return redirect()->route('waqaf.index');
+        } else {
+            if (is_null($data['nama_bank']) || is_null($data['nama_rekening']) || is_null($data['nomor_rekening']) || is_null($data['total_kebutuhan']) || is_null($data['dana_terkumpul']) || is_null($data['total_kekurangan'])) {
                 Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+
                 return redirect()->route('waqaf.create');
-            }else{
+            } else {
                 Waqaf::create($data);
 
                 Alert::success('Berhasil', 'Data Berhasil Tersimpan');
@@ -72,8 +73,8 @@ class WaqafController extends Controller
         ]);
 
         Alert::info('Diubah', 'Data Berhasil Terubah');
-        return redirect()->route('waqaf.index');
 
+        return redirect()->route('waqaf.index');
     }
 
     public function destroy($id)
@@ -82,6 +83,7 @@ class WaqafController extends Controller
         $waqaf->delete();
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('waqaf.index');
     }
 }

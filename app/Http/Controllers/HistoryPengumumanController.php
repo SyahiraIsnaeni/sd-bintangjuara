@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pengumuman;
-use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class HistoryPengumumanController extends Controller
@@ -12,9 +11,11 @@ class HistoryPengumumanController extends Controller
     {
         $this->middleware('auth');
     }
+
     public function index()
     {
         $pengumuman = Pengumuman::all()->sortByDesc('updated_at');
+
         return view('backend.back.history.pengumuman', compact('pengumuman'));
     }
 
@@ -24,6 +25,7 @@ class HistoryPengumumanController extends Controller
         $pengumuman->delete();
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('history-pengumuman.index');
     }
 
@@ -31,10 +33,11 @@ class HistoryPengumumanController extends Controller
     {
         $pengumuman = Pengumuman::find($id);
         $pengumuman->update([
-            'delete' => 'N'
+            'delete' => 'N',
         ]);
 
         Alert::info('Dipulihkan', 'Data Berhasil Dipulihkan');
+
         return redirect()->route('history-pengumuman.index');
     }
 }

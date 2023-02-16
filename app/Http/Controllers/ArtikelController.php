@@ -10,7 +10,6 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class ArtikelController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -19,6 +18,7 @@ class ArtikelController extends Controller
     public function index()
     {
         $artikel = Artikel::all()->sortByDesc('updated_at');
+
         return view('backend.back.artikel.index', compact('artikel'));
     }
 
@@ -29,7 +29,6 @@ class ArtikelController extends Controller
 
     public function history()
     {
-
     }
 
     public function store(Request $request)
@@ -39,11 +38,11 @@ class ArtikelController extends Controller
         ]);
 
         $data = $request->all();
-        if(is_null($data['nama_penulis']) || is_null($data['judul']) || is_null($data['body'])){
-
+        if (is_null($data['nama_penulis']) || is_null($data['judul']) || is_null($data['body'])) {
             Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+
             return redirect()->route('artikel.create');
-        }else{
+        } else {
             $data['slug'] = Str::slug($request->judul);
             $data['gambar_artikel'] = $request->file('gambar_artikel')->store('artikel');
 
@@ -64,7 +63,7 @@ class ArtikelController extends Controller
 
     public function update(Request $request, $id)
     {
-        if(empty($request->file('gambar_artikel'))) {
+        if (empty($request->file('gambar_artikel'))) {
             $artikel = Artikel::find($id);
             $artikel->update([
                 'nama_penulis' => $request->nama_penulis,
@@ -74,6 +73,7 @@ class ArtikelController extends Controller
                 'is_active' => $request->is_active,
             ]);
             Alert::info('Diubah', 'Data Berhasil Terubah');
+
             return redirect()->route('artikel.index');
         } else {
             $artikel = Artikel::find($id);
@@ -88,19 +88,20 @@ class ArtikelController extends Controller
             ]);
 
             Alert::info('Diubah', 'Data Berhasil Terubah');
+
             return redirect()->route('artikel.index');
         }
     }
 
     public function destroy($id)
     {
-
         $artikel = Artikel::find($id);
         $artikel->update([
-            'delete' => 'Y'
+            'delete' => 'Y',
         ]);
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('artikel.index');
     }
 }

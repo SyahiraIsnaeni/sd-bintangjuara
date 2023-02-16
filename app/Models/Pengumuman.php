@@ -12,12 +12,13 @@ class Pengumuman extends Model
     protected $table = 'pengumuman';
 
     protected $fillable = [
-        'nama_penulis', 'judul', 'slug', 'body', 'kategori_pengumuman_id', 'gambar_pengumuman', 'is_active', 'delete'
+        'nama_penulis', 'judul', 'slug', 'body', 'kategori_pengumuman_id', 'gambar_pengumuman', 'is_active', 'delete',
     ];
 
     protected $hidden = [];
 
-    public function kategori_pengumuman(){
+    public function kategori_pengumuman()
+    {
         return $this->belongsTo(KategoriPengumuman::class, 'kategori_pengumuman_id', 'id');
     }
 }

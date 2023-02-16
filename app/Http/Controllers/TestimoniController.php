@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Testimoni;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class TestimoniController extends Controller
@@ -18,6 +17,7 @@ class TestimoniController extends Controller
     public function index()
     {
         $testimoni = Testimoni::all()->sortByDesc('updated_at');
+
         return view('backend.back.testimoni.index', compact('testimoni'));
     }
 
@@ -28,7 +28,6 @@ class TestimoniController extends Controller
 
     public function history()
     {
-
     }
 
     public function store(Request $request)
@@ -39,15 +38,16 @@ class TestimoniController extends Controller
         ]);
 
         $data = $request->all();
-        if($testimoni->count('id') == 3){
+        if ($testimoni->count('id') == 3) {
             Alert::error('Gagal', 'Tidak Dapat Menambahkan Data Lebih Dari Tiga');
-            return redirect()->route('testimoni.index');
-        }else{
-            if(is_null($data['nama']) || is_null($data['testimoni'])){
 
+            return redirect()->route('testimoni.index');
+        } else {
+            if (is_null($data['nama']) || is_null($data['testimoni'])) {
                 Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+
                 return redirect()->route('testimoni.create');
-            }else{
+            } else {
                 $data['foto'] = $request->file('foto')->store('testimoni');
 
                 Testimoni::create($data);
@@ -67,14 +67,15 @@ class TestimoniController extends Controller
 
     public function update(Request $request, $id)
     {
-        if(empty($request->file('foto'))) {
+        if (empty($request->file('foto'))) {
             $testimoni = Testimoni::find($id);
             $testimoni->update([
                 'nama' => $request->nama,
                 'is_active' => $request->is_active,
-                'testimoni' => $request->testimoni
+                'testimoni' => $request->testimoni,
             ]);
             Alert::info('Diubah', 'Data Berhasil Terubah');
+
             return redirect()->route('testimoni.index');
         } else {
             $testimoni = Testimoni::find($id);
@@ -83,10 +84,11 @@ class TestimoniController extends Controller
                 'nama' => $request->nama,
                 'foto' => $request->file('foto')->store('testimoni'),
                 'is_active' => $request->is_active,
-                'testimoni' => $request->testimoni
+                'testimoni' => $request->testimoni,
             ]);
 
             Alert::info('Diubah', 'Data Berhasil Terubah');
+
             return redirect()->route('testimoni.index');
         }
     }
@@ -97,6 +99,7 @@ class TestimoniController extends Controller
         $testimoni->delete();
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('testimoni.index');
     }
 }

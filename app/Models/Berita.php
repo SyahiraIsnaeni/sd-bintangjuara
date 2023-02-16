@@ -12,12 +12,13 @@ class Berita extends Model
     protected $table = 'berita';
 
     protected $fillable = [
-        'nama_penulis', 'judul', 'slug', 'body', 'kategori_berita_id', 'gambar_berita', 'is_active', 'delete'
+        'nama_penulis', 'judul', 'slug', 'body', 'kategori_berita_id', 'gambar_berita', 'is_active', 'delete',
     ];
 
     protected $hidden = [];
 
-    public function kategori_berita(){
+    public function kategori_berita()
+    {
         return $this->belongsTo(KategoriBerita::class, 'kategori_berita_id', 'id');
     }
 }

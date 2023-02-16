@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\KategoriBerita;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -17,6 +17,7 @@ class KategoriBeritaController extends Controller
     public function index()
     {
         $kategori_berita = KategoriBerita::all();
+
         return view('backend.back.kategoriberita.index', compact('kategori_berita'));
     }
 
@@ -33,10 +34,11 @@ class KategoriBeritaController extends Controller
 
         $kategori_berita = KategoriBerita::create([
             'nama_kategori' => $request->nama_kategori,
-            'slug' => Str::slug($request->nama_kategori)
+            'slug' => Str::slug($request->nama_kategori),
         ]);
 
         Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+
         return redirect()->route('kategoriberita.index');
     }
 
@@ -61,6 +63,7 @@ class KategoriBeritaController extends Controller
         $kategori_berita->update($data);
 
         Alert::info('Diubah', 'Data Berhasil Terubah');
+
         return redirect()->route('kategoriberita.index');
     }
 
@@ -70,6 +73,7 @@ class KategoriBeritaController extends Controller
         $kategori_berita->delete();
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('kategoriberita.index');
     }
 }

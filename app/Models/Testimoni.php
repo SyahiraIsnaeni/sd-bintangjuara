@@ -12,7 +12,7 @@ class Testimoni extends Model
     protected $table = 'testimoni';
 
     protected $fillable = [
-        'nama', 'foto', 'testimoni', 'is_active'
+        'nama', 'foto', 'testimoni', 'is_active',
     ];
 
     protected $hidden = [];

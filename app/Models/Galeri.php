@@ -12,7 +12,7 @@ class Galeri extends Model
     protected $table = 'galeri';
 
     protected $fillable = [
-        'judul_gambar','gambar_galeri', 'slug'
+        'judul_gambar', 'gambar_galeri', 'slug',
     ];
 
     protected $hidden = [];

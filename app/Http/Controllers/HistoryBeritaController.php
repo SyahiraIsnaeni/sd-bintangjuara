@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berita;
-use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class HistoryBeritaController extends Controller
@@ -12,9 +11,11 @@ class HistoryBeritaController extends Controller
     {
         $this->middleware('auth');
     }
+
     public function index()
     {
         $berita = Berita::all()->sortByDesc('updated_at');
+
         return view('backend.back.history.berita', compact('berita'));
     }
 
@@ -24,6 +25,7 @@ class HistoryBeritaController extends Controller
         $berita->delete();
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('history-berita.index');
     }
 
@@ -31,10 +33,11 @@ class HistoryBeritaController extends Controller
     {
         $berita = Berita::find($id);
         $berita->update([
-            'delete' => 'N'
+            'delete' => 'N',
         ]);
 
         Alert::info('Dipulihkan', 'Data Berhasil Dipulihkan');
+
         return redirect()->route('history-berita.index');
     }
 }

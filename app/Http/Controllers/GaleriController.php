@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Galeri;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -19,6 +18,7 @@ class GaleriController extends Controller
     public function index()
     {
         $galeri = Galeri::all()->sortByDesc('updated_at');
+
         return view('backend.back.galeri.index', compact('galeri'));
     }
 
@@ -36,11 +36,11 @@ class GaleriController extends Controller
 
         $data = $request->all();
 
-        if(is_null($data['judul_gambar'])){
-
+        if (is_null($data['judul_gambar'])) {
             Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+
             return redirect()->route('galeri.create');
-        }else{
+        } else {
             $data['slug'] = Str::slug($request->judul_gambar);
             $data['gambar_galeri'] = $request->file('gambar_galeri')->store('galeri');
 
@@ -74,6 +74,7 @@ class GaleriController extends Controller
         $galeri->delete();
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('galeri.index');
     }
 }

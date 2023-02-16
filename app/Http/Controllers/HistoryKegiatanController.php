@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kegiatan;
-use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class HistoryKegiatanController extends Controller
@@ -12,9 +11,11 @@ class HistoryKegiatanController extends Controller
     {
         $this->middleware('auth');
     }
+
     public function index()
     {
         $kegiatan = Kegiatan::all()->sortByDesc('updated_at');
+
         return view('backend.back.history.kegiatan', compact('kegiatan'));
     }
 
@@ -24,6 +25,7 @@ class HistoryKegiatanController extends Controller
         $kegiatan->delete();
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('history-kegiatan.index');
     }
 
@@ -31,10 +33,11 @@ class HistoryKegiatanController extends Controller
     {
         $kegiatan = Kegiatan::find($id);
         $kegiatan->update([
-            'delete' => 'N'
+            'delete' => 'N',
         ]);
 
         Alert::info('Dipulihkan', 'Data Berhasil Dipulihkan');
+
         return redirect()->route('history-kegiatan.index');
     }
 }

@@ -16,6 +16,7 @@ class FaktaController extends Controller
     public function index()
     {
         $fakta = Fakta::all()->sortByDesc('updated_at');
+
         return view('backend.back.fakta.index', compact('fakta'));
     }
 
@@ -28,21 +29,22 @@ class FaktaController extends Controller
     {
         $data = $request->all();
         $fakta = Fakta::all();
-        if($fakta->count('id') == 1){
+        if ($fakta->count('id') == 1) {
             Alert::error('Gagal', 'Tidak Dapat Menambahkan Data Lebih Dari Satu');
+
             return redirect()->route('fakta.index');
-        }else{
-            if(is_null($data['jumlah_siswa']) || is_null($data['jumlah_guru']) || is_null($data['tahun_berjalan'])){
-
+        } else {
+            if (is_null($data['jumlah_siswa']) || is_null($data['jumlah_guru']) || is_null($data['tahun_berjalan'])) {
                 Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
-                return redirect()->route('fakta.create');
-            }else{
-                Fakta::create($data);
 
+                return redirect()->route('fakta.create');
+            } else {
+                Fakta::create($data);
             }
         }
 
         Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+
         return redirect()->route('fakta.index');
     }
 
@@ -68,8 +70,8 @@ class FaktaController extends Controller
         ]);
 
         Alert::info('Diubah', 'Data Berhasil Terubah');
-        return redirect()->route('fakta.index');
 
+        return redirect()->route('fakta.index');
     }
 
     public function destroy($id)
@@ -78,6 +80,7 @@ class FaktaController extends Controller
         $fakta->delete();
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('fakta.index');
     }
 }

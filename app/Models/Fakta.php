@@ -12,7 +12,7 @@ class Fakta extends Model
     protected $table = 'fakta';
 
     protected $fillable = [
-        'jumlah_siswa', 'jumlah_guru', 'tahun_berjalan'
+        'jumlah_siswa', 'jumlah_guru', 'tahun_berjalan',
     ];
 
     protected $hidden = [];

@@ -12,7 +12,7 @@ class KategoriPengumuman extends Model
     protected $table = 'kategori_pengumuman';
 
     protected $fillable = [
-        'nama_kategori', 'slug'
+        'nama_kategori', 'slug',
     ];
 
     protected $hidden = [];

@@ -12,7 +12,7 @@ class Jumbotron extends Model
     protected $table = 'jumbotron';
 
     protected $fillable = [
-        'foto'
+        'foto',
     ];
 
     protected $hidden = [];

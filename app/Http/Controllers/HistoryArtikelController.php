@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artikel;
-use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class HistoryArtikelController extends Controller
@@ -12,9 +11,11 @@ class HistoryArtikelController extends Controller
     {
         $this->middleware('auth');
     }
+
     public function index()
     {
         $artikel = Artikel::all()->sortByDesc('updated_at');
+
         return view('backend.back.history.artikel', compact('artikel'));
     }
 
@@ -24,6 +25,7 @@ class HistoryArtikelController extends Controller
         $artikel->delete();
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('history-artikel.index');
     }
 
@@ -31,10 +33,11 @@ class HistoryArtikelController extends Controller
     {
         $artikel = Artikel::find($id);
         $artikel->update([
-            'delete' => 'N'
+            'delete' => 'N',
         ]);
 
         Alert::info('Dipulihkan', 'Data Berhasil Dipulihkan');
+
         return redirect()->route('history-artikel.index');
     }
 }

@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Guru;
 use Illuminate\Http\Request;
-use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class GuruController extends Controller
 {
@@ -17,13 +17,13 @@ class GuruController extends Controller
     public function index()
     {
         $guru = Guru::all()->sortByDesc('updated_at');
+
         return view('backend.back.guru.index', compact('guru'));
     }
 
     public function create()
     {
         return view('backend.back.guru.create');
-
     }
 
     public function store(Request $request)
@@ -33,11 +33,11 @@ class GuruController extends Controller
         ]);
 
         $data = $request->all();
-        if(is_null($data['nama']) || is_null($data['jabatan']) || is_null($data['nip'])){
-
+        if (is_null($data['nama']) || is_null($data['jabatan']) || is_null($data['nip'])) {
             Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+
             return redirect()->route('guru.create');
-        }else{
+        } else {
             $data['foto'] = $request->file('foto')->store('guru');
 
             Guru::create($data);
@@ -63,12 +63,12 @@ class GuruController extends Controller
     public function update(Request $request, $id)
     {
         $guru = Guru::find($id);
-        if(is_null($guru['nama']) || is_null($guru['jabatan']) || is_null($guru['nip'])){
-
+        if (is_null($guru['nama']) || is_null($guru['jabatan']) || is_null($guru['nip'])) {
             Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+
             return redirect()->route('guru.edit');
-        }else{
-            if(empty($request->file('foto'))) {
+        } else {
+            if (empty($request->file('foto'))) {
                 $guru->update([
                     'nama' => $request->nama,
                     'jabatan' => $request->jabatan,
@@ -76,6 +76,7 @@ class GuruController extends Controller
                 ]);
 
                 Alert::info('Diubah', 'Data Berhasil Terubah');
+
                 return redirect()->route('guru.index');
             } else {
                 Storage::delete($guru->foto);
@@ -87,10 +88,10 @@ class GuruController extends Controller
                 ]);
 
                 Alert::info('Diubah', 'Data Berhasil Terubah');
+
                 return redirect()->route('guru.index');
             }
         }
-
     }
 
     public function destroy($id)
@@ -99,6 +100,7 @@ class GuruController extends Controller
         $guru->delete();
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('guru.index');
     }
 }

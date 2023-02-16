@@ -17,6 +17,7 @@ class KategoriPengumumanController extends Controller
     public function index()
     {
         $kategori_pengumuman = KategoriPengumuman::all();
+
         return view('backend.back.kategoripengumuman.index', compact('kategori_pengumuman'));
     }
 
@@ -33,10 +34,11 @@ class KategoriPengumumanController extends Controller
 
         $kategori_pengumuman = KategoriPengumuman::create([
             'nama_kategori' => $request->nama_kategori,
-            'slug' => Str::slug($request->nama_kategori)
+            'slug' => Str::slug($request->nama_kategori),
         ]);
 
         Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+
         return redirect()->route('kategoripengumuman.index');
     }
 
@@ -61,6 +63,7 @@ class KategoriPengumumanController extends Controller
         $kategori_pengumuman->update($data);
 
         Alert::info('Diubah', 'Data Berhasil Terubah');
+
         return redirect()->route('kategoripengumuman.index');
     }
 
@@ -70,6 +73,7 @@ class KategoriPengumumanController extends Controller
         $kategori_pengumuman->delete();
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('kategoripengumuman.index');
     }
 }

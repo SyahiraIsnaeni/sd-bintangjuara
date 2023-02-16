@@ -4,16 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Artikel;
 use App\Models\Berita;
+use App\Models\Fakta;
 use App\Models\Galeri;
 use App\Models\Guru;
 use App\Models\Jumbotron;
 use App\Models\Kegiatan;
 use App\Models\Pengumuman;
 use App\Models\Testimoni;
-use App\Models\Fakta;
 use App\Models\Waqaf;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class FrontendController extends Controller
 {
@@ -32,7 +30,8 @@ class FrontendController extends Controller
         $beritaPrioritas = Berita::where('is_active', '1')->limit(1)->orderByDesc('updated_at')->get();
         $artikelPrioritas = Artikel::where('is_active', '1')->limit(1)->orderByDesc('updated_at')->get();
         $pengumumanPrioritas = Pengumuman::where('is_active', '1')->limit(1)->orderByDesc('updated_at')->get();
-        return view('frontend.index', compact('pengumuman','berita', 'artikel',
+
+        return view('frontend.index', compact('pengumuman', 'berita', 'artikel',
             'kegiatan', 'galeri', 'kegiatanPrioritas', 'beritaPrioritas', 'artikelPrioritas',
             'pengumumanPrioritas', 'jumbotron', 'testimoni', 'fakta'));
     }
@@ -41,12 +40,14 @@ class FrontendController extends Controller
     {
         $artikel = Artikel::where('slug', $slug)->first();
         $nextArtikel = Artikel::whereNotIn('slug', [$slug])->where('is_active', '1')->limit(3)->orderByDesc('updated_at')->get();
+
         return view('frontend.artikel', compact('artikel', 'nextArtikel'));
     }
 
     public function daftarArtikel()
     {
         $artikel = Artikel::where('is_active', '1')->orderByDesc('updated_at')->get();
+
         return view('frontend.daftarartikel', compact('artikel'));
     }
 
@@ -54,12 +55,14 @@ class FrontendController extends Controller
     {
         $berita = Berita::where('slug', $slug)->first();
         $nextBerita = Berita::whereNotIn('slug', [$slug])->where('is_active', '1')->limit(3)->orderByDesc('updated_at')->get();
+
         return view('frontend.berita', compact('berita', 'nextBerita'));
     }
 
     public function daftarBerita()
     {
         $berita = Berita::where('is_active', '1')->orderByDesc('updated_at')->get();
+
         return view('frontend.daftarberita', compact('berita'));
     }
 
@@ -67,12 +70,14 @@ class FrontendController extends Controller
     {
         $kegiatan = Kegiatan::where('slug', $slug)->first();
         $nextKegiatan = Kegiatan::whereNotIn('slug', [$slug])->where('is_active', '1')->limit(3)->orderByDesc('updated_at')->get();
+
         return view('frontend.kegiatan', compact('kegiatan', 'nextKegiatan'));
     }
 
     public function daftarKegiatan()
     {
         $kegiatan = Kegiatan::where('is_active', '1')->orderByDesc('updated_at')->get();
+
         return view('frontend.daftarkegiatan', compact('kegiatan'));
     }
 
@@ -80,18 +85,21 @@ class FrontendController extends Controller
     {
         $pengumuman = Pengumuman::where('slug', $slug)->first();
         $nextPengumuman = Pengumuman::whereNotIn('slug', [$slug])->where('is_active', '1')->limit(3)->orderByDesc('updated_at')->get();
+
         return view('frontend.pengumuman', compact('pengumuman', 'nextPengumuman'));
     }
 
     public function daftarPengumuman()
     {
         $pengumuman = Pengumuman::where('is_active', '1')->orderByDesc('updated_at')->get();
+
         return view('frontend.daftarpengumuman', compact('pengumuman'));
     }
 
     public function waqaf()
     {
         $waqaf = Waqaf::all();
+
         return view('frontend.waqaf', compact('waqaf'));
     }
 
@@ -107,6 +115,7 @@ class FrontendController extends Controller
     public function profil()
     {
         $guru = Guru::limit(4)->orderByDesc('updated_at')->get();
+
         return view('frontend.profil', compact('guru'));
     }
 
@@ -116,7 +125,7 @@ class FrontendController extends Controller
         $guru3 = Guru::whereRaw('MOD(id, 4) = 2')->orderByDesc('updated_at')->get();
         $guru2 = Guru::whereRaw('MOD(id, 4) = 3')->orderByDesc('updated_at')->get();
         $guru1 = Guru::whereRaw('MOD(id, 4) = 0')->orderByDesc('updated_at')->get();
+
         return view('frontend.guru', compact('guru1', 'guru2', 'guru3', 'guru4'));
     }
-
 }

@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Jumbotron;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class JumbotronController extends Controller
@@ -18,6 +16,7 @@ class JumbotronController extends Controller
     public function index()
     {
         $jumbotron = Jumbotron::all()->sortByDesc('updated_at');
+
         return view('backend.back.jumbotron.index', compact('jumbotron'));
     }
 
@@ -28,7 +27,6 @@ class JumbotronController extends Controller
 
     public function history()
     {
-
     }
 
     public function store(Request $request)
@@ -43,6 +41,7 @@ class JumbotronController extends Controller
         Jumbotron::create($data);
 
         Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+
         return redirect()->route('jumbotron.index');
     }
 
@@ -52,6 +51,7 @@ class JumbotronController extends Controller
         $jumbotron->delete();
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('jumbotron.index');
     }
 }

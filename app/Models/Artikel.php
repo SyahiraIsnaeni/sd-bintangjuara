@@ -12,9 +12,8 @@ class Artikel extends Model
     protected $table = 'artikel';
 
     protected $fillable = [
-        'nama_penulis', 'judul', 'slug', 'body', 'gambar_artikel', 'is_active', 'delete'
+        'nama_penulis', 'judul', 'slug', 'body', 'gambar_artikel', 'is_active', 'delete',
     ];
 
     protected $hidden = [];
-
 }

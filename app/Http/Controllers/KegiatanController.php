@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Kegiatan;
 use App\Models\KategoriKegiatan;
-use Illuminate\Support\Str;
-// use Iluminate\Support\Facades\Auth;
+use App\Models\Kegiatan;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+// use Iluminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class KegiatanController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -21,30 +20,29 @@ class KegiatanController extends Controller
     public function index()
     {
         $kegiatan = Kegiatan::all()->sortByDesc('updated_at');
+
         return view('backend.back.kegiatan.index', compact('kegiatan'));
     }
 
     public function create()
     {
         $kategori_kegiatan = KategoriKegiatan::all();
-        return view('backend.back.kegiatan.create', compact('kategori_kegiatan'));
 
+        return view('backend.back.kegiatan.create', compact('kategori_kegiatan'));
     }
 
     public function store(Request $request)
     {
-
         $this->validate($request, [
             'gambar_artikel' => 'required|image|mimes:jpeg,jpg,png',
         ]);
 
         $data = $request->all();
-        if(is_null($data['nama_penulis']) || is_null($data['judul']) || is_null($data['body']) || is_null($data['kategori_kegiatan_id'])){
-
+        if (is_null($data['nama_penulis']) || is_null($data['judul']) || is_null($data['body']) || is_null($data['kategori_kegiatan_id'])) {
             Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
-            return redirect()->route('kegiatan.create');
-        }else{
 
+            return redirect()->route('kegiatan.create');
+        } else {
             $data['slug'] = Str::slug($request->judul);
             $data['gambar_artikel'] = $request->file('gambar_artikel')->store('kegiatan');
 
@@ -70,7 +68,7 @@ class KegiatanController extends Controller
 
     public function update(Request $request, $id)
     {
-        if(empty($request->file('gambar_artikel'))) {
+        if (empty($request->file('gambar_artikel'))) {
             $kegiatan = Kegiatan::find($id);
             $kegiatan->update([
                 'nama_penulis' => $request->nama_penulis,
@@ -82,6 +80,7 @@ class KegiatanController extends Controller
             ]);
 
             Alert::info('Diubah', 'Data Berhasil Terubah');
+
             return redirect()->route('kegiatan.index');
         } else {
             $kegiatan = Kegiatan::find($id);
@@ -97,6 +96,7 @@ class KegiatanController extends Controller
             ]);
 
             Alert::info('Diubah', 'Data Berhasil Terubah');
+
             return redirect()->route('kegiatan.index');
         }
     }
@@ -105,10 +105,11 @@ class KegiatanController extends Controller
     {
         $kegiatan = Kegiatan::find($id);
         $kegiatan->update([
-            'delete' => 'Y'
+            'delete' => 'Y',
         ]);
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('kegiatan.index');
     }
 }

@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Galeri;
-use Illuminate\Http\Request;
-use App\Models\Pengumuman;
-use App\Models\Berita;
 use App\Models\Artikel;
+use App\Models\Berita;
+use App\Models\Galeri;
 use App\Models\Kegiatan;
+use App\Models\Pengumuman;
 use App\Models\User;
+use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
@@ -31,7 +31,7 @@ class DashboardController extends Controller
         $drafKegiatan = Kegiatan::where('is_active', '0')->get();
         $drafArtikel = Artikel::where('is_active', '0')->get();
 
-        return view('backend.back.dashboard', compact('pengumuman','berita', 'artikel', 'kegiatan', 'admin', 'galeri', 'drafBerita', 'drafPengumuman', 'drafArtikel', 'drafKegiatan'));
+        return view('backend.back.dashboard', compact('pengumuman', 'berita', 'artikel', 'kegiatan', 'admin', 'galeri', 'drafBerita', 'drafPengumuman', 'drafArtikel', 'drafKegiatan'));
     }
 
     public function create()

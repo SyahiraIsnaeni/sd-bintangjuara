@@ -19,14 +19,15 @@ class PengumumanController extends Controller
     public function index()
     {
         $pengumuman = Pengumuman::all()->sortByDesc('updated_at');
+
         return view('backend.back.pengumuman.index', compact('pengumuman'));
     }
 
     public function create()
     {
         $kategori_pengumuman = KategoriPengumuman::all();
-        return view('backend.back.pengumuman.create', compact('kategori_pengumuman'));
 
+        return view('backend.back.pengumuman.create', compact('kategori_pengumuman'));
     }
 
     public function store(Request $request)
@@ -36,11 +37,11 @@ class PengumumanController extends Controller
         ]);
 
         $data = $request->all();
-        if(is_null($data['nama_penulis']) || is_null($data['judul']) || is_null($data['body']) || is_null($data['kategori_pengumuman_id'])){
-
+        if (is_null($data['nama_penulis']) || is_null($data['judul']) || is_null($data['body']) || is_null($data['kategori_pengumuman_id'])) {
             Alert::error('Gagal', 'Data Gagal Tersimpan. Periksa kembali data yang dimasukkan');
+
             return redirect()->route('pengumuman.create');
-        }else{
+        } else {
             $data['slug'] = Str::slug($request->judul);
             $data['gambar_pengumuman'] = $request->file('gambar_pengumuman')->store('pengumuman');
 
@@ -68,7 +69,7 @@ class PengumumanController extends Controller
     {
         $pengumuman = Pengumuman::find($id);
 
-        if(empty($request->file('gambar_pengumuman'))) {
+        if (empty($request->file('gambar_pengumuman'))) {
             $pengumuman->update([
                 'nama_penulis' => $request->nama_penulis,
                 'judul' => $request->judul,
@@ -79,6 +80,7 @@ class PengumumanController extends Controller
             ]);
 
             Alert::info('Diubah', 'Data Berhasil Terubah');
+
             return redirect()->route('pengumuman.index');
         } else {
             Storage::delete($pengumuman->gambar_pengumuman);
@@ -93,6 +95,7 @@ class PengumumanController extends Controller
             ]);
 
             Alert::info('Diubah', 'Data Berhasil Terubah');
+
             return redirect()->route('pengumuman.index');
         }
     }
@@ -101,10 +104,11 @@ class PengumumanController extends Controller
     {
         $pengumuman = Pengumuman::find($id);
         $pengumuman->update([
-            'delete' => 'Y'
+            'delete' => 'Y',
         ]);
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('pengumuman.index');
     }
 }

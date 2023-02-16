@@ -2,16 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\KategoriKegiatan;
-use Illuminate\Support\Facades\Date;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 
-
 class KategoriKegiatanController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -20,6 +17,7 @@ class KategoriKegiatanController extends Controller
     public function index()
     {
         $kategori_kegiatan = KategoriKegiatan::all();
+
         return view('backend.back.kategorikegiatan.index', compact('kategori_kegiatan'));
     }
 
@@ -40,6 +38,7 @@ class KategoriKegiatanController extends Controller
         ]);
 
         Alert::success('Berhasil', 'Data Berhasil Tersimpan');
+
         return redirect()->route('kategorikegiatan.index');
     }
 
@@ -64,6 +63,7 @@ class KategoriKegiatanController extends Controller
         $kategori_kegiatan->update($data);
 
         Alert::info('Diubah', 'Data Berhasil Terubah');
+
         return redirect()->route('kategorikegiatan.index');
     }
 
@@ -73,6 +73,7 @@ class KategoriKegiatanController extends Controller
         $kategori_kegiatan->delete();
 
         Alert::success('Dihapus', 'Data Berhasil Terhapus');
+
         return redirect()->route('kategorikegiatan.index');
     }
 }
