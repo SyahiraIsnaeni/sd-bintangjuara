@@ -75,7 +75,7 @@
         </div>
         <div class="row">
             <div class="col mt-4 mb-1">
-                <h2>{{$kegiatan->judul}}></h2>
+                <h2>{{$kegiatan->judul}}</h2>
                 <p></p>
             </div>
         </div>

@@ -41,7 +41,7 @@
     </style>
 </head>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark p-md-2 fixed-top ">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
 
     <div class="container">
         <a class="navbar-brand" href="/">
@@ -111,7 +111,7 @@
                 <p align="justify">SD ISLAM BINTANG JUARA adalah Islamic Character Based School yang mengedepankan pendidikan
                     diniyyah seperti pembiasaan ibadah, tahsin & tahfidz, serta penanaman adab dan akhlak mulia.
                 <div class="content">
-                    <p align="justify">Kami juga menerapkan pembelajaran
+                    <p>Kami juga menerapkan pembelajaran
                         holistik integratif dengan mengintegrasikan segala aspek dan nilai-nilai dalam pendidikan seperti nilai
                         moral, etis,
                         religius, psikologis dan sosial dalam kesatuan yang dilakukan secara menyeluruh antara jiwa dan badan
@@ -250,7 +250,7 @@
 <!-- Akhir Events, News, Videos -->
 
 <!-- video yt -->
-<div class="video yt">
+<section id="video yt">
     <div class="container mt-5">
         <div class="bintangjuaravideo">
             <div class="heading">
@@ -260,17 +260,17 @@
         </div>
         <section class="yt">
             <div class="row mt-3">
-                <div class="col-12 col-md-6 col-lg-6">
+                <div class="col-12 col-md-6">
                     <div class="video1">
                         <div class="bintangjuaravideo">
                             <div class="elementor-widget-video" data-id="8b392b9" data-element_type="widget"
                                  data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/www.youtube.com\/watch?v=1GL6RJMI0S4&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;,&quot;aspect_ratio&quot;:&quot;169&quot;}"
                                  data-widget_type="video.default">
                                 <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
-                                    <iframe class="elementor-video" frameborder="0" allowfullscreen="1"
+                                    <iframe class="responsive-iframe" frameborder="0" allowfullscreen="1"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             title="Video Profile SD Islam Bintang Juara Semarang | Sekolah Calon Pemimpin Muslim | Sekolah Ramah Anak"
-                                            width="620" height="360"
+                                            
                                             src="https://www.youtube.com/embed/1GL6RJMI0S4?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsd.bintangjuara.sch.id&amp;widgetid=1"
                                             id="widget2"></iframe>
                                 </div>
@@ -278,13 +278,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-6">
+                <div class="col-12 col-md-6">
                     <div class="bintangjuaravideo">
                         <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
-                            <iframe class="elementor-video" frameborder="0" allowfullscreen="1"
+                            <iframe class="responsive-iframe" frameborder="0" allowfullscreen="1"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    title="Leadership Camp SD Islam Bintang Juara | &quot;More Than Just Adventure&quot;" width="620"
-                                    height="360"
+                                    title="Leadership Camp SD Islam Bintang Juara | &quot;More Than Just Adventure&quot;" 
                                     src="https://www.youtube.com/embed/zvGGvawkXPo?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsd.bintangjuara.sch.id&amp;widgetid=3"
                                     id="widget4"></iframe>
                         </div>
@@ -293,7 +292,7 @@
             </div>
         </section>
     </div>
-</div>
+    </section>
 <!-- akhir video yt -->
 
 
@@ -440,14 +439,12 @@
         <div class="container mt-5 mb-5" >
             <div class="slide-container-swiper mt-5 mb-5">
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-3">
                         <h2><b>Galeri</b></h2>
                     </div>
-                    <div class="col-10">
+                    <div class="col-9">
                         <div class="main-scroll-div">
-                            <div>
-                                <button class="icon" onclick="scrollr()"><i class="fas fa-angle-double-left"></i></button>
-                            </div>
+                            
                             <div class="cover">
                                 <div class="scroll-images">
                                     @forelse ($galeri as $row)
@@ -456,9 +453,7 @@
                                     @endforelse
                                 </div>
                             </div>
-                            <div>
-                                <button class="icon" onclick="scrolll()"><i class="fas fa-angle-double-right"></i></button>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

@@ -22,9 +22,19 @@
         .img-fluid{
             border-radius: 20px 20px 20px 20px;
         }
-        .elementor-video {
-            border-radius: 20px 20px 20px 20px;
-        }
+        .responsive-iframe {
+ position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 360px;
+    border: none;
+    border-radius: 20px 20px 20px 20px;}
+
+.container{
+    width: 100%;}
         .banner {
             background: url("{{asset('front/gedung1.jpg')}}") no-repeat center center;
             background-size: cover;
@@ -145,7 +155,7 @@
                                      data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/www.youtube.com\/watch?v=1GL6RJMI0S4&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;,&quot;aspect_ratio&quot;:&quot;169&quot;}"
                                      data-widget_type="video.default">
                                     <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
-                                        <iframe class="elementor-video" frameborder="1" allowfullscreen="1"
+                                        <iframe class="responsive-iframe" frameborder="1" allowfullscreen="1"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                 title="Video Profile SD Islam Bintang Juara Semarang | Sekolah Calon Pemimpin Muslim | Sekolah Ramah Anak"
                                                 width="620px" height="360px"
@@ -176,10 +186,10 @@
 <section id="ketuayayasan">
     <div class="container">
         <div class="row fs-5">
-            <div class="col-6">
+            <div class="col-12 col-md-6 ">
                 <img src="{{asset('front/Buvivi.jpg')}}" class="img-fluid" alt="bg">
             </div>
-            <div class="col">
+            <div class="col-12 col-md-6 mt-3">
                 <p align="justify">SD Islam Bintang Juara adalah sebuah wadah belajar bagi anak-anak usia sekolah dasar yang
                     mengedepankan
                     sisi pendidikan islam dan metode pendekatan sesuai tahapan perkembangan anak. Sehingga anak bisa bertumbuh
@@ -204,9 +214,6 @@
         <div class="container ">
             <div class="row fs-5">
                 <div class="col-8">
-                    <br>
-                    <br>
-                    <br>
                     <h2><strong>VISI</strong></h2>
                     <p align="justify">Terwujudnya Calon Pemimpin Muslim yang Berilmu, Berakhlakul Karimah dan Bermanfaat.</p>
                 </div>
@@ -230,10 +237,10 @@
 <section id="misi">
 
     <div class="container">
-        <div class="row ">
-            <div class="col-5">
+        <div class="row fs-5">
+            <div class="col-6">
                 <img src="{{asset('front/misi.png')}}" class="img-fluid" alt="bg"></div>
-            <div class="col-7">
+            <div class="col mt-5">
                 <h2><strong>MISI</strong></h2>
                 <ol>
                     <li align="justify">Menyelenggarakan metode pembelajaran yang selaras dengan kebutuhan perkembangan anak &
@@ -264,7 +271,7 @@
     <div class="container-fluid text-white" style="background-color: #45b0f8;">
         <div class="container">
             <div class="row fs-5">
-                <div class="col-6">
+                <div class="col-12 col-md-6 mt-3">
                     <h2><strong>Rancangan Kurikulum</strong> </h2>
                     <ol>
                         <li align="justify">Kurikulum SD Islam Bintang Juara menggunakan acuan utama, yaitu Al-Qur’an, Hadist,
@@ -278,7 +285,7 @@
                             (bersifat individual maupun team – kerjasama dengan teman sekolah maupun keluarga)</li>
                     </ol>
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-6 mb-5">
                     <div style="text-align: right;">
                         <img src="{{asset('front/otak.png')}}" class="img-fluid" alt="bg"></div></div>
             </div>
@@ -331,8 +338,8 @@
     <div class="container-fluid text-white" style="background-color: #45b0f8;">
         <div class="container">
             <div class="row fs-5">
-                <div class="col-6">
-                    <h2><strong>Kengapa kami full day school?</strong> </h2>
+                <div class="col-12 col-md-6 mt-3">
+                    <h2><strong>Mengapa kami full day school?</strong> </h2>
                     <ol>
                         <li align="justify">Prioritas kami adalah memberikan pondasi yang kuat
                             pada aspek akidah, akhlak dan adab Islami. Perlu kesinambungan program kegiatan sejak anak datang hingga
@@ -346,7 +353,7 @@
                             optimal tanpa terstimulasi televisi dan smartphone.</li>
                     </ol>
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-6 mb-5 ">
                     <div class="row">
                         <div style="text-align: right;">
                             <img src="{{asset('front/gedung1.jpg')}}" class="img-fluid" alt="bg"></div></div>
