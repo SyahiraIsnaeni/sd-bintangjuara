@@ -89,7 +89,7 @@
                 <p>
                     <span id="span_1" style="font-size: large; font-weight: bold;">{{$kegiatan->nama_penulis}}</span>
                     <br>
-                    <span id="span_2"style="font-size: small;">{{$kegiatan->updated_at->format('d M Y')}} | {{$kegiatan->kategori_kegiatan->nama_kategori}}</span>
+                    <span id="span_2"style="font-size: small;">{{$kegiatan->created_at->format('d M Y')}} | {{$kegiatan->kategori_kegiatan->nama_kategori}}</span>
                 </p>
             </div>
         </div>

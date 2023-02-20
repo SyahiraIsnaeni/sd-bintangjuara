@@ -89,7 +89,7 @@
                 <p>
                     <span id="span_1" style="font-size: large; font-weight: bold;">{{$artikel->nama_penulis}}</span>
                     <br>
-                    <span id="span_2"style="font-size: small;">{{$artikel->updated_at->format('d M Y')}}</span>
+                    <span id="span_2"style="font-size: small;">{{$artikel->created_at->format('d M Y')}}</span>
                 </p>
             </div>
         </div>
