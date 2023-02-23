@@ -89,7 +89,7 @@
                 <p>
                     <span id="span_1" style="font-size: large; font-weight: bold;">{{$pengumuman->nama_penulis}}</span>
                     <br>
-                    <span id="span_2"style="font-size: small;">{{$pengumuman->created_at->format('d M Y')}}</span>
+                    <span id="span_2"style="font-size: small;">{{$pengumuman->created_at->format('d M Y')}} | {{$pengumuman->kategori_pengumuman->nama_kategori}}</span>
                 </p>
             </div>
         </div>
