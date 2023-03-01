@@ -133,77 +133,77 @@ class FrontendController extends Controller
     {
         $pengumuman = Pengumuman::where('is_active', '1')->limit(3)->orderByDesc('created_at')->get();
 
-        return response()->json($pengumuman);
+        return response()->json(['data' => $pengumuman]);
     }
 
     public function postBerita()
     {
         $berita = Berita::where('is_active', '1')->limit(3)->orderByDesc('created_at')->get();
-        return response()->json($berita);
+        return response()->json(['data' => $berita]);
     }
 
     public function postArtikel()
     {
         $artikel = Artikel::where('is_active', '1')->limit(3)->orderByDesc('created_at')->get();
 
-        return response()->json($artikel);
+        return response()->json(['data' => $artikel]);
     }
 
     public function postKegiatan()
     {
         $kegiatan = Kegiatan::where('is_active', '1')->limit(3)->orderByDesc('created_at')->get();
 
-        return response()->json($kegiatan);
+        return response()->json(['data' => $kegiatan]);
     }
 
     public function postKegiatanPrioritas()
     {
         $kegiatanPrioritas = Kegiatan::where('is_active', '1')->limit(1)->orderByDesc('created_at')->get();
 
-        return response()->json($kegiatanPrioritas);
+        return response()->json(['data' => $kegiatanPrioritas]);
     }
 
     public function postBeritaPrioritas()
     {
         $beritaPrioritas = Berita::where('is_active', '1')->limit(1)->orderByDesc('created_at')->get();
-        return response()->json($beritaPrioritas);
+        return response()->json(['data' => $beritaPrioritas]);
     }
 
     public function postArtikelPrioritas()
     {
         $artikelPrioritas = Artikel::where('is_active', '1')->limit(1)->orderByDesc('created_at')->get();
 
-        return response()->json($artikelPrioritas);
+        return response()->json(['data' => $artikelPrioritas]);
     }
 
     public function postPengumumanPrioritas()
     {
         $pengumumanPrioritas = Pengumuman::where('is_active', '1')->limit(1)->orderByDesc('created_at')->get();
 
-        return response()->json($pengumumanPrioritas);
+        return response()->json(['data' => $pengumumanPrioritas]);
     }
 
     public function artikelJson($slug)
     {
         $artikel = Artikel::where('slug', $slug)->first();
-        return response()->json($artikel);
+        return response()->json(['data' => $artikel]);
     }
 
     public function beritaJson($slug)
     {
         $berita = Berita::where('slug', $slug)->first();
-        return response()->json($berita);
+        return response()->json(['data' => $berita]);
     }
 
     public function kegiatanJson($slug)
     {
         $kegiatan = Kegiatan::where('slug', $slug)->first();
-        return response()->json($kegiatan);
+        return response()->json(['data' => $kegiatan]);
     }
 
     public function pengumumanJson($slug)
     {
         $pengumuman = Pengumuman::where('slug', $slug)->first();
-        return response()->json($pengumuman);
+        return response()->json(['data' => $pengumuman]);
     }
 }
