@@ -503,10 +503,11 @@
                     <div class="row">
                         <div class="col-12 col-md-6 col-lg-6">
                             <h2><strong>Kontak Kami</strong></h2>
-                            <p><i class="fas fa-home mr-3"></i> &nbsp; Jl. Dewi Sartika No.17 A, Sukorejo, Kec. Gn. Pati, Kota Semarang, 50221</p>
-                            <p><i class="fas fa-clock mr-3"></i> &nbsp; Senin - Sabtu (07.00 - 15.00)</p>
-                            <p><i class="fas fa-phone mr-3"></i> &nbsp; 0823-1493-0833</p>
-                            <p><i class="fas fa-phone mr-3"></i> &nbsp; 0823-1493-0833</p>
+                            <p><i class="fas fa-home mr-3"></i> &nbsp; Jl. Dewi Sartika No.17A, Kelurahan Sukorejo, Kecamatan Gunungpati, Kota Semarang, 50221</p>
+                            <p><i class="fas fa-clock mr-3"></i> &nbsp; Senin - Sabtu (08.00 - 15.00)</p>
+                            <p><i class="fas fa-phone mr-3"></i> &nbsp; WhatsApp : +62 896-6255-2583</p>
+                            <p><i class="fas fa-envelope mr-3"></i> &nbsp;<a href = "mailto:humas@bintangjuara.sch.id">humas@bintangjuara.sch.id</a> </p>
+                            <p><i class="fas fa-envelope mr-3"></i> &nbsp;<a href = "mailto:admin.it@bintangjuara.sch.id">admin.it@bintangjuara.sch.id</a> </p>
                         </div>
                         <div class="col-12 col-md-6 col-lg-6">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1979.9422714849622!2d110.38611055872192!3d-7.022855500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708bbd641c18cb%3A0xb100361d402b0f30!2sSD%20ISLAM%20BINTANG%20JUARA!5e0!3m2!1sen!2sus!4v1676260730522!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

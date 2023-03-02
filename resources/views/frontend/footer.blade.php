@@ -16,11 +16,20 @@
                     <div class="col-1">
                         <p>
                             <i class="fas fa-home mr-3"></i>
-                        </p></div>
+                        </p><br><br>
+                        <p>
+                            <i class="fas fa-envelope mr-3 mt-2"></i>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-3 mt-2"></i>
+                        </p>
+                    </div>
                     <div class="col">
                         <div class="row">
-                            <p align="justify">Jl. Dewi Sartika No.17 A, Sukorejo, Kec. Gn. Pati, Kota Semarang,
+                            <p align="justify">Jl. Dewi Sartika No. 82, Kelurahan Sukorejo, Kecamatan Gunungpati, Kota Semarang,
                                 50221</p>
+                            <p ><a class="text-white" href = "mailto:humas@bintangjuara.sch.id " style="text-decoration: none;">humas@bintangjuara.sch.id</a></p>
+                            <p ><a class="text-white" href = "mailto:admin.it@bintangjuara.sch.id " style="text-decoration: none;">admin.it@bintangjuara.sch.id</a></p>
                         </div>
                         <div class="row">
                             <p>
