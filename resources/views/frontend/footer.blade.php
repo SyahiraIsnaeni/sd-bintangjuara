@@ -38,9 +38,6 @@
                                 </a>  .
                                 <a href="#" style="text-decoration: none;">
                                     <strong class="text-white">Kontak Kami</strong>
-                                </a>  .
-                                <a href="../" style="text-decoration: none;">
-                                    <strong class="text-white">Sitemap</strong>
                                 </a>
                             </p>
                         </div>
