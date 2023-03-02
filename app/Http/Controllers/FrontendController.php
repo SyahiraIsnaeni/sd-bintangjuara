@@ -21,7 +21,7 @@ class FrontendController extends Controller
         $berita = Berita::where('is_active', '1')->limit(5)->orderByDesc('created_at')->get();
         $artikel = Artikel::where('is_active', '1')->limit(5)->orderByDesc('created_at')->get();
         $kegiatan = Kegiatan::where('is_active', '1')->limit(5)->orderByDesc('created_at')->get();
-        $galeri = Galeri::limit(5)->orderByDesc('updated_at')->get();
+        $galeri = Galeri::limit(7)->orderByDesc('updated_at')->get();
         $jumbotron = Jumbotron::orderByDesc('updated_at')->get();
         $testimoni = Testimoni::where('is_active', '1')->orderByDesc('updated_at')->get();
         $fakta = Fakta::all();
