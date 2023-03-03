@@ -26,11 +26,3 @@ Route::get('/post-pengumuman-prioritas', [\App\Http\Controllers\FrontendControll
 Route::get('/post-berita-prioritas', [\App\Http\Controllers\FrontendController::class, 'postBeritaPrioritas']);
 Route::get('/post-artikel-prioritas', [\App\Http\Controllers\FrontendController::class, 'postArtikelPrioritas']);
 Route::get('/post-kegiatan-prioritas', [\App\Http\Controllers\FrontendController::class, 'postKegiatanPrioritas']);
-Route::get('/post-artikel-detail/{slug}', [\App\Http\Controllers\FrontendController::class, 'artikelJson']);
-Route::get('/post-berita-detail/{slug}', [\App\Http\Controllers\FrontendController::class, 'beritaJson']);
-Route::get('/post-kegiatan-detail/{slug}', [\App\Http\Controllers\FrontendController::class, 'kegiatanJson']);
-Route::get('/post-pengumuman-detail/{slug}', [\App\Http\Controllers\FrontendController::class, 'pengumumanJson']);
-Route::get('/artikel-detail/{slug}', [\App\Http\Controllers\FrontendController::class, 'artikel'])->name('detail-artikel');
-Route::get('/berita-detail/{slug}', [\App\Http\Controllers\FrontendController::class, 'berita'])->name('detail-berita');
-Route::get('/kegiatan-detail/{slug}', [\App\Http\Controllers\FrontendController::class, 'kegiatan'])->name('detail-kegiatan');
-Route::get('/pengumuman-detail/{slug}', [\App\Http\Controllers\FrontendController::class, 'pengumuman'])->name('detail-pengumuman');

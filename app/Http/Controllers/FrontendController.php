@@ -183,27 +183,4 @@ class FrontendController extends Controller
         return response()->json($pengumumanPrioritas);
     }
 
-    public function artikelJson($slug)
-    {
-        $artikel = Artikel::where('slug', $slug)->first();
-        return response()->json($artikel);
-    }
-
-    public function beritaJson($slug)
-    {
-        $berita = Berita::where('slug', $slug)->first();
-        return response()->json($berita);
-    }
-
-    public function kegiatanJson($slug)
-    {
-        $kegiatan = Kegiatan::where('slug', $slug)->first();
-        return response()->json($kegiatan);
-    }
-
-    public function pengumumanJson($slug)
-    {
-        $pengumuman = Pengumuman::where('slug', $slug)->first();
-        return response()->json($pengumuman);
-    }
 }
